@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2005]gar
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1810. [Ioi2005]gar
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1810">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1810">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1810">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">Byteman拥有镇上最漂亮的花园。他在自己的花园里面种了N朵玫瑰花。夏天来了，所有的花都开的非常的漂亮。Byteman开始意识到自己没有能力看管自己花园里的所有的花，所以他决定雇佣两个园丁来帮助他。他想在花园中选择两块矩形的区域分别交给两个园丁看管。而且这两个矩形区域必须不能相交或者重叠，并且每一个区域要恰好包含K朵玫瑰花。
+Byteman想要给这两块矩形区域的周围安上栅栏，但是他现在手头比较紧，所以他希望自己花的钱尽量的少。你的任务就是帮助Byteman选择两块矩形的区域,使得它们在满足条件的情况下周长和最小。
+Byteman的花园有L米长，W米宽。花园被分成了L*W个大小相同(1*1)的方格。我们以平行与花园的两边建立起一个坐标系。所有的方格的坐标(x,y)满足1<=x<=L,1<=y<=W.每个方格内可能会有任意数目的玫瑰。
+所选的矩形区域的两边必须跟花园的两边平行，并且矩形区域的四个角的坐标必须是整数。对于1<=L1<=L2<=L 并且 1<=W1<=W2<=W,一个矩形区域的四个角为(L1,W1),(L1,W2),(L2,W1)和(L2,W2):
+* 这个矩形内所包含的点的坐标(x,y)满足L1<=x<=L2并且W1<=y<=W2.
+* 这个矩形的周长是 2*(L2-11+1)+2*(W2-W1+1).
+所选的两块矩形不能重叠或者相交。也就是它们不能有公共的方格。即使它们有公共的边，计算周长的时候也要分别计算。</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>
+第一行是L和W。1≤L,W≤250。
+第二行是N和K。2≤n≤5000,1≤k≤n/2。
+接下来N行为N朵玫瑰的坐标。
+50%的数据中，W≤40.
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输出仅有一行，为最小周长。如果不存在满足题意的矩形，则输出’NO’。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 5<br />
+7 3<br />
+3 4<br />
+3 3<br />
+6 1<br />
+1 1<br />
+5 5<br />
+5 5<br />
+3 1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>22</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

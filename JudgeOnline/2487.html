@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Super Poker II </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2487. Super Poker II </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2487">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2487">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2487">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">I have a set of super poker cards, consisting of an infinite number of cards. For each positive composite integer p, there <br />
+are exactly four cards whose value is p: Spade(S), Heart(H), Club(C) and Diamond(D). There are no cards of other values.<br />
+By &ldquo;composite integer&rdquo;, we mean integers that have more than 2 divisors. For example, 6 is a composite integer, since it <br />
+has 4 divisors: 1, 2, 3, 6; 7 is not a composite number, since 7 only has 2 divisors: 1 and 7. Note that 1 is not composite <br />
+(it has only 1 divisor). <br />
+&nbsp;<br />
+Given a positive integer n, how many ways can you pick up exactly one card from each suit (i.e. exactly one spade card, <br />
+one heart card, one club card and one diamond card), so that the card values sum to n? For example, if n=24, one way is <br />
+4S+6H+4C+10D, shown below:</span></p>
+<p></p>
+<p><span style="font-size: medium"><img alt="" src="upload/201110/11.jpg" /></span></p>
+<p></p>
+<p></p>
+<p><span style="font-size: medium">Unfortunately, some of the cards are lost, but this makes the problem more interesting. To further make the problem even <br />
+more interesting (and challenging!), I&rsquo;ll give you two other positive integers a and b, and you need to find out all the <br />
+answers for n=a, n=a+1, &hellip;, n=b.&nbsp;</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">The input contains at most 25 test cases. Each test case begins with 3 integers a, b and c, where c is the number of lost <br />
+cards. The next line contains c strings, representing the lost cards. Each card is formatted as valueS, valueH, valueC or <br />
+valueD, where value is a composite integer. No two lost cards are the same. The input is terminated by a=b=c=0. There <br />
+will be at most one test case where a=1, b=50,000 and c&lt;=10,000. For other test cases, 1&lt;=a&lt;=b&lt;=100, 0&lt;=c&lt;=10.&nbsp;<br />
+&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">For each test case, print b-a+1 integers, one in each line. Since the numbers might be large, you should output each <br />
+integer modulo 1,000,000. Print a blank line after each test case.&nbsp;<br />
+&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12 20 2 <br />
+4S 6H <br />
+0 0 0 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0 <br />
+0 <br />
+0 <br />
+0 <br />
+0 <br />
+0 <br />
+1 <br />
+0 <br />
+3 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;湖南省第七届大学生程序设计大赛</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

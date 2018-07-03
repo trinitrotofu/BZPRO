@@ -1,0 +1,232 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>动态仙人掌 I</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3464. 动态仙人掌 I</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3464">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3464">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3464">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">有一天，VFleaKing到森林里游玩，回来之后跟pyx1997说，我发现好多棵会动的树耶！<br />
+pyx1997说，这有什么好稀奇的，我用手指头就能维护每棵树的形态。<br />
+于是又过了几天VFleaKing到沙漠里游玩，回来之后跟pyx1997说，我发现好多棵会动的仙人掌耶！<br />
+pyx1997说，这有什么好稀奇的，我用脚丫子就能维护每棵仙人掌的形态。<br />
+于是VFleaKing很郁闷，他向你求助，请帮帮他吧。</span></p>
+<p><span style="font-size: medium">如果一个无向连通图的任意一条边最多属于一个简单环，我们就称之为仙人掌。<br />
+如果一个无向图的每个连通块都是个仙人掌，且不存在自环，我们就称之为沙漠。</span></p>
+<p><span style="font-size: medium">为了证明你确实能够维护仙人掌，我们给你n个结点，从1到n标号。初始时没有任何边。每次进行如下操作之一：<br />
+1. link v u w<br />
+&nbsp;&nbsp;&nbsp; 在结点v, u间连一条权值为w的边。1 &lt;= v, u &lt;= n且w为正整数。<br />
+&nbsp;&nbsp;&nbsp; 如果连边完成后图仍为沙漠，则输出&quot;ok&quot;（不含引号）。<br />
+&nbsp;&nbsp;&nbsp; 否则操作非法，撤销此次操作并输出&quot;failed&quot;（不含引号）。<br />
+2. cut v u w 在结点v, u间删掉权值为w的边。1 &lt;= v, u &lt;= n且w为正整数。<br />
+&nbsp;&nbsp;&nbsp; 如果存在这样的边则输出&quot;ok&quot;（不含引号）（如果有多条权值为w的边删去任意一条）。<br />
+&nbsp;&nbsp;&nbsp; 否则操作非法，不进行操作并输出&quot;failed&quot;（不含引号）。<br />
+3. distance? v u 查询结点v到结点u的最短路信息。1 &lt;= v, u &lt;= n。<br />
+&nbsp;&nbsp;&nbsp; 输出一个整数Lm。<br />
+&nbsp;&nbsp;&nbsp; Lm代表最短路的长度。<br />
+&nbsp;&nbsp;&nbsp; 如果v = u则Lm = 0。<br />
+&nbsp;&nbsp;&nbsp; 如果没有路可到达则Lm = -1。</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><span style="font-family: 宋体">第一行两个用空格隔开的正整数</span><span lang="EN-US">n, m</span><span style="font-family: 宋体">表示一共有</span><span lang="EN-US">n</span><span style="font-family: 宋体">个结点，</span><span lang="EN-US">m</span><span style="font-family: 宋体">个操作。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium"><span style="font-family: 宋体">接下来</span><span lang="EN-US">m</span><span style="font-family: 宋体">行，每行代表一个操作。</span></span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><span style="font-family: 宋体">对于每个操作，输出相应的结果。</span></span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 49<br />
+<br />
+link 1 2 1<br />
+<br />
+link 1 2 2<br />
+<br />
+distance? 1 2<br />
+<br />
+cut 1 2 1<br />
+<br />
+link 1 2 2<br />
+<br />
+distance? 1 2<br />
+<br />
+cut 1 2 2<br />
+<br />
+cut 1 2 2<br />
+<br />
+link 3 3 2<br />
+<br />
+cut 4 4 2<br />
+<br />
+link 1 2 2<br />
+<br />
+link 1 3 3<br />
+<br />
+link 2 3 4<br />
+<br />
+distance? 1 2<br />
+<br />
+distance? 1 3<br />
+<br />
+distance? 2 4<br />
+<br />
+link 2 4 3<br />
+<br />
+link 3 5 3<br />
+<br />
+link 4 5 1<br />
+<br />
+distance? 4 5<br />
+<br />
+cut 1 2 2<br />
+<br />
+link 4 5 5<br />
+<br />
+distance? 1 5<br />
+<br />
+cut 2 3 4<br />
+<br />
+link 2 5 5<br />
+<br />
+link 1 5 2<br />
+<br />
+distance? 1 2<br />
+<br />
+cut 4 5 5<br />
+<br />
+distance? 1 2<br />
+<br />
+cut 3 5 3<br />
+<br />
+distance? 1 2<br />
+<br />
+cut 2 5 5<br />
+<br />
+distance? 1 2<br />
+<br />
+distance? 4 5<br />
+<br />
+link 3 5 2<br />
+<br />
+distance? 1 3<br />
+<br />
+distance? 4 3<br />
+<br />
+link 4 6 3<br />
+<br />
+link 2 6 1<br />
+<br />
+distance? 2 6<br />
+<br />
+distance? 2 5<br />
+<br />
+link 5 6 2<br />
+<br />
+distance? 1 6<br />
+<br />
+distance? 2 3<br />
+<br />
+cut 2 4 3<br />
+<br />
+link 2 5 4<br />
+<br />
+distance? 4 1<br />
+<br />
+cut 4 6 3<br />
+<br />
+distance? 4 1<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>ok<br />
+<br />
+ok<br />
+<br />
+1<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+2<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+failed<br />
+<br />
+failed<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+2<br />
+<br />
+3<br />
+<br />
+-1<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+failed<br />
+<br />
+10<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+6<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+7<br />
+<br />
+ok<br />
+<br />
+7<br />
+<br />
+ok<br />
+<br />
+7<br />
+<br />
+ok<br />
+<br />
+-1<br />
+<br />
+-1<br />
+<br />
+ok<br />
+<br />
+3<br />
+<br />
+-1<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+1<br />
+<br />
+-1<br />
+<br />
+ok<br />
+<br />
+4<br />
+<br />
+5<br />
+<br />
+ok<br />
+<br />
+ok<br />
+<br />
+7<br />
+<br />
+ok<br />
+<br />
+-1<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium"><br /><br />
+<br /><br />
+1 &lt;= n &lt;= 100000<br /><br />
+<br /><br />
+1 &lt;= m &lt;= 400000<br /><br />
+<br /><br />
+保证中间有关边权的计算不会超过int范围。（祝pascal选手早日转C++，其实我在说longint）<br /><br />
+<br /><br />
+</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

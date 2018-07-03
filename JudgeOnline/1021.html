@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[SHOI2008]Debt 循环的债务</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1021. [SHOI2008]Debt 循环的债务</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1021">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1021">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1021">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>　　Alice、Bob和Cynthia总是为他们之间混乱的债务而烦恼，终于有一天，他们决定坐下来一起解决这个问题。<br />
+不过，鉴别钞票的真伪是一件很麻烦的事情，于是他们决定要在清还债务的时候尽可能少的交换现金。比如说，Al<br />
+ice欠Bob 10元，而Cynthia和他俩互不相欠。现在假设Alice只有一张50元，Bob有3张10元和10张1元，Cynthia有3<br />
+张20元。一种比较直接的做法是：Alice将50元交给Bob，而Bob将他身上的钱找给Alice，这样一共就会有14张钞票<br />
+被交换。但这不是最好的做法，最好的做法是：Alice把50块给Cynthia，Cynthia再把两张20给Alice，另一张20给<br />
+Bob，而Bob把一张10块给C，此时只有5张钞票被交换过。没过多久他们就发现这是一个很棘手的问题，于是他们找<br />
+到了精通数学的你为他们解决这个难题。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　输入的第一行包括三个整数：x1、x2、x3（-1,000&le;x1，x2，x3&le;1,000），其中 x1代表Alice欠Bob的钱（如<br />
+果x1是负数，说明Bob欠了Alice的钱） x2代表Bob欠Cynthia的钱（如果x2是负数，说明Cynthia欠了Bob的钱） x3<br />
+代表Cynthia欠Alice的钱（如果x3是负数，说明Alice欠了Cynthia的钱）<br />
+接下来有三行<br />
+每行包括6个自然数： <br />
+a100，a50，a20，a10，a5，a1 <br />
+b100，b50，b20，b10，b5，b1 <br />
+c100，c50，c20，c10，c5，c1 <br />
+a100表示Alice拥有的100元钞票张数，b50表示Bob拥有的50元钞票张数，以此类推。<br />
+另外，我们保证有a10+a5+a1&le;30，b10+b5+b1&le;30，c10+c5+c1&le;30，而且三人总共拥有的钞票面值总额不会<br />
+超过1,000。<br />
+<br />
+</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　如果债务可以还清，则输出需要交换钞票的最少张数；如果不能还清，则输出&ldquo;impossible&rdquo;（注意单词全部<br />
+小写，输出到文件时不要加引号）。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>输入一 <br />
+10 0 0 <br />
+0 1 0 0 0 0 <br />
+0 0 0 3 0 10<br />
+ 0 0 3 0 0 0 <br />
+输入二 <br />
+-10 -10 -10 <br />
+0 0 0 0 0 0 <br />
+0 0 0 0 0 0 <br />
+0 0 0 0 0 0 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>输出一<br />
+5<br />
+输出二<br />
+0</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>对于100%的数据，x1、x2、x3 &le; |1,000|。</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

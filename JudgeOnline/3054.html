@@ -1,0 +1,20 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Rainbow的信号</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3054. Rainbow的信号</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：3 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3054">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3054">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3054">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">Freda发明了传呼机之后，rainbow进一步改进了传呼机发送信息所使用的信号。由于现在是数字、信息时代，rainbow发明的信号用N个自然数表示。为了避免两个人的对话被大坏蛋VariantF偷听T_T，rainbow把对话分成A、B、C三部分，分别用a、b、c三个密码加密。现在Freda接到了rainbow的信息，她的首要工作就是解密。Freda了解到，这三部分的密码计算方式如下：<br />
+在1~N这N个数中，等概率地选取两个数l、r，如果l&gt;r，则交换l、r。把信号中的第l个数到第r个数取出来，构成一个数列P。<br />
+A部分对话的密码是数列P的xor和的数学期望值。xor和就是数列P中各个数异或之后得到的数； xor和的期望就是对于所有可能选取的l、r，所得到的数列的xor和的平均数。<br />
+B部分对话的密码是数列P的and和的期望，定义类似于xor和。<br />
+C部分对话的密码是数列P的or和的期望，定义类似于xor和。</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行一个正整数N。<br />
+第二行N个自然数，表示Freda接到的信号。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">一行三个实数，分别表示xor和、and和、or和的期望，四舍五入保留3位小数，相邻两个实数之间用一个空格隔开。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>样例输入1<br />
+2<br />
+4 5<br />
+<br />
+样例输入2<br />
+3<br />
+1 0 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>样例输出1<br />
+2.750 4.250 4.750<br />
+<br />
+样例输出2<br />
+0.667 0.222 0.889</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

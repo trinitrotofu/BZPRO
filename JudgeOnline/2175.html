@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>联赛</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2175. 联赛</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2175">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2175">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2175">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">问题描述<br />
+欧洲杯将至，欧足联在欧洲杯之前宣布了一项决定：成立一个新的联赛&mdash;&mdash;欧洲超级联赛，并将欧洲各豪门俱乐部加入该联赛。<br />
+众所周知，各联赛都将转播权卖给各电视台以盈利，欧洲超级联赛自然也不例外，可是问题也随之出现：不同的比赛激烈程度自然不同，例如国际米兰 与尤文图斯 ，曼联 与阿森纳 ，巴萨罗那 与皇家马德里 这样的比赛自然人人都愿意看，可是遇上了利物浦 与切尔西 这样的比赛球迷们就不高兴啦(至少作者会不高兴)<br />
+因此欧足联为每场比赛定了一个级别,以此来表示比赛的受欢迎程度。<br />
+然而，分级的方法却不只一种。例如，可以将所有比赛分为A，B，C共3种级别，也可以分成W（Wildness，野蛮型），T（Technic，技术型）共2种级别。<br />
+可是如果某轮联赛有多种级别的比赛，精明的电视台当然都会购买最激烈的比赛的转播权，这是欧足联的高官们所不愿看到的（因为联赛的盈利会因此减少），所以每轮联赛只能有同一种级别的比赛。<br />
+可挑剔的球迷希望：联赛不是循环的（即无法将联赛分为K（K为小于N的任意正整数）段并使这K段都相同），因为这样才不会引起他们的审美疲劳。<br />
+已知联赛共有N轮，第i种分级方法有Ri种级别的比赛，现在欧足联想知道在每种分级方法下有多少种安排联赛的方案（注：把某种方案顺移K（K&lt;=N）位后任然是同一种方案，例如,ABC和BCA，CAB为同一种方案，但ABC和ACB不是同一种方案）。为此，欧足联设下了奖品，谁能提供答案谁就能获得这份奖励。</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">&nbsp;第一行两个数N，M分别表示有N轮联赛和M种分级方法。<br />
+&nbsp;第二行M个数，第i个数为Ri，意义如题</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">&nbsp;M行，每行一个数ansi表示第i种分级方法下的方案数。</span></p>
+<p><span style="font-size: medium"><br />
+</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata> 3 1<br />
+ 3<br />
+<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata> 8<br />
+<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;在样例1中，8种方案分别为AAB，AAC，BBA，BBC，CCA，CCB，ABC，ACB。<br /><br />
+数据范围<br /><br />
+对于20%的数据，满足M&lt;=10<br /><br />
+&nbsp;对于所有的数据，满足<br /><br />
+&nbsp;N&lt;=1000<br /><br />
+M&lt;=100<br /><br />
+Ri&lt;=256 （1&lt;=i&lt;=M）</p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

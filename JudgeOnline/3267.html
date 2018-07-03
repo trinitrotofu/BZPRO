@@ -1,0 +1,26 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>KC采花</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3267. KC采花</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3267">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3267">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3267">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>KC在公园里种了一排花，一共有n朵，游手好闲的KC常常在公园里采花。他对每朵花都有一个美丽度鉴赏。由于对</div>
+<div>花的喜好不同，有的花分数很高，有的花分数很低，甚至会是负数。KC很忙，每次采花的时候，不可能从第一朵花</div>
+<div>，走到第n朵。所以他会先选定一个区间[l,r](1&lt;=l&lt;=r&lt;=n)，作为当天的采花范围。同时为了方便采花，他总是从</div>
+<div>[l,r]中最多选出k个互不相交的子区间，将这些子区间的花全部采光。当然，他希望美丽度总和最大。KC对花的鉴</div>
+<div>赏随着他对世界观人生观的改变而改变，他会不时地对每朵花的美丽度进行修改，可能改低，也可能提高。KC的行</div>
+<div>为持续m天，每天的行为要么是采花，要么是改变花的美丽度。注：(1)[l,r]的最多k个互不相同子区间可以表示成</div>
+<div>：[x1,y1],[x2,y2],...,[xt,yt]，满足l&lt;=x1&lt;=y1&lt;x2&lt;=y2&lt;...&lt;xt&lt;=yt&lt;=r，且0&lt;=t&lt;=k。(2)由于是KC种的花，一</div>
+<div>朵花采掉第二天会立刻生出来。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行一个正整数n,n&lt;=100000。</div>
+<div>第二行n个整数a1,a2...an，表示n朵花的美丽度。|ai|&lt;=500。</div>
+<div>第三行一个正整数m,m&lt;=100000。</div>
+<div>第四行开始，接下来m行，每行表示该天KC的行为。</div>
+<div>修改美丽度的行为用0 i val描述，表示将ai修改为val,|val|&lt;=500。</div>
+<div>采花行为用1 l r k描述,k&lt;=20意义如题面。</div>
+<div>n,m&lt;=50000,k&lt;=20,ai以及修改的val的绝对值不超过500。</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个采花行为，每行一个整数表示最大的美丽度总和</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9<br />
+9 -8 9 -1 -1 -1 9 -8 9<br />
+3<br />
+1 1 9 1<br />
+1 1 9 2<br />
+1 4 6 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>17<br />
+25<br />
+0</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,19 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[SDOI2015]序列统计</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3992. [SDOI2015]序列统计</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3992">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3992">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3992">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>小C有一个集合S，里面的元素都是小于M的非负整数。他用程序编写了一个数列生成器，可以生成一个长度为N的数</div>
+<div>列，数列中的每个数都属于集合S。小C用这个生成器生成了许多这样的数列。但是小C有一个问题需要你的帮助：</div>
+<div>给定整数x，求所有可以生成出的，且满足数列中所有数的乘积mod M的值等于x的不同的数列的有多少个。小C认为</div>
+<div>，两个数列{Ai}和{Bi}不同，当且仅当至少存在一个整数i，满足Ai&ne;Bi。另外，小C认为这个问题的答案可能很大</div>
+<div>，因此他只需要你帮助他求出答案mod 1004535809的值就可以了。</div>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行，四个整数，N、M、x、|S|，其中|S|为集合S中元素个数。</div>
+<div>第二行，|S|个整数，表示集合S中的所有元素。</div>
+<div>1&lt;=N&lt;=10^9，3&lt;=M&lt;=8000，M为质数</div>
+<div>0&lt;=x&lt;=M-1，输入数据保证集合S中元素不重复<span style="font-family: arial, verdana, helvetica, sans-serif;">x&isin;[1,m-1]</span></div>
+<p><span style="font-family: arial, verdana, helvetica, sans-serif;">集合中的数&isin;[0,m-1]</span></p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>一行，一个整数，表示你求出的种类数mod 1004535809的值。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 3 1 2<br />
+1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8<br />
+【样例说明】<br />
+可以生成的满足要求的不同的数列有(1,1,1,1)、(1,1,2,2)、(1,2,1,2)、(1,2,2,1)、<br />
+(2,1,1,2)、(2,1,2,1)、(2,2,1,1)、(2,2,2,2)</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

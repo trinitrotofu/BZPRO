@@ -1,0 +1,46 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Noi2005]聪聪和可可</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1415. [Noi2005]聪聪和可可</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1415">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1415">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1415">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><img border="0" src="images/1415_1.jpg"></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>数据的第1行为两个整数N和E，以空格分隔，分别表示森林中的景点数和连接相邻景点的路的条数。
+第2行包含两个整数C和M，以空格分隔，分别表示初始时聪聪和可可所在的景点的编号。
+接下来E行，每行两个整数，第i+2行的两个整数Ai和Bi表示景点Ai和景点Bi之间有一条路。
+所有的路都是无向的，即：如果能从A走到B，就可以从B走到A。
+输入保证任何两个景点之间不会有多于一条路直接相连，且聪聪和可可之间必有路直接或间接的相连。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输出1个实数，四舍五入保留三位小数，表示平均多少个时间单位后聪聪会把可可吃掉。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【输入样例1】<br />
+4 3<br />
+1 4<br />
+1 2<br />
+2 3<br />
+3 4<br />
+【输入样例2】<br />
+9 9<br />
+9 3<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+3 6<br />
+4 6<br />
+4 7<br />
+7 8<br />
+8 9<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【输出样例1】<br />
+1.500<br />
+【输出样例2】<br />
+2.167<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>【样例说明1】<br />
+开始时，聪聪和可可分别在景点1和景点4。<br />
+第一个时刻，聪聪先走，她向更靠近可可(景点4)的景点走动，走到景点2，然后走到景点3；假定忽略走路所花时间。<br />
+可可后走，有两种可能：<br />
+第一种是走到景点3，这样聪聪和可可到达同一个景点，可可被吃掉，步数为1，概率为 。<br />
+第二种是停在景点4，不被吃掉。概率为 。<br />
+到第二个时刻，聪聪向更靠近可可(景点4)的景点走动，只需要走一步即和可可在同一景点。因此这种情况下聪聪会在两步吃掉可可。<br />
+所以平均的步数是1* +2* =1.5步。<br />
+<img border="0" src="https://www.lydsy.com/JudgeOnline/images/1415_2.jpg"><br />
+<br />
+对于所有的数据，1≤N,E≤1000。<br />
+对于50%的数据，1≤N≤50。<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

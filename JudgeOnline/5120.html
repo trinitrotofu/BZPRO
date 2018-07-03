@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[2017国家集训队测试]无限之环</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5120. [2017国家集训队测试]无限之环</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5120">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5120">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5120">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>曾经有一款流行的游戏，叫做InfinityLoop，先来简单的介绍一下这个游戏:</div>
+<div>游戏在一个n&times;m的网格状棋盘上进行，其中有些小方格中会有水管，水管可能在方格某些方向的边界的中点有接口</div>
+<div>，所有水管的粗细都相同，所以如果两个相邻方格的公共边界的中点都有接头，那么可以看作这两个接头互相连接</div>
+<div>。水管有以下15种形状：</div>
+<div><img src="upload/201712/vv2.png" width="430" height="228" alt="" /></div>
+<div>游戏开始时，棋盘中水管可能存在漏水的地方。</div>
+<div>形式化地:如果存在某个接头，没有和其它接头相连接，那么它就是一个漏水的地方。</div>
+<div>玩家可以进行一种操作：选定一个含有非直线型水管的方格，将其中的水管绕方格中心顺时针或逆时针旋转90度。</div>
+<div>直线型水管是指左图里中间一行的两种水管。</div>
+<div>现给出一个初始局面，请问最少进行多少次操作可以使棋盘上不存在漏水的地方。</div>
+</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个正整数n,m代表网格的大小。</div>
+<div>接下来n行每行m数，每个数是[0,15]中的一个</div>
+<div>你可以将其看作一个4位的二进制数，从低到高每一位分别代表初始局面中这个格子上、右、下、左方向上是否有水管接头。</div>
+<div>特别地，如果这个数是000，则意味着这个位置没有水管。</div>
+<div>比如3(0011(2))代表上和右有接头，也就是一个L型，而12(1100(2))代表下和左有接头，也就是将L型旋转180度。</div>
+<div>n&times;m&le;2000</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出共一行，表示最少操作次数。如果无法达成目标，输出-1</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 3<br />
+3 14 12<br />
+3 11 12</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;样例1棋盘如下</p><br />
+<div>旋转方法很显然，先将左上角虚线方格内的水管顺时针转90度</div><br />
+<div><img src="upload/201712/vv1.png" width="192" height="270" alt="" /></div><br />
+<div>然后右下角虚线方格内的水管逆时针旋转90度，这样就使得水管封闭了</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

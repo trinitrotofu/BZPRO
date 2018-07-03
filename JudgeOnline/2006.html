@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2010]超级钢琴</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2006. [NOI2010]超级钢琴</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2006">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2006">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2006">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小Z是一个小有名气的钢琴家，最近C博士送给了小Z一架超级钢琴，小Z希望能够用这架钢琴创作出世界上最美妙的</div>
+<div>音乐。 这架超级钢琴可以弹奏出n个音符，编号为1至n。第i个音符的美妙度为Ai，其中Ai可正可负。 一个&ldquo;超级</div>
+<div>和弦&rdquo;由若干个编号连续的音符组成，包含的音符个数不少于L且不多于R。我们定义超级和弦的美妙度为其包含的</div>
+<div>所有音符的美妙度之和。两个超级和弦被认为是相同的，当且仅当这两个超级和弦所包含的音符集合是相同的。&nbsp;</div>
+<div>小Z决定创作一首由k个超级和弦组成的乐曲，为了使得乐曲更加动听，小Z要求该乐曲由k个不同的超级和弦组成。</div>
+<div>我们定义一首乐曲的美妙度为其所包含的所有超级和弦的美妙度之和。小Z想知道他能够创作出来的乐曲美妙度最</div>
+<div>大值是多少。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行包含四个正整数n, k, L, R。其中n为音符的个数，k为乐曲所包含的超级和弦个数，L和R分别是超级和弦所</div>
+<div>包含音符个数的下限和上限。 接下来n行，每行包含一个整数Ai，表示按编号从小到大每个音符的美妙度。</div>
+<div>N&lt;=500,000</div>
+<div>k&lt;=500,000</div>
+<div>-1000&lt;=Ai&lt;=1000,1&lt;=L&lt;=R&lt;=N且保证一定存在满足条件的乐曲</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>只有一个整数，表示乐曲美妙度的最大值。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 3 2 3<br />
+3<br />
+2<br />
+-6<br />
+8</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>11<br />
+<br />
+【样例说明】<br />
+共有5种不同的超级和弦：<br />
+音符1 ~ 2，美妙度为3 + 2 = 5 <br />
+音符2 ~ 3，美妙度为2 + (-6) = -4 <br />
+音符3 ~ 4，美妙度为(-6) + 8 = 2 <br />
+音符1 ~ 3，美妙度为3 + 2 + (-6) = -1 <br />
+音符2 ~ 4，美妙度为2 + (-6) + 8 = 4 <br />
+最优方案为：乐曲由和弦1，和弦3，和弦5组成，美妙度为5 + 2 + 4 = 11。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

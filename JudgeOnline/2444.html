@@ -1,0 +1,40 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2011 Open]焊接</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2444. [Usaco2011 Open]焊接</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：3 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2444">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2444">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2444">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium"><br />
+奶牛们正在玩电线！他们学会了焊接：把两条电线连接起来，将某条的端点焊接到<br />
+另一条的中间某个位置(注意：不能够将两条电线的端点焊接起来，即中间某个位置<br />
+不包括端点)。当然，中间的同一个位置可以焊接多条电线。(并且焊接点必须为整数点，<br />
+这个好像英文题面没说，我是这么理解的)<br />
+<br />
+奶牛们准备建造一个神奇的结构。它是一个N(1 &lt;= N &lt;= 50,000)个节点N-1条边的图，<br />
+并且任意两个节点连通。每条边通过两个整数A,B来表示(1 &lt;= A &lt;=N; 1 &lt;= B &lt;= N; A != B)。<br />
+<br />
+奶牛们要从当地的店里买电线，然而，越长的电线就越贵，具体地：一条长度为L的电线<br />
+的售价为L*L，并且，电线是不允许连接或者裁断的。<br />
+<br />
+给出奶牛准备建造的结构，请帮助奶牛们找出最小的花费。<br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><br />
+* 第一行: 一个整数 N<br />
+<br />
+* 第二到N行: 每行两个整数A,B描述一条边<br />
+<br />
+</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><br />
+* 第一行：一个整数表示最小的花费，注意这个整数可能超过32位二进制数。<br />
+</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+1 2<br />
+1 3<br />
+1 4<br />
+1 5<br />
+1 6<br />
+<br />
+<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+由于每个节点都和1号节点相连，因此，我们只要购买1条长度为2的电线和3条长度为1的电线即可。<br />
+总的花费为2 * 2 +1 * 1 + 1 * 1 + 1 * 1 = 7。<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

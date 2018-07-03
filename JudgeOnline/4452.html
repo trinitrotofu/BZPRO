@@ -1,0 +1,74 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Cerc2015]Export Estimate</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4452. [Cerc2015]Export Estimate</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4452">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4452">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4452">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>给你一个n个点m条边的无向图，每条边有权值，我们可以选择一个整数lim来生成一个新的图，过程如下：&nbsp;</div>
+<div>1.先将原图中边权小于lim的边删掉&nbsp;</div>
+<div>2.依次从1到n枚举每个点&nbsp;</div>
+<div>（a）如果这个点没有边于它相连，这个点将会被删去&nbsp;</div>
+<div>（b）如果这个点只与两条不相同的边x，y相连，设这两条边的另一个点分别为a，b，如果a，b和这个点都不相同（a，b可以相同），则依次做如下操作：&nbsp;</div>
+<div>（i）删去边x，y&nbsp;</div>
+<div>（ii）删去这个点&nbsp;</div>
+<div>（iii）在a，b之间建立一条新的边&nbsp;</div>
+<div>下面这个例子lim=95：&nbsp;</div>
+<div><img src="upload/201603/aa(2).png" width="856" height="380" alt="" /></div>
+<div></div>
+<div>数据保证原图没有重边和自环，但不保证经过如上操作后的图没有重边和自环。&nbsp;</div>
+<div>现在我们想知道当lim取若干值时，由原图生成的新图的点数和边数是多少。&nbsp;</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行两个数n，m，表示原图有n点m条边。&nbsp;</div>
+<div>接下来m行，每行三个数a，b，c，表示a和b之间有一条边权为c的双向边。&nbsp;</div>
+<div>接下来一行一个数q，表示有q次询问。&nbsp;</div>
+<div>接下来一行q个数，k1，k2，...，kq。&nbsp;</div>
+<div>1&lt;=n&lt;=300000&nbsp;</div>
+<div>1&lt;=m&lt;=300000&nbsp;</div>
+<div>0&lt;=c&lt;=300000&nbsp;</div>
+<div>1&lt;=q&lt;=300000&nbsp;</div>
+<div>0&lt;=ki&lt;=300000&nbsp;</div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>总共q行，每行两个数，表示lim取ki时，生成的新图的点数和边数&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample Input1: <br />
+6 7 <br />
+1 2 20 <br />
+2 3 80 <br />
+2 5 100 <br />
+3 5 50 <br />
+3 4 100 <br />
+5 6 90 <br />
+4 6 100 <br />
+4 <br />
+25 75 85 95 <br />
+Sample Input2: <br />
+10 14 <br />
+2 7 150 <br />
+1 2 100 <br />
+2 3 150 <br />
+3 1 200 <br />
+1 4 60 <br />
+4 5 20 <br />
+2 5 100 <br />
+5 6 90 <br />
+6 7 120 <br />
+7 5 130 <br />
+6 8 50 <br />
+8 9 200 <br />
+9 10 200 <br />
+10 7 200 <br />
+5 <br />
+300 50 95 100 110 <br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample Output1: <br />
+2 3 <br />
+1 1 <br />
+2 1 <br />
+4 2 <br />
+Sample Output2: <br />
+0 0 <br />
+6 9 <br />
+4 5 <br />
+4 5 <br />
+5 4 <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

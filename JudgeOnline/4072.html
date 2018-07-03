@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Wf2014]baggage</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4072. [Wf2014]baggage</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4072">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4072">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4072">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;给定一排长度为4n的格子，编号从-2n+1到2n</p>
+<div>每个编号为正的格子中有一个物品，其中每个编号为奇数的格子中有一个B类物品，编号为偶数的格子中有一个A类物品</div>
+<div>例如：当n=4时初始状态如下图所示：</div>
+<div><img src="upload/201505/附图.png" width="960" height="100" alt="" /></div>
+<div>你只能进行一种操作：选择某两个相邻的格子，要求这两个格子中都有物品，然后移动到另外两个相邻的空格子中，不能改变两个格子的相对位置</div>
+<div>要求进行最少的操作使得所有物品以AAA...ABBB...B(n个A和n个B)的形式排列在一起</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入数据包含一行一个正整数n，含义如题面中所示</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一个最短的满足要求的移动序列</p>
+<div>
+<div>每个操作的格式如下：</div>
+<div>x to y</div>
+<div>含义为将x和x+1两个格子中的物品移动到y和y+1两个位置</div>
+<div>如果有多组方案可以达到要求，你可以输出任意一组。</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 to -1<br />
+3 to 8<br />
+6 to 3<br />
+0 to 6<br />
+9 to 0<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,55 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>卡常数</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3815. 卡常数</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3815">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3815">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3815">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在某个诡异的地方，有一座智慧之城，那里的人民平均智商为 192，智商低于 150 的人都被称为弱智。智慧之城的市长名叫卡常（Karp-de-Chant），他 12 岁时在智慧之城中心大学 Cross Institute 获得博士学位，两年后发明了一种数列 &mdash;&mdash; 卡常数（Karp-de-Chant Number），该数列可用来解决或优化数论、图论等领域的多种经典难题。后来，卡常数被 Trajan（智慧之城的副市长）用 spaly 树进行扩展后，威力大大增加，可以在线性时间内解决各种网络流问题和其它一些难题。卡常和 Trajan 因此分别被选为正、副市长，他们和智慧之城内的另一些智者一起，领导人民共同建设人类智慧，发挥创造和改进的能力。</div>
+<div></div>
+<div>然而某一天，智慧之城突然受到了反人类智慧者的袭击，反人类智慧者在城内设置了 N 个摄像头（由于他们的智商很低，只会用摄像头这种垃圾玩意），企图监视城内的人们。卡常、Trajan 决定找到这些摄像头并摧毁它们。</div>
+<div></div>
+<div>智慧之城里有一个用扩展卡常数原理设计的发射器，将其放在合适位置并设置半径以后，所有位于球心为这个发射器的位置、半径为指定值的球面上的目标都能被发现。在卡常、Trajan 的带领下，智慧之城的人们用这个发射器进行了若干次实验，并发现了一些摄像头的位置。比较囧的是，每次发射都能且仅能发现一个摄像头，但是，反馈回来的结果貌似有些不对劲&hellip;&hellip;</div>
+<div></div>
+<div>后来人们终于找到了这 N 个摄像头的位置，并发现在他们用发射器进行实验的过程中，某些摄像头被移位&mdash;&mdash;这就是导致反馈结果不对劲的原因。但是，在对实验结果进行分析的时候，人们却肿么也回忆不起每次实验发现的摄像头是哪个了（可能是遭遇了灵异事件导致脑抽），只知道每次实验时发射器的位置和半径。你的任务就是，根据实验数据（为了防止被反人类智慧者窃取，已经进行了加密）找出每次实验时被发射器找到的摄像头的编号。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个正整数 N、M，表示摄像头数量（摄像头以 1 到 N 编号）和事件数量。</div>
+<div></div>
+<div>第二行两个实数 a、b，表示加密参数。</div>
+<div></div>
+<div>接下来 N 行，每行三个实数 (x,y,z)，表示 1 到 N 号摄像头的初始位置坐标。</div>
+<div></div>
+<div>接下来 M 行，每行描述一个事件，有两种可能的事件（保证其中实数的精度充分高）：</div>
+<div></div>
+<div>0 i x y z，表示将编号为 i 的摄像头的坐标改为 (x,y,z)；</div>
+<div>1 x y z r，表示进行一次实验，将发射器放在 (x,y,z) 处并设置半径为r，数据保证每次实验能且仅能发现一个摄像头；</div>
+<div>加密方式：设函数 f(x)=ax&minus;bsinx，对于所有事件中的参数（i、x、y、z、r），均加密成 f(last_res&times;原值+1)，其中 last_res 为上一个实验事件的返回值（即发现的摄像头编号），若之前未进行过实验则 last_res=0.1。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个实验事件，输出发现的摄像头编号，一个一行。</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+6 10<br />
+1 0<br />
+-3.6 7.2 3.6<br />
+9.7 0.4 0.5<br />
+8.8 -4.7 0.5<br />
+9.6 8.2 -5.7<br />
+0.3 -9.9 1.5<br />
+0.5 -5.7 -1.0<br />
+0 1.3 1.92 0.13 1.85<br />
+1 1.98 1.55 1.2 2.360183811<br />
+1 8.2 0.9 2.1 9.981091248<br />
+1 -7.4 -44.0 11.2 83.061927835<br />
+1 20.8 -9.6 -11.8 31.598039153<br />
+0 10.0 11.2 -19.73 -19.1<br />
+0 13.0 7.3 28.6 22.6<br />
+0 4.0 22.3 -17.6 1.3<br />
+1 -3.2 -14.0 16.6 30.9549661993<br />
+0 7.0 -3.1 5.8 -0.9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+6<br />
+2<br />
+3<br />
+1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>N&lt;=65536</div><br />
+<div>M&lt;=65536</div><br />
+<div>所有的测试点满足 0&le;b&lt;a&lt;5，坐标的绝对值均不超过 100，所有坐标均为随机生成且至少精确到 10^&minus;5。</div><br />
+<div></div><br />
+<div>为尽可能减小精度误差，建议 C/C++ 使用long double类型、Pascal 使用 EXTENDED 类型存储实数。</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

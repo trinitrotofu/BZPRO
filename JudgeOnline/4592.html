@@ -1,0 +1,43 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2015]脑洞治疗仪</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4592. [Shoi2015]脑洞治疗仪</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4592">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4592">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4592">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>曾经发明了自动刷题机的发明家SHTSC又公开了他的新发明：脑洞治疗仪--一种可以治疗他因为发明而日益增大的脑洞的神秘装置。</div>
+<div>为了简单起见，我们将大脑视作一个01序列。1代表这个位置的脑组织正常工作，0代表这是一块脑洞。</div>
+<div>1<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>0</div>
+<div>脑洞治疗仪修补某一块脑洞的基本工作原理就是将另一块连续区域挖出，将其中正常工作的脑组织填补在这块脑洞中。</div>
+<div>（所以脑洞治疗仪是脑洞的治疗仪？）</div>
+<div>例如，用上面第8号位置到第10号位置去修补第1号位置到第4号位置的脑洞。我们就会得到：</div>
+<div>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0</div>
+<div>如果再用第1号位置到第4号位置去修补第8号位置到第10号位置：</div>
+<div>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1</div>
+<div>这是因为脑洞治疗仪会把多余出来的脑组织直接扔掉。</div>
+<div>如果再用第7号位置到第10号位置去填补第1号位置到第6号位置：</div>
+<div>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>1<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0<span class="Apple-tab-span" style="white-space:pre"></span>0</div>
+<div>这是因为如果新脑洞挖出来的脑组织不够多，脑洞治疗仪仅会尽量填补位置比较靠前的脑洞。</div>
+<div>假定初始时SHTSC并没有脑洞，给出一些挖脑洞和脑洞治疗的操作序列，你需要即时回答SHTSC的问题：</div>
+<div>在大脑某个区间中最大的连续脑洞区域有多大。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行两个整数n，m。表示SHTSC的大脑可分为从1到n编号的n个连续区域。有m个操作。</div>
+<div>以下m行每行是下列三种格式之一。</div>
+<div>0 l r ：SHTSC挖了一个从l到r的脑洞。</div>
+<div>1 l0 r0 l1 r2 ：SHTSC进行了一次脑洞治疗，用从l0到r0的脑组织修补l1到r1的脑洞。</div>
+<div>2 l r ：SHTSC询问l到r这段区间最大的脑洞有多大。</div>
+<div>n,m &lt;=200000，1&lt;=l&lt;=r&lt;=n</div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问，输出一行一个整数，表示询问区间内最大连续脑洞区域有多大。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10 10<br />
+0 2 2<br />
+0 4 6<br />
+0 10 10<br />
+2 1 10<br />
+1 8 10 1 4<br />
+2 1 10<br />
+1 1 4 8 10<br />
+2 1 10<br />
+1 7 10 1 6<br />
+2 1 10<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+3<br />
+6<br />
+6<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

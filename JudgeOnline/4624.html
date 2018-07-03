@@ -1,0 +1,62 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>农场种植</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4624. 农场种植</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4624">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4624">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4624">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>农夫约翰想要在一片巨大的土地上建造一个新的农场。 这块土地被抽象为个 R*C 的矩阵。土地中的每个方格都可</div>
+<div>以用来生产一种食物：谷物(G)或者是牲畜(L)。下面是一个 R 为 5，C 为 8 的土地的样例：</div>
+<div>&nbsp; 12345678</div>
+<div>1 GLGGLGLG</div>
+<div>2 GGLGGLGL</div>
+<div>3 GGLLLGGG</div>
+<div>4 LLGLLGLG</div>
+<div>5 LGGGLGLL</div>
+<div>农夫约翰已经有一套设计好的他想要建造的农场的蓝图。 每一个蓝图被抽象为一个 H*W 的矩阵，其中 H&le;R，W&le;</div>
+<div>C。蓝图中的每个方格表示着农夫约翰想要生产的食物，谷物(G)或是牲畜(L)。下面是一个 H=2，W=3 的蓝图的样</div>
+<div>例。</div>
+<div>&nbsp; 123</div>
+<div>1 GLL</div>
+<div>2 LGG</div>
+<div>使用这个蓝图，农夫约翰可以在土地上的某个位置建立起实际的农场。这个农场的位置可以用它的左上角的位置来</div>
+<div>代表， 比如这个农场被建立在土地上的(r,c)这个位置，这个农场必须整个都建立在这块土地中（也就是说 r + H</div>
+<div>&nbsp;&le; R 并且 c + W &le; C） 。如果在土地上的位置(r + i, c + j)的食物种类和蓝图里的位置(i + 1, j + 1)的食</div>
+<div>物种类相同（其中 0 &le; i&lt;H，0 &le; j&lt;W） ，那么就能出产食物。农夫约翰想要找到这样的农场位置，使得他可以</div>
+<div>出产最多的食物（即谷物的格数+牲畜的格数） 。如果有多于一个可能的解，输出最上方的一个，如果仍然有多于</div>
+<div>一个可能的解，就输出最作坊的一个。比如对于上面给出的土地和蓝图的样例，最佳的农场位置是(1, 3)，这是最</div>
+<div>左上方的一个可行的农场，如下图所示：</div>
+<div>&nbsp; 12345678</div>
+<div>1 GLGGLGLG</div>
+<div>2 GGLGGLGL</div>
+<div>3 GGLLLGGG</div>
+<div>4 LLGLLGLG</div>
+<div>5 LGGGLGLL</div>
+<div>通过在(1, 3)位置建立农场，农夫约翰可以生产出 5 格的粮食，3 格谷物和2 格牲畜，具体来说，是第一行的一</div>
+<div>格谷物和一个牲畜，第二行的一格牲畜和两格谷物。注意位置(2, 5)和位置(3, 2)同样能生产出 5 格谷物，但是</div>
+<div>农夫约翰需要的是最靠上中的最靠左的。 在除此以外的任何位置放置农场都只能生产出少于5 格的食物。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入数据中只有一组土地，第一行包含了两个整数 R 和 C，其中 0 &lt;R,C &le;500，紧接着是 R 行每行包含 C 个字</div>
+<div>符来描述这片土地，接下来有一个整数 B，满足 0 &lt;B &le; 5，表示农夫约翰拥有的蓝图的数量，接下来是 B 个蓝</div>
+<div>图，每个蓝图都以包含两个整数 H 和 W 的一行开头，其中 0 &lt;H &le; R 并且 0 &lt;W &le; C，紧接着是 H 行，每行 W</div>
+<div>&nbsp;个字母来描述这个蓝图。对于每个蓝图，在一行中输出&quot;Case #X: Y&quot;（没有引号） ，X 是蓝图编号，从 1 开始</div>
+<div>，Y 是一组用空格隔开的四个整数组成的输出，前两个整数表示最好的建造农场的位置，接下来两个整数分别表示</div>
+<div>可以生产的谷物和牲畜的格数。</div>
+<div>R,C &le; 500，B&le;5，H&le;R，W&le;C</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个蓝图，在一行中输出&quot;Case #X: Y&quot;（没有引号） ，X 是蓝图编号，从 1 开始，Y 是一组用空格隔开的四</div>
+<div>个整数组成的输出，前两个整数表示最好的建造农场的位置，接下来两个整数分别表示可以生产的谷物和牲畜的格</div>
+<div>数。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 8<br />
+GLGGLGLG<br />
+GGLGGLGL<br />
+GGLLLGGG<br />
+LLGLLGLG<br />
+LGGGLGLL<br />
+3 2<br />
+3<br />
+GLL<br />
+LGG<br />
+3 1<br />
+L G G 1<br />
+4<br />
+GGLL</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case #1: 1 3 3 2<br />
+Case #2: 1 2 2 1<br />
+Case #3: 3 1 2 2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,51 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>改装</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4717. 改装</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：100 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4717">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4717">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4717">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>(reequip.pas/c/cpp/in/out)</div>
+<div>【题目背景】</div>
+<div>小Q最近喜欢上了一款游戏，名为《舰队connection》，在游戏中，小Q指挥强大的舰队南征北战，从而成为了一名</div>
+<div>dalao。在游戏中，不仅船只能力很重要，搭配合适的装备更是如虎添翼。小Q潜心研究配装三十年，终于&mdash;&mdash;把装</div>
+<div>备凑齐了。</div>
+<div>【题意描述】</div>
+<div>小Q有n艘船，m件装备。为了简单起见，我们假定每艘船都只能携带一件装备，且可以携带任何一件装备。每艘船</div>
+<div>和每件装备都有自己的能力值。船携带装备时，能力值为两者相乘。另外，小q还有可能对船或装备进行改修(强化</div>
+<div>)。改修成功会让能力提升，失败则会让能力降低。由于最佳配置已经用了无数次了毫无挑战性，因此，小Q并不打</div>
+<div>算直接使用最佳配置，而是使用相对弱一些的第k佳配置。具体来说，每次选择船只时，由于关卡限制，小Q需要在</div>
+<div>编号为L到R的船只中选择一艘，并在编号为a和b之间的装备选择一架，组成出击用的船只。于是，小Q总共有(R-L+</div>
+<div>1)*(b-a+1)种选择，小Q希望知道，所有这些选择中，第k大的能力值是多少。例如：</div>
+<div>船只：5 3 7</div>
+<div>装备：4 2 1 8 16</div>
+<div>对于L=1,R=3,a=1,b=5,k=10的询问，将所有可能的能力值排序，分别为7*16=102，5*16=80，7*8=56，3*16=48，5*</div>
+<div>8=40，7*4=28，3*8=24，5*4=20，7*2=14，3*4=12，5*2=10，7*1=7，3*2=6，5*1=5，3*1=3，其中第10大的是12。</div>
+<div>对于L=2,R=3,a=2,b=4,k=5的询问，将所有可能的能力值排序，分别为7*8=56，3*8=24，7*2=16，7*1=7，3*2=6，3</div>
+<div>*1=3，其中第5大的是6。假定小Q改修了第二艘船使其能力值成功增加至4，并改修了第5件装备但由于失败使得它</div>
+<div>的能力值减小为9。现在，对于L=1,R=2,A=4,B=5,K=3的询问，所有可能的能力值分别为5*9=45，5*8=40，4*9=36，</div>
+<div>4*8=32，其中第3大的是36。现在，你要编写一个程序回答这些问题。提示：由于游戏的特殊性，装备比船多得不</div>
+<div>知道到哪里去了，另外，作为一个人类，小Q才不会在一秒钟之内问几百万个问题让你回答，他只会问几百个，而</div>
+<div>且给你好几秒钟的时间回答。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个数n,m，空格分隔，表示小Q的船的数量和装备的数量。</div>
+<div>第二行n个数，空格分隔，表示小Q的船的能力值(按编号)。</div>
+<div>第三行m个数，空格分隔，表示小Q的装备的能力值(按编号)。</div>
+<div>第四行一个数q，表示小q的操作数量。</div>
+<div>接下来q行，每行描述一个操作，操作要么为一个改修事件，要么为一个询问。</div>
+<div>对于改修事件，该行4个数0,type,pos,val，type为0或1，0表示把pos号船改修成val的能力值</div>
+<div>1表示把pos号装备改修成val的能力值。</div>
+<div>对于询问操作，该行6个数1,L,R,a,b,k，空格分隔，表示一个询问。</div>
+<div>n&lt;=250，m&lt;=100000，q&lt;=100000，其中询问操作不会超过200。</div>
+<div>对于100%的数据，1&lt;=L&lt;=R&lt;=n，1&lt;=a&lt;=b&lt;=m，1&lt;=k&lt;=(R-L+1)*(b-a+1)</div>
+<div>任何时候船能力值为不超过2000的正整数，装备能力值为不超过1000000的正整数。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问操作，输出一行，包含一个数，表示询问的答案。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 5<br />
+5 3 7<br />
+4 2 1 8 16<br />
+5<br />
+1 1 3 1 5 10<br />
+1 2 3 2 4 5<br />
+0 0 2 4<br />
+0 1 5 9<br />
+1 1 2 4 5 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12<br />
+6<br />
+36</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

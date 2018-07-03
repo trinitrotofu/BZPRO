@@ -1,0 +1,39 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi2001]Nas Necklaces项链</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2533. [Poi2001]Nas Necklaces项链</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2533">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2533">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2533">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p style="text-align: left"><font face="Times New Roman" size="3"><span id="1323849459956S" style="display: none">&nbsp;</span>项链 <br />
+著名珠宝商Byteman的迷人项链使得Byteland声名在外。这些项链由宝石串织而成。宝石有26个不同的种类 <br />
+我们用小写的拉丁字母a &ndash; z来表示（同一类型的宝石是不可区分的）。不生产俩条完全一样的项链是 <br />
+Byteman的一份荣誉，因而他保留有以前制造的所有项链的描述。由于有些项链确实很长，这就使得我们 <br />
+必须用简短的形式来描述它。每个描述都由下列形式的fragments构成：一个字符串（我们称之为pattern） <br />
+后面跟一整数，整数表示此pattern在项链中重复的次数。所有描述都是这样的fragments的连续。 <br />
+例如，描述： <br />
+abc 2 xyz 1 axc 3 <br />
+表示项链abcabcxyzaxcaxcaxc（这一字符串可由写&ldquo;abc&rdquo;两次，&ldquo;xyz&rdquo;一次和&ldquo;axc&rdquo;3次而得到）。 <br />
+然而，由于不能决定项链的开始（即项链能任意被转动），这个问题变得更加复杂化。一些项链可能 <br />
+有多于一种的描述形式。例如，我们上面提到的项链也可以描述为如下形式： <br />
+cabcxyzaxcaxcaxcab或者xcaxcaxcabcabcxyza。 <br />
+要求 <br />
+写一程序： <br />
+1、 从文件NAS.IN中读入俩条项链的描述； <br />
+2、证明这俩个描述是否表示同一项链； <br />
+3、结果写入文件NAS.OUT中。 <br />
+</font></p>
+<p style="text-align: left"></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p style="text-align: left"><font face="Times New Roman" size="3">输入俩行。每行都为某一项链的描述，由小写的拉丁字母和整数组成 <br />
+用单个空格隔开。每行开始为一整数n，它表示此描述中所含pattern的数量 <br />
+1&lt;=n&lt;=1 000。后面跟着是n个重复pattern的描述。第i个重复pattern由以下几部分组成： <br />
+整数li ，表示pattern的长度；由li 个小写拉丁字母构成的字符串si ； <br />
+以及整数ki表示pattern在描述中重复的次数，1&lt;=ki&lt;=100 000。整数li (for i=1,...,n)的总和不超过10 000。 <br />
+</font></p>
+<p style="text-align: left"></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p style="text-align: left"><font face="Times New Roman" size="3">如果这俩个描述表示的是同一条项链，程序应在输出文件的第一行写入一单词&quot;TAK&quot;，否则，写入单词&quot;NIE&quot;。 <br />
+</font></p>
+<p><font face="Times New Roman" size="3">
+<pre>
+</pre>
+</font></p>
+<pre></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3 abc 2 3 xyz 1 3 axc 3<br />
+4 4 cabc 1 4 xyza 1 3 xca 3 1 b 1<br />
+<br />
+<br />
+ </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>TAK<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

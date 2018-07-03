@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CERC2016]Invisible Integers</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4794. [CERC2016]Invisible Integers</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：80 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4794">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4794">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4794">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>《隐形的整数》是一个简单的猜数游戏。在这个游戏中，给定n个提示，玩家将尝试去猜一个仅包含自然数1到9的</div>
+<div>数字序列，满足所有n个提示。每个提示是一个包含若干互不相同的1到9之间的整数序列，它是这样生成的：</div>
+<div></div>
+<div>1.随机选择一个序列中的位置作为起点。</div>
+<div></div>
+<div>2.随机选择任意一个方向，左或者右。</div>
+<div></div>
+<div>3.从起点开始沿着选定的方向走，遍历完这个方向的每个数字，将每个数字第一次出现的顺序记录下来。</div>
+<div></div>
+<div>请找到长度最短的满足所有n个提示的序列。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个正整数n(1&lt;=n&lt;=10)，表示提示的个数。</div>
+<div>接下来n行，每行若干个互不相同的1到9之间的整数，依次表示每个提示，每一行以0为终止。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行一个整数，即最短长度，若无解则输出-1。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+1 2 0<br />
+3 4 0<br />
+1 4 3 0<br />
+3 1 4 2 0<br />
+1 2 4 3 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+一个可行的序列是(1,2,1,4,1,3,4)。<br />
+对于提示序列(1,2)，可以选择位置3，然后往左走。<br />
+对于提示序列(3,4)，可以选择位置6，然后往右走。<br />
+对于提示序列(1,4,3)，可以选择位置3，然后往右走。<br />
+对于提示序列(3,1,4,2)，可以选择位置6，然后往左走。<br />
+对于提示序列(1,2,4,3)，可以选择位置1，然后往右走。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,42 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>打电话(tel)</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1550. 打电话(tel)</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1550">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1550">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1550">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">龙先生是一位著名的记者，平时最喜欢报道一些鲜为人知的故事。最近，由于听说索马里海盗猖獗，他打算实地探访，做一个深入的调查。龙先生联系了索马里当地的一些朋友，做了周密的计划——坐船从三亚出发，越过南海，趟过印度洋，最后到达索马里海域的亚丁湾。可就在船离海岸仅10公里时，突然一伙海盗突袭客船，所有人都被劫持到了索马里城内。
+在人质被运送到“海盗基地”的途中，龙先生凭着多年的经验，乘海盗不注意，跃下了卡车，在无数砰砰的枪声中，没命的向外跑去。跑了几分钟后，龙先生突然看到一个电话厅。他迅速向电话厅奔去，想打电话向住在索马里的朋友求助。然而，随着追赶脚步声的临近，龙先生估算留给自己打电话的时间最多30秒，决不容许拨错电话。
+遗憾的是，越是这种危机的时候，越容易犯错。身为“智者”的您，请帮龙先生算一算：当他打电话给一位朋友的时候，恰好打给了另外一个人（不一定是他朋友,可以是任何人）的概率是多少？已知索马里是一个有不超过10万人的小城，电话号码只有6位。 
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第1行：索马里人数n。n <= 100000
+接下来的n行：所有人的电话号码
+接下来的10行：一个10*10错按表，表示按a键时按成b键的概率（第一行第一列表示按0时按成0的概率，第一行第二列表示按0时按成1的概率。所有的概率用整数0~10表示，即实际概率要除以10）
+下一行：索马里城中你的朋友人数m。m <= n。
+接下来的m行：每个朋友的电话号码。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>打给你的每一个朋友时候，打通其他人的电话的概率（每行一个概率，乘以10^6 后用整数表示） 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+267535<br />
+229127<br />
+693606<br />
+861879<br />
+902375<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+1 1 1 1 1 1 1 1 1 1<br />
+5<br />
+267535<br />
+229127<br />
+693606<br />
+861879<br />
+902375<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+4<br />
+4<br />
+4<br />
+4<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>说明：当龙先生要打某个朋友的电话时，有3种情况：1，恰好打给了这个朋友2，打通了其他人的电话3，空号。现要求计算第2种情况发生的概率。<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

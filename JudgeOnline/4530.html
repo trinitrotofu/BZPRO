@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Bjoi2014]大融合</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4530. [Bjoi2014]大融合</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4530">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4530">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4530">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小强要在N个孤立的星球上建立起一套通信系统。这套通信系统就是连接N个点的一个树。</div>
+<div>这个树的边是一条一条添加上去的。在某个时刻，一条边的负载就是它所在的当前能够</div>
+<div>联通的树上路过它的简单路径的数量。</div>
+<div><img src="upload/201604/ff.png" width="352" height="277" alt="" /></div>
+<div>例如，在上图中，现在一共有了5条边。其中，(3,8)这条边的负载是6，因</div>
+<div>为有六条简单路径2-3-8,2-3-8-7,3-8,3-8-7,4-3-8,4-3-8-7路过了(3,8)。</div>
+<div>现在，你的任务就是随着边的添加，动态的回答小强对于某些边的负载的</div>
+<div>询问。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个整数N,Q，表示星球的数量和操作的数量。星球从1开始编号。</div>
+<div>接下来的Q行，每行是如下两种格式之一：</div>
+<div>A x y 表示在x和y之间连一条边。保证之前x和y是不联通的。</div>
+<div>Q x y 表示询问(x,y)这条边上的负载。保证x和y之间有一条边。</div>
+<div>1&le;N,Q&le;100000</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对每个查询操作，输出被查询的边的负载。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 6<br />
+A 2 3<br />
+A 3 4<br />
+A 3 8<br />
+A 8 7<br />
+A 6 5<br />
+Q 3 8</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

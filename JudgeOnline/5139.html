@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2017 Dec]Greedy Gift Takers</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5139. [Usaco2017 Dec]Greedy Gift Takers</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5139">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5139">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5139">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Farmer John's nemesis, Farmer Nhoj, has NN cows (1&le;N&le;10^5), conveniently numbered 1&hellip;N. They have&nbsp;</div>
+<div>unexpectedly turned up at Farmer John's farm, so the unfailingly polite Farmer John is attempting to</div>
+<div>&nbsp;give them gifts.To this end, Farmer John has brought out his infinite supply of gifts, and Nhoj's c</div>
+<div>ows have queued up in front of him, with cow 11 at the head of the queue and cow N at the tail. Farm</div>
+<div>er John was expecting that at every timestep, the cow at the head of the queue would take a gift fro</div>
+<div>m Farmer John and go to the tail of the queue. However, he has just realized that Nhoj's cows are no</div>
+<div>t that polite! After receiving her gift, each cow may not go to the tail of the queue, but rather ma</div>
+<div>y cut some number of cows at the tail, and insert herself in front of them. Specifically, cow ii wil</div>
+<div>l always cut exactly cici cows (0&le;ci&le;N-1).Farmer John knows that some cows might receive multiple&nbsp;</div>
+<div>gifts; as he has an infinite supply, this does not worry him. But he is worried that some cows might</div>
+<div>&nbsp;become unhappy if they do not get any gifts.Help Farmer John find the number of cows who never rece</div>
+<div>ive any gifts, no matter how many gifts are handed out.</div>
+<div>
+<div>有 N (1 &lt;= N &lt;= 10^5)头牛按顺序排成一列，编号从1到N，1 号牛在队头，N 号牛在队尾。每次位于队头的牛 i&nbsp;</div>
+<div>拿到一个礼物，然后插入到从队尾数 c_i 头牛之前的位置。举个栗子： 初始队列 1 2 3 4 5， c_1 = 2，c_2 =&nbsp;</div>
+<div>3，则第一次操作后的序列为 2 3 4 1 5，第二次操作后的序列为 3 2 4 1 5 。重复无限次操作，求最后有几头牛</div>
+<div>拿不到礼物。</div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line contains a single integer, N.</div>
+<div>The second line contains N space-separated integers c1,c2,&hellip;,cN</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>Please output the number of cows who cannot receive any gifts.</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+1 2 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

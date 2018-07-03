@@ -1,0 +1,89 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Stylish</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4687. Stylish</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4687">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4687">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4687">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Stylish 是一种编程语言，其语法包括名称（拉丁字母组成的序列）、三种分组符号、句号(&lsquo;.&rsquo;)和换行符。分</div>
+<div>组符号即圆括号(&lsquo;(&rsquo;和&lsquo;)&rsquo;)、大括号(&lsquo;{&rsquo;和&lsquo;}&rsquo;)和方括号(&lsquo;[&rsquo;和&lsquo;]&rsquo;)，它们必须正确地匹配和嵌套。</div>
+<div>不同于大多数编程语言，Stylish 使用句号来分隔每个词，而不是使用空格，下图就是一个使用 Stylish 编程的</div>
+<div>例子。</div>
+<div><img src="upload/201608/ff.png" width="566" height="200" alt="" /></div>
+<div>正如你从上面的例子所看到的那样， Stylish 代码通过句号来缩进，每行的缩进量就是前导句号的数量。</div>
+<div>你的任务是向一位 Stylish 编程大师学习他的缩进风格，并成为最年轻的 Stylish 编程大师。一种良好的 Styli</div>
+<div>sh 缩进风格被定义为整数组成的三元组 (R,C,S) &nbsp;，其中 1&le;R,C,S&le;20 ，而 R,C,S 分别表示一个左圆括号、左</div>
+<div>大括号、左方括号所带来的缩进量。在一个具有良好缩进风格的 Stylish 代码里，每一行的缩进量都应该是 R(r_</div>
+<div>o-r_c )+C(c_o-c_c )+S(s_o-s_c ) &nbsp;，其中 r_o,c_o,s_o &nbsp;分别表示这一行之前的左圆括号、左大括号、左方括</div>
+<div>号数量，r_c,c_c,s_c &nbsp;分别表示这一行之前的右圆括号、右大括号、右方括号数量。因此第一行没有任何缩进量</div>
+<div>。上面的例子可以被格式化为缩进风格 (R,C,S)=(9,5,2) &nbsp;。由于第一行只有一个左圆括号，所以第二行的缩进量</div>
+<div>是 9 ，同理第五行的缩进量是 7 。每个 Stylish 编程大师都有自己独特的缩进风格，并且写出的程序都是具有</div>
+<div>良好缩进风格的，你需要写一个程序来模仿 Stylish 编程大师的缩进风格。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入包含多组测试数据。每组数据的第一行包含两个整数 p(1&le;p&le;10) &nbsp;和 q(1&le;q&le;10) &nbsp;。接下来 p 行是一位</div>
+<div>编程大师具有良好缩进风格的代码，再接下来 q 行是一份完全没有缩进的代码。输入以两个零作为结束。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据，则输出 q 行，表示模仿编程大师的代码风格后改写的那份完全没有缩进的代码每一行应该有的缩</div>
+<div>进量，如果缩进量有多种可能则输出-1。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 4<br />
+(Follow.my.style<br />
+.........starting.from.round.brackets)<br />
+{then.curly.brackets<br />
+.....[.and.finally<br />
+.......square.brackets.]}<br />
+(Thank.you<br />
+{for.showing.me<br />
+[all<br />
+the.secrets]})<br />
+4 2<br />
+(This.time.I.will.show.you<br />
+.........(how.to.use.round.brackets)<br />
+.........[but.not.about.square.brackets]<br />
+.........{nor.curly.brackets})<br />
+(I.learned<br />
+how.to.use.round.brackets)<br />
+4 2<br />
+(This.time.I.will.show.you<br />
+.........(how.to.use.round.brackets)<br />
+.........[but.not.about.square.brackets]<br />
+.........{nor.curly.brackets})<br />
+[I.have.not.learned<br />
+how.to.use.square.brackets]<br />
+2 2<br />
+(Be.smart.and.let.fear.of<br />
+..(closed.brackets).go)<br />
+(A.pair.of.round.brackets.enclosing<br />
+[A.line.enclosed.in.square.brackets])<br />
+1 2<br />
+Telling.you.nothing.but.you.can.make.it<br />
+[One.liner.(is).(never.indented)]<br />
+[One.liner.(is).(never.indented)]<br />
+2 4<br />
+([{Learn.from.my.KungFu<br />
+...}])<br />
+((<br />
+{{<br />
+[[<br />
+]]}}))<br />
+1 2<br />
+Do.not.waste.your.time.trying.to.read.from.emptiness<br />
+(<br />
+)<br />
+2 3<br />
+({Quite.interesting.art.of.ambiguity<br />
+....})<br />
+{<br />
+(<br />
+)}<br />
+2 4<br />
+({[<br />
+............................................................]})<br />
+(<br />
+{<br />
+[<br />
+]})<br />
+0 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0 9 14 16<br />
+0 9<br />
+0 -1<br />
+0 2<br />
+0 0<br />
+0 2 4 6<br />
+0 -1<br />
+0 -1 4<br />
+0 20 40 60<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

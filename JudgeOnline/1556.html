@@ -1,0 +1,32 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>墓地秘密</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1556. 墓地秘密</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1556">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1556">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1556">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">费尽周折，终于将众将士的残骸运送到了KD军事基地地底层的大型墓地入口。KD的伙伴和战友们都参加了这次重大的送葬仪式。右边是一扇敞开的大门，进去便是墓地了，左边是一堵凹进去的墙，没有什么特别的地方。
+部队缓缓进入右边的门，一切。。。就这么结束了么。。。。。
+此时， F却没有跟上队伍，在一般MM都会有的强烈的第六感之下，她来到了左边这堵墙前一探究竟。扫去了重重的灰尘之后，墙上一块凹进去的手掌印清晰可见了。F试着用自己的手对上去，竟刚好合适。稍微用力一按，顿时一声巨响，地上马上裂开一大洞，F和那厚重的墙瞬间一起落入深渊！当其他人听见了巨大的声响而赶来的时候，一切都恢复平静了。只有那堵墙后面的世界，震惊了所有生物。这到底是什么，为什么会在墓地里面？
+墙的后面是一个巨大的迷宫！简单的一行字浮现在了一侧的墙上：猛烈撞击所有发亮的机关石。当大伙好奇的蜂拥进迷宫的时候，一块莫名其妙的巨石竟从入口上方落下，将入口完全堵死了！石头上清晰的写了一行字：超过规定时间不能完成任务，全部人都会困死于此。看来，只有硬着头皮去闯，才有可能离开这里，并且探索出这个迷宫的秘密了。
+于是大家马上散开，很快摸清了这里的地形，剩下的任务就是轰击石头了。那么。。。论攻击力最高的，自然非功夫DP莫属，而且功夫DP可以使用前滚翻移动法，能够瞬间获得巨大的初速度，并且在直线运动的时候速度将近似光速，质量无穷大，那动能自然就。。。。。。DP每次可以选择朝一个方向滚动，并且可以自己选择在某位置停下来，或者撞击到墙和石头的时候被迫停下来。由于直线速度过快，所以要停下来拐弯自然就是很麻烦的事情。那么只有制定出一个最好的运动方法，使得DP停下来次数最少，才能争取尽量多的时间！
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行3个正整数N、M和T。表示这是一个N*M的迷宫，并且有T个机关石。
+接下来用一个N*M的字符矩阵描述迷宫，．表示是空地，#表示是墙。
+接下来T行每行2个正整数X、Y，描述一个机关石的位置，它在迷宫对应的位置是#。不会有两个机关石在同一位置。
+最后一行2个正整数X0、Y0，表示DP的初始位置。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>
+一个正整数ANS，表示DP至少要停下来多少次才能撞击完所有的机关石。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 6 3<br />
+……<br />
+….#.<br />
+…..#<br />
+….#.<br />
+2 5<br />
+3 6<br />
+4 5<br />
+1 5<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>数据规模：<br />
+对于10%的数据，N、M<=10，T<=2；<br />
+对于40%的数据，N、M<=50，T<=10；<br />
+对于100%的数据，N、M<=100，T<=15；<br />
+注意事项：<br />
+迷宫的最外层是墙，即任何时候不可能滚出迷宫，墙是撞不烂的（好硬）！<br />
+每次DP只能选择4个基本方向中的一个方向移动，每块机关石都必须被撞击，撞击后变成普通的墙。<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

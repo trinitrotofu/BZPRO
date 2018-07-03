@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>装备合成</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3443. 装备合成</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：15 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3443">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3443">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3443">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">【背景】</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; lll6924在某游戏中有n件装备。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 游戏中共有m种属性，装备有属性加成。当将A装备合成到B装备上时，A装备消失，B装备的所有小于A装备的属性更新为A装备的这个属性。然而lll6924的记性不太好，因为装备很多，所以一些属性常常记错，他在合成时会突然想起，某个装备的某个属性的初始值应该是多少（暂且认为修改后是正确的，这个属性可能会被修改多次）（请注意，这是理解题意的难点，请结合样例）。在合成过程中lll6924想知道一些装备的一些属性（根据之前给出的数据（初始属性、合成、修改），输出装备当前认为是正确的属性）。</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 输入有n+1+q行，第一行有三个用空格隔开的正整数n、m、q，q表示操作（合成操作、询问操作和修改操作）数。接下来的n行，每行有m个用空格隔开的正整数，表示这个装备的各个属性。接下来的q行，每行格式为&ldquo;k a b c&rdquo;，若k为1，则为将第a个装备合成到第b个装备，输入数据保证a、b装备存在，此时c=0。若k为2，则为询问第a个装备的第b个属性（若第a个装备已被合成掉，则输出该装备在被合成前的第b个属性是多少），此时c=0。若k为3，则为将第a个装备的第b个属性的初始值更新为c（注意，若a装备已被合成掉，该操作仍然有效，会影响他合成到的装备的属性）。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 输出如输入格式所述，每个输出占一行。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 5 10<br />
+1 2 3 4 3<br />
+0 0 0 0 0<br />
+2 0 0 0 0<br />
+1 1 2 0<br />
+2 2 3 0<br />
+3 2 4 5<br />
+1 2 3 0<br />
+3 1 3 2<br />
+2 3 1 0<br />
+3 3 1 0<br />
+2 3 1 0<br />
+2 3 4 0<br />
+2 2 3 0<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+2<br />
+1<br />
+5<br />
+2<br />
+【数据范围及约定】<br />
+100%的数据，0＜n≤1500,0＜m≤400，0＜q≤200000，0≤装备属性≤50000。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img height="487" alt="" width="606" src="upload/201402/11.jpg" /></p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,63 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2017]摧毁“树状图”</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4871. [Shoi2017]摧毁“树状图”</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：25 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4871">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4871">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4871">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>自从上次神刀手帮助蚯蚓国增添了上千万人口（蚯口？），蚯蚓国发展得越来越繁荣了！最近，他们在地下发现了</div>
+<div>一些神奇的纸张，经过仔细研究，居然是D国X市的超级计算机设计图纸！这台计算机叫做&lsquo;树状图&rsquo;，由n个计算</div>
+<div>节点与n1条可以双向通信的网线连接而成，所有计算节点用不超过n的正整数编号。顾名思义，这形成了一棵树的</div>
+<div>结构。蚯蚓国王已在图纸上掌握了这棵树的完整信息，包括n的值与n1条网线的连接信息。于是蚯蚓国王决定，派</div>
+<div>出蚯蚓国最强大的两个黑客，小P和小H，入侵&lsquo;&lsquo;树状图&rsquo;&rsquo;，尽可能地摧毁它。小P和小H精通世界上最好的编程</div>
+<div>语言，经过一番商量后，他们决定依次采取如下的步骤：小P选择某个计算节点，作为他入侵的起始点，并在该节</div>
+<div>点上添加一个P标记。重复以下操作若干次（可以是0次）：&ndash;小P从他当前所在的计算节点出发，选择一条没有被</div>
+<div>标记过的网线，入侵到该网线的另一端的计算节点，并在路过的网线与目的计算节点上均添加一个P标记。小H选择</div>
+<div>某个计算节点，作为她入侵的起始点，并在该节点上添加一个H标记。重复以下操作若干次（可以是0次）：&ndash;小H</div>
+<div>从她当前所在的计算节点出发，选择一条没有被标记过的网线，入侵到该网线的另一端的计算节点，并在路过的网</div>
+<div>线与目的计算节点上均添加一个H标记。（注意，小H不能经过带有P标记的网线，但是可以经过带有P标记的计算节</div>
+<div>点）删除所有被标记过的计算节点和网线。对于剩下的每条网线，如果其一端或两端的计算节点在上一步被删除了</div>
+<div>，则也删除这条网线。经过以上操作后，&lsquo;&lsquo;树状图&rsquo;&rsquo;会被断开，剩下若干个（可能是0个）连通块。为了达到</div>
+<div>摧毁的目的，蚯蚓国王希望，连通块的个数越多越好。于是他找到了你，希望你能帮他计算这个最多的个数。小P</div>
+<div>和小H非常心急，在你计算方案之前，他们可能就已经算好了最优方案或最优方案的一部分。你能得到一个值x：若</div>
+<div>x=0，则说明小P和小H没有算好最优方案，你需要确定他们两个的入侵路线。若x=1，则说明小P已经算好了某种两</div>
+<div>人合作的最优方案中，他的入侵路线。他将选择初始点p0，并沿着网线一路入侵到了目标点p1，并且他不会再沿着</div>
+<div>网线入侵；你只需要确定小H的入侵路线。若x=2，则说明小P和小H算好了一种两人合作的最优方案，小P从点p0入</div>
+<div>侵到了p1并停下，小H从点h0入侵到了h1并停下。此时你不需要指挥他们入侵了，只需要计算最后两步删除计算节</div>
+<div>点与网线后，剩下的连通块个数即可。</div>
+<div></div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>每个输入文件包含多个输入数据。输入文件的第一行为两个整数 T 和 x， T 表示</div>
+<div>该文件包含的输入数据个数， x 的含义见上述。（同一个输入文件的所有数据的 x 都是相同的）</div>
+<div>接下来依次输入每个数据。</div>
+<div>每个数据的第一行有若干个整数：</div>
+<div>&nbsp;若 x = 0，则该行只有一个整数 n。</div>
+<div>&nbsp;若 x = 1，则该行依次有三个整数 n, p0, p1。</div>
+<div>&nbsp;若 x = 2，则该行依次有五个整数 n, p0, p1, h0, h1。</div>
+<div>保证 p0, p1, h0, h1 均为不超过 n 的正整数。</div>
+<div>每个数据接下来有 n &nbsp;1 行，每行有两个不超过 n 的正整数，表示这两个编号的计</div>
+<div>算节点之间有一条网线将其相连。保证输入的是一棵树。</div>
+<div>同一行相邻的整数之间用恰好一个空格隔开。</div>
+<div>对于整数 k，设 &sum; n^k 为某个输入文件中，其 T 个输入数据的 n^k 之和。</div>
+<div>所有输入文件满足 T &le; 10^5, &sum; n^1 &le; 5 &times; 10^5。</div>
+<div>数据文件可能较大，请避免使用过慢的输入输出方法。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个数据，输出一行，表示在给定条件下，剩下连通块的最大个数。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1 0<br />
+13<br />
+1 2<br />
+2 3<br />
+2 4<br />
+4 5<br />
+4 6<br />
+4 7<br />
+7 8<br />
+7 9<br />
+9 10<br />
+10 11<br />
+10 12<br />
+12 13<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8<br />
+这个输入文件只有一个输入数据。一种最优的方案如下：<br />
+ 小 P 从节点 2 开始入侵，节点 2 被小 P 标记。<br />
+ 小 P 从节点 2 入侵到节点 4，节点 4 和经过的网线被小 P 标记。<br />
+ 小 P 从节点 4 入侵到节点 7，节点 7 和经过的网线被小 P 标记。<br />
+ 小 H 从节点 10 开始入侵，节点 10 被小 H 标记。<br />
+ 删除被标记的节点 2,4,7,10 和被标记的网线 (2,4) 和 (4,7)。<br />
+ 删除任意一端在上一步被删除的网线。<br />
+此时还剩下 8 个连通块。其中节点 1,3,5,6,8,9,11 各自形成一个连通块，节点 12,13<br />
+形成了一个连通块。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;2017.4.28新加数据一组By&nbsp;150137</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

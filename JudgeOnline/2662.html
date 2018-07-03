@@ -1,0 +1,54 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeiJing wc2012]冻结 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2662. [BeiJing wc2012]冻结 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：3 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2662">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2662">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2662">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">&nbsp; &ldquo;我要成为魔法少女！&rdquo;&nbsp;&nbsp; <br />
+&nbsp; &ldquo;那么，以灵魂为代价，你希望得到什么？&rdquo; <br />
+&ldquo;我要将有关魔法和奇迹的一切，封印于卡片之中&bdquo;&bdquo;&rdquo;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; <br />
+&nbsp; 在这个愿望被实现以后的世界里，人们享受着魔法卡片（SpellCard，又名符<br />
+卡）带来的便捷。 <br />
+&nbsp;<br />
+现在，不需要立下契约也可以使用魔法了！你还不来试一试？ <br />
+&nbsp; 比如，我们在魔法百科全书（Encyclopedia&nbsp; of&nbsp; Spells）里用&ldquo;freeze&rdquo;作为关<br />
+键字来查询，会有很多有趣的结果。 <br />
+例如，我们熟知的Cirno，她的冰冻魔法当然会有对应的 SpellCard 了。 当然，<br />
+更加令人惊讶的是，居然有冻结时间的魔法，Cirno 的冻青蛙比起这些来真是小<br />
+巫见大巫了。 <br />
+这说明之前的世界中有很多魔法少女曾许下控制时间的愿望，比如 Akemi <br />
+Homura、Sakuya Izayoi、&bdquo;&bdquo; <br />
+当然，在本题中我们并不是要来研究历史的，而是研究魔法的应用。 <br />
+&nbsp;<br />
+我们考虑最简单的旅行问题吧：&nbsp; 现在这个大陆上有 N 个城市，M 条双向的<br />
+道路。城市编号为 1~N，我们在 1 号城市，需要到 N 号城市，怎样才能最快地<br />
+到达呢？ <br />
+&nbsp; 这不就是最短路问题吗？我们都知道可以用 Dijkstra、Bellman-Ford、<br />
+Floyd-Warshall等算法来解决。 <br />
+&nbsp; 现在，我们一共有 K 张可以使时间变慢 50%的 SpellCard，也就是说，在通<br />
+过某条路径时，我们可以选择使用一张卡片，这样，我们通过这一条道路的时间<br />
+就可以减少到原先的一半。需要注意的是： <br />
+&nbsp; 1. 在一条道路上最多只能使用一张 SpellCard。 <br />
+&nbsp; 2. 使用一张SpellCard 只在一条道路上起作用。 <br />
+&nbsp; 3. 你不必使用完所有的 SpellCard。 <br />
+&nbsp;&nbsp; <br />
+&nbsp; 给定以上的信息，你的任务是：求出在可以使用这不超过 K 张时间减速的<br />
+SpellCard 之情形下，从城市1 到城市N最少需要多长时间。 </span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
+第一行包含三个整数：N、M、K。 <br />
+接下来 M 行，每行包含三个整数：Ai、Bi、Timei，表示存在一条 Ai与 Bi之<br />
+间的双向道路，在不使用 SpellCard 之前提下，通过它需要 Timei的时间。 </span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">输出一个整数，表示从1 号城市到 N号城市的最小用时。 </span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 4 1 <br />
+1 2 4 <br />
+4 2 6 <br />
+1 3 8 <br />
+3 4 8 <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7 <br />
+【样例1 解释】 <br />
+  在不使用 SpellCard 时，最短路为 1à2à4，总时间为 10。现在我们可<br />
+以使用 1 次 SpellCard，那么我们将通过 2à4 这条道路的时间减半，此时总<br />
+时间为7。 <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>对于100%的数据：1&nbsp; &le;&nbsp; K&nbsp; &le;&nbsp; N &le;&nbsp; 50，M&nbsp; &le;&nbsp; 1000。 <br /><br />
+&nbsp; 1&le;&nbsp; Ai，Bi &le;&nbsp; N，2 &le;&nbsp; Timei&nbsp; &le;&nbsp; 2000。 <br /><br />
+为保证答案为整数，保证所有的 Timei均为偶数。 <br /><br />
+所有数据中的无向图保证无自环、重边，且是连通的。&nbsp;&nbsp;&nbsp;<br /><br />
+&nbsp;</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

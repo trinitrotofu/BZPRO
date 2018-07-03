@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeiJing2016]打字机</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4629. [BeiJing2016]打字机</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4629">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4629">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4629">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小 J 在搬家的过程中发现了一台古老的打字机。 好奇的小 J 决定研究如何使用它。首先，需要将一条长度为 m&nbsp;</div>
+<div>的纸带放入打字机。打字机上共有 26 个按键，分别是小写字母 &rsquo;a&rsquo; - &rsquo;z&rsquo;。每当你按下一个按键时，打字机</div>
+<div>就会立即在纸带上打印出那个字符，并将纸带平移一个单位距离。聪明的小 J 很快就掌握了这款打字机的使用技</div>
+<div>巧，并想尝试新的挑战。他拿出了一本字典，挑选了 n 个单词，并给每个单词设定了分数。纸带中每出现一次指</div>
+<div>定的单词，就会得到对应的分数。例如， 单词 &rsquo;eye&rsquo; 的分数为 2， &rsquo;year&rsquo; 的分数为 3，那么纸带 &rsquo;eyeye</div>
+<div>year&rsquo; 的分数为 9 分。小 J 希望挑战自己，打出分数最高的纸带。特别地，小 J 偶尔会手抖，按到自己不想输</div>
+<div>入的字符。由于这台古老的打字机没有退格（删除）功能，所以小 J 只能接受按错这个事实，重新规划在按错的</div>
+<div>情况下如何得最高分。倘若小 J 有可能在任意位置按错按键，并保证整个过程中按错的次数不超过 k 次，那么请</div>
+<div>你算出他在最坏情况下的最高得分是多少。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含 3 个非负整数 n, m, k，分别表示单词数量、纸带长度和最多按错次数。</div>
+<div>接下来 n 行，每行为一个字符串 Si和正整数 Ai，由空格隔开，描述一个单词及其得分。</div>
+<div>n &le; 100， m &le; 109，&sum;|Si| &le; 500， Ai &le;1000， k &le; 5</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>仅一行，包含一个整数，表示最坏情况下的最大得分</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 4 1<br />
+w 1<br />
+ha 9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9<br />
+//首先，展示一种错误的思路如下：<br />
+“共 4 种情况，即第 1 位按错、第 2 位按错、第 3 位按错和第 4 位按错。<br />
+1、第 1 位按错（不妨假设按成 ’x’，下同），最高得分为 ’xwha’，得分为 10。<br />
+2、第 2 位按错，最高得分为 ’wxha’，同样为 10 分。<br />
+3、第 3 位按错，最高得分为 ’haxw’，同样为 10 分。<br />
+4、第 4 位按错，最高得分为 ’hawx’，同样为 10 分。<br />
+综上，最坏情况下最高得分为 10 分。”<br />
+这种思路的错误之处在于，你不能根据哪一位按错决定你第一位按哪个键。 换种说法，<br />
+你在哪一位按错，是在按下那个按键之后才能知道的事情。 正确的思路如下：<br />
+1、第 1 位先按 ’h’，倘若按对， goto 2，倘若按错， goto 4；<br />
+2、 第 2 位按 ’a’，倘若按对， goto 3，倘若按错， goto 5；<br />
+3、 第 3 位和第 4 位都按 ’w’， 结束。 至多错 1 次，最终纸带为 ’hawx’ 或 ’haxw’，<br />
+得分为 10 分。<br />
+4、后面三位依次按 ’haw’， 结束。 因为不会再错， 最终纸带为’xhaw’，得分为 10 分。<br />
+5、后面两位依次按 ’ha’， 结束。因为不会再错， 最终纸带为’hxha’，得分为 9 分。<br />
+综上，最坏情况下，最高得分为 9 分</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>测试点 1 &ndash; 2 满足，n = 1 或 k = 0；</div><br />
+<div>测试点 1 &ndash; 6 满足，n &le; 100，m &le; 500，&sum;|Si| &le; 500，A i &le;1000；</div><br />
+<div>测试点 7 &ndash; 8 满足，k = 0，&sum;|Si| &le; 200；</div><br />
+<div>测试点 9 &ndash; 10 满足，&sum;|Si| &le; 50，A i &le;1。</div><br />
+<div>对于 100%的数据，n &le; 100，m &le; 10 9 ，&sum;|Si| &le; 500，A i &le;1000，k &le; 5。</div><br />
+<div>也就是说对于m比较大的那些测试点是有特殊性质的</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

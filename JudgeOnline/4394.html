@@ -1,0 +1,40 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2015 dec]Bessie</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4394. [Usaco2015 dec]Bessie</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4394">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4394">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4394">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>After eating too much fruit in Farmer John's kitchen, Bessie the cow is getting some very strange dreams! In her most recent dream, she is trapped in a maze in the shape of an N&times;M grid of tiles (1&le;N,M&le;1,000). She starts on the top-left tile and wants to get to the bottom-right tile. When she is standing on a tile, she can potentially move to the adjacent tiles in any of the four cardinal directions.<br />
+<br />
+But wait! Each tile has a color, and each color has a different property! Bessie's head hurts just thinking about it:<br />
+<br />
+&nbsp;&nbsp;&nbsp; If a tile is red, then it is impassable.<br />
+&nbsp;&nbsp;&nbsp; If a tile is pink, then it can be walked on normally.<br />
+&nbsp;&nbsp;&nbsp; If a tile is orange, then it can be walked on normally, but will make Bessie smell like oranges.<br />
+&nbsp;&nbsp;&nbsp; If a tile is blue, then it contains piranhas that will only let Bessie pass if she smells like oranges.<br />
+&nbsp;&nbsp;&nbsp; If a tile is purple, then Bessie will slide to the next tile in that direction (unless she is unable to cross it). If this tile is also a purple tile, then Bessie will continue to slide until she lands on a non-purple tile or hits an impassable tile. Sliding through a tile counts as a move. Purple tiles will also remove Bessie's smell. <br />
+<br />
+(If you're confused about purple tiles, the example will illustrate their use.)<br />
+<br />
+Please help Bessie get from the top-left to the bottom-right in as few moves as possible.</p>
+<p></p>
+<p>奶牛Bessie被困在了N*M的网格图迷宫中，她位于左上角(1,1)，出口在右下角(N,M)。Bessie只能上下左右行走。</p>
+<p>每块地砖都有一个颜色：</p>
+<p>如果是红色，那么不可通行。</p>
+<p>如果是粉色，那么可以通行。</p>
+<p>如果是橙色，那么可以通行，但是会给Bessie带上橘子的气味。</p>
+<p>如果是蓝色，那么当且仅当Bessie带着橘子的气味时，才可以通行。</p>
+<p>如果是紫色，那么Bessie会保持原有方向滑过去，如果之后仍然是紫色，那么会继续滑。当滑到不是紫色的地砖上或者不可通行的时候，才会停下来。并且这会消除Bessie身上的气味。每一步滑行和走路一样，都需要耗费一单位时间。</p>
+<p>请输出Bessie逃到出口所需的最短时间。</p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>The first line has two integers N and M, representing the number of rows and columns of the maze.<br />
+<br />
+The next NN lines have MM integers each, representing the maze:<br />
+<br />
+&nbsp;&nbsp;&nbsp; The integer '0' is a red tile<br />
+&nbsp;&nbsp;&nbsp; The integer '1' is a pink tile<br />
+&nbsp;&nbsp;&nbsp; The integer '2' is an orange tile<br />
+&nbsp;&nbsp;&nbsp; The integer '3' is a blue tile<br />
+&nbsp;&nbsp;&nbsp; The integer '4' is a purple tile <br />
+<br />
+The top-left and bottom-right integers will always be '1'.</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>A  single integer, representing the minimum number of moves Bessie must  use to cross the maze, or -1 if it is impossible to do so.</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 4<br />
+1 0 2 1<br />
+1 1 4 1<br />
+1 0 4 0<br />
+1 3 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>In this example, Bessie walks one square down and two squares to the right (and then slides one more square to the right). She walks one square up, one square left, and one square down (sliding two more squares down) and finishes by walking one more square right. This is a total of 10 moves (DRRRULDDDR).</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

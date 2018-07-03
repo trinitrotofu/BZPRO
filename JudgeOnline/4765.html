@@ -1,0 +1,36 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>普通计算姬</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4765. 普通计算姬</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4765">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4765">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4765">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>&quot;奋战三星期，造台计算机&quot;。小G响应号召，花了三小时造了台普通计算姬。普通计算姬比普通计算机要厉害一些</div>
+<div>。普通计算机能计算数列区间和，而普通计算姬能计算树中子树和。更具体地，小G的计算姬可以解决这么个问题</div>
+<div>：给定一棵n个节点的带权树，节点编号为1到n，以root为根，设sum[p]表示以点p为根的这棵子树中所有节点的权</div>
+<div>值和。计算姬支持下列两种操作:</div>
+<div>1 给定两个整数u,v，修改点u的权值为v。</div>
+<div>2 给定两个整数l,r，计算sum[l]+sum[l+1]+....+sum[r-1]+sum[r]</div>
+<div>尽管计算姬可以很快完成这个问题，可是小G并不知道它的答案是否正确，你能帮助他吗？</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数n,m，表示树的节点数与操作次数。</div>
+<div>接下来一行n个整数，第i个整数di表示点i的初始权值。</div>
+<div>接下来n行每行两个整数ai,bi，表示一条树上的边，若ai=0则说明bi是根。</div>
+<div>接下来m行每行三个整数，第一个整数op表示操作类型。</div>
+<div>若op=1则接下来两个整数u,v表示将点u的权值修改为v。</div>
+<div>若op=2则接下来两个整数l,r表示询问。</div>
+<div>N&lt;=10^5,M&lt;=10^5</div>
+<div>0&lt;=Di,V&lt;2^31,1&lt;=L&lt;=R&lt;=N,1&lt;=U&lt;=N</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对每个操作类型2输出一行一个整数表示答案。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 4<br />
+0 0 3 4 0 1<br />
+0 1<br />
+1 2<br />
+2 3<br />
+2 4<br />
+3 5<br />
+5 6<br />
+2 1 2<br />
+1 1 1<br />
+2 3 6<br />
+2 3 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>16<br />
+10<br />
+9</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

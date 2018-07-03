@@ -1,0 +1,24 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Zjoi2016]电阻网络</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4575. [Zjoi2016]电阻网络</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4575">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4575">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4575">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>小Y是一个充满智慧的女孩子，但是她只会使用串并联的方法计算两个节点之间的电阻。现在小Y有一个电阻网络问</div>
+<div>有多少点对u,v(u&ne;v)之间的电阻可以用串并联的方法计算出来。我们来形式化地定义一下点对u,v(u&ne;v)之间的电</div>
+<div>阻能否用串并联的方法计算出来。首先我们把电阻网络看成一个n个点m条边的图（每个电阻对应一条边）。令S表</div>
+<div>示从u到v的所有简单路径(不经过重复的点的路径)上点的并集，也就是对于一个点x，如果存在一条从u到v的简单</div>
+<div>路径经过这个点，那么它就在集合S中。如果S非空且S的导出子图是u,v为端点的二端串并联图，那么u,v之间的电</div>
+<div>阻就能用串并联方法计算。一个有两个不同端点s,t的图被称为二端图，其中一个称为源点，另一个称为汇点。两</div>
+<div>个二端图X,Y并联(parallelcomposition)是指建一个新图，把X和Y的源点和汇点分别合并起来。两个二端图X,Y串</div>
+<div>联(seriescomposition)是指建一个新图，把X的汇点和Y的源点合并起来。由若干个两个点一条边的二端图经过一</div>
+<div>系列串并联变化之后形成的图称为二端串并联图。集合S的导出子图点集为S，边集由原图中两个端点都在S中的边</div>
+<div>构成</div>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含2个正整数n,m，表示电阻网络中的节点数和电阻数。接下来m行，每行包含2个正整数u,v(1&le;u,v&le;n,u</div>
+<div>&ne;v)，表示有一个电阻在节点u和v之间</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出共1行，表示答案，即有多少点对之间的电阻可以使用串并联的方法计算出来。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 6<br />
+1 2<br />
+1 3<br />
+1 4<br />
+2 3<br />
+2 4<br />
+5 6<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+//可行的点对有(1,2),(1,3),(1,4),(2,3),(2,4),(5,6)。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,32 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[2009国家集训队]神奇的K线</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1953. [2009国家集训队]神奇的K线</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1953">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1953">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1953">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>小明爱上了炒股。经过近段时间的观察和整理，他发现了如果一个股<br />
+票出现了某种形态的k线，那么这个股票不久之后一定会大涨。小明<br />
+想利用这种神奇的k线来做一个股票软件。他将一条k线用整数序列a<br />
+来表示，并规定当且仅当a[i+1]-a[i]=p[i]时，这条k线是一条神奇<br />
+的k线。但是事情总不是一帆风顺的，小明发现许多k线不是神奇的，<br />
+但之后也能大涨。不过他发现这些k线都和神奇的k线很接近。为了进<br />
+一步扩展神奇的k线的用途，小明定义了两条k线b和a的差异度： 将b<br />
+中某一个元素修改成任意值的代价为cost1，将b中某一个元素删除的<br />
+代价为cost2。将b修改成a的前缀的最小的代价和就是b和a的差异度<br />
+。这里的前缀的定义有点特别，假设b的长度为m，b是a的前缀当且仅<br />
+当b[i+1]-b[i]=a[i+1]-a[i](1&lt;=i</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行三个正整数n，cost1，cost2。<br />
+n表示给出的k线a的长度，cost1和cost2的含义如题。<br />
+第二行n-1个整数，依次表示p[1]到p[n-1]，含义如题。 <br />
+第三行n个整数，依次表示给出的k线a中的n个元素。<br />
+n&lt;=1500<br />
+cost1，cost2&lt;=1000000<br />
+p中每个元素的绝对值均&lt;=1000<br />
+a中每个元素的绝对值均&lt;=1000000</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>一个数，a和神奇的k线的差异度。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 1 2<br />
+1 2 3 4 5 6 7<br />
+0 1 999 6 10 -999 15 21<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+【样例解释】<br />
+将999改为3，删去-999，得到序列0 1 3 6 10 15 21。不存在代价更<br />
+小的方案。<br />
+<br />
+<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Graph2</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3082. Graph2</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：100 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3082">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3082">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3082">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">一个无向图，N个点，编号从1~N，M条边，编号从1~M。接下来Q个操作，插入一条边，编号为原有编号数+1；删除一条边，编号数不变；询问两个点是否能够互达。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">第一行两个整数N,M</span></div>
+<div><span style="font-size: medium">接下来M行，每行两个整数，表示该条边所连接的两个点。</span></div>
+<div><span style="font-size: medium">接下来一行一个整数Q</span></div>
+<div><span style="font-size: medium">接下来Q行，是以下三种之一:</span></div>
+<div><span style="font-size: medium">D x，表示删除编号为x的边（一条边被删除多次等价于删除一次）</span></div>
+<div><span style="font-size: medium">I x y，表示在点x和点y之间插入一条边</span></div>
+<div><span style="font-size: medium">Q x y，表示询问点x和点y是否能互达</span></div>
+<div><span style="font-size: medium">保证点和边的编号合法。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">对于每个询问输出一行，&rdquo;Yes&rdquo;表示能达到，&rdquo;No&rdquo;表示不能。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 1<br />
+1 2<br />
+5<br />
+Q 1 2<br />
+D 1<br />
+Q 1 2<br />
+I 1 2<br />
+Q 1 2<br />
+ <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Yes<br />
+No<br />
+Yes<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><br /><br />
+对于100%的数据，N&lt;=50000,M&lt;=100000,Q&lt;=100000</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

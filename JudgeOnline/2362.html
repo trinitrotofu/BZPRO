@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>二叉树计数</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2362. 二叉树计数</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2362">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2362">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2362">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div align="center"><b>&nbsp;</b></div>
+<div style="text-indent: 20.25pt" align="left">在那个植树节，晚上，小L，小H，小X讨论起了一个关于树的问题：</div>
+<div style="text-indent: 20.25pt" align="left">有多少个不同的二叉树最长链为<i>N</i>。</div>
+<div style="text-indent: 20.25pt" align="left">但是他们发现，答案随<i>N</i>增长的速度太快了，他们想不出什么好方法，便求助于你。</div>
+<div style="text-indent: 20.25pt" align="left">由于答案可能会很大，你只需要输出答案mod 10<i><sup>K</sup></i>后的结果即可。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div align="left">包含两个正整数<i>N</i>，<i>K</i>。表示询问有多少个不同的二叉树最长链为<i>N</i>。</div>
+<div style="text-indent: 20.25pt" align="left">&nbsp;</div>
+<div align="left"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div align="left">包含一个非负整数，为答案mod 10<i><sup>K</sup></i>后的结果。</div>
+<div align="left">&nbsp;</div>
+<div style="text-indent: 20.25pt" align="left"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 10<br />
+ <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+ <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>对于100%的数据，有N&le;200000，K&le;64；<br /><br />
+&nbsp;<br /><br />
+【提示】<br /><br />
+关于二叉树：<br /><br />
+二叉树的递归定义：二叉树要么为空，要么由根结点，左子树，右子树组成。左子树和右子树分别是一棵二叉树。<br /><br />
+请注意，有根树和二叉树的三个主要差别：<br /><br />
+1. 树的结点个数至少为1，而二叉树的结点个数可以为0；<br /><br />
+2. 树中结点的最大度数没有限制，而二叉树结点的最大度数为2；<br /><br />
+3. 树的结点无左、右之分，而二叉树的结点有左、右之分。<br /><br />
+关于最长链：<br /><br />
+最长链为这棵二叉树中一条最长的简单路径，即不经过重复结点的一条路径。可以容易证明，二叉树中最长链的起始、结束结点均为叶子结点。<br /><br />
+&nbsp;</p><br />
+<p><br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

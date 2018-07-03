@@ -1,0 +1,114 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Wf2016]Spin Doctor</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4617. [Wf2016]Spin Doctor</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4617">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4617">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4617">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>大选要到了，受候选人X的要求，你调查了n个人，并记录了每个人的3个信息：</div>
+<div>ai--他们能记忆&pi;的多少位</div>
+<div>bi--他们的头发数量</div>
+<div>ci--他们是否会给候选人X投票</div>
+<div>你需要找到某个公式使这些结果看起来有意义。你要选择2个实数S和T，将所有调查结果按ai*S+bi*T排序。如果ci</div>
+<div>为true的人聚集在了一起，你会觉得这个排序看起来不错。更准确地说，如果j和k分别是第一个和最后一个ci为tr</div>
+<div>ue的人的下标，你想要最小化k-j+1。注意有些S和T会让排序时出现相等的情况，这时你应该假设最坏情况发生，</div>
+<div>即排序使得k-j+1最大。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个数n(1 &le; n &le; 250000)为被调查的人数。</div>
+<div>接下来每行描述一个人的ai(0 &le; ai &le; 2000000)、bi(0 &le; bi &le; 2000000)、ci</div>
+<div>ci是一个0/1变量。保证至少有一个人投了X的票（即至少有一个ci为true）</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于所有可能的实数对(S,T)，输出最小的k-j+1。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>100<br />
+7487 4751 1<br />
+7499 5064 1<br />
+7471 5376 1<br />
+7404 5683 1<br />
+7300 5979 1<br />
+7159 6260 1<br />
+6984 6520 1<br />
+6777 6757 1<br />
+6543 6966 1<br />
+6284 7144 1<br />
+6006 7288 1<br />
+5711 7396 1<br />
+5405 7466 1<br />
+5092 7498 1<br />
+4780 7490 1<br />
+4469 7442 1<br />
+4167 7357 1<br />
+3878 7234 1<br />
+3607 7075 1<br />
+3358 6884 1<br />
+3135 6664 1<br />
+2941 6417 1<br />
+2780 6147 1<br />
+2653 5860 1<br />
+2564 5559 1<br />
+2513 5249 1<br />
+2501 4936 1<br />
+2529 4624 1<br />
+2596 4317 1<br />
+2700 4021 1<br />
+2841 3740 1<br />
+3016 3480 1<br />
+3223 3243 1<br />
+3457 3034 1<br />
+3716 2856 1<br />
+3994 2712 1<br />
+4289 2604 1<br />
+4595 2534 1<br />
+4908 2502 1<br />
+5220 2510 1<br />
+5531 2558 1<br />
+5833 2643 1<br />
+6122 2766 1<br />
+6393 2925 1<br />
+6642 3116 1<br />
+6865 3336 1<br />
+7059 3583 1<br />
+7220 3853 1<br />
+7347 4140 1<br />
+7436 4441 1<br />
+4946 8828 0<br />
+8742 4313 0<br />
+2126 2132 0<br />
+9435 3372 0<br />
+5088 584 0<br />
+278 7609 0<br />
+464 5305 0<br />
+1577 509 0<br />
+2804 8754 0<br />
+9047 1580 0<br />
+1558 5541 0<br />
+3041 9135 0<br />
+7723 9004 0<br />
+3245 7600 0<br />
+3274 8477 0<br />
+7867 5690 0<br />
+4184 9319 0<br />
+8425 475 0<br />
+942 6676 0<br />
+8254 1405 0<br />
+7168 6512 0<br />
+2541 51 0<br />
+3017 7811 0<br />
+6805 39 0<br />
+4351 8732 0<br />
+533 9472 0<br />
+1513 9570 0<br />
+634 790 0<br />
+5809 9609 0<br />
+6536 8399 0<br />
+5640 9504 0<br />
+2408 9157 0<br />
+1271 1853 0<br />
+1976 2706 0<br />
+9332 7001 0<br />
+1048 3322 0<br />
+9764 9397 0<br />
+1901 1449 0<br />
+3985 2122 0<br />
+7139 9767 0<br />
+5835 8305 0<br />
+746 585 0<br />
+3025 8187 0<br />
+2301 782 0<br />
+9741 3033 0<br />
+3960 8756 0<br />
+693 3827 0<br />
+1169 7143 0<br />
+556 8694 0<br />
+3721 1983 0<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>61</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

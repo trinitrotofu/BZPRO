@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Lydsy2017省队十连测]绝版题</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5243. [Lydsy2017省队十连测]绝版题</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5243">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5243">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5243">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>所谓的考试，就一定有一道绝版题使得男人沉默女人流泪，而不有理有据的绝版题怎么称得上绝版呢？火车国一开</div>
+<div>始只有一座城市，也就是1号城市。不过火车国的领土是在不断变化的，经常会新添加一个城市，那么小火车就会</div>
+<div>用一条铁路把它和某个老城市连接起来。偶尔火车国会发生自然灾害，那么小火车就得找到一个合适的城市指挥赈</div>
+<div>灾，这个城市满足所有城市到其距离乘以城市人口的和最小，如果有不止一个最小的城市时小火车会选择距离1号</div>
+<div>城市最近的。当然火车国人口也是不断变化的，也就是说有时候某个城市的人口会改变。现在小火车请你告诉他每</div>
+<div>次指挥赈灾应该选择的城市。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数m和t1，表示事件数量以及1号城市初始人口。</div>
+<div>接下来m行每行先是一个整数type表示事件种类。</div>
+<div>如果type=1表示新建一个城市，编号为当前城市最大编号加一</div>
+<div>接下来读入两个整数u和t表示新建一条连接着城市u和新城市的铁路，新城市的人口为t。</div>
+<div>如果type=2表示一个城市的人口发生了变化，读入两个整数u和t表示城市u的人口变成了t。</div>
+<div>否则type一定为3，表示一次询问。</div>
+<div>为了体现问题的在线性，小火车对输入顺序进行了加密，用lastans表示上一次的答案（初始为0），</div>
+<div>则读入的u和t都需要按位异或lastans得到真正的操作。</div>
+<div>m&lt;=300000，其中1操作和2操作个数不超过150000，保证任意城市人口数量不超过1000000且不低于1</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问输出一行一个整数表示答案。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7 1<br />
+1 1 1<br />
+1 1 1<br />
+1 2 2<br />
+1 2 1<br />
+3<br />
+2 1 1<br />
+3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

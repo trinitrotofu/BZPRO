@@ -1,0 +1,37 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>JSOI2012 铁拳</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4334. JSOI2012 铁拳</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4334">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4334">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4334">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>经过了可怕的第三次世界大战后，国家政府崩溃，各大财团趁机夺取掌控世界。长年战争后，八大财团幸存并割据一方，其中最强的当属掌控北美的铁拳。&nbsp;</div>
+<div>在铁拳财团所维护的文明区域中，有一项最为光荣、重要的赛事&mdash;&mdash;Iron Fist，也就是铁拳大赛。IF中云集了世界各地各财团鼎力资助的世外高手，只为了赢得IF Champion，得到无上的荣耀，当然还有随之而来的权力。本来一切秩序井然，但一个来自贫民窟的少年风间仁意外地在海选中赢了IF正式选手，获得了决赛资格，从此格局被打乱&hellip;&hellip;&nbsp;</div>
+<div>为了应对这突如其来的变数，IF管理层决定先对联盟中所有的选手进行评估，以更好地掌握大局。&nbsp;</div>
+<div></div>
+<div>已知最近m届比赛出现过的n位选手，背后都有着各自财团的资助，并且签下了合同。由于这是各财团的高度机密，合同的具体细节无从得知，但铁拳财团的间谍们通过各种渠道得知了每个选手的薪金范围（显然薪金是非负数）。&nbsp;</div>
+<div>对于最近m届的IF比赛（从1开始编号），每一届联盟都会进行清算，通过国际金融手段准确计算出这一届联盟选手身价总和的变化。每一届中，会有一些新选手加入，也会有部分选手在比赛中丧失了战斗能力，而被踢出联盟，流放到贫民窟。&nbsp;</div>
+<div>现在给出联盟中n位选手的身价范围，以及他们 进入联盟的届数（0表示在m+1届以前就已经是联盟选手） 和 离开联盟的届数（0表示是现役选手）。同时给出最近m届中，每一届联盟选手身价总和减去上一届的值。&nbsp;</div>
+<div>请你根据现有信息，尽可能准确地给出每个选手可能的薪金范围。各选手之间的薪金范围可以不同时成立，但对于一位选手的范围中的每一个数，都必须至少存在一种合法方案使该选手能得到相应薪金，而且这个范围跨度要尽可能大。&nbsp;</div>
+<div>如果输入信息有误，请输出-1，表示无解。&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个正整数m，意义见上（下同）。&nbsp;</div>
+<div>第二行包含m个整数，第i个表示第i届中 选手身价总和 的变化情况。&nbsp;</div>
+<div>第三行一个正整数n。&nbsp;</div>
+<div>接下来n行，每行包含四个整数，分别表示 身价下限 、 身价上限 、 出道届数 、 退役届数，细节请参照上文。&nbsp;</div>
+<div>保证出道时间严格比退役时间小（0除外）。&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>如果输入信息有误，仅输出一行一个整数&ldquo;-1&rdquo;（不含双引号）。&nbsp;</div>
+<div>否则输出n行，每行两个实数，第i行表示第i个选手实际身价的准确范围。&nbsp;</div>
+<div>保留两位小数，需要与标准答案完全相同才得分。&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+5 -1<br />
+3<br />
+1 4 1 0<br />
+2 3 1 0<br />
+1 5 1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1.00 2.00<br />
+2.00 3.00<br />
+1.00 1.00</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>第二届只有3号离开了，可以锁定3号的薪金是1。&nbsp;</div><br />
+<div>如此一来，1号和2号薪金之和为4，那么1号最少能拿1，最多能拿2；2号最少能拿到2，最多能拿到3。&nbsp;</div><br />
+<div></div><br />
+<div>对于100%的数据，n&le;200，m&le;100，给定薪金范围不超过20000。&nbsp;</div><br />
+<div></div><br />
+<div>应上传者要求，此题不公开，如有异议，请提出.</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

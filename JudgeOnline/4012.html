@@ -1,0 +1,61 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[HNOI2015]开店</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4012. [HNOI2015]开店</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：70 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4012">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4012">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4012">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;风见幽香有一个好朋友叫八云紫，她们经常一起看星星看月亮从诗词歌赋谈到</p>
+<div>人生哲学。最近她们灵机一动，打算在幻想乡开一家小店来做生意赚点钱。这样的</div>
+<div>想法当然非常好啦，但是她们也发现她们面临着一个问题，那就是店开在哪里，面</div>
+<div>向什么样的人群。很神奇的是，幻想乡的地图是一个树形结构，幻想乡一共有 n</div>
+<div>个地方，编号为 1 到 n，被 n-1 条带权的边连接起来。每个地方都住着一个妖怪，</div>
+<div>其中第 i 个地方的妖怪年龄是 x_i。妖怪都是些比较喜欢安静的家伙，所以它们并</div>
+<div>不希望和很多妖怪相邻。所以这个树所有顶点的度数都小于或等于 3。妖怪和人一</div>
+<div>样，兴趣点随着年龄的变化自然就会变化，比如我们的 18 岁少女幽香和八云紫就</div>
+<div>比较喜欢可爱的东西。幽香通过研究发现，基本上妖怪的兴趣只跟年龄有关，所以</div>
+<div>幽香打算选择一个地方 u（u为编号），然后在 u开一家面向年龄在 L到R 之间（即</div>
+<div>年龄大于等于 L、小于等于 R）的妖怪的店。也有可能 u这个地方离这些妖怪比较</div>
+<div>远，于是幽香就想要知道所有年龄在 L 到 R 之间的妖怪，到点 u 的距离的和是多</div>
+<div>少（妖怪到 u 的距离是该妖怪所在地方到 u 的路径上的边的权之和） ，幽香把这个</div>
+<div>称为这个开店方案的方便值。幽香她们还没有决定要把店开在哪里，八云紫倒是准</div>
+<div>备了很多方案，于是幽香想要知道，对于每个方案，方便值是多少呢。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;第一行三个用空格分开的数 n、Q和A，表示树的大小、开店的方案个数和妖</p>
+<div>怪的年龄上限。&nbsp;</div>
+<div>第二行n个用空格分开的数 x_1、x_2、&hellip;、x_n，x_i 表示第i 个地点妖怪的年</div>
+<div>龄，满足0&lt;=x_i&lt;A。(年龄是可以为 0的，例如刚出生的妖怪的年龄为 0。)&nbsp;</div>
+<div>接下来 n-1 行，每行三个用空格分开的数 a、b、c，表示树上的顶点 a 和 b 之</div>
+<div>间有一条权为c(1 &lt;= c &lt;= 1000)的边，a和b 是顶点编号。&nbsp;</div>
+<div>接下来Q行，每行三个用空格分开的数 u、 a、 b。对于这 Q行的每一行，用 a、</div>
+<div>b、A计算出 L和R，表示询问&ldquo;在地方 u开店，面向妖怪的年龄区间为[L,R]的方</div>
+<div>案的方便值是多少&rdquo;。对于其中第 1 行，L 和 R 的计算方法为：L=min(a%A,b%A),&nbsp;</div>
+<div>R=max(a%A,b%A)。对于第 2到第 Q行，假设前一行得到的方便值为 ans，那么当</div>
+<div>前行的 L 和 R 计算方法为： L=min((a+ans)%A,(b+ans)%A),&nbsp;</div>
+<div>R=max((a+ans)%A,(b+ans)%A)。&nbsp;</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对于每个方案，输出一行表示方便值。&nbsp;</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10 10 10 <br />
+0 0 7 2 1 4 7 7 7 9  <br />
+1 2 270 <br />
+2 3 217 <br />
+1 4 326 <br />
+2 5 361 <br />
+4 6 116 <br />
+3 7 38 <br />
+1 8 800 <br />
+6 9 210 <br />
+7 10 278 <br />
+8 9 8 <br />
+2 8 0 <br />
+9 3 1 <br />
+8 0 8 <br />
+4 2 7 <br />
+9 7 3 <br />
+4 7 0 <br />
+2 2 7 <br />
+3 2 1 <br />
+2 3 4 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1603 <br />
+957 <br />
+7161 <br />
+9466 <br />
+3232 <br />
+5223 <br />
+1879 <br />
+1669 <br />
+1282 <br />
+0 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;满足 n&lt;=150000,Q&lt;=200000。对于所有数据，满足 A&lt;=10^9</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

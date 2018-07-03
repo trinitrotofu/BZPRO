@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2007 Dec]奶牛的旅行</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1690. [Usaco2007 Dec]奶牛的旅行</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1690">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1690">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1690">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">作为对奶牛们辛勤工作的回报，Farmer John决定带她们去附近的大城市玩一天。旅行的前夜，奶牛们在兴奋地讨论如何最好地享受这难得的闲暇。 很幸运地，奶牛们找到了一张详细的城市地图，上面标注了城市中所有L(2 &lt;= L &lt;= 1000)座标志性建筑物（建筑物按1..L顺次编号），以及连接这些建筑物的P(2 &lt;= P &lt;= 5000)条道路。按照计划，那天早上Farmer John会开车将奶牛们送到某个她们指定的建筑物旁边，等奶牛们完成她们的整个旅行并回到出发点后，将她们接回农场。由于大城市中总是寸土寸金，所有的道路都很窄，政府不得不把它们都设定为通行方向固定的单行道。 尽管参观那些标志性建筑物的确很有意思，但如果你认为奶牛们同样享受穿行于大城市的车流中的话，你就大错特错了。与参观景点相反，奶牛们把走路定义为无趣且令她们厌烦的活动。对于编号为i的标志性建筑物，奶牛们清楚地知道参观它能给自己带来的乐趣值F_i (1 &lt;= F_i &lt;= 1000)。相对于奶牛们在走路上花的时间，她们参观建筑物的耗时可以忽略不计。 奶牛们同样仔细地研究过城市中的道路。她们知道第i条道路两端的建筑物 L1_i和L2_i（道路方向为L1_i -&gt; L2_i），以及她们从道路的一头走到另一头所需要的时间T_i(1 &lt;= T_i &lt;= 1000)。 为了最好地享受她们的休息日，奶牛们希望她们在一整天中平均每单位时间内获得的乐趣值最大。当然咯，奶牛们不会愿意把同一个建筑物参观两遍，也就是说，虽然她们可以两次经过同一个建筑物，但她们的乐趣值只会增加一次。顺便说一句，为了让奶牛们得到一些锻炼，Farmer John要求奶牛们参观至少2个建筑物。 请你写个程序，帮奶牛们计算一下她们能得到的最大平均乐趣值。 </span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">* 第1行: 2个用空格隔开的整数：L 和 P </span></p>
+<p><span style="font-size: medium">* 第2..L+1行: 第i+1行仅有1个整数：F_i * 第L+2..L+P+1行: 第L+i+1行用3个用空格隔开的整数：L1_i，L2_i以及T_i， 描述了第i条道路。 </span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">* 第1行: 输出1个实数，保留到小数点后2位（直接输出，不要做任何特殊的取 整操作），表示如果奶牛按题目中描述的一系列规则来安排她们的旅 行的话，她们能获得的最大平均乐趣值 </span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 7<br />
+30<br />
+10<br />
+10<br />
+5<br />
+10<br />
+1 2 3<br />
+2 3 2<br />
+3 4 5<br />
+3 5 2<br />
+4 5 5<br />
+5 1 3<br />
+5 2 2<br />
+<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+6.00<br />
+<br />
+输出说明:<br />
+<br />
+    如果奶牛选择1 -> 2 -> 3 -> 5 -> 1的旅行路线，她们能得到的总乐趣值<br />
+为60，为此她们得花费10单位的时间在走路上。于是她们在这次旅行中的平均乐<br />
+趣值为6。如果她们走2 -> 3 -> 5 -> 2的路线，就只能得到30/6 = 5的平均乐<br />
+趣值。并且，任何去参观建筑物4的旅行路线的平均乐趣值都没有超过4。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

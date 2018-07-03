@@ -1,0 +1,62 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Heoi2014]林中路径</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3610. [Heoi2014]林中路径</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3610">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3610">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3610">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Alice 和 Marisa 都住在一个巨大的由 N 个路口与 M 条单向小道构成的森林中。Marisa 非常喜</div>
+<div>欢到 Alice 家里去玩，但是 Alice 并不喜欢这位鲁莽的来客。Alice 非常擅长观察， 因此每当她发</div>
+<div>现 Marisa 走了一条与之前完全相同的路径来到她家时，她就会装作不在家， Marisa 就只好败兴而</div>
+<div>归。Marisa 发现了这个秘密，因此她决定每次走不同的路径到 Alice 家。</div>
+<div>&nbsp; &nbsp;Marisa 体力有限，她不想走超过 K 条边到达 Alice 家，并且，每当她走 t（t&le;K）条边 到达&nbsp;</div>
+<div>Alice 家时，她需要付出 t2的体力。Marisa 想知道，在 Alice 无论如何都不想接见她 之前（即&nbsp;</div>
+<div>Marisa 无法走一条长度不超过 K 的与之前不同的路径），她会消耗多少体力。</div>
+<div>&nbsp; &nbsp;现在 Marisa 拿到了一张森林的地图，但因为 Marisa 非常笨，她并不知道自己的家和 Alice 的</div>
+<div>家在哪一个路口，因此她会给询问你 Q 次，每次询问假如 Marisa 的家的位置在 S 而 Alice 的家</div>
+<div>的位置在 T 时的答案。</div>
+<div>&nbsp; &nbsp; 一条路径 A 的定义是指一个长度为 P（P 可以为任意正整数或零）的边的序列 Am0,Am1,Am2,&hellip;</div>
+<div>,AmT-1，其中对于任意 1&le;i＜P，有 Ami-1的结束节点是 Ami的起始节点。&nbsp;</div>
+<div>&nbsp; &nbsp;两条路径 A 和 B 完全相同是指两条路径的长度均为 T 并且对任意 0&le;i＜P，有 Ami=Bmi。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入数据第一行包含四个整数 N,M,K,Q，含义如题所述。&nbsp;</p>
+<div>
+<div>&nbsp;接下来 M 行，每行两个整数 X,Y，表示从第 X 个路口到第 Y 个路口有一条单向小道。</div>
+<div>路 口的标号为 1,2,3,&hellip;,N，在输入数据第 i+1 行的边的标号为 i。&nbsp;</div>
+<div>&nbsp;接下来 Q 行，每行两个整数 S 和 T，含义如题所述。&nbsp;</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问，输出一行，表示这次询问的答案。由于 Marisa 接受不了非常大的数， 你只需</div>
+<div>
+<div>要输出答案模 1,000,000,007 的值。&nbsp;</div>
+<div></div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>#1<br />
+2 0 1 1<br />
+1 2<br />
+<br />
+#2<br />
+2 2 2 1<br />
+1 2<br />
+2 1<br />
+1 1<br />
+<br />
+#3<br />
+2 2 100 1<br />
+1 2<br />
+2 1<br />
+1 2<br />
+<br />
+<br />
+#4<br />
+2 3 100 2<br />
+1 2<br />
+1 2<br />
+2 1<br />
+2 2<br />
+2 1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>#1<br />
+0<br />
+<br />
+#2<br />
+4<br />
+<br />
+#3<br />
+166650<br />
+<br />
+#4<br />
+632506153<br />
+518794755</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;对于 100%的数据，2&le;N&le;100，0&le;M&le;100,000，0&le;K&le;1,000,000,000，0&le;Q&le;10,000， 1&le;X，Y，S，T&le;N</p><br />
+<div>样例一解释 从 S 到 T 不存在路径 &nbsp;</div><br />
+<div>样例二解释 Marisa 可以重复经过一个路口，即使这个路口就是 Alice 的家或 Marisa 的家&nbsp;</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi2012]Minimalist Security</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2801. [Poi2012]Minimalist Security</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2801">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2801">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2801">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">给出一个N个顶点、M条边的无向图，边(u,v)有权值w(u,v)，顶点i也有权值p(i)，<br />
+并且对于每条边(u,v)都满足p(u)+p(v)&gt;=w(u,v)。<br />
+现在要将顶点i的权值减去z(i)，其中0&lt;=z(i)&lt;=p(i)。<br />
+修改后设顶点i的权值p'(i)=p(i)-z(i)，对于每条边(u,v)都满足p'(u)+p'(v)=w(u,v)。<br />
+求sum{z(i)}的最小值和最大值。</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行两个正整数n,m (n&lt;=500,000, m&lt;=3,000,000)。<br />
+第二行n个整数，依次表示p(1),p(2),...,p(n) (0&lt;=p(i)&lt;=10^6)。<br />
+下面m行，每行三个整数u,v,w (1&lt;=u,v&lt;=n, 0&lt;=w&lt;=10^6)，表示存在一条权值为w的边(u,v)。</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
+两个正整数，分别表示sum{z(i)}的最小值和最大值，如果不存在方案就输出NIE。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>For the input data:<br />
+3 2<br />
+5 10 5<br />
+1 2 5<br />
+2 3 3<br />
+the correct result is:<br />
+12 15<br />
+whereas for the following input data: <br />
+3 3<br />
+1 1 1<br />
+1 2 1<br />
+1 3 1<br />
+3 2 1<br />
+the correct result is: <br />
+NIE</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata></span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

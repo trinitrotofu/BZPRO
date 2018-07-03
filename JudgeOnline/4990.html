@@ -1,0 +1,42 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2017 Feb]Why Did the Cow Cross the Road II</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4990. [Usaco2017 Feb]Why Did the Cow Cross the Road II</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4990">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4990">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4990">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Farmer John is continuing to ponder the issue of cows crossing the road through his farm, introduced</div>
+<div>&nbsp;in the preceding problem. He realizes that interaction between some pairs of breeds is actually acc</div>
+<div>eptable if the breeds are friendly, a property that turns out to be easily characterized in terms of</div>
+<div>&nbsp;breed ID: breeds aa and bb are friendly if |a-b|&le;4, and unfriendly otherwise. It is ok for cows to</div>
+<div>&nbsp;wander into fields designated for other breeds, as long as they are friendly.Given the ordering of&nbsp;</div>
+<div>N fields on both sides of the road through FJ's farm (again, with exactly one field for each breed o</div>
+<div>n each side), please help FJ determine the maximum number of crosswalks he can draw over his road, s</div>
+<div>uch that no two intersect, and such that each crosswalk joins a pair of fields containing two breeds</div>
+<div>&nbsp;that are friendly. Each field can be accessible via at most one crosswalk (so crosswalks don't meet</div>
+<div>&nbsp;at their endpoints).</div>
+<div>
+<div>上下有两个长度为n、位置对应的序列A、B，</div>
+<div>其中数的范围均为1~n。若abs(A[i]-B[j]) &lt;= 4，</div>
+<div>则A[i]与B[j]间可以连一条边。现要求在边与边不相交的情况下的最大的连边数量。</div>
+<div>n &lt;= 10^5。</div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of input contains N (1&le;N&le;100,0000).&nbsp;</div>
+<div>The next N lines describe the order, by breed ID, of fields on one side of the road;&nbsp;</div>
+<div>each breed ID is an integer in the range 1&hellip;N&nbsp;</div>
+<div>The last N lines describe the order, by breed ID, of the fields on the other side of the road.&nbsp;</div>
+<div>Each breed ID appears exactly once in each ordering.</div>
+<div>注意:<span style="font-family: arial, verdana, helvetica, sans-serif;">两个序列都是全排列</span></div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>Please output the maximum number of disjoint &quot;friendly crosswalks&quot; Farmer John can draw across the road.</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+1<br />
+2<br />
+3<br />
+4<br />
+5<br />
+6<br />
+6<br />
+5<br />
+4<br />
+3<br />
+2<br />
+1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

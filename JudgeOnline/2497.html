@@ -1,0 +1,77 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Winmine.exe</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2497. Winmine.exe</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2497">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2497">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2497">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class="panel_content">
+<p><span style="font-size: medium">&nbsp;&nbsp;The Windows Minesweeper (WinMine) is one of the most well-known games on the Windows system. The rule is quite easy and it takes only a few minutes to play a set. First of all, let&rsquo;s briefly introduce this game (if you believe that you are familiar enough with this game, you can skip the next paragraph):<br />
+<br />
+&nbsp;&nbsp;<i>The goal of the game is to uncover all the squares that do not contain mines (with the left mouse button) without being &quot;destroyed&quot; by clicking on a mine. The location of the mines is discovered by a process of logic. Clicking on the game board will reveal what is hidden underneath the chosen square or squares (a large number of blank squares may be revealed in one go if they are adjacent to each other). Some squares are blank but some contain numbers (1 to 8), each number being the number of mines adjacent to the uncovered square. The game is won once all blank squares have been uncovered without hitting a mine, any remaining mines not identified by flags being automatically flagged by the computer. The distinctive feature of minesweeper is the randomness at the initial stage and at some intermediate stages.<br />
+----Wikipedia<br />
+</i><br />
+&nbsp;&nbsp;Jaddy loves playing WinMine at free time very much due to its simplicity and ingenuity. However, sometimes it makes him frustrated when he reaches some undeterminable states during the game. See the following state as an example:<br />
+</span></p>
+<center></center>
+<p></p>
+<p></p>
+<p><span style="font-size: medium"><br />
+In the red circle of this example, the rest two squares are absolutely undeterminable and there are apparently two possible distributions of the rest ONE mine.<br />
+<br />
+&nbsp;&nbsp;When Jaddy gets into this kind of trouble, he has no choice but to guess. Sometimes there are only two possible choices (as what the example says) but sometimes there are many. This way, he needs an assistant of this game to calculate the number of different possible distributions of mines depending on the current state of game board.<br />
+<br />
+&nbsp;&nbsp;This assistant of game is pretty useful and interesting, at least for him, so that he immediately starts coding. Unfortunately, Jaddy spent all the time to play WinMine in the class of Programming and Algorithm, so he feels such a complex task is a mission impossible. Jaddy loves WinMine very much so that he asks you, an excellent programmer, for help. In addition, in order to reduce the difficulty, he added three constraints:<br />
+1. It is guaranteed that the input state of game can always be created by making only ONE click on the initial board.<br />
+2. In the given state, if two unrevealed squares are connected directly or by any other unrevealed squares, they are also bi-connected. That is to say, even after any one of the other unrevealed squares is removed, these two squares are still connected. Here we say two squares are connected if and only if they share an edge. That means a square has at most four squares connected.<br />
+3. In the given state, if two numbers are connected by sharing an edge directly or by other numbers, all the unrevealed cells adjacent to the connected set of numbers must be connected.<br />
+<br />
+Help Jaddy please!</span></p>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;There are multiple test cases, the first line of input is a positive integer T (T &lt;= 50) indicating the number of test cases. Then T cases follow. For each test case, the first line contains three positive integers n, m and M where 1 &lt;= n, m &lt;= 100 and 1 &lt;= M &lt;= 1000 denoting the number of rows and columns in the given board and the total number of mines on the board. Then an n*m matrix of chars describing the current state of board will be given. In this matrix, there are 2 styles of symbols:<br />
+1. digits from 0 to 8: that means the number of mines around this square (&lsquo;0&rsquo; implies a blank square).<br />
+2. &lsquo;.&rsquo; (quotes for clarifying): that means this square is unrevealed.</span></div>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium"><br />
+</span>&nbsp;</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;For each test case, output an integer leading by the case number, denoting the number of possible distribution of mine in the given state, module by 1000003. See the sample output for further details.<br />
+</span></div>
+<div class="panel_content"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+4 5 2<br />
+…..<br />
+.....<br />
+11111<br />
+00000<br />
+4 5 4<br />
+…..<br />
+.....<br />
+22222<br />
+00000<br />
+ <br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case #1: 2<br />
+Case #2: 1<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">Notice</span></p><br />
+<p><span style="font-size: medium">(a) The upper bound of w (the number of mines) should be 1500, rather than<br /><br />
+1000 in the problem statement.<br /><br />
+(b) There is another (the third) constraint about the initial state of board: for any<br /><br />
+pair of unrevealed squares A and B, if A and B are both adjacent to a connected<br /><br />
+component S, where S is a connected area consisting of only squares with positive positive positive positive<br /><br />
+numbers, then A and B can always be connected by unrevealed squares. For example,<br /><br />
+the following board contradicts this constraint due to the disconnection of squares on<br /><br />
+row 7 column 3 and row 8 column 4:</span></p><br />
+<p><span style="font-size: medium">00000001 1 .<br /><br />
+11000001..<br /><br />
+.1000002..<br /><br />
+11000001..<br /><br />
+0000000111<br /><br />
+0111000000<br /><br />
+01.3221100<br /><br />
+012....100<br /><br />
+0012221100<br /><br />
+1100001110<br /><br />
+.100001.10<br /><br />
+, whereas the following one is acceptable:<br /><br />
+..10000000<br /><br />
+2210011100<br /><br />
+000001.100<br /><br />
+000001.100<br /><br />
+000011.221<br /><br />
+00001.....<br /><br />
+01122.....<br /><br />
+12........<br /><br />
+..........</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

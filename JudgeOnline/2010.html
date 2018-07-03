@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ceoi2010]bodyguard</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2010. [Ceoi2010]bodyguard</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：100 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2010">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2010">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2010">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">为保证会场安全，专家确定了每一行每一列的保镖数，这个信息以一种压缩的形式给出。确定是否有可能实现这样一种方案，在每行每列安排确定数量的保镖。假设座位最初都是空的，也就是说保安可以被安排在任意一个座位上。 
+题目等价于已知一个01矩阵的每行、每列各有多少个1，问这样的矩阵是否存在。
+输入数据归纳为：
+有R个正整数对 A1、B1，A2 、B2，……， AR、BR 
+表示这个01矩阵一共有 B1+B2+…+BR行，其中有Bi 个行都含有 Ai个1。
+同样的，有C个正整数对 Pi和Qi 来表示列的信息。
+限制条件：按行和按列计算的总保镖数相等</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>The input begins with the description of the rows. The first line of the input contains one positive integer R: the
+number of groups of rows. R lines follow. Each of these lines contains 2 positive integers: the required number
+of bodyguards in each row of the group and the number of rows that form the group.
+This is followed by the description of column groups. The next line contains one positive integer C: the number
+of groups of columns. C lines follow. Each of these lines contains 2 positive integers: the required number of
+bodyguards in each column of the group and the number of columns that form the group.
+
+You may assume that the total number of bodyguards required by row constrains is the same as the total
+number of bodyguards required by column constraints. You may assume that this total number of bodyguards
+is at most 10^18.
+You may assume that all numbers are positive integers that do not exceed 10^9 .
+You may assume 1<= R,C <= 200000 that  .
+Several batches of test cases, worth a total of 50 points, satisfy the following criteria:
+the total number of rows in the auditorium will be at most 2000
+the total number of columns in the auditorium will be at most 2000
+the total number of bodyguards will be at most  .
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>Output a single line with the number "1" if the constraints are satisfiable and the number "0" otherwise (quotes
+for clarity).</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+2 1<br />
+1 2<br />
+1<br />
+2 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

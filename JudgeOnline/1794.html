@@ -1,0 +1,25 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2008]Linear Garden</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1794. [Ioi2008]Linear Garden</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1794">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1794">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1794">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">Ramesses二世刚刚获胜归来。为了纪念这一胜利，他决定建造一座壮观的花园。这个花园里的植物排成一行，从他在Luxor的宫殿直达Karnak的神庙。所种植的植物只有莲花和纸莎草，因为它们分别代表上埃及和下埃及。
+这个花园中必须有N棵植物，并且必须保持平衡，即在花园中任取一段，其中莲花和纸莎草的棵数之差不能超过2。
+花园可以被表示为由字母L（莲花）和P（纸莎草）组成的字符串。例如，当N等于5时，有14种可能的平衡花园，按照字母排序如下：LLPLP，LLPPL，LPLLP，LPLPL，LPLPP， LPPLL，LPPLP，PLLPL，PLLPP，PLPLL，PLPLP，PLPPL，PPLLP 和 PPLPL。
+给定长度的所有可能的平衡花园可按字母顺序排序，并从1开始编号。例如，当N等于5时，第12号花园是PLPPL。
+任务
+写一个程序，给定植物棵数N和一个表示平衡花园的字符串，计算该花园的序号模M的结果，其中M是一个给定的整数。
+注意，在问题求解中，数值 M 除了简化计算外没有其他的作用。
+限制
+1 <= N <= 1,000,000
+7 <= M <= 10,000,000
+评分
+有总分40分的测试点的N不超过40。
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序需要从标准输入上读入下列数据：
+&#61548;第一行是整数N，说明花园中植物的数量。
+&#61548;第二行是整数M。
+&#61548;第三行是长度为N的由字符L或P组成的字符串，表示一个平衡的花园。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序需要向标准输出上输出一个介于0和M-1（含）的整数，占一行，表示该花园的序号模M。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+7<br />
+PLPPL</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>实际的序号是12。因此输出的是12模7，即5。<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

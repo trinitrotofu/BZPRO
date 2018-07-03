@@ -1,0 +1,62 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Sum</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4649. Sum</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4649">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4649">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4649">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>给一棵大小为(n&lt;=100000)的树，每个点有权值vi。要求支持以下操作：</div>
+<div>子树加、子树对某数取max/min、链加、链对某数取max/min、子树修改、链修改、链权值翻转、子树求和、链求和。输出对10^9+7取模的非负结果即可。</div>
+<div>树有根为1。保证输入中的链权值翻转操作的i为j的祖先。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入第一行一个正整数n，第二行n个整数v，第三行到第n+1行每行两个数u、v代表u和v之间有一条边。</div>
+<div>接下来一行一个整数(m&lt;=100000)，下面m行每行一个操作。操作格式如下：</div>
+<div>SUBADD i v i的子树加上v</div>
+<div>SUBMAX i v i的子树对v取max</div>
+<div>SUBMIN i v i的子树对v取min</div>
+<div>CHAINADD i j v i到j的路径上每个点加上v</div>
+<div>CHAINMAX i j v i到j的路径上每个点对v取max</div>
+<div>CHAINMIN i j v i到j的路径上每个点对v取min</div>
+<div>SUBXGW i v i的子树修改为v</div>
+<div>CHAINXGW i j v i到j的路径上每个点修改为v</div>
+<div>CHAINREV i j i到j的路径进行权值翻转</div>
+<div>SUBQUE i 输出i的子树和</div>
+<div>CHAINQUE i j 输出i到j路径上的权值和</div>
+<div>操作中所有v和点的初始权值v满足v&lt;=1000000，保证全程不会有点权值超过10^9+7</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对于每个求和操作输出一行代表对应权值和。</p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10<br />
+-3 -2 1 3 1 -2 0 -5 1 4 <br />
+2 1<br />
+3 1<br />
+4 1<br />
+5 2<br />
+6 4<br />
+7 3<br />
+8 2<br />
+9 3<br />
+10 2<br />
+19<br />
+SUBADD 4 2<br />
+SUBXGW 9 -5<br />
+CHAINQUE 1 1<br />
+SUBQUE 9<br />
+SUBMAX 7 -1<br />
+SUBMIN 10 2<br />
+CHAINQUE 6 9<br />
+SUBQUE 1<br />
+CHAINADD 9 3 4<br />
+CHAINXGW 5 7 5<br />
+CHAINQUE 7 7<br />
+SUBQUE 1<br />
+CHAINMAX 8 7 -5<br />
+CHAINMIN 5 3 4<br />
+CHAINQUE 3 1<br />
+SUBQUE 5<br />
+CHAINREV 1 7<br />
+CHAINQUE 3 2<br />
+SUBQUE 7</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1000000004<br />
+1000000002<br />
+1000000005<br />
+1000000001<br />
+5<br />
+26<br />
+8<br />
+4<br />
+13<br />
+4</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

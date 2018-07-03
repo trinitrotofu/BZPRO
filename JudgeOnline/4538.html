@@ -1,0 +1,79 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Hnoi2016]网络</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4538. [Hnoi2016]网络</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4538">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4538">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4538">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>　　一个简单的网络系统可以被描述成一棵无根树。每个节点为一个服务器。连接服务器与服务器的数据线则看做<br />
+一条树边。两个服务器进行数据的交互时，数据会经过连接这两个服务器的路径上的所有服务器（包括这两个服务<br />
+器自身）。由于这条路径是唯一的，当路径上的某个服务器出现故障，无法正常运行时，数据便无法交互。此外，<br />
+每个数据交互请求都有一个重要度，越重要的请求显然需要得到越高的优先处理权。现在，你作为一个网络系统的<br />
+管理员，要监控整个系统的运行状态。系统的运行也是很简单的，在每一个时刻，只有可能出现下列三种事件中的<br />
+一种：1.&nbsp; 在某两个服务器之间出现一条新的数据交互请求；2.&nbsp; 某个数据交互结束请求；3.&nbsp; 某个服务器出现故<br />
+障。系统会在任何故障发生后立即修复。也就是在出现故障的时刻之后，这个服务器依然是正常的。但在服务器产<br />
+生故障时依然会对需要经过该服务器的数据交互请求造成影响。你的任务是在每次出现故障时，维护未被影响的请<br />
+求中重要度的最大值。注意，如果一个数据交互请求已经结束，则不将其纳入未被影响的请求范围。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　第一行两个正整数n,m，分别描述服务器和事件个数。服务器编号是从1开始的，因此n个服务器的编号依次是1<br />
+,2,3,&hellip;,n。接下来n-1行，每行两个正整数u,v，描述一条树边。u和v是服务器的编号。接下来m行，按发生时刻依<br />
+次描述每一个事件；即第i行（i=1,2,3,&hellip;,m）描述时刻i发生的事件。每行的第一个数type描述事件类型，共3种<br />
+类型：（1）若type=0，之后有三个正整数a,b,v，表示服务器a,b之间出现一条重要度为v的数据交互请求；（2）<br />
+若type=1，之后有一个正整数t，表示时刻t（也就是第t个发生的事件）出现的数据交互请求结束；（3）若type=2<br />
+，之后有一个正整数x，表示服务器x在这一时刻出现了故障。对于每个type为2的事件，就是一次询问，即询问&ldquo;<br />
+当服务器x发生故障时，未被影响的请求中重要度的最大值是多少？&rdquo;注意可能有某个服务器自身与自身进行数据<br />
+交互的情况。<span style="font-family: arial, verdana, helvetica, sans-serif;">2 &le; n &le; 10^5, 1 &le; m &le; 2&times;10^5，其他的所有输入值不超过 10^9</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　对于每个type=2的事件，即服务器出现故障的事件，输出一行一个整数，描述未被影响的请求中重要度的最大<br />
+值。如果此时没有任何请求，或者所有请求均被影响，则输出-1。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>13 23 <br />
+1 2 <br />
+1 3 <br />
+2 4 <br />
+2 5 <br />
+3 6 <br />
+3 7 <br />
+4 8 <br />
+4 9 <br />
+6 10 <br />
+6 11 <br />
+7 12 <br />
+7 13 <br />
+2 1 <br />
+0 8 13 3 <br />
+0 9 12 5 <br />
+2 9 <br />
+2 8 <br />
+2 2 <br />
+0 10 12 1 <br />
+2 2 <br />
+1 3 <br />
+2 7 <br />
+2 1 <br />
+0 9 5 6 <br />
+2 4 <br />
+2 5 <br />
+1 7 <br />
+0 9 12 4 <br />
+0 10 5 7 <br />
+2 1 <br />
+2 4 <br />
+2 12 <br />
+1 2 <br />
+2 5 <br />
+2 3 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>-1 <br />
+3 <br />
+5 <br />
+-1 <br />
+1 <br />
+-1 <br />
+1 <br />
+1 <br />
+3 <br />
+6 <br />
+7 <br />
+7 <br />
+4 <br />
+6 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>样例给出的树如下所示：<br /><br />
+<img width="403" height="185" alt="" src="upload/201604/222.png" /><br /><br />
+解释其中的部分询问；下面的解释中用(a,b;t,v)表示在t时刻出现的服务器a和b之间的重<br /><br />
+要度为v的请求：<br /><br />
+对于第一个询问（在时刻1），此时没有任何请求，输出-1。<br /><br />
+对于第四个询问（在时刻6），此时有两条交互(8,13;2,3),(9,12;3,5)，所有询问均经过2<br /><br />
+号服务器，输出-1。<br /><br />
+对于第五个询问（在时刻8），此时有三条交互(8,13;2,3),(9,12;3,5),(10,12;7,1)，只有交互<br /><br />
+(10,12;7,1)没有经过2号服务器，因此输出其重要度1。<br /><br />
+对于最后一个询问（在时刻23），此时有三条交互(9,5;12,6),(9,12;16,4),(10,5;17,7)。当3<br /><br />
+号服务器出现故障时，只有交互(9,5;12,6)没有经过3号服务器，因此输出6。</p><br />
+<p>2016.5.20新加数据一组,未重测</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

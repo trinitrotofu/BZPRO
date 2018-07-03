@@ -1,0 +1,48 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2007 Demo]Cow Acrobats</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1629. [Usaco2007 Demo]Cow Acrobats</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1629">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1629">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1629">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">Farmer John's N (1 <= N <= 50,000) cows (numbered 1..N) are planning
+to run away and join the circus.  Their hoofed feet prevent them
+from tightrope walking and swinging from the trapeze (and their
+last attempt at firing a cow out of a cannon met with a dismal
+failure). Thus, they have decided to practice performing acrobatic
+stunts.
+
+The cows aren't terribly creative and have only come up with one
+acrobatic stunt: standing on top of each other to form a vertical
+stack of some height.  The cows are trying to figure out the order
+in which they should arrange themselves within this stack.
+
+Each of the N cows has an associated weight (1 <= W_i <= 10,000)
+and strength (1 <= S_i <= 1,000,000,000).  The risk of a cow
+collapsing is equal to the combined weight of all cows on top of
+her (not including her own weight, of course) minus her strength
+(so that a stronger cow has a lower risk).  Your task is to determine
+an ordering of the cows that minimizes the greatest risk of collapse
+for any of the cows.
+
+
+//有三个头牛，下面三行二个数分别代表其体重及力量
+//它们玩叠罗汉的游戏，每个牛的危险值等于它上面的牛的体重总和减去它的力量值，因为它要扛起上面所有的牛嘛.
+//求所有方案中危险值最大的最小
+
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>* Line 1: A single line with the integer N.
+
+* Lines 2..N+1: Line i+1 describes cow i with two space-separated
+        integers, W_i and S_i.
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>* Line 1: A single integer, giving the largest risk of all the cows in
+        any optimal ordering that minimizes the risk.
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+10 3<br />
+2 5<br />
+3 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+Put the cow with weight 10 on the bottom. She will carry the other<br />
+two cows, so the risk of her collapsing is 2+3-3=2. The other cows<br />
+have lower risk of collapsing.<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

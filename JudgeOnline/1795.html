@@ -1,0 +1,65 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2008]Pyramid Base 金字塔地基
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1795. [Ioi2008]Pyramid Base 金字塔地基
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1795">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1795">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1795">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">你要在自己财力许可的范围内寻找一个尽可能大的地方，以便兴建一个新的金字塔。为帮助你作出决定，为你提供了土地测绘图。为方便起见，该地块被划分为由M乘N个小正方形构成的网格。金字塔的地基部份必须是正方形，而且各边要与这些方格平行。
+
+测绘图中标出了P个有可能重叠的障碍物，这些障碍物是上述网格上的长方形，其各边与方格平行。为了建造金字塔，任何塔基所占方格中的障碍物必须被移走。移除障碍物i需要付出成本Ci。当移除一个障碍物时，需要将障碍物整个地移除，即不能只移除障碍物的一部份。同时，移除一个障碍物对与其重叠的其他障碍物无任何影响。
+
+任务
+已知测绘图中M和N的大小，对P个障碍物的描述，移走每个障碍物的成本以及你的预算B。编写程序，找出在移走障碍物总成本不超过B的前提下金字塔地基的最大边长。
+
+限制及评分
+程序用三组不相交的数据进行评测。以下限制适用于所有的测试数据：
+1 <= M, N <= 1,000,000网格的尺寸。
+1 <= Ci <= 7,000移除障碍物i的成本。
+对每个障碍物i均有 1 <= Xi1 <= Xi2 <= M 并且 1 <= Yi1 <= Yi2<= N。
+
+第一组测试总分值35分：
+B = 0可以付出的最大成本。（不可移除任何障碍物）
+1<= P <= 1,000网格中障碍物的数目。
+
+第二组测试总分值35分：
+0 < B <= 2,000,000,000你的预算。
+1<= P <= 30,000网格中障碍物的数目。
+
+第三组测试值30分：
+B = 0你的预算。（不可以移除任何障碍物）
+1<= P <= 400,000网格中障碍物的数目。
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序需要从标准输入上读入以下数据：
+&#8226;第一行包含两个以单个空格分隔的整数，分别表示M及N。
+&#8226;第二行包含整数B，是你可付出的最大成本（即你的预算）。
+&#8226;第三行包含整数P，是测绘图中标出的障碍物数量。
+&#8226;以下P行的每一行表示一个障碍物。其中第i 行表示第i个障碍物。每一行包含5个以单个空格分隔的整数Xi1, Yi1, Xi2, Yi2和Ci，分别表示障碍物左下角小正方形的座标，右上角小正方形的座标，以及移除这个障碍物的成本。网格左下角的小正方形座标为（1, 1）而其右上角小正方形为（M, N）。
+
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序必须向标准输出写出一行，该行只含一个整数，即金字塔基可能的最大边长。如果无法建造任何金字塔，程序应输出0。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>input 1<br />
+6 9<br />
+42<br />
+5<br />
+4 1 6 3 12<br />
+3 6 5 6 9<br />
+1 3 3 8 24<br />
+3 8 6 9 21<br />
+5 1 6 2 20<br />
+<br />
+input 2<br />
+13 5<br />
+0<br />
+8<br />
+8 4 10 4 1<br />
+4 3 4 4 1<br />
+10 2 12 2 2<br />
+8 2 8 4 3<br />
+2 4 6 4 5<br />
+10 3 10 4 8<br />
+12 3 12 4 13<br />
+2 2 4 2 21<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>output 1<br />
+4<br />
+<br />
+output 2<br />
+3<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><img border="0" src="images/1795.jpg"> </p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

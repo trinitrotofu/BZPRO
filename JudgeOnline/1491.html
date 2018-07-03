@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2007]社交网络</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1491. [NOI2007]社交网络</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1491">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1491">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1491">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在社交网络（socialnetwork）的研究中，我们常常使用图论概念去解释一些社会现象。不妨看这样的一个问题。</div>
+<div>在一个社交圈子里有n个人，人与人之间有不同程度的关系。我们将这个关系网络对应到一个n个结点的无向图上，</div>
+<div>两个不同的人若互相认识，则在他们对应的结点之间连接一条无向边，并附上一个正数权值c，c越小，表示两个人</div>
+<div>之间的关系越密切。我们可以用对应结点之间的最短路长度来衡量两个人s和t之间的关系密切程度，注意到最短路</div>
+<div>径上的其他结点为s和t的联系提供了某种便利，即这些结点对于s和t之间的联系有一定的重要程度。我们可以通过</div>
+<div>统计经过一个结点v的最短路径的数目来衡量该结点在社交网络中的重要程度。考虑到两个结点A和B之间可能会有</div>
+<div>多条最短路径。我们修改重要程度的定义如下：令Cs,t表示从s到t的不同的最短路的数目，Cs,t(v)表示经过v从s</div>
+<div>到t的最短路的数目；则定义</div>
+<div><img src="upload/201604/dd(4).png" width="207" height="87" alt="" /></div>
+<div>
+<div>为结点v在社交网络中的重要程度。为了使I(v)和Cs,t(v)有意义，我们规定需要处理的社交网络都是连通的无向图</div>
+<div>，即任意两个结点之间都有一条有限长度的最短路径。现在给出这样一幅描述社交网络的加权无向图，请你求出每</div>
+<div>一个结点的重要程度。</div>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输入第一行有两个整数n和m，表示社交网络中结点和无向边的数目。在无向图中，我们将所有结点从1到n进行编号</div>
+<div>。接下来m行，每行用三个整数a，b，c描述一条连接结点a和b，权值为c的无向边。注意任意两个结点之间最多有</div>
+<div>一条无向边相连，无向图中也不会出现自环（即不存在一条无向边的两个端点是相同的结点）。n&le;100；m&le;4500&nbsp;</div>
+<div>，任意一条边的权值 c 是正整数，满足：1&le;c&le;1000。所有数据中保证给出的无向图连通，且任意两个结点之间</div>
+<div>的最短路径数目不超过 10^10</div>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出包括n行，每行一个实数，精确到小数点后3位。第i行的实数表示结点i在社交网络中的重要程度。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 4<br />
+1 2 1<br />
+2 3 1<br />
+3 4 1<br />
+4 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1.000<br />
+1.000<br />
+1.000<br />
+1.000</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>社交网络如下图所示。</p><br />
+<p><img src="upload/201604/dd(5).png" width="286" height="233" alt="" /></p><br />
+<div>对于 1 号结点而言，只有 2 号到 4 号结点和 4 号到 2 号结点的最短路经过 1 号结点，而 2 号结点和 4 号结</div><br />
+<div>点之间的最短路又有 2 条。因而根据定义，1 号结点的重要程度计算为 1/2 + 1/2 = 1 。由于图的对称性，其他</div><br />
+<div>三个结点的重要程度也都是 1 。</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

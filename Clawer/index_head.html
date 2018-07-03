@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="icon" href="./image/logo32x32.png" sizes="32x32" />
+		<link rel="icon" href="./image/logo192x192.png" sizes="192x192" />
+		<link rel="stylesheet" type="text/css" href="./Semantic/semantic.min.css">
+		<script src="./Semantic/jquery.min.js"></script>
+		<script src="./Semantic/semantic.min.js"></script>
+		<script type="text/javascript">
+			function go_pid() {
+				var pid = document.getElementById("targetURL").value;
+				window.location.href = ("./JudgeOnline/" + pid + ".html");
+			}
+		</script>
+		<title>BZPRO</title>
+	</head>
+	
+	<body>
+		<div class="ui three item menu">
+			<a class="header item" href="./index.html">
+				<img src="./image/logo.png">
+				BZPRO
+			</a>
+		</div>
+		<center>
+			<div class="ui main container">
+				<div class="padding">
+					<div class="eleven wide column">
+					<h4 class="ui top attached block header">题目列表=。=</h4>
+						<div class="ui bottom attached segment">
+							<div class="ui input focus">
+								<input type="text" id="targetURL" onkeydown="if(event.keyCode==13)javascript:go_pid()" placeholder="请输入题号"/>
+							</div>
+							<button class="ui primary button" name="Btn" onclick="javascript:go_pid()">传送到题目！</button>
+							<table class="ui celled table">
+								<thead>
+									<tr><th>PID</th><th>标题</th></tr>
+								</thead>
+								<tbody>

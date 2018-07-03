@@ -1,0 +1,136 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>滑雪</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3468. 滑雪</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3468">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3468">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3468">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium;"><!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--></span></p>
+<p><span style="font-size: medium;"><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-fareast-font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]-->  </span>
+<p style="text-indent:21.25pt;mso-char-indent-count:1.77" class="MsoNormal"><span style="font-size: medium;"><span style="font-family: 宋体;">陶陶最近迷上了滑雪，这天他来到了滑雪场。滑雪场可以看做</span><span lang="EN-US">N*M </span><span style="font-family: 宋体;">的方格区域，每个格子有一个高度，陶陶可以选择任意一个格子作为起点，然后每次可以滑到相邻的某个格子，但要满足经过格子的高度严格递减，同时陶陶可以随时停下来，途中滑的次数就为这条滑雪路径的长度，例如经过了</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">3</span><span style="font-family: 宋体;">个格子，路径长度为就为</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">2</span><span style="font-family: 宋体;">。有一点需要注意，陶陶不能够停在原地，也就是说路径的长度一定是正整数。</span></span></p>
+<p style="text-indent:21.25pt;mso-char-indent-count:1.77" class="MsoNormal"><span style="font-size: medium;"><span style="font-family: 宋体;">这样的话，陶陶就有很多很多种路径选择，但能发现不可能有无限种路径供陶陶选择，然后陶陶就想知道所有可能路径长度的</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">0</span><span style="font-family: 宋体;">至</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">K</span><span style="font-family: 宋体;">次方之和为多少。由于答案可能会很大，你只需要输出每个答案</span><span lang="EN-US">Mod 12345</span><span style="font-family: 宋体;">后的值。</span></span></p>
+<p align="left" style="text-align:left" class="MsoNormal"><span style="font-size: medium;"><span lang="EN-US">&nbsp;</span></span></p>
+</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium;"><span style="font-family: 宋体;">共</span><span lang="EN-US">N+1</span><span style="font-family: 宋体;">行。</span></span></p>
+<p><span style="font-size: medium;"><span style="font-family: 宋体;">第一行包含三个正整数</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;;">N,M,K</span><span style="font-family: 宋体;">。</span></span></p>
+<p><span style="font-size: medium;"><span style="font-family: 宋体;">接下来有</span><span lang="EN-US">N</span><span style="font-family: 宋体;">行，每行包含</span><span lang="EN-US">M</span><span style="font-family: 宋体;">个不超过</span><span lang="EN-US">10^9</span><span style="font-family: 宋体;">的正整数，依次表示每个格子的高度。</span></span></p>
+<p class="MsoNormal"><span style="font-size: medium;"><span lang="EN-US">&nbsp;</span></span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium;"><span style="font-family: 宋体;">共</span><span lang="EN-US">K+1</span><span style="font-family: 宋体;">行，每行包含一个非负整数，第</span><span lang="EN-US">i</span><span style="font-family: 宋体;">行的整数表示所有可能路径长度的</span><span lang="EN-US">i-1 </span><span style="font-family: 宋体;">次方之和</span><span lang="EN-US">Mod 12345</span><span style="font-family: 宋体;">后的值。</span></span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 4 3<br />
+1 2 3 4<br />
+4 3 2 1<br />
+1 2 3 4<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>38<br />
+66<br />
+136<br />
+318<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><!--[if gte mso 9]><xml><br />
+<w:WordDocument><br />
+<w:View>Normal</w:View><br />
+<w:Zoom>0</w:Zoom><br />
+<w:PunctuationKerning /><br />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing><br />
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery><br />
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery><br />
+<w:ValidateAgainstSchemas /><br />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid><br />
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent><br />
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText><br />
+<w:Compatibility><br />
+<w:SpaceForUL /><br />
+<w:BalanceSingleByteDoubleByteWidth /><br />
+<w:DoNotLeaveBackslashAlone /><br />
+<w:ULTrailSpace /><br />
+<w:DoNotExpandShiftReturn /><br />
+<w:AdjustLineHeightInTable /><br />
+<w:BreakWrappedTables /><br />
+<w:SnapToGridInCell /><br />
+<w:WrapTextWithPunct /><br />
+<w:UseAsianBreakRules /><br />
+<w:DontGrowAutofit /><br />
+<w:UseFELayout /><br />
+</w:Compatibility><br />
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel><br />
+</w:WordDocument><br />
+</xml><![endif]--></p><br />
+<p><!--[if gte mso 9]><xml><br />
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156"><br />
+</w:LatentStyles><br />
+</xml><![endif]--><!--[if gte mso 10]><br />
+<style><br />
+/* Style Definitions */<br />
+table.MsoNormalTable<br />
+{mso-style-name:普通表格;<br />
+mso-tstyle-rowband-size:0;<br />
+mso-tstyle-colband-size:0;<br />
+mso-style-noshow:yes;<br />
+mso-style-parent:"";<br />
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;<br />
+mso-para-margin:0cm;<br />
+mso-para-margin-bottom:.0001pt;<br />
+mso-pagination:widow-orphan;<br />
+font-size:10.0pt;<br />
+font-family:"Times New Roman";<br />
+mso-fareast-font-family:"Times New Roman";<br />
+mso-ansi-language:#0400;<br />
+mso-fareast-language:#0400;<br />
+mso-bidi-language:#0400;}<br />
+</style><br />
+<![endif]--><br />
+<p align="left" style="text-align:left;text-indent:21.25pt;<br />
+mso-char-indent-count:1.77" class="MsoNormal"><span lang="EN-US" style="font-size:12.0pt">N</span><span style="font-size:12.0pt;font-family:宋体;mso-ascii-font-family:Calibri;<br />
+mso-hansi-font-family:Calibri">，</span><span lang="EN-US" style="font-size:12.0pt">M&lt;=300,K&lt;=200</span></p><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

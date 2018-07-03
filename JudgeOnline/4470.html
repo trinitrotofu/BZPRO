@@ -1,0 +1,76 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Jsoi2013]公交系统</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4470. [Jsoi2013]公交系统</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4470">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4470">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4470">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>【故事背景】 <br />
+几年前南京因为修地铁的缘故，很多公交车线路都被迫改变了。JYY为此很<br />
+苦恼：试想一下，当你坐上一辆公交车，却发现这辆公交车驶向了与你记忆完全<br />
+不同的方向。于是 JYY 打算开发一套可以利用手机进行实时更新的公交信息<br />
+应用， 所有安装了这款应用的手机都可以向数据库发送最新的公交线路更改情况，<br />
+同时也可以通过应用向数据库查询自己所需要的信息。 <br />
+【问题描述】 <br />
+南京一共有 N 个公交站点，分别从1到 N 编号。两个不同的站点 x和y之间<br />
+可能会有公交车直接运营（不经过别的站点直接从 x 开到 y） ，我们将这种关系<br />
+看作一条无向边（公交线路显然是双向的，我们既可以从 x坐公交车到 y，也可<br />
+以从y坐车到x） 。 <br />
+任意时刻任何公交站点都至多只会连有 2条边，并且所有这些边是不会形成<br />
+环的（公交车很少会出现环线，所以这些公交线路应该形成一些不相交的链，链<br />
+的两端分别对应两个终点站）。 <br />
+JYY 的 IOS 应用按照时间顺序一共收到了 Q 条交互信息，每一条交互信息<br />
+都是下列五种信息之一： <br />
+1)&nbsp; add x y z <br />
+表示当前时刻，站点 x 到站点 y 之间有新增了一班公交车直接运营，并<br />
+且在当前路况下，公交车所需要的运营时间为 z； <br />
+2)&nbsp; del x y <br />
+表示由于某种原因，原本在站点 x 和站点 y 之间直接运营的公交车停运<br />
+了； <br />
+3)&nbsp; change x y z <br />
+表示由于路况情况改变，站点 x 到站点 y 之间直接运营的公交车当前的<br />
+运营时间为 z； <br />
+4)&nbsp; reach x y <br />
+表示某个用户询问从站点 x坐车能不能坐到站点y； <br />
+5)&nbsp; dest x y <br />
+表示某个用户从站点 x 上车，坐上了当前正开往站点 y 的公交车。该用<br />
+户想知道，他到达 y 后继续乘坐可乘坐的线路(已经乘坐过的线路不能重<br />
+复乘坐)，最终能够到达的终点站是哪一站？从站点 x 开始需要多久才能<br />
+开到终点站？ <br />
+由于用户难免会提交错误的信息，所以 JYY希望他的软件对于错误的信息也<br />
+要能够做出合理的反应： <br />
+1)&nbsp; 对于 add 信息，如果加入边(x,y)之后，任何站点连接的边数均不超过 2<br />
+并且图中没有环，JYY 则认为这个信息是正确的，并根据这个信息更新<br />
+数据库中的公交线路数据，否则JYY会无视这个错误信息； <br />
+2)&nbsp; 对于del和change信息，如果站点x和站点y之间有公交车直接运营， JYY<br />
+则认为这条信息是正确的，并更新数据库，否则 JYY 则会无视这个错误<br />
+信息； <br />
+3)&nbsp; 对于dest 信息，如果站点x不能到达站点 y，JYY也会认为这一条询问信<br />
+息是错误的。 <br />
+JYY希望你能够帮助他完成这一个公交信息应用。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入数据的第一行包含两个整数 N 和Q。 <br />
+接下来 Q行，每行对应一个 JYY需要处理的信息。 <br />
+在收到第一条信息之前，没有任何公交车在运营。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出 Q行，每行都对应一个输入文件中的信息，具体内容如下： <br />
+1)&nbsp; 如果输入的信息是错误的，输出&ldquo;ERROR&rdquo;； <br />
+2)&nbsp; 对于一个正确的 add，del，change信息，输出&ldquo;OK&rdquo;； <br />
+3)&nbsp; 对于一个正确的 dest 信息，输出一行两个整数，分别为终点站的编号和<br />
+开到终点站所需要的时间； <br />
+4)&nbsp; 对于reach 信息，如果用户询问的两个公交站点相互可达，输出&ldquo;YES&rdquo;，<br />
+否则输出&ldquo;NO&rdquo;。 <br />
+注意：输入输出数据很大，请使用快速的输入输出方式。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 10<br />
+add 1 2 1<br />
+add 2 1 1<br />
+add 3 2 1<br />
+add 4 5 2<br />
+reach 4 6<br />
+dest 1 5<br />
+del 5 6<br />
+add 1 4 2<br />
+dest 2 3<br />
+dest 3 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>OK<br />
+ERROR<br />
+OK<br />
+OK<br />
+NO<br />
+ERROR<br />
+ERROR<br />
+OK<br />
+3 1<br />
+5 6<br />
+ </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>2 &lt; =&nbsp; N &lt; =&nbsp; 10^5 ,2 &lt; =&nbsp; Q &lt; =&nbsp; 2&times;10^5，任意信息均保证X&ne;Y，<br /><br />
+1 &lt; = X,Y&lt;=N,1 &lt;=Z&lt;=10^4。</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

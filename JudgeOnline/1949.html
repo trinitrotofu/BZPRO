@@ -1,0 +1,84 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ceoi2006]Walk</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1949. [Ceoi2006]Walk</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：4 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1949">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1949">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1949">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">考虑X-Y平面上满足X≥0的整数结点
+
+给定若干个矩形及一个目标点，紧靠每个矩形外部的一周范围内没有其它矩形的点，所有矩形中的所有点满足X≥0
+
+求一条以(0,0)点为起点，以目标点为终点、不与任何矩形相交的最短路径</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行输入为两个整数X与Y(1≤X≤106,-106≤Y≤106)表示目标点坐标
+
+第二行为一个整数N(0≤N≤105)，表示矩形的数目
+
+接下来的N行每行包括4个整数：
+X1,Y1,X2,Y2(0≤X1,X2≤106,0≤Y1,Y2≤106)
+即N个矩形的某对对角顶点。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行包括一个整数L，表示最短路径长度
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>42 33<br />
+66<br />
+35 37 37 37<br />
+13 -41 13 6<br />
+40 -2 42 -1<br />
+27 -2 28 -2<br />
+15 -4 16 2<br />
+29 16 29 16<br />
+38 -34 38 -11<br />
+22 -5 22 -5<br />
+34 27 34 35<br />
+28 12 29 12<br />
+10 11 11 13<br />
+11 25 11 25<br />
+24 4 25 40<br />
+27 9 27 10<br />
+27 -4 27 -4<br />
+29 7 29 10<br />
+3 -13 5 -13<br />
+16 17 16 17<br />
+18 6 18 48<br />
+4 7 4 14<br />
+5 2 5 5<br />
+40 22 44 32<br />
+21 13 21 13<br />
+34 3 34 25<br />
+41 11 42 20<br />
+15 -15 16 -9<br />
+24 -46 25 -6<br />
+5 -4 5 -3<br />
+10 17 11 17<br />
+28 14 29 14<br />
+3 -15 4 -15<br />
+10 15 10 15<br />
+16 8 16 9<br />
+2 2 2 2<br />
+1 -4 3 -3<br />
+10 21 10 21<br />
+22 8 22 8<br />
+20 -3 21 2<br />
+10 19 11 19<br />
+7 -47 8 3<br />
+28 -11 28 -6<br />
+20 4 20 9<br />
+11 23 11 23<br />
+15 -17 16 -17<br />
+27 0 27 3<br />
+43 5 43 8<br />
+15 -7 16 -6<br />
+16 -19 16 -19<br />
+11 -10 11 -10<br />
+21 11 22 11<br />
+4 0 4 0<br />
+15 5 16 6<br />
+3 -11 5 -7<br />
+11 -8 11 -1<br />
+28 -13 28 -13<br />
+21 15 22 15<br />
+40 -30 43 -5<br />
+41 34 43 35<br />
+15 14 16 15<br />
+21 -16 22 -13<br />
+1 -1 2 -1<br />
+10 1 11 9<br />
+22 17 22 17<br />
+31 -50 32 -1<br />
+22 -8 22 -7<br />
+16 -21 16 -21<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>89<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>数量积</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4414. 数量积</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4414">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4414">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4414">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>神犇heheda最近得到了UOJ抱枕，蒟蒻yts1999想要玩。于是heheda给yts1999出了一道题：</div>
+<div>一个长度为2n+2的整数数列 按照下式定义：</div>
+<div>A0=0</div>
+<div>A1=C</div>
+<div>Ai+2=(Ai+1+Ai) Mod M (0&lt;=i&lt;=2*N)</div>
+<div>现有n个平面向量v1&hellip;vn：</div>
+<div>V1=(A2,A3),V2=(A4,A5)...Vn=(A2n,A2n+1)</div>
+<div>集合S的定义如下：</div>
+<div>&nbsp;<img width="380" height="48" alt="" src="upload/201602/111.png" /></div>
+<div>其中&quot;vi&bull;vj&quot;表示向量vi和vj的数量积。</div>
+<div>求S集合中不同元素的个数是多少。答案对M取模。</div>
+<div>heheda告诉yts1999，只要他做出了这道题，她就可以把抱枕借给他玩一会。然而yts1999实在是太弱了不会做，于是向你求助。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入数据包含一行三个整数C,M和n，分别表示a1的值，模数和平面向量的个数，每两个数之间用一个空格隔开。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行一个整数表示答案对M取模后的值。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 5 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>数列为{0,4,4,3,2,0,2,2}，v1=(4,3),v2=(2,0),v3=(2,2)。</div><br />
+<div><span style="font-family: arial, verdana, helvetica, sans-serif; font-size: 18px; line-height: normal; background-color: rgb(228, 240, 248);">v1&bull;v2 mod M=3</span>, v2&bull;v3 mod M=4, v1&bull;v3 mod M=4。</div><br />
+<div>对于100%的数据，1&le;C&le;10^9,1&le;M&le;10^9,1&le;n&le;3*10^5</div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,52 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2018 Open]Out of Sorts</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5277. [Usaco2018 Open]Out of Sorts</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5277">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5277">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5277">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>留意着农场之外的长期职业生涯的可能性，奶牛Bessie开始在不同的在线编程网站上学习算法。她最喜欢的两个算</div>
+<div>法是&ldquo;冒泡排序&rdquo;和&ldquo;快速排序&rdquo;，但是不幸的是Bessie轻易地把它们搞混了，最后实现了一个奇怪的混合算法！</div>
+<div></div>
+<div>如果数组A中A[...i]的最大值不大于A[i+1&hellip;]的最小值，我们就称元素i和i+1之间的位置为一个&ldquo;分隔点&rdquo;。Bess</div>
+<div>ie还记得快速排序包含对数组的重排，产生了一个分隔点，然后要递归对两侧的A[...i]和A[i+1&hellip;]排序。然而，</div>
+<div>尽管她正确地记下了数组中所有的分隔点都可以在线性时间内被求出，她却忘记快速排序应该怎么重排来快速构造</div>
+<div>一个分隔点了！在这个可能会被证明是排序算法的历史中最糟糕的算法性失误之下，她做出了一个不幸的决定，使</div>
+<div>用冒泡排序来完成这个任务。</div>
+<div></div>
+<div>以下是Bessie最初的对数组A</div>
+<div></div>
+<div>进行排序的实现的概要。她首先写了一个简单的函数，执行冒泡排序的一轮：</div>
+<div></div>
+<div>bubble_sort_pass (A) {</div>
+<div>&nbsp; &nbsp;for i = 0 to length(A)-2</div>
+<div>&nbsp; &nbsp; &nbsp; if A[i] &gt; A[i+1], swap A[i] and A[i+1]</div>
+<div>}</div>
+<div></div>
+<div>她的快速排序（相当快）函数的递归代码是按下面的样子构成的：</div>
+<div></div>
+<div>quickish_sort (A) {</div>
+<div>&nbsp; &nbsp;if length(A) = 1, return</div>
+<div>&nbsp; &nbsp;do { // Main loop</div>
+<div>&nbsp; &nbsp; &nbsp; work_counter = work_counter + length(A)</div>
+<div>&nbsp; &nbsp; &nbsp; bubble_sort_pass(A)</div>
+<div>&nbsp; &nbsp;} while (no partition points exist in A)&nbsp;</div>
+<div>&nbsp; &nbsp;divide A at all partition points; recursively quickish_sort each piece</div>
+<div>}</div>
+<div></div>
+<div>Bessie好奇于她的代码能够运行得多快。简单起见，她计算出她得主循环的每一轮都消耗线性时间，</div>
+<div>所以她相应增加一个全局变量work_counter的值，以此来跟踪整个算法总共完成的工作量。</div>
+<div></div>
+<div>给定一个输入数组，请预测quickish_sort函数接收这个数组之后，变量work_counter的最终值。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行包含N,接下来N行描述了A[0]&hellip;A[N-1]，每个数都是一个范围为0&hellip;10^9的整数。</div>
+<div>输入数据不保证各不相同。</div>
+<div>（1&le;N&le;100,000）</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出work_counter的最终值</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+20<br />
+2<br />
+3<br />
+4<br />
+9<br />
+8<br />
+7</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12<br />
+在这个例子中，数组开始时为20 2 3 4 9 8 7。在一轮冒泡排序之后（增加7的工作量），我们得到2 | 3 | 4 | 9<br />
+ 8 7 | 20，其中|表示一个分隔点。于是我们的问题被分成了递归的子问题，包括对2、3、4、20排序（每个消耗0<br />
+单元的工作量）和对9 8 7排序。对于9 8 7这个子问题，主循环的一轮（3单元工作量）得到8 7 | 9，在此之后最<br />
+后一轮处理8 7（2单元工作量） 就有效地完成了排序</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

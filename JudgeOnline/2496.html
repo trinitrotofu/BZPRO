@@ -1,0 +1,90 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Very Boring Homework</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2496. Very Boring Homework</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2496">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2496">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2496">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium"><br />
+&nbsp;&nbsp;Prof. Z thinks his homework is very hard for most of his students to solve (do you remember the task &ldquo;Boring Homework&rdquo;?) To his surprise, many students hand in correct solutions. He thinks the reason is actually the small size of the data set he used to test students&rsquo; programs rather than the low difficulty of the homework task. He decides to give his students the same homework again, but with enormous test cases. Of course, his students think his homework becomes even more boring this time. They need your help again.<br />
+&nbsp;&nbsp;For the ones who don&rsquo;t know what homework Prof. Z. had given to his students last time:<br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;You&rsquo;re asked to draw a graph of a binary search tree (BST). <br />
+<i><br />
+&nbsp;&nbsp;A binary search tree, which may sometimes also be called ordered or sorted binary tree, is a node-based binary tree data structure which has the following properties:<br />
+&nbsp;&nbsp;The left subtree of a node contains only nodes with keys less than the node's key.<br />
+&nbsp;&nbsp;The right subtree of a node contains only nodes with keys greater than the node's key.<br />
+&nbsp;&nbsp;Both the left and right subtrees must also be binary search trees.<br />
+&nbsp;&nbsp;--from Wikipedia<br />
+</i><br />
+&nbsp;&nbsp;Given a list of integer keys that should be inserted into the BST one by one orderly, we can form a unique BST. Moreover, Prof. Z wants the students to draw the graph of this BST.<br />
+&nbsp;&nbsp;<br />
+&nbsp;&nbsp;The rules to draw a graph of a BST are listed below:<br />
+&nbsp;&nbsp;<br />
+1. The graph of a 1-node BST is a single 'o' (15th small Latin letter).<br />
+2. If a BST has a non-empty subtree, draw a single '|' just above the subtree's root, and a single '+' just above the previous drawn '|'. Finally, in the row of '+', use the least number (including 0) of '-'s to connect '+' (corresponding to the left or right subtree) and 'o' (denoting the parent node of the subtrees).<br />
+3. The left subtree (if exists) must be drawn on the left side of its parent. Similarly, the right subtree (if exists) must be drawn on the right side of its parent.<br />
+4. The column of the BST's root must not contain any characters belonging to left or right subtree.<br />
+5. For each node of the BST, the graph of its left subtree and the graph of its right subtree do not share common columns in the picture of the whole tree.<br />
+<br />
+&nbsp;&nbsp;After the whole BST has been drawn, we number the rows from top to bottom, counting from 1, and so do the columns from left to right, counting from 1.<br />
+&nbsp;&nbsp;Due to the large scale of the tree, the graph will become so large that it is impossible for Prof. Z to check every detail of the graph this time. So you are only asked to hand in m fragments of that graph to Prof. Z instead of the whole one.</span></p>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium">根据输入构造一棵二叉树，将二叉树转化为图形，并根据询问输出该图形的局部<br />
+<br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;The first line contains T, the number of test cases. T test cases follow.<br />
+&nbsp;&nbsp;For each test case:<br />
+&nbsp;&nbsp;The first line contains a positive integer N (N &lt;= 100000).<br />
+&nbsp;&nbsp;The second line contains N distinct integers, each of which can be represented by a 32-bit signed integer. These numbers should be inserted into an empty BST one by one in the given order.<br />
+&nbsp;&nbsp;The third line contains an integer M (M &lt;= 5).<br />
+&nbsp;&nbsp;M lines follow, each contains four integers, which are the row and column number of the top left corner, and the number of rows Ri and columns Ci of the required graph fragment, respectively. All the input integers will be positive and fit into a 32-bit signed integer, except Ri and Ci, which will be less than or equal to 200 and greater than 0.<br />
+</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="panel_content"><span style="font-size: medium">For each test case:<br />
+<br />
+&nbsp;&nbsp;Output the case number counting from 1 in the first line.<br />
+&nbsp;&nbsp;Then M blocks follow, each contains Ri (or less, see next) lines. Each line should contain exactly Ci characters. Use space (ASCII 32) to fill in the blank. But if a line contains only whitespaces, this line should not be outputted.<br />
+&nbsp;&nbsp;Output a blank line after each graph fragment.<br />
+</span></div>
+<div class="panel_content">
+<pre></pre>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+3<br />
+3 1 2<br />
+1<br />
+1 1 5 3<br />
+6 4 5 6 1 3 2<br />
+1<br />
+1 1 8 10<br />
+10<br />
+2 6 7 4 5 3 1 9 10 8<br />
+2<br />
+1 1 5 5<br />
+3 6 5 5<br />
+ <br />
+<br />
+ <br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case #1:<br />
++-o<br />
+|  <br />
+o+ <br />
+ | <br />
+ o <br />
+<br />
+Case #2:<br />
++--o+     <br />
+|   |     <br />
+o-+ o+    <br />
+  |  |    <br />
+ +o  o    <br />
+ |        <br />
+ o        <br />
+<br />
+Case #3:<br />
++o---<br />
+|    <br />
+o  +-<br />
+   | <br />
+  +o+<br />
+<br />
+o+   <br />
+ |   <br />
+ o-+ <br />
+   | <br />
+  +o+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

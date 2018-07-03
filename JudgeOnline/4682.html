@@ -1,0 +1,48 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Sliding Block Puzzle</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4682. Sliding Block Puzzle</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4682">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4682">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4682">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在滑块拼图中，我们通过反复滑动滑块到空格位置来完成一个目标局面。一位拼图设计者结合滑块拼图和迷宫的思</div>
+<div>想设计了一种新的拼图。拼图被表示成一个矩形区域，区域被划分成一些 1&times;1 的小格。其中一些小格被提前放置</div>
+<div>了障碍，无法被滑动。剩下的位置里有两个小格是空的，以及一个 2&times;2 的王滑块与许多 1&times;1 的卒滑块。如果一</div>
+<div>个卒滑块与一个空格相邻，则卒滑块可以移动到空格中。如果一个王滑块的一边两个小格都是空格，则王滑块可以</div>
+<div>向这条边的方向移动。但是注意我们无法移动障碍。对于给定的初始拼图，拼图游戏的任务是将王滑块移动到整个</div>
+<div>区域的左上角。</div>
+<div>例如下图给出了第四组样例的初始局面。</div>
+<div>&nbsp;<img src="upload/201608/11.png" width="298" height="150" alt="" /></div>
+<div>你的任务是计算从给定局面到完成任务所需的最少移动次数。一次移动是指某种滑块移动到相邻的位置上。</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="font-size: 11.8181819915771px;">输入包含多组测试数据。每组数据的第一行包含两个正整数 H 和 W ，表示拼图的矩形区域包含 H&times;W 个小格。接</div>
+<div style="font-size: 11.8181819915771px;">下来 H 行，每行 W 个字符，表示拼图，其中&lsquo;X&rsquo;, &lsquo;o&rsquo;, &lsquo;*&rsquo; 和 &lsquo;.&rsquo; 分别表示王滑块、卒滑块、障碍和</div>
+<div style="font-size: 11.8181819915771px;">空格。保证 3&le;H,W&le;50 。输入以两个零作为结束。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="font-size: 11.8181819915771px;">对于每组数据，输出一行一个整数，如果给定局面能完成任务，则输出最小步数，否则输出-1。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3<br />
+oo.<br />
+oXX<br />
+.XX<br />
+3 3<br />
+XXo<br />
+XX.<br />
+o.o<br />
+3 5<br />
+.o*XX<br />
+oooXX<br />
+oooo.<br />
+7 12<br />
+oooooooooooo<br />
+ooooo*****oo<br />
+oooooo****oo<br />
+o**ooo***ooo<br />
+o***ooooo..o<br />
+o**ooooooXXo<br />
+ooooo****XXo<br />
+5 30<br />
+oooooooooooooooooooooooooooooo<br />
+oooooooooooooooooooooooooooooo<br />
+o***************************oo<br />
+XX.ooooooooooooooooooooooooooo<br />
+XX.ooooooooooooooooooooooooooo<br />
+0 0 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>11<br />
+0<br />
+-1<br />
+382<br />
+6807<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

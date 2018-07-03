@@ -1,0 +1,59 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>【POJ Challenge】爬山II</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2294. 【POJ Challenge】爬山II</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2294">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2294">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2294">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>
+<dd>
+<div>
+<p>lqp18_31给了1tthinking一个很难的问题。这个问题由NWERC 2011某道题改编而来。下面是这个问题:</p>
+<p>你在家乡的一个山坡上开车回家。你想尽可能快的回家，但是你的油箱里没有太多油了。回家的路是由一些上坡和下坡组成的。每个坡有不同的斜率和长度。如何可以在油量限制的前提下，最快回家呢？</p>
+<p>我们把油量的消耗简化为一个很简单的模型。每小时油量消耗会随着速度 <em>v</em> 线性递增。但是，油量还和坡的斜率 <em>s</em> 有关。 举个例子，当走下坡路的时候，你可以以10千米每小时的速度行走而不花费任何的油。然后如果你走上坡路，你就需要耗油了。 更加详细的说, 你的汽车每小时耗油是 <em>c</em>。那么</p>
+<p align="center"><em>c = max(0, &alpha;v + &beta;s)</em>,</p>
+其中 <em>&alpha;</em> 和 <em>&beta;</em> 是两个常数， <em>v</em> 是你的速度 km/h, <em>s</em> 是斜率。 加速和减速不花费油，且可以瞬间完成。
+<p>你的车有一个安全速度，你永远也不能超越这个速度vmax <strong>且在一个斜坡上，你必须以同样的速度行驶，不能变速</strong>.</p>
+<p><img src="http://media.openjudge.cn/images/g3204_1.jpg" alt="" /></p>
+</div>
+</dd>
+<dd>
+<div></div>
+</dd>
+</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>
+<dd>
+<div>
+<p>第一行一个正数：测试数据组数，最多100。接下来是每个测试数据：</p>
+<ul>
+    <li>一行是4个浮点数 <em>&alpha;</em> (0.1 &le; <em>&alpha;</em> &le; 100), <em>&beta;</em> (0.1 &le; <em>&beta;</em> &le; 100), <em>vmax</em> (0 &lt; <em>vmax</em> &le; 200) and <em>f</em> (0 &le; <em>f</em> &le;= 50): 常数<em>&alpha;</em>和<em>&beta;</em>，最大速度和剩余油量。</li>
+    <li>下一行一个整数 <em>r</em> (1 &le; <em>r</em> &le; 10,000): 斜坡数。</li>
+    <li>接下来 <em>r</em> 行，每行两个浮点数，<em>x<sub>i</sub></em> and <em>y<sub>i</sub></em> (1 &le; <em>x<sub>i</sub></em> &le; 1000, -1000 &le; <em>y<sub>i</sub></em> &le; 1000，单位是米) ，表示由现在的位置平移向量(<em>x<sub>i</sub></em>,<em>y<sub>i</sub></em>)可以到达下一个斜坡的拐点（斜坡的斜率是不变的）。</li>
+</ul>
+</div>
+</dd>
+</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>
+<dt>&nbsp; 每组测试数据：</dt>
+<dt>一行一个浮点数：你可以回家的最快时间。保证如果可以回家，一定在24h内可以到家。如果不可能到家，输出&quot;IMPOSSIBLE&quot;。输出保留两位小数</dt>
+</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+<br />
+1.000000 1.000000 1.000000 21.213204<br />
+10<br />
+1000 1000<br />
+1000 -1000<br />
+1000 1000<br />
+1000 -1000<br />
+1000 1000<br />
+1000 -1000<br />
+1000 1000<br />
+1000 -1000<br />
+1000 1000<br />
+1000 -1000<br />
+<br />
+10.0 100.0 150 1.0<br />
+2<br />
+100 0<br />
+100 100<br />
+<br />
+0.5 0.1 100 10<br />
+3<br />
+1000 0<br />
+100 10<br />
+100 -10</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>14.14<br />
+IMPOSSIBLE<br />
+0.01</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

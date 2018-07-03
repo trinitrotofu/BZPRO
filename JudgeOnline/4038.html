@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>医疗援助</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4038. 医疗援助</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4038">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4038">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4038">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>一只带着先进设备和药物的医疗团队来到了埃博拉病毒疫区的某个非洲国家。这个国家有n个村庄，均坐落在该国唯一的一条公路旁，n个村庄依次标号为1,2,&hellip;n。第i个村庄有a_i个埃博拉感染者。</div>
+<div>到来后的第一天早晨，医疗团队在第1个村庄。每天他们可以选择治疗所在村庄的村民，这样所有感染者都会痊愈；他们也可以选择前往相邻的一个村庄，路程需要1天。每天结束时，如果第i个村庄的a_i个感染者没有痊愈，那么他们会死去，同时会有另外a_i个人被感染。也就是说，如果第i个村庄没有被治疗，那么每天这个村庄会死去a_i个人。</div>
+<div>医疗团队在经过村庄i时，可能选择不治疗这个村庄而前往下一个村庄i+1。但为了不让村民失去希望，如果医疗团队在村庄j决定往回走时，则他们要治疗村庄j之前所有没有被治疗的村庄，同时在返回的过程中，如果经过没有接受治疗的村庄，他们需要停下来进行治疗。</div>
+<div>医疗团队最终会治愈所有村民。作为团队的领导人，你需要得出在合理规划行程下最少的死亡人数。</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">第一行为一个正整数</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">n</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">，表示村庄的个数。接下来一行是</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">n</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">个正整数</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">a_i</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">（</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:
+AR-SA">1&lt;=a_i&lt;=10^9</span><span style="font-size:10.5pt;mso-bidi-font-size:
+11.0pt;font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">），为每个村庄的感染人数</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">输出一个整数，表示在治愈所有村民前最少的死亡人数。</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+40 200 1 300 2 10<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1950</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p class="MsoNormal" align="left"><span lang="EN-US">100%</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">的数据，</span><span lang="EN-US">n&lt;=3000</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

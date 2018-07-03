@@ -1,0 +1,536 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>基础排序算法练习题</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4534. 基础排序算法练习题</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：12 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4534">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4534">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4534">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:TrackMoves />
+<w:TrackFormatting />
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:DoNotPromoteQF />
+<w:LidThemeOther>EN-US</w:LidThemeOther>
+<w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+<w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:SplitPgBreakAndParaMark />
+<w:DontVertAlignCellWithSp />
+<w:DontBreakConstrainedForcedTables />
+<w:DontVertAlignInTxbx />
+<w:Word11KerningPairs />
+<w:CachedColBalance />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+<m:mathPr>
+<m:mathFont m:val="Cambria Math" />
+<m:brkBin m:val="before" />
+<m:brkBinSub m:val="&#45;-" />
+<m:smallFrac m:val="off" />
+<m:dispDef />
+<m:lMargin m:val="0" />
+<m:rMargin m:val="0" />
+<m:defJc m:val="centerGroup" />
+<m:wrapIndent m:val="1440" />
+<m:intLim m:val="subSup" />
+<m:naryLim m:val="undOvr" />
+</m:mathPr></w:WordDocument>
+</xml><![endif]--></p>
+<p><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+LatentStyleCount="267">
+<w:LsdException Locked="false" Priority="0" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Normal" />
+<w:LsdException Locked="false" Priority="9" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="heading 1" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 2" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 3" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8" />
+<w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9" />
+<w:LsdException Locked="false" Priority="39" Name="toc 1" />
+<w:LsdException Locked="false" Priority="39" Name="toc 2" />
+<w:LsdException Locked="false" Priority="39" Name="toc 3" />
+<w:LsdException Locked="false" Priority="39" Name="toc 4" />
+<w:LsdException Locked="false" Priority="39" Name="toc 5" />
+<w:LsdException Locked="false" Priority="39" Name="toc 6" />
+<w:LsdException Locked="false" Priority="39" Name="toc 7" />
+<w:LsdException Locked="false" Priority="39" Name="toc 8" />
+<w:LsdException Locked="false" Priority="39" Name="toc 9" />
+<w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption" />
+<w:LsdException Locked="false" Priority="10" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Title" />
+<w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font" />
+<w:LsdException Locked="false" Priority="11" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtitle" />
+<w:LsdException Locked="false" Priority="22" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Strong" />
+<w:LsdException Locked="false" Priority="20" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Emphasis" />
+<w:LsdException Locked="false" Priority="59" SemiHidden="false"
+UnhideWhenUsed="false" Name="Table Grid" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text" />
+<w:LsdException Locked="false" Priority="1" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="No Spacing" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 1" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 1" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 1" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 1" />
+<w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision" />
+<w:LsdException Locked="false" Priority="34" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="List Paragraph" />
+<w:LsdException Locked="false" Priority="29" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Quote" />
+<w:LsdException Locked="false" Priority="30" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Quote" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 1" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 1" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 1" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 1" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 1" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 2" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 2" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 2" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 2" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 2" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 2" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 2" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 2" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 2" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 3" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 3" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 3" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 3" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 3" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 3" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 3" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 3" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 3" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 4" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 4" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 4" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 4" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 4" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 4" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 4" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 4" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 4" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 5" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 5" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 5" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 5" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 5" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 5" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 5" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 5" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 5" />
+<w:LsdException Locked="false" Priority="60" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Shading Accent 6" />
+<w:LsdException Locked="false" Priority="61" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light List Accent 6" />
+<w:LsdException Locked="false" Priority="62" SemiHidden="false"
+UnhideWhenUsed="false" Name="Light Grid Accent 6" />
+<w:LsdException Locked="false" Priority="63" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6" />
+<w:LsdException Locked="false" Priority="64" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6" />
+<w:LsdException Locked="false" Priority="65" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 1 Accent 6" />
+<w:LsdException Locked="false" Priority="66" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium List 2 Accent 6" />
+<w:LsdException Locked="false" Priority="67" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6" />
+<w:LsdException Locked="false" Priority="68" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6" />
+<w:LsdException Locked="false" Priority="69" SemiHidden="false"
+UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6" />
+<w:LsdException Locked="false" Priority="70" SemiHidden="false"
+UnhideWhenUsed="false" Name="Dark List Accent 6" />
+<w:LsdException Locked="false" Priority="71" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Shading Accent 6" />
+<w:LsdException Locked="false" Priority="72" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful List Accent 6" />
+<w:LsdException Locked="false" Priority="73" SemiHidden="false"
+UnhideWhenUsed="false" Name="Colorful Grid Accent 6" />
+<w:LsdException Locked="false" Priority="19" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis" />
+<w:LsdException Locked="false" Priority="21" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis" />
+<w:LsdException Locked="false" Priority="31" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference" />
+<w:LsdException Locked="false" Priority="32" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Intense Reference" />
+<w:LsdException Locked="false" Priority="33" SemiHidden="false"
+UnhideWhenUsed="false" QFormat="true" Name="Book Title" />
+<w:LsdException Locked="false" Priority="37" Name="Bibliography" />
+<w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading" />
+</w:LatentStyles>
+</xml><![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-priority:99;
+mso-style-qformat:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.5pt;
+mso-bidi-font-size:11.0pt;
+font-family:"Calibri","sans-serif";
+mso-ascii-font-family:Calibri;
+mso-ascii-theme-font:minor-latin;
+mso-hansi-font-family:Calibri;
+mso-hansi-theme-font:minor-latin;
+mso-bidi-font-family:"Times New Roman";
+mso-bidi-theme-font:minor-bidi;
+mso-font-kerning:1.0pt;}
+</style>
+<![endif]--></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">OI</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">小园丁</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">ZZX</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">最近在</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">XJOI</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">上夜以继日地学习编程基础知识，刷初级训练题库。在无压力</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">AC</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">了</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&ldquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">圆的周长与面积</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&rdquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">、</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&ldquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">二位数加法口算训练程序</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&rdquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">等题之后，他遇到了这样一道难题：</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&ldquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">输入</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri">n</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">个数</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri">a[1], a[2], ..., a[n]</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">，请将它们升序排序后输出。</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&rdquo;</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">ZZX</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">苦思冥想，不知所措，便去请教德高望重的</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri">OI</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">老司机</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri">JRY</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">。</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">JRY</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">贴给他一段超自然的神秘代码，说：</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&ldquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">你把这段东西塞进程序里，然后每次调用</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">magic(left, right)</span><span style="mso-bidi-font-size:10.5pt;
+font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">这个函数，它就会用</span><span lang="EN-US" style="mso-bidi-font-size:
+10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">O(1)</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">时间将</span><span lang="EN-US" style="mso-bidi-font-size:
+10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">a[left], a[left+1], ..., a[right]</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">原地升序排序。</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&rdquo;</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&ldquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">劲啊</span><span style="mso-bidi-font-size:10.5pt;font-family:&quot;Times New Roman&quot;,&quot;serif&quot;;
+mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">&rdquo;</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&ldquo;</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">但是啊由于一些奇怪的原因，你不能直接调用</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">magic(1,n)</span><span style="mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">，否则程序会</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">RE</span><span style="mso-bidi-font-size:
+10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&rdquo;</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+&quot;Times New Roman&quot;,&quot;serif&quot;;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&ldquo;</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri">wori?</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&rdquo;</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">不过这难不倒聪明伶俐的</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">ZZX</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">。经过一番思索，他写出了这样一段程序：</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">input(a[1], a[2], ..., a[n]);</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">magic(left_1, right_1);</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">magic(left_2, right_2);</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">...</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">magic(left_m, right_m);</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">output(a[1], a[2], ..., a[n]);</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">JRY</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">看了这段代码，批判道：</span><span style="mso-bidi-font-size:
+10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">&ldquo;</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">Native! </span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">看我用遗传算法造个数据分分钟把你卡掉</span><span style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:宋体;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">&rdquo;</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">然而</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:
+Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">ZZX</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">并不信服，他打算把程序交到</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">XJOI</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">上，用评测结果来打</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">JRY</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">的脸。</span></p>
+<p align="left" style="text-align:left;mso-layout-grid-align:
+none;text-autospace:none" class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">由于</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:
+Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">XJOI</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">管理员</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">Ginger</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">最近忙于打</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;
+mso-fareast-font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:
+Calibri">Geometry Dash</span><span style="mso-bidi-font-size:10.5pt;font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">，没有工夫来修理狗带了的评测姬。因此评测任务落到了你的头上。</span></p>
+<p class="MsoNormal"><span style="mso-bidi-font-size:10.5pt;font-family:宋体;
+mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:宋体;mso-ansi-language:
+ZH-CN">这道题共有</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;
+mso-ascii-font-family:Calibri;mso-fareast-font-family:宋体;mso-hansi-font-family:
+Calibri;mso-bidi-font-family:Calibri">q</span><span style="mso-bidi-font-size:
+10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:宋体;
+mso-ansi-language:ZH-CN">个测试点。你需要对于每一个测试点，判断</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+宋体;mso-hansi-font-family:Calibri;mso-bidi-font-family:Calibri">ZZX</span><span style="mso-bidi-font-size:10.5pt;font-family:宋体;mso-hansi-font-family:Calibri;
+mso-bidi-font-family:宋体;mso-ansi-language:ZH-CN">的程序是否输出了正确的排序结果。</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行三个整数n, m, q。</div>
+<div>接下来m行按顺序给出了ZZX的程序中每条指令的参数left_i, right_i。</div>
+<div>接下来q行，每行表示一个测试点，包含空格隔开的n个非负整数a[1], a[2], ..., a[n]。</div>
+<div>1 &le; n &le; 1500 , 1 &le; m &le; 1000000 , 1 &le; q &le; 1500;&nbsp;</div>
+<div>1 &le; left_i &le; right_i &le; n, right_i - left_i + 1 &lt; n; 0 &le; a[i] &le; 1500。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个测试点输出一行，如果ZZX的程序能将这个数列正确排序，输出&quot;AC&quot;，否则输出&quot;WA&quot;。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 3 2<br />
+1 3<br />
+3 6<br />
+1 3<br />
+4 2 2 3 0 7<br />
+5 3 8 2 1 9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>AC<br />
+WA<br />
+样例说明<br />
+对于第一个测试点：<br />
+4 2 2 3 0 7 -> [2 2 4] 3 0 7 -> 2 2 [0 3 4 7] -> [0 2 2] 3 4 7，正确。<br />
+对于第二个测试点：<br />
+5 3 8 2 1 9 -> [3 5 8] 2 1 9 -> 3 5 [1 2 8 9] -> [1 3 5] 2 8 9，错误。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,41 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2007]生成树计数</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1494. [NOI2007]生成树计数</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1494">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1494">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1494">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>最近，小栋在无向连通图的生成树个数计算方面有了惊人的进展，他发现：</div>
+<div>&middot;n个结点的环的生成树个数为n。</div>
+<div>&middot;n个结点的完全图的生成树个数为n^(n-2)。这两个发现让小栋欣喜若狂，由此更加坚定了他继续计算生成树个数的</div>
+<div>想法，他要计算出各种各样图的生成树数目。一天，小栋和同学聚会，大家围坐在一张大圆桌周围。小栋看了看，</div>
+<div>马上想到了生成树问题。如果把每个同学看成一个结点，邻座（结点间距离为1）的同学间连一条边，就变成了一</div>
+<div>个环。可是，小栋对环的计数已经十分娴熟且不再感兴趣。于是，小栋又把图变了一下：不仅把邻座的同学之间连</div>
+<div>一条边，还把相隔一个座位（结点间距离为2）的同学之间也连一条边，将结点间有边直接相连的这两种情况统称</div>
+<div>为有边相连，如图1所示。</div>
+</div>
+<div><img src="upload/201602/1(1).png" width="312" height="367" alt="" /></div>
+<div><img src="upload/201602/1.png" width="0" height="0" alt="" /></div>
+<div>
+<div>小栋以前没有计算过这类图的生成树个数，但是，他想起了老师讲过的计算任意图的生成树个数的一种通用方法：</div>
+<div>构造一个n&times;n的矩阵A={aij},其中</div>
+</div>
+<div><img src="upload/201602/2(3).png" width="267" height="92" alt="" /></div>
+<div><img src="https://www.lydsy.com/JudgeOnline/upload/201602/2(2).png" width="0" height="0" alt="" /></div>
+<div><img src="upload/201602/2(1).png" width="0" height="0" alt="" /></div>
+<div><img src="https://www.lydsy.com/JudgeOnline/upload/201602/2.png" width="0" height="0" alt="" /></div>
+<div>
+<div>其中di表示结点i的度数。与图1相应的A矩阵如下所示。为了计算图1所对应的生成数的个数，只要去掉矩阵A的最</div>
+<div>后一行和最后一列，得到一个(n-1)&times;(n-1)的矩阵B，计算出矩阵B的行列式的值便可得到图1的生成树的个数所以</div>
+<div>生成树的个数为|B|=3528。小栋发现利用通用方法，因计算过于复杂而很难算出来，而且用其他方法也难以找到更</div>
+<div>简便的公式进行计算。于是，他将图做了简化，从一个地方将圆桌断开，这样所有的同学形成了一条链，连接距离</div>
+<div>为1和距离为2的点。例如八个点的情形如下：</div>
+</div>
+<div><img src="https://www.lydsy.com/JudgeOnline/upload/201602/3(2).png" width="469" height="94" alt="" /></div>
+<div><img src="https://www.lydsy.com/JudgeOnline/upload/201602/3(1).png" width="0" height="0" alt="" /></div>
+<div></div>
+<div></div>
+<div>
+<div>这样生成树的总数就减少了很多。小栋不停的思考，一直到聚会结束，终于找到了一种快捷的方法计算出这个图的</div>
+<div>生成树个数。可是，如果把距离为3的点也连起来，小栋就不知道如何快捷计算了。现在，请你帮助小栋计算这类</div>
+<div>图的生成树的数目。</div>
+</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>包含两个整数k,n，由一个空格分隔。k表示要将所有距离不超过k（含k）的结点连接起来，n表示有n个结点。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一个整数，表示生成树的个数。由于答案可能比较大，所以你 只要输出答案除65521 的余数即可。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 5<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>75</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img border="0" src="https://www.lydsy.com/JudgeOnline/images/1494_4.jpg" alt="" /> <img border="0" src="https://www.lydsy.com/JudgeOnline/images/1494_5.jpg" alt="" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

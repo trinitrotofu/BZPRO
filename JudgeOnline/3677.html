@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Apio2014]连珠线 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3677. [Apio2014]连珠线 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3677">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3677">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3677">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><font face="Times New Roman" size="3">在列奥纳多&middot;达&middot;芬奇时期，有一个流行的童年游戏，叫做&ldquo;连珠线&rdquo;。不出所料，玩这个游戏只需要珠子和线，珠子从1到礼编号，线分为红色和蓝色。游戏 <br />
+开始时，只有1个珠子，而接下来新的珠子只能通过线由以下两种方式被加入： <br />
+1．Append(w，杪)：-个新的珠子w和一个已有的珠子杪连接，连接使用红线。 <br />
+2．Insert(w，u，v)：-个新的珠子w加入到一对通过红线连接的珠子（u，杪） <br />
+之间，并将红线改成蓝线。也就是将原来u连到1的红线变为u连到w的蓝线与W连到V的蓝线。 <br />
+无论红线还是蓝线，每条线都有一个长度。而在游戏的最后，将得到游戏的 <br />
+最后得分：所有蓝线的长度总和。 <br />
+现在有一个这个游戏的最终结构：你将获取到所有珠子之间的连接情况和所 <br />
+有连线的长度，但是你并不知道每条线的颜色是什么。 <br />
+你现在需要找到这个结构下的最大得分，也就是说：你需要给每条线一个颜 <br />
+色f红色或蓝色），使得这种连线的配色方案是可以通过上述提到的两种连线方式 <br />
+操作得到的，并且游戏得分最大。在本题中你只需要输出最大的得分即可。&nbsp;<br />
+</font></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font face="Times New Roman" size="3">第一行是一个正整数n，表示珠子的个数，珠子编号为1刭n。 <br />
+接下来n-l行，每行三个正整数ai，bi(l&le;ai10000)，表示有一条长度为ci的线连接了珠子ai和珠子bi。 <br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font face="Times New Roman" size="3">输出一个整数，为游戏的最大得分。 <br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+1 2 10<br />
+1 3 40<br />
+1 4 15<br />
+1 5 20</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>60 <br />
+<br />
+<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">数据范围满足1&le;n&le;200000。 <br /><br />
+</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

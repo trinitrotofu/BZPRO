@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi2014]Rally</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3832. [Poi2014]Rally</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3832">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3832">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3832">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>An annual bicycle rally will soon begin in Byteburg. The bikers of Byteburg are natural long distance cyclists. Local representatives of motorcyclists, long feuding the cyclists, have decided to sabotage the event.</div>
+<div>There are &nbsp; intersections in Byteburg, connected with one way streets. Strangely enough, there are no cycles in the street network - if one can ride from intersection U to intersection V , then it is definitely impossible to get from V to U.</div>
+<div>The rally's route will lead through Byteburg's streets. The motorcyclists plan to ride their blazing machines in the early morning of the rally day to one intersection and completely block it. The cyclists' association will then of course determine an alternative route but it could happen that this new route will be relatively short, and the cyclists will thus be unable to exhibit their remarkable endurance. Clearly, this is the motorcyclists' plan - they intend to block such an intersection that the longest route that does not pass through it is as short as possible.</div>
+<div></div>
+<div>
+<div>给定一个N个点M条边的有向无环图，每条边长度都是1。</div>
+<div>请找到一个点，使得删掉这个点后剩余的图中的最长路径最短。</div>
+<div></div>
+</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>In the first line of the standard input, there are two integers, N and M(2&lt;=N&lt;=500 000,1&lt;=M&lt;=1 000 000), separated by a single space, that specify the number of intersections and streets in Byteburg. The intersections are numbered from &nbsp; to &nbsp;. The &nbsp; lines that follow describe the street network: in the &nbsp;-th of these lines, there are two integers, Ai, Bi(1&lt;=Ai,Bi&lt;=N,Ai&lt;&gt;Bi), separated by a single space, that signify that there is a one way street from the intersection no. Ai to the one no. Bi.</div>
+<div>
+<div></div>
+<div>
+<div>第一行包含两个正整数N,M(2&lt;=N&lt;=500 000,1&lt;=M&lt;=1 000 000)，表示点数、边数。</div>
+<div>接下来M行每行包含两个正整数A[i],B[i](1&lt;=A[i],B[i]&lt;=N,A[i]&lt;&gt;B[i])，表示A[i]到B[i]有一条边。</div>
+<div></div>
+</div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first and only line of the standard output should contain two integers separated by a single space. The first of these should be the number of the intersection that the motorcyclists should block, and the second - the maximum number of streets that the cyclists can then ride along in their rally. If there are many solutions, your program can choose one of them arbitrarily.</div>
+<div></div>
+<div>
+<div>包含一行两个整数x,y，用一个空格隔开，x为要删去的点，y为删除x后图中的最长路径的长度，如果有多组解请输出任意一组。</div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 5<br />
+1 3<br />
+1 4<br />
+3 6<br />
+3 4<br />
+4 5<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1 2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

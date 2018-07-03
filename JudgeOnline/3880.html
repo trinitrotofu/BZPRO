@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>炼辰</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3880. 炼辰</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3880">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3880">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3880">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p class="MsoNormal"><span lang="EN-US" style="font-size: 16pt; font-family: 方正瘦金书简体;">Background</span><span style="font-size: 16pt; font-family: 方正瘦金书简体;">：</span></p>
+<p class="MsoNormal"><span style="font-size:16.0pt;font-family:方正瘦金书简体;
+mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">载着荣耀的流光在星云上启程，不知终落谁手。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:16.0pt;font-family:方正瘦金书简体;
+mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">Description</span><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">：<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:32.0pt;mso-char-indent-count:2.0"><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">星云由<span lang="EN-US">N</span>颗星组成，呈环状分布<span lang="EN-US">(</span>按照顺时针方向标号顺序为<span lang="EN-US">1,2,3,...,N,1,2,3...)</span>，流光可以有两种流动方式：<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:16.0pt;font-family:方正瘦金书简体;
+mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16.0pt;
+font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">一、沿顺时针由一颗星滑向它的下一颗星。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:16.0pt;font-family:方正瘦金书简体;
+mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16.0pt;
+font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">二、我们定义&ldquo;焱&rdquo;为一种传送机制，即若两个星球之间燃烧着&ldquo;焱&rdquo;，则顺时针序靠后的星球，可以通过此机制传送回顺时针序靠前的那个星球。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:32.0pt;mso-char-indent-count:2.0"><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">某一天星云被破坏了，只剩下了最后一抹荣耀流光被两股神秘力量角逐。而破坏带来了两个限制：<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"><span lang="EN-US" style="font-size:16.0pt;font-family:方正瘦金书简体;
+mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">&nbsp;&nbsp;&nbsp; </span><span style="font-size:16.0pt;
+font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;mso-bidi-font-family:方正瘦金书简体">一、某颗行星<span lang="EN-US">P</span>被设定为流光禁区（即永远无法被选择为流光的落脚点）。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:32.0pt;mso-char-indent-count:2.0"><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">二、一旦一颗星被流光划过，那么就再也不能被经过了。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:32.0pt;mso-char-indent-count:2.0"><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">现在两种神秘力量轮流引导流光的流动，先手在第一次操作时为确定流光的起始位置，问谁可以拿到最后一次的掌控权来获得胜利？<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:32.0pt;mso-char-indent-count:2.0"><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">另外学者们发现，&ldquo;焱&rdquo;具有特殊的性质：<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent:32.0pt;mso-char-indent-count:2.0"><span style="font-size:16.0pt;font-family:方正瘦金书简体;mso-hansi-font-family:方正瘦金书简体;
+mso-bidi-font-family:方正瘦金书简体">如果把每个&ldquo;焱&rdquo;视为零点为其两个星球的类似圆弧的轨迹，那么两条轨迹之间不会相交或外切，但是内切和包含以及相离都是合法的。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="MsoNormal" style="text-indent: 32pt;"><span style="font-size: 16pt; font-family: 方正瘦金书简体;">第一行三个整数<span lang="EN-US">n</span>，<span lang="EN-US">m</span>，<span lang="EN-US">p</span>表示星云上<span lang="EN-US">n</span>个点按标号顺时针环形排列，有<span lang="EN-US">m</span>个&ldquo;焱&rdquo;，行星<span lang="EN-US">p</span>为流光禁区。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="text-indent: 32pt;"><span style="font-size: 16pt; font-family: 方正瘦金书简体;">接下来有<span lang="EN-US">m</span>行，每行两个整数<span lang="EN-US">u</span>，<span lang="EN-US">v</span>，表示<span lang="EN-US">u</span>与<span lang="EN-US">v</span>之间存在一个&ldquo;焱&rdquo;。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<p class="MsoNormal" style="text-indent: 32pt;"><span style="font-size: 16pt; font-family: 方正瘦金书简体;">如果先手胜，输出&ldquo;<span lang="EN-US">dawn</span>&rdquo;，否则输出&ldquo;<span lang="EN-US">galaxy</span>&rdquo;。<span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal"></p>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 5 3<br />
+1 1<br />
+1 4<br />
+2 3<br />
+3 4<br />
+4 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>dawn</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>1&lt;=p,u,v&lt;=n&lt;=1,000,000</div><br />
+<div>0&lt;=m&lt;=2,000,000</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeijingWc2008]雷涛的小猫</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1270. [BeijingWc2008]雷涛的小猫</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1270">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1270">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1270">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>雷涛的小猫雷涛同学非常的有爱心，在他的宿舍里，养着一只因为受伤被救助的小猫（当然，这样的行为是违反学</div>
+<div>生宿舍管理条例的）。 &nbsp;在他的照顾下，小猫很快恢复了健康，并且愈发的活泼可爱了。可是有一天，雷涛下课回</div>
+<div>到寝室，却发现小猫不见了！经过一番寻找，才发现她正趴在阳台上对窗外的柿子树发呆&hellip;在北京大学的校园里，</div>
+<div>有许多柿子树，在雷涛所在的宿舍楼前，就有N棵。并且这N棵柿子树每棵的高度都是H。冬天的寒冷渐渐笼罩了大</div>
+<div>地，树上的叶子渐渐掉光了，只剩下一个个黄澄澄的柿子，看着非常喜人。而雷涛的小猫恰好非常的爱吃柿子，看</div>
+<div>着窗外树上的柿子，她十分眼馋，于是决定利用自己敏捷的跳跃能力跳到树上去吃柿子。小猫可以从宿舍的阳台上</div>
+<div>跳到窗外任意一棵柿子树的树顶。之后，她每次都可以在当前位置沿着当前所在的柿子树向下跳1单位距离。当然</div>
+<div>，小猫的能力远不止如此，她还可以在树之间跳跃。每次她都可以从当前这棵树跳到另外的任意一棵，在这个过程</div>
+<div>中，她的高度会下降Delta单位距离。每个时刻，只要她所在的位置有柿子，她就可以吃掉。整个&ldquo;吃柿子行动&rdquo;</div>
+<div>一直到小猫落到地面上为止。雷涛调查了所有柿子树上柿子的生长情况。饱很想知道，小猫从阳台出发，最多能吃</div>
+<div>到多少柿子？他知道写一个程序可以很容易的解决这个问题，但是他现在懒于写任何代码。于是，现在你的任务就</div>
+<div>是帮助雷涛写一个这样的程序。左图是N=3，H=10，Delta=2的一个例子。小猫按照图示路线进行跳跃，可以吃到最</div>
+<div>多的8个柿子</div>
+<div><img src="upload/201802/11(1).jpg" width="348" height="352" alt="" /></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行三个整数N，H，Delta</div>
+<div>接下来N行，每行一个整数Ni代表第i个树上柱子的数量</div>
+<div>接下来Ni个整数，每个整数Tij代表第i个树的高度Tij上有一个柿子</div>
+<div>
+<div>1&lt;=N,H&lt;=2000</div>
+<div>0&lt;=Ni&lt;=5000</div>
+<div>1&lt;=Delta&lt;=N</div>
+<div>1&lt;=Ti&lt;=H</div>
+<div>输入文件不大于40960Kb</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>小猫能吃到多少柿子</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 10 2<br />
+3 1 4 10<br />
+6 3 5 9 7 8 9<br />
+5 4 5 3 6 9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

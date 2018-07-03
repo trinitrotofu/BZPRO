@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[ZJOI2009]假期的宿舍</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1433. [ZJOI2009]假期的宿舍</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1433">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1433">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1433">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>学校放假了&middot;&middot;&middot;&middot;&middot;&middot;有些同学回家了，而有些同学则有以前的好朋友来探访，那么住宿就是一个问题。比如A</div>
+<div>和B都是学校的学生，A要回家，而C来看B，C与A不认识。我们假设每个人只能睡和自己直接认识的人的床。那么一</div>
+<div>个解决方案就是B睡A的床而C睡B的床。而实际情况可能非常复杂，有的人可能认识好多在校学生，在校学生之间也</div>
+<div>不一定都互相认识。我们已知一共有n个人，并且知道其中每个人是不是本校学生，也知道每个本校学生是否回家</div>
+<div>。问是否存在一个方案使得所有不回家的本校学生和来看他们的其他人都有地方住。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行一个数T表示数据组数。接下来T组数据，</div>
+<div>每组数据第一行一个数n表示涉及到的总人数。</div>
+<div>接下来一行n个数，第i个数表示第i个人是否是在校学生(0表示不是，1表示是)。</div>
+<div>再接下来一行n个数，第i个数表示第i个人是否回家</div>
+<div>(0表示不回家，1表示回家，注意如果第i个人不是在校学生，那么这个位置上的数是一个随机的数，</div>
+<div>你应该在读入以后忽略它)。</div>
+<div>接下来n行每行n个数，</div>
+<div>第i行第j个数表示i和j是否认识</div>
+<div>(1表示认识，0表示不认识，第i行i个的值为0，但是显然自己还是可以睡自己的床)，</div>
+<div>认识的关系是相互的。</div>
+<div>1 &le; n &le; 50,1 &le; T &le; 20</div>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据，如果存在一个方案则输出&ldquo;^_^&rdquo;(不含引号)否则输出&ldquo;T_T&rdquo;(不含引号)。</div>
+<div>(注意输出的都是半角字符，即三个符号的ASCII码分别为94,84,95)</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+3<br />
+1 1 0<br />
+0 1 0<br />
+0 1 1<br />
+1 0 0<br />
+1 0 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>&#710; &#710;</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

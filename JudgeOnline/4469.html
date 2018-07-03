@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Jsoi2013]打地鼠 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4469. [Jsoi2013]打地鼠 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4469">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4469">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4469">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>【故事背景】 <br />
+JYY 特别喜欢到游戏厅玩打地鼠游戏&mdash;&mdash;拿起两个锤子用力敲打不断冒出<br />
+来的地鼠。打到不同的地鼠有不同的得分，JYY想知道怎样才能得到最高的分<br />
+数。 <br />
+【问题描述】 <br />
+游戏里一共会冒出来 N 个地鼠，这些地鼠冒出来的位置都分布在一条直线<br />
+上。第i 个地鼠会在 Ti时刻在Xi位置冒出来，打到第 i 个地鼠的得分是 Pi。 <br />
+当游戏开始时（也就是 0 时刻），JYY 左手的位置为 XLEFT，右手的位置为<br />
+XRIGHT。JYY的手的最大移动速度是 V（每单位时刻最多移动的距离为 V） 。 <br />
+地鼠会在瞬间冒出来然后消失。如果在对应的时刻 JYY 的一只手恰好也在<br />
+地鼠冒出来的位置，那么 JYY 就可以在瞬间完成击打动作并得到对应的分数；<br />
+否则，JYY就只能错过这只地鼠了。 <br />
+JYY两只手都拿着锤子，所以两只手是可以同时打地鼠的。 <br />
+然而， 如果在游戏过程中 JYY的两只手交叉的话， JYY会感到很不舒服 （这<br />
+个动作确实很别扭，而且两只手可能会互相阻碍而影响移动速度） ，所以 JYY希<br />
+望在整个游戏过程中左手的位置 XLEFT永远严格小于右手的位置XRIGHT。 <br />
+JYY想知道，他最多能得多少分呢？</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行包含四个整数N，V，XLEFT和XRIGHT； <br />
+接下来 N 行，分别描述 N 个可能出现的地鼠； <br />
+其中第 i 行包含三个整数 Xi，Ti，Pi。 <br />
+数据保证在同一个时刻不会有两个地鼠出现在同样的位置。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一行一个整数，表示JYY最多能够得到的分数。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 10 150 250<br />
+100 20 123<br />
+201 10 67<br />
+202 10 45</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>190</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>1 &lt; =&nbsp; N &lt; =&nbsp; 3000,1 &lt; =&nbsp; XLEFT &lt; XRIGHT &lt; =&nbsp; 10^5， 1 &lt; =&nbsp; Ti &lt; =&nbsp; 10^5<br /><br />
+1 &lt; =&nbsp; Pi &lt; = 10^5，1 &lt; =&nbsp; Xi &lt; =&nbsp; 10^5，1 &lt; =&nbsp; V &lt; =&nbsp; 10^4</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

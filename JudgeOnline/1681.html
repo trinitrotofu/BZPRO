@@ -1,0 +1,40 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2005 Mar]Checking an Alibi 不在场的证明</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1681. [Usaco2005 Mar]Checking an Alibi 不在场的证明</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1681">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1681">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1681">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">A crime has been comitted: a load of grain has been taken from the barn by one of FJ's cows. FJ is trying to determine which of his C (1 &lt;= C &lt;= 100) cows is the culprit. Fortunately, a passing satellite took an image of his farm M (1 &lt;= M &lt;= 70000) seconds before the crime took place, giving the location of all of the cows. He wants to know which cows had time to get to the barn to steal the grain. Farmer John's farm comprises F (1 &lt;= F &lt;= 500) fields numbered 1..F and connected by P (1 &lt;= P &lt;= 1,000) bidirectional paths whose traversal time is in the range 1..70000 seconds (cows walk very slowly). Field 1 contains the barn. It takes no time to travel within a field (switch paths). Given the layout of Farmer John's farm and the location of each cow when the satellite flew over, determine set of cows who could be guilty. NOTE: Do not declare a variable named exactly 'time'. This will reference the system call and never give you the results you really want. </span></p>
+<div>
+<div>谷仓里发现谷物被盗！约翰正试图从C(1&le;C&le;100)只奶牛里找出那个偷谷物的罪犯．幸运的是，一个恰好路过的卫</div>
+<div>星拍下谷物被盗前M(1&le;M&le;70000)秒的农场的图片．这样约翰就能通过牛们的位置来判断谁有足够的时间来盗窃谷</div>
+<div>物．约翰农场有F(1&le;F&le;500)草地，标号1到F，还有P(1&le;P&le;1000)条双向路连接着它们．通过这些路需要的时间</div>
+<div>在1到70000秒的范围内．田地1上建有那个被盗的谷仓． 给出农场地图，以及卫星照片里每只牛所在的位置．请判</div>
+<div>断哪些牛有可能犯罪．</div>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>* Line 1: Four space-separated integers: F, P, C, and M&nbsp;</div>
+<div>* Lines 2..P+1: Three space-separated integers describing a path: F1, F2, and T. The path connects F</div>
+<div>1 and F2 and requires T seconds to traverse.&nbsp;</div>
+<div>* Lines P+2..P+C+1: One integer per line, the location of a cow. The first line gives the field numb</div>
+<div>er of cow 1, the second of cow 2, etc.</div>
+<div></div>
+<div>第1行输入四个整数F，只C，和M;</div>
+<div>接下来P行每行三个整数描述一条路，起点终点和通过时间．</div>
+<div>接下来C行每行一个整数，表示一头牛所在的地点．</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>* Line 1: A single integer N, the number of cows that could be guilty of the crime.</div>
+<div>* Lines 2..N+1: A single cow number on each line that is one of the cows that could be guilty of the</div>
+<div>&nbsp;crime. The list must be in ascending order.</div>
+<div>第1行输出嫌疑犯的数目，接下来一行输出一只嫌疑犯的编号．</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7 6 5 8<br />
+1 4 2<br />
+1 2 1<br />
+2 3 6<br />
+3 5 5<br />
+5 4 6<br />
+1 7 9<br />
+1<br />
+4<br />
+5<br />
+3<br />
+7<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+1<br />
+2<br />
+3<br />
+4<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img height="256" alt="" width="622" src="upload/201401/44(4).jpg" /></p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

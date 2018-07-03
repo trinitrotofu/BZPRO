@@ -1,0 +1,42 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Thu  Summer Camp 2013]魔塔</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4141. [Thu  Summer Camp 2013]魔塔</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4141">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4141">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4141">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;沫沫最近迷上了一款名叫魔塔的角色扮演类游戏。在游戏中，玩家需要控制</p>
+<div>勇士在魔塔内行走，消灭怪物，积累宝物，最终解救出困在塔顶的公主。&nbsp;</div>
+<div>勇士的能力通过生命值、攻击力和防御力三个属性值来表示 （均为正整数） ，</div>
+<div>怪物的能力表示与勇士相同。勇士在和一个怪物战斗时，双方会面对面站好，然</div>
+<div>后每秒钟攻击对方一次。当勇士攻击力大于怪物防御力时，怪物将被扣除勇士攻</div>
+<div>击力减去怪物防御力的血量，否则怪物不扣血。同时，当怪物攻击力大于勇士防</div>
+<div>御力时，勇士将被扣除怪物攻击力减去勇士防御力的血量，否则勇士不扣血。若</div>
+<div>经过若干秒的攻击后，有至少一方的血量小于等于零，则此次战斗结束。注意，</div>
+<div>由于双方同时攻击，所以可能会出现战斗结束时双方血量均小于等于零的情况。</div>
+<div>当且仅当战斗在有限回合内结束且勇士的剩余血量大于零时，勇士获得胜利。例</div>
+<div>如：下图勇士与怪物的战斗中，每秒钟勇士的攻击使怪物扣除 9点血量，怪物的</div>
+<div>攻击使勇士扣除 10 点血量，6 秒钟后怪物的血量低于零，勇士剩余 940 点生命</div>
+<div>值并取得胜利。 &nbsp;</div>
+<div>沫沫喜欢上魔塔的主要原因是，她不需要用精妙的操作来打败怪物。相反，</div>
+<div>一旦勇士的属性确定，勇士与每只怪物的战斗结果就已经确定。游戏中，勇士必</div>
+<div>须击败N只怪物才能救出公主， 沫沫需要决定勇士的初始属性与消灭怪物的顺序。 &nbsp;</div>
+<div>在踏入魔塔之前，沫沫可以用金币为勇士购买初始属性，每一点生命值需要</div>
+<div>1枚金币，每一点攻击力需要Ca枚金币，每一点防御力需要Cd枚金币。沫沫想通</div>
+<div>过选择合理的消灭怪物的顺序，以减少金币的花费， 并让勇士战胜所有N只怪物，</div>
+<div>成功救出公主。现在请你来计算最少需要多少金币才能完成该任务。&nbsp;</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入的第一行包含三个正整数N,Ca,Cd，分别表示怪物数量、购买单位攻击</p>
+<div>力的价格以及购买单位防御力的价格。&nbsp;</div>
+<div>接下来N行描述怪物的属性，其中第i行包含三个正整数Hi,Ai,Di表示第i只</div>
+<div>怪物的生命值、攻击力和防御力。&nbsp;</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出为一行，包含三个正整数，表示勇士的生命值、攻击力和防御力，如果</p>
+<div>有多种方案均能战胜所有怪物且花费金币数最少，输出任意一种即可。注意：尽</div>
+<div>管防御力为零可能更优，但本题要求输出的防御力必须大于零。&nbsp;</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 2 5 <br />
+5 30 5 <br />
+20 10 3 <br />
+100 5 1 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>41 10 5 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;首先，与第一只怪物战斗，经过 1秒钟勇士损失25点生命值并取得胜利；&nbsp;</p><br />
+<div>然后，与第二只怪物战斗，经过 3秒钟勇士损失15点生命值并取得胜利；&nbsp;</div><br />
+<div>最后，与第三只怪物战斗，经过 12秒钟勇士取得胜利且未损失生命值；&nbsp;</div><br />
+<div>最终，勇士消灭了所有怪物，剩余 1点血量，共花费41 + 2 &times; 10 + 5 &times; 5 = 86</div><br />
+<div>枚金币。&nbsp;</div><br />
+<div></div><br />
+<div></div><br />
+<div>所有的测试数据满足N&lt;=5000，Hi,Ai,Di &lt;=10^6，CA, CD &lt;=10^6。</div><br />
+<div>&nbsp;</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

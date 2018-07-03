@@ -1,0 +1,33 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Bjoi2014]想法</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4529. [Bjoi2014]想法</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4529">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4529">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4529">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小强和阿米巴是好朋友。小强要出一套题目。</div>
+<div>他的题目以涉及面广（偏）、考察深入（怪）、思维</div>
+<div>强度大（难）著称。他为了出题，一共攒了M个本质不同的想法，每个想法形</div>
+<div>成了一个题目。不过，他觉得拿这些题目去考察选手会把比赛搞的太过变态，</div>
+<div>所以，想请阿米巴来帮忙调整一下他的题目。</div>
+<div>阿米巴指出，为了让一场考试的题目的考察点尽量全面，有一个通用的做</div>
+<div>法叫做&ldquo;组合&rdquo;。如果把两个题目A和B组合在一起，那么组合而成的题目涉</div>
+<div>及到的想法的集合就是A涉及到的想法的集合和B涉及到的想法的集合的并。</div>
+<div>并且，题目是可以反复组合的。</div>
+<div>例如，小强现在有三个想法1,2,3，分别对应了题目P1,P2,P3。</div>
+<div>现在，小强把P1和P2组合得到P4。P4涉及的想法的集合是{1,2}。</div>
+<div>之后，小强把P2和P3组合得到P5。P5涉及的想法的集合是{2,3}。</div>
+<div>最后，小强把P4和P5组合得到P6。P6涉及的想法的集合是{1,2,3}。</div>
+<div>现在，小强告诉你每个题目都是如何组合而来的。你要回答的就是，每个</div>
+<div>题目涉及的想法的集合有多大。</div>
+<div>不过，这个问题是很难的。于是，你只需要能够以比较高的概率回答的比较准确即可。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数N，M，依次表示小强的题目数量和想法的数量</div>
+<div>接下来N-M行，每行两个整数，依次表示小强组合出来的题目都是由哪两</div>
+<div>个题组合而成的。M个想法对应的题目依次编号为1~M。之后，小强组合出来</div>
+<div>的第一个题编号为M+1，组合出来的第二个题编号为M+2，依次类推。</div>
+<div>M&le;100000,N&le;1000000</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出N-M行，每行一个整数表示小强组合出来的每个题都涉及了几个想法。</p>
+<div></div>
+<div></div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 3<br />
+1 2<br />
+2 3<br />
+4 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+2<br />
+3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>建设游乐场</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4261. 建设游乐场</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4261">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4261">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4261">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>现在有一大块土地，可以看成N*M的方格。在这块土地上，有些格子内是崎岖的山地，无法建造任何东西；其他格子都是平原。现在打算在这块土地上建设一个游乐园。游乐园由若干条闭合的过山车轨道组成，每个平原格子都要铺一截轨道，为下列 6 种类型中的一种：</div>
+<div><img src="upload/201509/fb.jpg" width="576" height="208" alt="" /></div>
+<div>（每张图表示一块平原格子，图内网格线为辅助线，无实际意义。）</div>
+<div></div>
+<div>其中前 2 种为直轨道，后 4 种为弯轨道。显然对游客来说，弯轨道更加刺激。</div>
+<div></div>
+<div>由于每块格子风景各不相同，经过一番研究，现给了N*M个方格中的每个格子一个评估值，意义为：如果该格子修建弯轨道，会给游客们带来多少的愉悦值。现需要一名设计师，帮他设计一种最优的轨道建设方案，使所有格子给游客们带来的愉悦值之和尽量大。（如果没有合法方案，输出 -1）</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个正整数 n, m。</div>
+<div>接下来 n 行，每行 m 个数，描述了整块土地。其中 1 表示山地，0 表示平原。接下来 n 行，每行 m 个非负整数，第 i 行第 j 个为 Vi,j，表示格子 (i,j) 修建弯轨道能给游客们带来的愉悦值。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行一个数，表示最优设计方案中给游客们带来的愉悦值之和。</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3<br />
+1 1 1 <br />
+1 0 0 <br />
+1 0 0 <br />
+48 94 1 <br />
+78 78 81 <br />
+1 12 60 <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>231</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>N&lt;=150,M&lt;=30,Vi,j&lt;=100</p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

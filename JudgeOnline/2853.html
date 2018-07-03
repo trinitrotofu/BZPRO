@@ -1,0 +1,41 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>puzzle</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2853. puzzle</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2853">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2853">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2853">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div style="text-indent: 21pt">如图是一张扩展版的九九表</div>
+<div style="text-indent: 21pt">1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*&hellip;</div>
+<div style="text-indent: 21pt">2*1=2 2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=1&hellip;</div>
+<div style="text-indent: 21pt">3*1=3 3*2=6 3*3=9 3*4=12 3*5=15 3*6=18 3*7=21 3*8=&hellip;</div>
+<div style="text-indent: 21pt">4*1=4 4*2=8 4*3=12 4*4=16 4*5=20 4*6=24 4*7=28 4*8&hellip;</div>
+<div style="text-indent: 21pt">5*1=5 5*2=10 5*3=15 5*4=20 5*5=25 5*6=30 5*7=35 5*&hellip;</div>
+<div style="text-indent: 21pt">&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;&hellip;</div>
+<div style="text-indent: 21pt">第<span>I 行是与I 有关的等式(I*1=I,I*2=2I,I*3&hellip;..),相邻两个等式间用一个空隔开.</span></div>
+<div style="text-indent: 21pt">现在<span>,出题人希望你能告诉他,以第X 行的第Y 个字符为左上角,大小为5*Z 的矩形(五</span></div>
+<div style="text-indent: 21pt">行<span>Z 列)的内容</span></div>
+<div><span style="font-size: 16pt">输入格式</span></div>
+<div style="text-indent: 21pt">读入正整数<span>X,Y,Z X,Y,Z 意义如上</span></div>
+<div><span style="font-size: 16pt">输出格式</span></div>
+<div style="text-indent: 21pt">输出<span>5*Z 矩形，代表答案</span></div>
+<div style="text-indent: 21pt">行末没有多余空格</div>
+<div style="text-indent: 21pt">每行末尾均有一个换行符<span>(\n)</span></div>
+<div style="text-indent: 21pt">文末没有多余回车</div>
+<div style="text-indent: 21pt">逐字节比较</div>
+<div><span style="font-size: 16pt">样例一</span></div>
+<div>Input</div>
+<div>1 1 50</div>
+<div>Output</div>
+<div>1*1=1 1*2=2 1*3=3 1*4=4 1*5=5 1*6=6 1*7=7 1*8=8 1*</div>
+<div>2*1=2 2*2=4 2*3=6 2*4=8 2*5=10 2*6=12 2*7=14 2*8=1</div>
+<div>3*1=3 3*2=6 3*3=9 3*4=12 3*5=15 3*6=18 3*7=21 3*8=</div>
+<div>4*1=4 4*2=8 4*3=12 4*4=16 4*5=20 4*6=24 4*7=28 4*8</div>
+<div>5*1=5 5*2=10 5*3=15 5*4=20 5*5=25 5*6=30 5*7=35 5*</div>
+<div><span style="font-size: 16pt">样例二</span></div>
+<div>Input</div>
+<div>7 64 10</div>
+<div>Output</div>
+<div>*10=70 7*11=77 7*12=</div>
+<div>*10=80 8*11=88 8*12=</div>
+<div>*10=90 9*11=99 9*12=</div>
+<div>10*9=90 10*10=100 1</div>
+<div>11*9=99 11*10=110 1</div>
+<div><span style="font-size: 16pt">数据范围</span></div>
+<div style="text-indent: 21pt">对于<span>100%的数据1 &lt;= X &lt;= 2^31-1 1 &lt;= Z &lt;= 2000</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata></span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata></span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

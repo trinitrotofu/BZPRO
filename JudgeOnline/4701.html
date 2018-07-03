@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>采样</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4701. 采样</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4701">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4701">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4701">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>【题目背景】</div>
+<div>&ldquo;看着我的眼睛。&rdquo;一一优祖列罕</div>
+<div>【题意描述】</div>
+<div>VOID抽取的基因呈环形，每个单元用A到Z的大写字母表示，换句话说一个基因就是一个环状字符串。设环状基因长</div>
+<div>度为Li，从其中Li个断点分别断开，可以形成Li种链状基因（不一定两两不同）。以ABCAB为例，链状基因分别为A</div>
+<div>BCAB，BCABA，CABAB，ABABC，BABCA，依次编号1--5现要抽取其中一种链状基因，不同种类基因参数不尽相同，每</div>
+<div>个环状基因有两个参数Pi,ti首先执行打乱操作，每个位置x设定权重</div>
+<div><img src="upload/201609/11(1).png" width="611" height="65" alt="" /></div>
+<div>对于任意x，y，当F(x)&lt;f（y）且编号X的链状基因字典序小于编号y的链状基因字典序时，这两个链状基因会交换</div>
+<div>编号。输入数据保证存在一种方案使得该操作不会执行超过f次便会停止。（易知执行顺序不影响最终结果）最终</div>
+<div>，选取编号Pi的链状基因作为该环状基因的采样，记为Gi。现在有N个环状基因。a环状基因是b环状基因的亲和体</div>
+<div>，当且仅当a环状基因的采样为b环状基因采样的前缀。求每个环状基因的亲和体数量。</div>
+</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个数n，表示环状基因的数量。</div>
+<div>接下来n行，每行描述一个环状基因，由一个字符串，Pi，ti组成，之间用空格分隔。</div>
+<div>1&lt;=Pi&lt;=Li,1&lt;=Ti&lt;=10000</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出n行，每行一个数，表示该环状基因的亲和体数量。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+CDEAB 3 2<br />
+ABC 2 4<br />
+D 1 6<br />
+EDEE 2 6</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+0<br />
+0<br />
+1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img src="upload/201609/22.png" width="662" height="242" alt="" /></p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

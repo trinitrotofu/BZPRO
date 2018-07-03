@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>上帝与集合的正确用法</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3884. 上帝与集合的正确用法</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3884">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3884">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3884">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div></div>
+<div>根据一些书上的记载，上帝的一次失败的创世经历是这样的：</div>
+<div>第一天，<span class="Apple-tab-span" style="white-space:pre"></span>上帝创造了一个世界的基本元素，称做&ldquo;元&rdquo;。</div>
+<div>第二天，<span class="Apple-tab-span" style="white-space:pre"></span>上帝创造了一个新的元素，称作&ldquo;&alpha;&rdquo;。&ldquo;&alpha;&rdquo;被定义为&ldquo;元&rdquo;构成的集合。容易发现，一共有两种不同的&ldquo;&alpha;&rdquo;。</div>
+<div>第三天，<span class="Apple-tab-span" style="white-space:pre"></span>上帝又创造了一个新的元素，称作&ldquo;&beta;&rdquo;。&ldquo;&beta;&rdquo;被定义为&ldquo;&alpha;&rdquo;构成的集合。容易发现，一共有四种不同的&ldquo;&beta;&rdquo;。</div>
+<div>第四天，<span class="Apple-tab-span" style="white-space:pre"></span>上帝创造了新的元素&ldquo;&gamma;&rdquo;，&ldquo;&gamma;&rdquo;被定义为&ldquo;&beta;&rdquo;的集合。显然，一共会有16种不同的&ldquo;&gamma;&rdquo;。</div>
+<div>如果按照这样下去，上帝创造的第四种元素将会有65536种，第五种元素将会有2^65536种。这将会是一个天文数字。</div>
+<div>然而，上帝并没有预料到元素种类数的增长是如此的迅速。他想要让世界的元素丰富起来，因此，日复一日，年复一年，他重复地创造着新的元素&hellip;&hellip;</div>
+<div>然而不久，当上帝创造出最后一种元素&ldquo;&theta;&rdquo;时，他发现这世界的元素实在是太多了，以致于世界的容量不足，无法承受。因此在这一天，上帝毁灭了世界。</div>
+<div>至今，上帝仍记得那次失败的创世经历，现在他想问问你，他最后一次创造的元素&ldquo;&theta;&rdquo;一共有多少种？</div>
+<div>上帝觉得这个数字可能过于巨大而无法表示出来，因此你只需要回答这个数对p取模后的值即可。</div>
+<div>你可以认为上帝从&ldquo;&alpha;&rdquo;到&ldquo;&theta;&rdquo;一共创造了10^9次元素，或10^18次，或者干脆&infin;次。</div>
+<div></div>
+<div>一句话题意：</div>
+<div><img src="upload/201502/1.png" width="630" height="379" alt="" /></div>
+<h2 style="text-align: left;">
+<div>
+<div></div>
+</div>
+<div></div>
+</h2>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div></div>
+<div>接下来T行，每行一个正整数p，代表你需要取模的值</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>T行，每行一个正整数，为答案对p取模后的值</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+2<br />
+3<br />
+6</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0<br />
+1<br />
+4</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>对于100%的数据，T&lt;=1000,p&lt;=10^7</div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

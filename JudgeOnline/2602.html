@@ -1,0 +1,55 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2010杀菌计划]</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2602. [Ctsc2010杀菌计划]</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：100 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2602">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2602">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2602">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">栋栋有一个凸多面体形状的漂亮盒子，这个盒子的每个面都由形状为凸多边<br />
+形的透明玻璃薄壁组成。 <br />
+每隔一段时间，栋栋就要使用一个激光发射器给他的盒子杀菌。激光发射器<br />
+能发射出一束激光，当激光照射到盒子的玻璃薄壁时，会把薄壁内外两面的细菌<br />
+杀死，同时有大量光线透射过玻璃，少量光线被玻璃反射。透射过玻璃的光线沿<br />
+原方向前进，反射的光线遵循光线的镜面反射定理，即在反射时反射光线、入射<br />
+光线和镜面的法线在同一平面内，反射光线与入射光线分居法线两侧，反射角（反<br />
+射光线与法线的夹角）等于入射角（入射光线与法线的夹角）。 <br />
+我们认为激光被玻璃反射 k次后的能量不足以杀死细菌（即使有多个这样的<br />
+光线同时照射在玻璃薄壁上也不能杀死细菌），而 k 次反射前激光照射到的细菌<br />
+都会被杀死。 <br />
+激光发射器的发射口是三角形的，当发射激光时，整个发射口都会发出激光。&nbsp; <br />
+给定盒子和激光发射器的位置，栋栋想知道，盒子的玻璃薄壁上有多大面积<br />
+的细菌被杀死了。由于盒子的内外两面的细菌必然是同时被杀死或者同时不被杀<br />
+死，所以只要算出外面被杀死的细菌面积即可。 <br />
+注意，激光或经过反射的激光可能与某些表面平行，但本题的数据保证激光<br />
+或经过反射的激光不会照射到与之平行的表面。 </span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">每个输入数据满足下面的输入格式，每两个数之间用一个空格隔开：</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p>
+<p><br />
+<font size="4">输入的第一行包含三个整数 n, m, k，分别表示盒子的顶点数、盒子的面数和<br />
+光线的反射次数。 <br />
+接下来 n行，第 i 行包含三个实数xi, yi, zi，表示盒子第 i 个顶点的坐标。 <br />
+接下来 m行，每行描述盒子的一个表面，每行第一个数 tj，表示该表面的多<br />
+边形的顶点个数，接下来 tj个整数，表示这 tj个顶点对应的盒子顶点的编号，这<br />
+些编号按顶点在面上的顺时针或逆时针顺序给出。 <br />
+接下来三行，每行 3个整数x, y, z，分别表示激光发射器发射口的坐标。 <br />
+接下来 1行，包含 3个整数&Delta;x, &Delta;y, &Delta;z，表示出射光线的方向是沿着向量(&Delta;x, <br />
+&Delta;y, &Delta;z)的方向。 </font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
+每个输出文件包含一个实数，四舍五入保留两位小数，<br />
+表示被杀死的细菌的面积。当一个表面被多次照射到时，这个表面的面积只计算<br />
+一次。 </span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 6 1 <br />
+0.0 0.0 0.0 <br />
+0.0 0.0 1.0 <br />
+0.0 1.0 1.0 <br />
+0.0 1.0 0.0 <br />
+1.0 0.0 0.0 <br />
+1.0 0.0 1.0 <br />
+1.0 1.0 1.0 <br />
+1.0 1.0 0.0 <br />
+4 2 3 7 6 <br />
+4 5 6 7 8 <br />
+4 1 2 3 4 <br />
+4 1 2 6 5 <br />
+4 4 3 7 8 <br />
+4 1 4 8 5 <br />
+2.0 0.33 0.25 <br />
+2.0 0.67 0.25 <br />
+2.0 0.33 0.75 <br />
+-1.0 0.0 0.0 <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+0.17 <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

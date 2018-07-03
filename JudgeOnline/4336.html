@@ -1,0 +1,57 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>BJOI2015 骑士的旅行</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4336. BJOI2015 骑士的旅行</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4336">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4336">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4336">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在一片古老的土地上，有一个繁荣的文明。</div>
+<div>这片大地几乎被森林覆盖，有N座城坐落其中。巧合的是，这N座城由恰好N-1条双</div>
+<div>向道路连接起来，使得任意两座城都是连通的。也就是说，这些城形成了树的结构，任意两</div>
+<div>座城之间有且仅有一条简单路径。</div>
+<div>在这个文明中，骑士是尤其受到尊崇的职业。任何一名骑士，都是其家族乃至家乡的荣</div>
+<div>耀。Henry从小就渴望成为一名能守护家乡、驱逐敌人的骑士。勤奋训练许多年后，Henry</div>
+<div>终于满18岁了。他决定离开家乡，向那些成名已久的骑士们发起挑战！</div>
+<div>根据Henry的调查，大陆上一共有M名受封骑士，不妨编号为1到M。</div>
+<div>第i个骑士居住在城Pi，武力值为Fi。</div>
+<div>Henry计划进行若干次旅行，每次从某座城出发沿着唯一的简单路径前往另一座城，</div>
+<div>同时会挑战路线上武力值最高的K个骑士（Henry的体力有限，为了提高水平，当然要挑</div>
+<div>战最强的骑士）。如果路线上的骑士不足K人，Henry会挑战遇到的所有人。</div>
+<div>每次旅行前，可能会有某些骑士的武力值或定居地发生变化，Henry自然会打听消息，</div>
+<div>并对计划做出调整。</div>
+<div>为了在每次旅行时做好充分准备，Henry希望你能帮忙在每次旅行前计算出这条路线</div>
+<div>上他将挑战哪些对手。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行，一个整数N，表示有N座城，编号为1~N。</div>
+<div>接下来N-1行，每行两个整数Ui和Vi，表示城Ui和城Vi之间有一条道路相连。</div>
+<div>第N+1行，一个整数M，表示有M个骑士。</div>
+<div>接下来M行，每行两个整数Fi和Pi。按顺序依次表示编号为1~M的每名骑士的武</div>
+<div>力值和居住地。</div>
+<div>第N+M+2行，两个整数Q,K，分别表示操作次数和每次旅行挑战的骑士数目上限。</div>
+<div>接下来Q行，每行三个整数Ti,Xi,Yi。Ti取值范围为{1,2,3}，表示操作类型。</div>
+<div>一共有以下三种类型的操作：</div>
+<div>Ti=1时表示一次旅行，Henry将从城Xi出发前往城市Yi；</div>
+<div>Ti=2时表示编号为Xi的骑士的居住地搬到城Yi；</div>
+<div>Ti=3时表示编号为Xi的骑士的武力值修正为Yi。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出若干行，依次为每个旅行的答案。</div>
+<div>对每个Ti=1的询问，输出一行，按从大到小的顺序输出Henry在这次旅行中挑战的</div>
+<div>所有骑士的武力值。如果路线上没有骑士，输出一行，为一个整数-1。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 <br />
+1 2 <br />
+1 3 <br />
+2 4 <br />
+2 5 <br />
+4 <br />
+10 1 <br />
+6 1 <br />
+14 5 <br />
+7 3 <br />
+5 3 <br />
+1 2 3 <br />
+1 5 3 <br />
+1 4 4 <br />
+2 1 4 <br />
+1 2 3 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10 7 6 <br />
+14 10 7 <br />
+-1 <br />
+7 6 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>100%的数据中，1 &le; N, M &le; 40,000，1 &le; Ui, Vi, Pi &le; N，1 &le; Q &le; 80,000, 1 &le; K &le;&nbsp;</div><br />
+<div>20，旅行次数不超过 40,000 次，武力值为不超过1,000的正整数。&nbsp;</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

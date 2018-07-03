@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Noip2007]Core树网的核</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1999. [Noip2007]Core树网的核</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1999">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1999">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1999">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">设T=(V, E, W) 是一个无圈且连通的无向图（也称为无根树），每条边带有正整数的权，我们称T为树网（treenetwork），其中V, E分别表示结点与边的集合，W表示各边长度的集合，并设T有n个结点。
+路径：树网中任何两结点a,b都存在唯一的一条简单路径，用d(a,b)表示以a,b为端点的路径的长度，它是该路径上各边长度之和。我们称d(a,b)为a,b两结点间的距离。
+一点v到一条路径P的距离为该点与P上的最近的结点的距离：
+d(v，P)=min{d(v，u)，u为路径P上的结点}。
+树网的直径：树网中最长的路径称为树网的直径。对于给定的树网T，直径不一定是唯一的，但可以证明：各直径的中点（不一定恰好是某个结点，可能在某条边的内部）是唯一的，我们称该点为树网的中心。
+偏心距ECC(F)：树网T中距路径F最远的结点到路径F的距离，即
+ 。
+任务：对于给定的树网T=(V, E,W)和非负整数s，求一个路径F，它是某直径上的一段路径（该路径两端均为树网中的结点），其长度不超过s（可以等于s），使偏心距ECC(F)最小。我们称这个路径为树网T=(V,E,W)的核（Core）。必要时，F可以退化为某个结点。一般来说，在上述定义下，核不一定只有一个，但最小偏心距是唯一的。
+下面的图给出了树网的一个实例。图中，A-B与A-C是两条直径，长度均为20。点W是树网的中心，EF边的长度为5。如果指定s=11，则树网的核为路径DEFG（也可以取为路径DEF），偏心距为8。如果指定s=0（或s=1、s=2），则树网的核为结点F，偏心距为12。
+
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>包含n行：
+第1行，两个正整数n和s，中间用一个空格隔开。其中n为树网结点的个数，s为树网的核的长度的上界。设结点编号依次为1, 2, ..., n。
+从第2行到第n行，每行给出3个用空格隔开的正整数，依次表示每一条边的两个端点编号和长度。例如，“2 4 7”表示连接结点2与4的边的长度为7。
+所给的数据都是正确的，不必检验。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>只有一个非负整数，为指定意义下的最小偏心距。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 2<br />
+1 2 5<br />
+2 3 2<br />
+2 4 4<br />
+2 5 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>对于70%的数据，n<=200000<br />
+对于100%的数据：n<=500000, s<2^31, 所有权值<500<br />
+<br />
+==============================================<br />
+似乎SPOJ上加强版的数据...</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

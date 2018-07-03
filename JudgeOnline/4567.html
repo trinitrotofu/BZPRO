@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Scoi2016]背单词</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4567. [Scoi2016]背单词</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4567">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4567">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4567">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Lweb 面对如山的英语单词，陷入了深深的沉思，&ldquo;我怎么样才能快点学完，然后去玩三国杀呢？&rdquo;。这时候睿智</div>
+<div>的凤老师从远处飘来，他送给了 Lweb 一本计划册和一大缸泡椒，他的计划册是长这样的：</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div>序号 &nbsp;单词</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div>&nbsp;1</div>
+<div>&nbsp;2</div>
+<div>&hellip;&hellip;</div>
+<div>n-2</div>
+<div>n-1</div>
+<div>&nbsp;n</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div></div>
+<div>然后凤老师告诉 Lweb ，我知道你要学习的单词总共有 n 个，现在我们从上往下完成计划表，对于一个序号为 x&nbsp;</div>
+<div>的单词（序号 1...x-1 都已经被填入）：</div>
+<div>1) 如果存在一个单词是它的后缀，并且当前没有被填入表内，那他需要吃 n&times;n 颗泡椒才能学会；</div>
+<div>2) 当它的所有后缀都被填入表内的情况下，如果在 1...x-1 的位置上的单词都不是它的后缀，那么你吃 x 颗泡</div>
+<div>椒就能记住它；</div>
+<div>3) 当它的所有后缀都被填入表内的情况下，如果 1...x-1的位置上存在是它后缀的单词，所有是它后缀的单词中</div>
+<div>，序号最大为 y ，那么你只要吃 x-y 颗泡椒就能把它记住。</div>
+<div>Lweb 是一个吃到辣辣的东西会暴走的奇怪小朋友，所以请你帮助 Lweb ，寻找一种最优的填写单词方案，使得他</div>
+<div>记住这 n 个单词的情况下，吃最少的泡椒。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入一个整数 n ，表示 Lweb 要学习的单词数。接下来 n 行，每行有一个单词（由小写字母构成，且保证任意单</div>
+<div>词两两互不相同）1&le;n&le;100000, 所有字符的长度总和 1&le;|len|&le;510000</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;Lweb 吃的最少泡椒数</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 <br />
+a <br />
+ba</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

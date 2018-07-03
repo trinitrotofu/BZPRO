@@ -1,0 +1,48 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Noi2013]书法家</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3241. [Noi2013]书法家</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3241">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3241">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3241">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">小E同学非常喜欢书法，他听说NOI2013已经开始了，想题一幅&ldquo;NOI&rdquo;的字送给大家。<br />
+<br />
+小E有一张非常神奇的纸，纸可以用一个n 行m 列的二维方格矩阵来表示，为了描述方便，我们定义矩阵左下角方格坐标为(1,1) ，右上角方格坐标为(m,n) 。矩阵的每个方格有一个整数的幸运值。在格子上面写字可以增加大家的幸运度，幸运度的大小恰好是所有被笔写到的方格的幸运值之和。现在你要在上面写上 &lsquo;N&rsquo;，&lsquo;O&rsquo;，&lsquo;I&rsquo;三个字母。<br />
+<br />
+下面给出3个书法字的定义：<br />
+<br />
+&nbsp;&nbsp;1.&lsquo;N&rsquo;由若干（&ge;3）个边平行于坐标轴的矩形组成，设有K个矩形组成（标号1~K），第i个矩形的左下角方格坐标设为(Li ,Bi) ，右上角坐标设为(Ri ,Ti) ，要求满足：<br />
+a)Li&lt;=Ri,Bi&lt;=Ti<br />
+b)对任意1&lt;i&lt;=K，有Li=R(i-1)+1<br />
+c)对任意3&lt;=i&lt;K，有B(i-1)-1&lt;=Ti&lt;=T(i-1),Bi&lt;=B(i-1);&quot; <br />
+d)B2&gt;B1,T2=T1,B(K-1)=B(K),T(k-1)&lt;T(K)<br />
+<br />
+<br />
+&nbsp;&nbsp;2.&lsquo;O&rsquo;由一个大矩形A，挖去一个小矩形B得到，这两个矩形的边都平行于坐标轴。设大矩形左下角的方格坐标为(u,v)，长为W宽为H，则小矩形B满足左下角方格坐标为(u+1,v+1) ，长W-2 ，宽H-2。要求满足：<br />
+a)W&gt;=3,H&gt;=3<br />
+b)u&gt;R(K)+1<br />
+<br />
+&nbsp;&nbsp;3.&lsquo;I&rsquo;为3个边平行于坐标轴的从下到上的实心矩形组成，从下到上依次标号为1,2,3，第i 个矩形的左下角格子坐标设为(Pi , Qi )，右上角格子坐标设为(Gi , Hi )，要求满足：<br />
+a)Pi&lt;=Gi,Qi&lt;=Hi<br />
+b)P1=P3&gt;u+W,G1=G3<br />
+c)Q1=H1=Q2-1,H2+1=Q3=H3<br />
+d)P1&lt;P2&lt;=G2&lt;G1<br />
+<br />
+下图是一个&lsquo;N&rsquo;,&lsquo;O&rsquo;,&lsquo;I&rsquo;的例子</span></p>
+<p><span style="font-size: medium"><img height="157" alt="" width="500" src="upload/201307/33.jpg" /></span></p>
+<p></p>
+<p><span style="font-size: medium">另外，所有画的图形均不允许超过纸张的边界。现在小E想要知道,他能画出的最大幸运度是多少。</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行包含两个正整数n和m，分别表示矩阵的行数和列数。<br />
+接下来n行，每行有m个整数，第i+1行的第j个数表示格子(j,n-i+1)的幸运值。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">输出一个整数T，表示小E能够获得的最大幸运度</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输入1】<br />
+3 13<br />
+1 1 -1 -1 1 -1 1 1 1 -1 1 1 1<br />
+1 -1 1 -1 1 -1 1 -1 1 -1 -1 1 -1<br />
+1 -1 -1 1 1 -1 1 1 1 -1 1 1 1<br />
+<br />
+<br />
+<br />
+<br />
+【样例输入2】<br />
+3 13<br />
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1<br />
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1<br />
+-1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输出1】<br />
+24<br />
+【样例输出2】<br />
+-20</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img height="76" alt="" width="500" src="upload/201307/11(1).jpg" /></p><br />
+<p><img height="375" alt="" width="370" src="upload/201307/22.jpg" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,18 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>魔法</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3793. 魔法</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3793">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3793">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3793">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>一天，白神和他的伙伴喵喵一起走到了可以产生魔法的神奇世界。但是这个世界产生魔法有这样一个有趣的方法。在一个无向图，有N个城镇，M条道路，并且每一条道路有一个权值（不超过10^18 ）。每次从1号城镇出发，随意一条有限长度的路径，一条路可以经过多次，所经过的边将权值xor起来，若xor值不为0，则算新产生一种魔法（一个xor值对应唯一的魔法）。注意：一条边经过几次，就要xor几次）。<br />
+喵喵觉得这样太没有意思了，就在想假如我删除一些边这个世界的魔法总数还会有多少呢？喵喵可不会一下删完，他会进行Q次删边操作，每次只会删除一条边，他想知道每删除一条边，剩余的魔法种数有多少。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行3个整数，表示N个节点，M条边，之后删除Q次边。<br />
+接下来M行表示A B 之间有一条U权值的边<br />
+在接下来Q行，表示删除第编号为A的边</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>一共Q+1行，每行一个整数。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3 2<br />
+1 2 1<br />
+2 3 2<br />
+3 1 4<br />
+1<br />
+3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+2<br />
+0</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>所有数据保证该无向图不含重边、自环。<br /><br />
+所有数据保证不会有一条边被删除多次，即对于不同i和j，有Disi&ne;Disj<br /><br />
+N &le; 5000，M &le; 20000，Q &le;20000，U&le;10^18；<br /><br />
+<br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

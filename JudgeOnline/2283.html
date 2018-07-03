@@ -1,0 +1,50 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Sdoi2011]火星移民</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2283. [Sdoi2011]火星移民</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2283">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2283">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2283">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h1 align="center" style="margin: 17pt 0cm 16.5pt; text-align: center"><span style="font-size: medium"><span style="font-family: 宋体">在</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">2xyz</span><span style="font-family: 宋体">年，人类已经移民到了火星上。由于工业的需要，人们开始在火星上采矿。火星的矿区是一个边长为</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">N</span><span style="font-family: 宋体">的正六边形，为了方便规划，整个矿区被分为</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">6*N*N</span><span style="font-family: 宋体">个正三角形的区域（如图</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="font-family: 宋体">）。</span></span></h1>
+<p><img height="303" alt="" width="574" src="upload/201105/image/2283.jpg" /></p>
+<h1 align="center" style="margin: 17pt 0cm 16.5pt; text-align: center"><span lang="EN-US" style="font-size: 12pt; font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></h1>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p>
+<p></p>
+<p></p>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p>
+<p></p>
+<p></p>
+<p class="NOI" style="margin: 13pt 0cm"></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><o:p></o:p></span></p>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;"><v:shapetype id="_x0000_t75" stroked="f" filled="f" path="m@4@5l@4@11@9@11@9@5xe" o:preferrelative="t" o:spt="75" coordsize="21600,21600"><v:stroke joinstyle="miter"></v:stroke><v:formulas><v:f eqn="if lineDrawn pixelLineWidth 0"></v:f><v:f eqn="sum @0 1 0"></v:f><v:f eqn="sum 0 0 @1"></v:f><v:f eqn="prod @2 1 2"></v:f><v:f eqn="prod @3 21600 pixelWidth"></v:f><v:f eqn="prod @3 21600 pixelHeight"></v:f><v:f eqn="sum @0 0 1"></v:f><v:f eqn="prod @6 1 2"></v:f><v:f eqn="prod @7 21600 pixelWidth"></v:f><v:f eqn="sum @8 21600 0"></v:f><v:f eqn="prod @7 21600 pixelHeight"></v:f><v:f eqn="sum @10 21600 0"></v:f></v:formulas><v:path o:connecttype="rect" gradientshapeok="t" o:extrusionok="f"></v:path><o:lock aspectratio="t" v:ext="edit"></o:lock></v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style="width: 407.25pt; height: 228.75pt"><v:imagedata o:title="" src="file:///C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\msohtml1\01\clip_image001.png"></v:imagedata></v:shape><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体">整个矿区中存在</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">A</span><span style="font-family: 宋体">矿，</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">B</span><span style="font-family: 宋体">矿，</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">C</span><span style="font-family: 宋体">矿三个矿场，和</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">a</span><span style="font-family: 宋体">厂，</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">b</span><span style="font-family: 宋体">厂，</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">c</span><span style="font-family: 宋体">厂三个炼矿厂。每个三角形的区域可以是一个矿场、炼矿厂、山地、或者平地。现在矿区管理局要求建立一个交通系统，使得矿场和对应炼矿厂之间存在一条公路，并且三条公路互不交叉</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">(</span><span style="font-family: 宋体">即一个三角形区域中不存在两条以上运输不同矿的公路</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">)</span><span style="font-family: 宋体">。两个三角形区域是相邻的当且仅当这两个三角形存在公共边，只有相邻的两个区域之间才能建一段路，建这段路的费用为</span><span lang="EN-US" style="font-family: &quot;Times New Roman&quot;">1</span><span style="font-family: 宋体">。注意，山地上是不能建公路的。由于火星金融危机的影响，矿区管理局想知道建立这样一个交通系统最少要花多少费用。更多的，当局向知道有多少种花费最小的方案。</span></span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体">第</span><span lang="EN-US" style="font-family: 'Times New Roman'">1</span><span style="font-family: 宋体">行一个整数</span><span lang="EN-US" style="font-family: 'Times New Roman'">N</span><span style="font-family: 宋体">。表示这个矿区是边长为</span><span lang="EN-US" style="font-family: 'Times New Roman'">N</span><span style="font-family: 宋体">的正六边形。</span></span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体">接下来有</span><span lang="EN-US" style="font-family: 'Times New Roman'">6*N*N</span><span style="font-family: 宋体">的整数，分为</span><span lang="EN-US" style="font-family: 'Times New Roman'">2*N</span><span style="font-family: 宋体">行，表示矿区当前区域的情况。</span><span lang="EN-US" style="font-family: 'Times New Roman'">0</span><span style="font-family: 宋体">表示平地，</span><span lang="EN-US" style="font-family: 'Times New Roman'">1,2,3</span><span style="font-family: 宋体">表示对应的矿区或者炼矿厂，</span><span lang="EN-US" style="font-family: 'Times New Roman'">4</span><span style="font-family: 宋体">表示山地。（样例</span><span lang="EN-US" style="font-family: 'Times New Roman'">1</span><span style="font-family: 宋体">对应图</span><span lang="EN-US" style="font-family: 'Times New Roman'">2</span><span style="font-family: 宋体">）。可能有多组数据，请处理到文件结尾</span></span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体">对于每组数据，包含两个整数，表示最小费用和达到最小费用的方案数。如果找不到符合要求的方案，输出</span><span lang="EN-US" style="font-family: 'Times New Roman'">-1 -1</span><span style="font-family: 宋体">。由于方案数可能过大，所以请把方案数</span><span lang="EN-US" style="font-family: 'Times New Roman'">mod 1000000007</span></span></p>
+<p></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输入1】<br />
+2<br />
+0 1 0 0 0<br />
+0 0 2 0 4 0 0<br />
+0 0 4 3 0 3 2<br />
+0 0 0 1 0<br />
+<br />
+【样例输入2】<br />
+3<br />
+0 0 0 1 0 0 0<br />
+0 0 0 0 0 0 0 0 0<br />
+0 0 2 0 0 0 0 0 0 0 0<br />
+0 0 0 0 0 0 3 0 0 0 0<br />
+0 0 0 0 0 0 0 0 0<br />
+0 3 0 1 0 2 0<br />
+ <br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输出1】<br />
+18 1<br />
+【样例输出2】<br />
+44 1<br />
+ </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p class="MsoNormal" style="margin: 0cm 0cm 0pt">样例2的解释</p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><a href="https://www.lydsy.com/JudgeOnline/upload/201105/file/2283_1.jpg"><img height="412" alt="" width="416" src="upload/201105/image/2283_1.jpg" /></a></p><br />
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体">对于</span><span lang="EN-US" style="font-family: 'Times New Roman'">100%</span><span style="font-family: 宋体">的数据，</span><span lang="EN-US" style="font-family: 'Times New Roman'">N&le;6</span></span><span lang="EN-US" style="font-size: 12pt; font-family: 'Times New Roman'"><o:p></o:p></span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

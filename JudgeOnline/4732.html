@@ -1,0 +1,40 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>数据交互</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4732. 数据交互</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4732">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4732">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4732">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>一个简单的网络系统可以被描述成一棵无根树。每个节点为一个服务器。连接服务器与服务器的数据 线则看做一</div>
+<div>条树边。两个服务器进行数据交互时，数据会经过连接这两个服务器的路径上的所有服务 器（包括这两个服务器</div>
+<div>自身）。每个数据交互请求都有一个非负的重要度，越重要的请求显然需要得 到越高的优先处理权。此外，如果</div>
+<div>在某一个时刻存在一条非常重要（可以看作重要度无穷大）、且数 据量巨大的交互请求，则所有被该交互经过的</div>
+<div>服务器都会优先处理这条交互并阻塞，从而导致其他通 过这些服务器的交互出现延迟。现在，你作为一个网络系</div>
+<div>统的管理员，要监控整个系统的运行状态。 系统的运行也很简单，在每一个时刻，只有可能出现下列二种事件中</div>
+<div>的一种：</div>
+<div>1、在某两个服务器之间出现一条新的数据交互请求；</div>
+<div>2、某个数据交互请求结束；</div>
+<div>我们假设这些事件中的交互请求的数据量都足够小。你的任务是在每一个时刻的事件结束后，求出：</div>
+<div>如果突然出现一条非常重要、且数据量巨大的交互请求</div>
+<div>那么因其造成延迟的数据交互请求的重要度之和最大可能是多少？</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行包含二个正整数N,M，分别表示服务器的个数、事件（时刻）的个数。</div>
+<div>接下来N?1行，每行两个整数u,v，描述一条树边。u和v是服务器的编号，服务器编号1&hellip;n。</div>
+<div>接下来M行，按发生时刻依次描述每一个事件；即第i行（i=1,2,3,&hellip;,m）描述时刻i发生的事件。</div>
+<div>事件的描述有两种：</div>
+<div>+ u v w 服务器u和v之间出现了一条重要度为w的数据交互请求</div>
+<div>? t 时刻tt出现的数据交互请求结束</div>
+<div>1&le;N,M&le;10^5，所有的输入数据均为 int 范围内的非负整数。保证输入合法。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出M行，每行一个整数，依次描述在每个事件后，如果突然出现一条非常重要、且数据量巨大的交互请求</div>
+<div>那么因其造成延迟的数据交互请求的重要度之和的最大值。如果此时没有任何数据交互请求，输出 0。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 6<br />
+1 2<br />
+2 4<br />
+4 3<br />
+2 5<br />
++ 1 4 7<br />
++ 5 5 4<br />
+- 1<br />
++ 3 4 3<br />
++ 1 1 6<br />
+- 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+11<br />
+4<br />
+7<br />
+10<br />
+9</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

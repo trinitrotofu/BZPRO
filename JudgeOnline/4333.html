@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>JSOI2012 智者的考验</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4333. JSOI2012 智者的考验</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4333">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4333">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4333">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>公元1371年，太祖下令在北极阁上大建庙宇，短短几年，鸡笼山上便建成了帝王庙、关公庙、真武庙、功臣庙、蒋王庙、都城隍庙、卞壶庙、忠烈庙、刘越王庙、曹武惠王庙共十座庙宇，统称为&ldquo;十庙&rdquo;。&nbsp;</div>
+<div>后来，为了方便人们来鸡笼山进香礼佛，太祖下令疏通了鸡笼山下已淤塞多年的潮沟。于是，便有了&ldquo;进香河&rdquo;。&nbsp;</div>
+<div>然而并不是所有人都可以来鸡笼山的，太祖在进香河上修建了一座石桥，中间悬挂了一块高Rx宽Ry的机关格图（如下图所示）。所有格子都是活动可翻转的，一面是白色，一面是黑色，这里我们用0表示白色，用1表示黑色。初始情况下，所有格子都是白色面朝前的。有Rx+Ry个机关按钮，对应Rx行和Ry列。一个按钮一旦触发，就会引发对应的一行或一列的格子同时翻转。&nbsp;</div>
+<div></div>
+<div>同时，善于识天象的谋臣刘基给出了一种黑白状态，称之为&ldquo;厄运星&rdquo;。每一位过往前去鸡笼山的人都需要触发且只触发一个按钮，触发后，如果来访者呈&ldquo;厄运星&rdquo;形状，则不允许通过。&nbsp;</div>
+<div>每一天要来鸡笼山的人数N是事先就知道的，同时天朝神威浩荡，每一位来者一开始总是有很大概率触发编号为1的按钮，我们不妨用数列A1,A2,&hellip;,AN来表示，问题保证了初始时候的A数列全为1。同时在整个问题中，Ai满足1&lt;=Ai&lt;=Rx+Ry。太祖很关心那些不允许去鸡笼山的人数。于是他时不时就会询问关于&ldquo;某一段时间内会有多少人不能通过&ldquo;厄运星&rdquo;的考验&rdquo;。然而那些前来鸡笼山的文人墨客并不愿意如此单一的操作。来访者有可能会突然决定修改自己的触发按钮。更麻烦的情况，结伴而来的连续若干人会突然决定修改触发按钮并且都去触发同一个按钮。&nbsp;</div>
+<div>现在这麻烦的问题交给了你。&nbsp;</div>
+<div></div>
+<div>后记：&nbsp;</div>
+<div>等到了乾隆时期，一位人称纪昀的才子来访此地，告诉了人们一套方法，从此再也没有人会不被允许通过了。久而久之，鸡笼山烟火依旧，然这机关格图的故事便渐渐失传了。直到今天才再一次被世人所了解。&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入文件第一行有2个数字Rx和Ry表示机关格图的高和宽（如图所示）。之后Rx行每一行Ry个数字，描述了&ldquo;厄运星&rdquo;形状，每一个数字都满足非0即1.&nbsp;</div>
+<div>之后一行有两个数字，分别为N和M，表示人数和询问修改的次数。&nbsp;</div>
+<div>之后M行，对应M次询问或修改。每一行先有一个数字t：&nbsp;</div>
+<div>若t为0：之后有2个数字d和x，表明将Ad修改为x。&nbsp;</div>
+<div>若t为1：之后有2个数字l和r，表明询问第l个人到第r个人中有多少人触发按钮后会出现&ldquo;厄运星&rdquo;形状，从而无法通过。</div>
+<div>若t为2：之后有3个数字l,r和x，表面将Al,Al+1,&hellip;,Ar-1,Ar都修改为x。&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每一次询问(即t为1的情况)，输出单独一行，一个整数描述了在区间[l,r]中满足要求的人数。&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 3 <br />
+0 0 1 <br />
+1 1 0 <br />
+7 4 <br />
+1 1 7 <br />
+0 2 3 <br />
+0 3 4<br />
+1 1 7 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0 <br />
+3 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>对于100%的数据，N&lt;=1000000，M&lt;=120000，Rx&lt;=2，Ry&lt;=3。</p><br />
+<p>应上传者要求，此题不公开，如有异议，请提出.</p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

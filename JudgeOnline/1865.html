@@ -1,0 +1,42 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Pku2057 The Lost House</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1865. Pku2057 The Lost House</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1865">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1865">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1865">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">蜗牛的房子遗失在了一棵树的某个叶子结点上，它要从根结点出发开始寻找它的房子。有一些中间结点可能会住着一些虫子，这些虫子会告诉蜗牛它的房子是否在以这个中间结点为根的子树上，这样蜗牛就不用白跑路了。当然，如果有些结点没有住着虫子的话，那么可怜的蜗牛只有靠自己决定访问顺序来探索了。假设蜗牛走过一条边的耗费都是1，且房子遗失在每个叶子结点的概率都是相等的，那么请问蜗牛找到他的房子的最小数学期望值？
+我们约定，树上的结点数n最多为1000，每个结点的分叉数k最多为8。
+例如在下面的这棵树当中：
+<img border="0" src="images/1865.jpg"> 
+蜗牛从根结点1出发开始寻找它的房子，它的房子可能遗失在2、4、5。在结点3上住着一只虫子，它会告诉蜗牛，以3为根的子树上是否有蜗牛的房子。蜗牛有两种走法。蜗牛可以先访问2，如果它在那儿不能找到房子，那么它要回到根结点1，再通过3来访问结点4（或5），如果还是不能找到它的房子，那么它又要回到结点3，再去访问结点5（或4）。在这种走法中，当房子分别位于2、4、5的时候，蜗牛需要走的步数分别是1、4、6，期望值是(1+4+6)/3=11/3。显然，这种走法没有充分发挥虫子在这里起到的作用。在另一种走法中，蜗牛先访问结点3，它可以从住在3上的虫子那里得知它的房子是否存在于4或5的信息。在这种走法中，当房子分别位于2、4、5的时候，蜗牛需要走的步数分别是3、2、4，期望值是(3+2+4)/3=3。这种走法合理的利用了虫子提供的信息，得到了更优的数学期望值。 
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>The input contains several sets of test data. Each set begins with a line containing one integer N, no more than 1000, which indicates the number of key points in the tree. Then follow N lines describing the N key points. For convenience, we number all the key points from 1 to N. The key point numbered with 1 is always the first fork of the tree. Other numbers may be any key points in the tree except the first fork. The i-th line in these N lines describes the key point with number i. Each line consists of one integer and one uppercase character 'Y' or 'N' separated by a single space, which represents the number of the previous key point and whether there lives a worm ('Y' means lives and 'N' means not). The previous key point means the neighboring key point in the shortest path between this key point and the key point numbered 1. In the above illustration, the previous key point of point 2 or 3 is point 1, while the previous key point of point 4 or 5 is point 3. This integer is -1 for the key point 1, means it has no previous key point. You can assume a fork has at most eight branches. The first set in the sample input describes the above illustration. 
+
+A test case of N = 0 indicates the end of input, and should not be processed. 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>Output one line for each set of input data. The line contains one float number with exactly four digits after the decimal point, which is the mathematical expectation value. 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+-1 N<br />
+1 N<br />
+1 Y<br />
+3 N<br />
+3 N<br />
+10<br />
+-1 N<br />
+1 Y<br />
+1 N<br />
+2 N<br />
+2 N<br />
+2 N<br />
+3 N<br />
+3 Y<br />
+8 N<br />
+8 N<br />
+6<br />
+-1 N<br />
+1 N<br />
+1 Y<br />
+1 N<br />
+3 N<br />
+3 N<br />
+0<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3.0000<br />
+5.0000<br />
+3.5000<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

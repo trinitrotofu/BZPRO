@@ -1,0 +1,39 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>决斗</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4640. 决斗</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4640">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4640">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4640">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>&quot;现在的我虽然很强了，但是还不够，距离那高高在上的人类智慧巅峰还有很远很远。&quot;&nbsp;</div>
+<div>--TB</div>
+<div></div>
+<div>TB正走在通向人类智慧巅峰的路上。</div>
+<div></div>
+<div>可是她发现自己居然不会玩C国杀...虽说是颓物，但是毕竟也是人类智慧的结晶啊...</div>
+<div>于是她找来了机房一只颓狗，开始学习C国杀。</div>
+<div>颓狗说：&quot;C国杀里面只有一种牌【杀】，但是每个人有n副牌堆。&quot;</div>
+<div>TB：&quot;这么无聊的游戏你都玩？&quot;</div>
+<div>颓狗被怒D...无语三秒。</div>
+<div>颓狗说：&quot;但是你可以选择一个牌堆，对别人打出决斗，然后对方也选择一个牌堆，并和你依次打出【杀】（对方</div>
+<div>先出），先不能出者输。不过决斗完大家都要把刚才选择的牌堆扔掉，所以总共可以进行n次决斗。&quot;</div>
+<div>TB：&quot;还是无聊啊...每次不就是比谁的牌堆大么...不过一张一张的打好像可以打一天啊...&quot;</div>
+<div>颓狗再次被怒D...无语五秒。</div>
+<div>颓狗说：&quot;其实真正刺激的是，你们俩都是随机选择牌堆的。&quot;</div>
+<div>TB很惊讶，没想到人类智慧结晶中也有随机这个东西，她开始感觉到C国杀的乐趣。</div>
+<div>现在她知道了她和对手的每副牌堆的【杀】的数量，想知道她期望赢的场数。</div>
+<div>不过这个貌似太简单了。经过各种一番决斗，TB发现她赢x场可以增加x^k点智商，所以她想知道她增加智商的期望。</div>
+<div></div>
+<div>C国杀一番，她又感觉自己的智慧得到了升华。</div>
+<div></div>
+<div>&quot;或许永远都到不了，或许明天就到了。&quot;</div>
+<div>TB看着远方渐渐扬起的红霞，喃喃道。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输入文件的第一行包含两个正整数n，k，分别表示牌堆个数和赢x盘增加智商的指数。</div>
+<div>接下来两行：第一行n个非负整数，表示TB的每副牌堆中【杀】的个数；</div>
+<div>第二行n个非负整数，表示颓狗的每副牌堆中【杀】的个数。</div>
+<div>数据保证除第二行和第三行的n个非负整数按照对于所有数据数据，所有牌堆的【杀】的数量不会超过10^9。</div>
+<div>N&lt;=2000,K&lt;=10^9从小到大的顺序给出。</div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行，表示TB期望增加的智商点数。</div>
+<div>要求输出期望在对10^9+7取模意义下的值。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 1<br />
+2 3 4<br />
+1 3 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>666666673</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">k=1或者2，n的范围是1000000</span><br style="font-family: arial, verdana, helvetica, sans-serif;" /><br />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">k=10^9，n的范围是2000</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

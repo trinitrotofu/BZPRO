@@ -1,0 +1,81 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2010 Hol]Cowwar 奶牛战争</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1779. [Usaco2010 Hol]Cowwar 奶牛战争</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1779">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1779">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1779">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">农场主约翰在编号为1到V (1 <= V <= 1,000)一共V片草地上跟他的邻居农场主汤姆有着一
+个激烈的争吵。两个农场主目前正在这些草地上放养他们的奶牛，每片草地要不是空的，要不就
+被一只属于农场主约翰或者农场主汤姆的奶牛佔领着。
+
+农场主约翰的耐心已经消磨完了，它希望把汤姆所有的奶牛都打到四脚朝天以解决这场争端。他
+当然希望可以抢占先机，并且尽可能多地打翻尽农场主汤姆的奶牛。
+
+一共E (1 <= E <= 5,000)条双向道路连接E对草地。没有两片草地由超过一条道路连接，每
+条道路恰好连接2片不同的草地。每条路径由它的两个端点P1_i和P2_i (1 <= P1_i <= V;
+1 <= P2_i <= V)描述。
+
+在他的进攻过程中，农场主约翰的每一只奶牛如果需要的话，可以走过一条单独的道路。然后，
+如果她愿意，可以对相邻（也就是由一条单独的道路相连的）一片草地发动进攻，也就是把上面
+的敌牛打翻。注意她可以先移动再攻击 -- 但是她不能先攻击然后再移动。
+
+每片草地上每个时刻最多可以有一只奶牛。一只奶牛不能移动到一个已经有奶牛在上面的草地
+上，尤其是上面的奶牛已经被打翻的时候。当然，如果一个草地已经被空出来了，另外一只奶牛
+可以在之后走到这片草地，以取代它的位置。一只被打翻的奶牛不能再次被打翻。
+
+农场主约翰想要了解下面两个问题:
+
+* 农场主约翰在这场战役的第一波攻击中，可以打翻农场主汤姆的多少只奶牛。
+
+* 如何指挥他的奶牛来移动和攻击，以在这第一波攻击中，打翻最多的农场主汤姆的奶牛。
+
+求出可以打翻的敌牛的最大数目，并按照上面的规则，构建出一个移动和攻击的命令序列来指挥
+他的奶牛以打翻这个数目的敌牛。只要能打翻最多的敌牛，任何一个符合条件的序列都是可以接
+受的。
+
+考虑这样一个例子。一共有5片草地，分布在一条线上面，如果有的话，每片草地（经由'--'，
+见下图）连接它左边和右边相邻的草地（如果有的话）。换句话说，草地1和草地2之间有一条道
+路相连，草地2到草地3之间有一条道路相连，等等。农场主汤姆('T')有两只奶牛，分别站在草
+地1和草地4上面，农夫约翰('J')有2只奶牛，站在草地3和草地5上面('E'表示空的草地):
+      
+           1    2    3    4    5
+           T -- E -- J -- T -- J
+
+在这个情况下，农场主约翰可以把农场主汤姆的两只奶牛都打翻。第一步把草地3上的奶牛移动
+到草地2。此时，现在草地上的情况是TJETJ。于是农场主约翰就可以让他两只奶牛都向左进攻。
+注意，虽然一开始在草地3上面的牛可以不需移动而向右攻击，但是这样的话最右边的奶牛就无
+法展开攻击了。于是唯一的可行解肯定跟上面提供的解法有着相同地移动与攻击，儘管农场主
+约翰指挥他的奶牛的具体顺序可能稍微有不同。
+
+如果你正确计算出可以打翻敌牛的最大数目但是没有给出一个命令序列（或者这个序列出错），
+你将得到这个测试点的50%的分数。有一个程序会来给你的输出记分。
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>* 第1行: 两个由空格隔开的整数: V 和 E
+* 第2行: 一个包含V个字符的字符串（没有空格）。其中第i个字符表示草地i一开始的状况。
+'E'表示这片草地是空的；'J'表示这片草地上面有一只奶牛，这只奶牛属于农场主
+约翰；'T'表示这片草地属于农场主汤姆。
+* 第3到第E+2行: 第i+2行包含两个由空格隔开的整数: P1_i 和 P2_i
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>
+* 第1行: 一个单独的整数，表示农场主约翰可以打翻的敌牛的最大数目。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 4<br />
+TEJTJ<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><br />
+输出细节:<br />
+<br />
+其他可行的输出为:<br />
+<br />
+2<br />
+MOVE 3 2<br />
+ATTACK 5 4<br />
+ATTACK 2 1<br />
+<br />
+或者<br />
+<br />
+2<br />
+ATTACK 5 4<br />
+MOVE 3 2<br />
+ATTACK 2 1<br />
+<br />
+其它的输出祇是改变一下命令的顺序。但是并不是所有的数据都是这样的。</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

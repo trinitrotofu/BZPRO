@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Noi2010]旅行路线</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2009. [Noi2010]旅行路线</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：100 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2009">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2009">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2009">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>2010年，世博会在中国上海举办，吸引了数以千万计的中外游客前来参观。暑假期间小Z也来到了上海世博园，她</div>
+<div>对世博园的拥挤早有所闻，对有的展馆甚至要排上好几个小时的队才能进入也做好了充分准备，但为了使得自己的</div>
+<div>世博之旅更加顺利舒畅，小Z决定在游玩之前先制定一份详细的旅行路线。 小Z搜集到了世博园的地图，她发现从</div>
+<div>整体上看世博园是一块非常狭长的区域，而每一个展馆占用了其中一个几乎相同大小的方块。因此可以将整个园区</div>
+<div>看成一个n &times; m的矩阵(n&le;3)，其中每一个格子为一个主题展馆。 由于不同展馆受到的关注度会有一些差别，因</div>
+<div>此排队时间的长短也不尽相同。小Z根据统计信息给每一个展馆(x, y)标记了Tx,y = 0或1，如果Tx,y = 1，表示这</div>
+<div>个展馆非常热门，需要排很长时间的队；如果Tx,y = 0，表示这个展馆相对比较普通，几乎不需要排队即可进入参</div>
+<div>观。小Z希望能够制定一份合理的路线，使得能交替参观热门馆和普通馆，既不会因为总是参观热门馆而长时间在</div>
+<div>排队，也不会因为总是参观普通馆而使得游览过于平淡。同时，小Z办事很讲究效率，她希望在游遍所有展馆的同</div>
+<div>时，又不会走冤枉路浪费体力。因此她希望旅行路线满足以下几个限制： 在参观完位于(x, y)的展馆后，下一个</div>
+<div>参观的是一个相邻的且未被参观过的展馆(x', y')，即 |x-x'|+|y-y'|=1； 路线的起点位于整个矩阵的边界上，</div>
+<div>即x = 1或x = n或y = 1或y = m； 她制定了一个长度为n*m的 01 序列L，她希望第i个参观的展馆(x,y)满足Tx,y=</div>
+<div>Li。 小Z想知道有多少条不同的旅行路线能够满足她的要求。由于最终的结果可能很大，小Z只想知道可行的旅行</div>
+<div>路线总数mod 11192869的值。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个正整数n, m。&nbsp;</div>
+<div>第2行至第n+ 1行，每行有m个01整数，其中第i+ 1行第j个数表示Ti,j。</div>
+<div>第n+ 2行有n*m个01整数，其中第i个数表示Li的值。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>仅包含一个整数，表示可行的旅行路线总数mod 11192869的值。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 2<br />
+10<br />
+01<br />
+1010</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+【样例说明】<br />
+这四条可行的旅行路线分别为：<br />
+(1,1)→(1,2)→(2,2)→(2,1)<br />
+(1,1)→(2,1)→(2,2)→(1,2)<br />
+(2,2)→(1,2)→(1,1)→(2,1)<br />
+(2,2)→(2,1)→(1,1)→(1,2)<br />
+对于100%的数据：m≤50，Li, Ti,j = 0或1。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

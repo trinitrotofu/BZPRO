@@ -1,0 +1,53 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2015 Open]Bessie Goes Moo</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4100. [Usaco2015 Open]Bessie Goes Moo</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4100">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4100">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4100">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Farmer John and Bessie the cow love to exchange math puzzles in their free time. The last puzzle FJ gave Bessie</div>
+<div>was quite difficult and she failed to solve it. Now she wants to get even with FJ by giving him a challenging puzzle.</div>
+<div>Bessie gives FJ the expression (B+E+S+S+I+E)(G+O+E+S)(M+O+O), containing the seven variables B,E,S,I,G,O,M</div>
+<div>(the &quot;O&quot; is a variable, not a zero). For each variable, she gives FJ a list of up to 500 integer values the variable can</div>
+<div>possibly take. She asks FJ to count the number of different ways he can assign values to the variables so the entire</div>
+<div>expression evaluates to a multiple of 7.</div>
+<div></div>
+<div>Note that the answer to this problem can be too large to fit into a 32-bit integer, so you probably want to use 64-bit</div>
+<div>integers (e.g., &quot;long long&quot;s in C or C++).</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">七个变量B,E,S,I,G,O,M;使得(B+E+S+S+I+E)(G+O+E+S)(M+O+O)被7整除的方案有多少种.</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;"></div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;"></div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of the input contains an integer N. The next N lines each contain a variable and a possible value for</div>
+<div>that variable. Each variable will appear in this list at least once and at most 500 times. No possible value will be</div>
+<div>listed more than once for the same variable. All possible values will be in the range &minus;10^5 to 10^5.</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">第一行一个整数N,接下来N行</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">每行一个字母C,一个数字k;表示变量C可以为k.</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">保证每个变量有不超过500种可能的值</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;"></div>
+</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>Print a single integer, giving the number of ways FJ can assign values to variables so the expression</div>
+<div>above evaluates to a multiple of 7.</div>
+<div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">一个整数方案数</div>
+<div style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.333333015441895px;">注意使用64位变量来存储</div>
+</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10<br />
+B 2<br />
+E 5<br />
+S 7<br />
+I 10<br />
+O 16<br />
+M 19<br />
+B 3<br />
+G 1<br />
+I 9<br />
+M 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+The two possible assignments are<br />
+<br />
+(B,E,S,I,G,O,M) = (2, 5, 7, 9,  1, 16, 19) -> 51,765<br />
+                = (2, 5, 7, 9,  1, 16, 2 ) -> 34,510</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

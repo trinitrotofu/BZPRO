@@ -1,0 +1,70 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[ZJOI2008]杀蚂蚁antbuster</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1033. [ZJOI2008]杀蚂蚁antbuster</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1033">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1033">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1033">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>　　最近，佳佳迷上了一款好玩的小游戏：antbuster。游戏规则非常简单：在一张地图上，左上角是蚂蚁窝，右<br />
+下角是蛋糕，蚂蚁会源源不断地从窝里爬出来，试图把蛋糕搬回蚂蚁窝。而你的任务，就是用原始资金以及杀蚂蚁<br />
+获得的奖金造防御塔，杀掉这些试图跟你抢蛋糕的蚂蚁~下附一张游戏截图：</p>
+<p><span style="font-size: medium">&nbsp;<img border="0" alt="" src="images/1033/1.jpg" /> </span></p>
+<p></p>
+<p>　　为了拿到尽可能高的分数，佳佳设计了很多种造塔的方案，但在尝试了其中的一小部分后，佳佳发现，这个游<br />
+戏实在是太费时间了。为了节省时间，佳佳决定写个程序，对于每一种方案，模拟游戏进程，根据效果来判断方案<br />
+的优劣。根据自己在游戏中积累的一些经验，以及上网搜到的一些参数，佳佳猜了蚂蚁爬行的算法，并且假设游戏<br />
+中的蚂蚁也是按这个规则选择路线：1、每一秒钟开始的时候，蚂蚁都在平面中的某个整点上。如果蚂蚁没有扛着<br />
+蛋糕，它会在该点留下2单位的信息素，否则它会留下5单位的信息素。然后蚂蚁会在正北、正南、正东、正西四个<br />
+方向中选择一个爬过去。2、选择方向的规则是：首先，爬完一个单位长度后到达的那个点上，不能有其他蚂蚁或<br />
+是防御塔，并且那个点不能是蚂蚁上一秒所在的点（除非上一个时刻蚂蚁就被卡住，且这个时刻它仍无法动），当<br />
+然，蚂蚁也不会爬出地图的边界（我们定义这些点为不可达点）。如果此时有多个选择，蚂蚁会选择信息素最多的<br />
+那个点爬过去。3、如果此时仍有多种选择，蚂蚁先面向正东，如果正东不是可选择的某个方向，它会顺时针转90<br />
+&deg;，再次判断，如果还不是，再转90&deg;...直到找到可以去的方向。4、如果将每只蚂蚁在洞口出现的时间作为它的<br />
+活动时间的第1秒，那么每当这只蚂蚁的活动时间秒数为5的倍数的时候，它先按规则1~3确定一个方向，面对该方<br />
+向后逆时针转90&deg;，若它沿当前方向会走到一个不可达点，它会不停地每次逆时针转90&deg;，直到它面对着一个可达<br />
+的点，这样定下的方向才是蚂蚁最终要爬去的方向。5、如果蚂蚁的四周都是不可达点，那么蚂蚁在这一秒内会选<br />
+择停留在当前点。下一秒判断移动方向时，它上一秒所在点为其当前停留的点。6、你可以认为蚂蚁在选定方向后<br />
+，瞬间移动到它的目标点，这一秒钟剩下的时间里，它就停留在目标点。7、蚂蚁按出生的顺序移动，出生得比较<br />
+早的蚂蚁先移动。然后，是一些有关地图的信息：1、 每一秒，地图所有点上的信息素会损失1单位，如果那个点<br />
+上有信息素的话。2、 地图上某些地方是炮台。炮台的坐标在输入中给出。3、 地图的长、宽在输入中给出，对于<br />
+n * m的地图，它的左上角坐标为（0，0），右下角坐标为（n，m）。蚂蚁洞的位置为（0，0），蛋糕的位置为（n<br />
+，m）。4、 你可以把蚂蚁看做一个直径为1单位的圆，圆心位于蚂蚁所在的整点。5、 游戏开始时，地图上没有蚂<br />
+蚁，每个点上的信息素含量均为0。一些有关炮塔的信息：1、 炮塔被放置在地图上的整点处。2、 为了简单一些<br />
+，我们认为这些炮塔都是激光塔。激光塔的射速是1秒/次，它的攻击伤害为d/次，攻击范围为r。你可以认为每秒<br />
+蚂蚁移动完毕后，塔才开始攻击。并且，只有当代表蚂蚁的圆的圆心与塔的直线距离不超过r时，塔才算打得到那<br />
+只蚂蚁。3、 如果一只蚂蚁扛着蛋糕，那么它会成为target，也就是说，任何打得到它的塔的炮口都会对准它。如<br />
+果蛋糕好好地呆在原位，那么每个塔都会挑离它最近的蚂蚁进行攻击，如果有多只蚂蚁，它会选出生较早的一只。<br />
+4、 激光塔有个比较奇怪的特性：它在选定了打击目标后，只要目标在其射程内，塔到目标蚂蚁圆心的连线上的所<br />
+有蚂蚁（这里&ldquo;被打到&rdquo;的判定变成了表示激光的线段与表示蚂蚁的圆有公共点）都会被打到并损d格血，但激光<br />
+不会穿透它的打击目标打到后面的蚂蚁。5、 尽管在真实游戏中，塔是可以升级的，但在这里我们认为塔的布局和<br />
+等级就此定了下来，不再变动。再介绍一下蚂蚁窝：1、 如果地图上的蚂蚁不足6只，并且洞口没有蚂蚁，那么窝<br />
+中每秒会爬出一只蚂蚁，直到地图上的蚂蚁数为6只。2、 刚出生的蚂蚁站在洞口。3、 每只蚂蚁有一个级别，级<br />
+别决定了蚂蚁的血量，级别为k的蚂蚁的血量为int(4*1.1^k)（int(x)表示对x取下整）。每被塔打一次，蚂蚁的血<br />
+减少d。注意，血量为0的蚂蚁仍能精力充沛地四处乱爬，只有一只蚂蚁的血被打成负数时，它才算挂了。 4、 蚂<br />
+蚁的级别是这样算的：前6只出生的蚂蚁是1级，第7~12只是2级，依此类推。最后给出关于蛋糕的介绍：1、 简单<br />
+起见，你可以认为此时只剩最后一块蛋糕了。如果有蚂蚁走到蛋糕的位置，并且此时蛋糕没有被扛走，那么这只蚂<br />
+蚁就扛上了蛋糕。蚂蚁被打死后蛋糕归位。2、 如果一只扛着蛋糕的蚂蚁走到蚂蚁窝的位置，我们就认为蚂蚁成功<br />
+抢到了蛋糕，游戏结束。3、 蚂蚁扛上蛋糕时，血量会增加int（该蚂蚁出生时血量 / 2），但不会超过上限。整<br />
+理一下1秒钟内发生的事件： 1秒的最初，如果地图上蚂蚁数不足6，一只蚂蚁就会在洞口出生。接着，蚂蚁们在自<br />
+己所在点留下一些信息素后，考虑移动。先出生的蚂蚁先移动。移动完毕后，如果有蚂蚁在蛋糕的位置上并且蛋糕<br />
+没被拿走，它把蛋糕扛上，血量增加，并在这时被所有塔设成target。然后所有塔同时开始攻击。如果攻击结束后<br />
+那只扛着蛋糕的蚂蚁挂了，蛋糕瞬间归位。攻击结束后，如果发现扛蛋糕的蚂蚁没死并在窝的位置，就认为蚂蚁抢<br />
+到了蛋糕。游戏也在此时结束。最后，地图上所有点的信息素损失1单位。所有蚂蚁的年龄加1。漫长的1秒到此结<br />
+束。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　输入的第一行是2个用空格隔开的整数，n、m，分别表示了地图的长和宽。第二行是3个用空格隔开的整数，s<br />
+、d、r，依次表示炮塔的个数、单次攻击伤害以及攻击范围。接下来s行，每行是2个用空格隔开的整数x、y，描述<br />
+了一个炮塔的位置。当然，蚂蚁窝的洞口以及蛋糕所在的位置上一定没有炮塔。最后一行是一个正整数t，表示我<br />
+们模拟游戏的前t秒钟1 &lt; =&nbsp; n,m &lt; =&nbsp; 8，s &lt; =&nbsp; 20，t &lt; =&nbsp; 200,000</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　如果在第t秒或之前蚂蚁抢到了蛋糕，输出一行&ldquo;Game over after x seconds&rdquo;，其中x为游戏结束的时间，<br />
+否则输出&ldquo;The game is going on&rdquo;。如果游戏在t秒或之前结束，输出游戏结束时所有蚂蚁的信息，否则输出t秒<br />
+后所有蚂蚁的信息。格式如下：第一行是1个整数s，表示此时活着的蚂蚁的总数。接下来s行，每行5个整数，依次<br />
+表示一只蚂蚁的年龄（单位为秒）、等级、当前血量，以及在地图上的位置（a，b）。输出按蚂蚁的年龄递减排序</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 8<br />
+2 10 1<br />
+7 8<br />
+8 6<br />
+5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>The game is going on<br />
+5<br />
+5 1 4 1 4<br />
+4 1 4 0 4<br />
+3 1 4 0 3<br />
+2 1 4 0 2<br />
+1 1 4 0 1<br />
+样例说明：<br />
+　　3*5的地图，有1个单次伤害为1、攻击范围为2的激光炮塔，它的位置为（2，2），模拟游戏的前5秒。5秒内有<br />
+5只蚂蚁出生，都是向东爬行，其中第1~4只在路过（0，2）点时被激光塔伤了1格血。在第5秒的时候，最早出生的<br />
+蚂蚁按移动规则1~3本来该向东移动，但由于规则4的作用，它在发现向北和向西移动都会到达不可达点后，最终选<br />
+择了向南移动。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>一个好的题面版本:&nbsp;<a href="https://www.lydsy.com/JudgeOnline/upload/201803/1033.rar">JudgeOnline/upload/201803/1033.rar</a></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

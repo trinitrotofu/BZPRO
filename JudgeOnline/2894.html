@@ -1,0 +1,36 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>世界线</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2894. 世界线</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2894">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2894">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2894">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">由于春希对于第二世代操作的不熟练，所以刚使用完invasion process便掉落到了世界线之外，错综复杂的平行世界信息涌入到春希的意识中。春希明白了事件的真相。</span></div>
+<div><span style="font-size: medium">在一个冬马与雪菜同时存在的世界里，傲娇的冬马最终还是博得了春希的内心。然而看着好友雪菜的消瘦，内心愧疚的冬马启动了第二世代操作，想找到一个雪菜最终成功的世界，却发现哪里都没有。绝望的冬马决定耗尽自己全部的第二世代操作点数，自创一个没有自己只有雪菜与春希的世界。</span></div>
+<div><span style="font-size: medium">虽然这个世界一开始效果很好，春希与雪菜很快的被命运撮合在了一起，然而没有了冬马的雪菜，如没有了大海的沙滩，失去了傍依。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">虽然世界里没有冬马的存在，但是由于冬马创造时的疏忽，这个世界里的雪菜依然存在着因独占春希而产生的对冬马的愧疚感，这种愧疚感折磨着雪菜，最终雪菜选择了自毁忘记春希。</span></div>
+<div><span style="font-size: medium">看着这一切的春希深知不管是三个人一起的快乐，还是两个人独处的甜蜜，都无法消除冬马与雪菜内心的自责，无论如何修改世界，三人都只会更加痛苦，于是春希使用了自己剩余的全部操作点数，念出了key world:WhiteAlbum2，开始了initialization process.</span></div>
+<div><span style="font-size: medium">在initialization process中，春希需要整理世界线，才能回归原本的世界。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">世界线是一棵根节点为1的树，每个节点为1个字符。规定树上的子串为从某个节点（不一定是1号节点）出发往其子节点走所形成的字符串。每一个子串相当于一个平行世界，要想重构世界，就需要知道两个信息：</span></div>
+<div style="margin: 0cm 0cm 0pt 30pt; text-indent: -18pt"><span style="font-size: medium">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp; </span>不同子串的个数</span></div>
+<div style="margin: 0cm 0cm 0pt 30pt; text-indent: -18pt"><span style="font-size: medium">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp; </span>将不同的子串排序后，字典序第k-1小的子串。</span></div>
+<div><span style="font-size: medium">如图所示为一个世界线的样例，从4-&gt;5的子串为bb,1-&gt;5的为abb</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="text-indent: 12pt"><span style="font-size: medium">第一行两个整数n，q表示节点个数以及询问个数</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">第二行n个字符，表示编号为i的字符是什么。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">接下来n-1行表示一棵树。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">接下来q行，每行一个整数k</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="text-indent: 12pt"><span style="font-size: medium">第一行为不同支付串个数。</span></div>
+<div style="text-indent: 12pt"><span style="font-size: medium">接下来q行为q个询问的答案(注意输出的是第k-1小的子串，如果K=1请直接换行)，如果不存在（不包括k=1）输出-1.</span></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 1<br />
+abcbbaca<br />
+1 2<br />
+2 3<br />
+1 4<br />
+4 5<br />
+4 6<br />
+4 7<br />
+1 8 <br />
+5<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12<br />
+aba<br />
+【数据规模和约定】<br />
+12%：n<=10<br />
+另有48%为一条链;<br />
+100%: n<=250000,q<=50000.<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

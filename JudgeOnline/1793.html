@@ -1,0 +1,66 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2008]Fish 鱼
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1793. [Ioi2008]Fish 鱼
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1793">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1793">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1793">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">据Scheherazade说，在很远的沙漠中有一个湖。湖中起初有N条鱼。选择最值钱的K种宝石，对F条鱼的每一条只喂给它一块宝石。注意，因为K可能小于F，两条或更多的鱼可能会吞下同一种宝石。
+随着时间的流逝，有些鱼吃掉了别的鱼。一条鱼能够吃掉另一条鱼，当且仅当它的长度是被吃掉的鱼的两倍(A 能吃掉B 当且仅当LA >= 2 * LB)。没有规则说明一条鱼何时会吃掉另一条鱼。有的鱼可能会一条接一条地吃掉几条小鱼，而有的鱼可能不吃别的鱼，即使它们有能力吃。当一条鱼吃掉一条小鱼时，它的身长并不改变，但是小鱼腹中的宝石会完好无损地进到大鱼腹中。
+据Scheherazade说，如果你能够找到那个湖，你会被准许捕捉一条鱼，并且得到鱼腹中的宝石。你很想试试运气，但是在出发前很想知道捉到一条鱼可能会有多少种不同的宝石组合。
+
+任务
+写一个程序，给定每条鱼的长度以及其最初吞食的宝石的种类，找出鱼腹中宝石不同组合的数量对给定整数M取模的值。组合由每种宝石的数量定义，与宝石的排列顺序无关。同一类宝石中任意两块是没有区别的。
+
+限制
+1 <= F <= 500,000湖中最初鱼的数量
+1 <= K <= F宝石的种类
+2 <=M <= 30,000
+1 <= LX <= 1,000,000,000鱼X的长度
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序需要从标准输入上读入下列数据：
+&#8226;
+&#8226;第一行是整数F, 即湖中最初鱼的数量。
+&#8226;第二行是整数K, 即宝石的种类数。
+不同类型的宝石分别用从 1 到 K的整数表示。
+&#8226;第三行是整数M。
+&#8226;以后 F 行中的每一行用由一个空格分隔的两个整数描述一条鱼：按顺序分别是鱼的长度以及鱼腹中的宝石的类型。
+注意: 在所有的测试用例中，K 种宝石中的每一种都会至少有一块。
+ 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输出
+你的程序需要在标准输出上输出一个介于0和M-1(包含)的整数，即宝石所有可能的不同组合数量模M，占一行。
+注意，在问题求解中，数值 M 除了简化计算外没有其他的作用。
+评分
+有总计 70 分的测试用例，其中K 不超过 7,000。在这些测试用例中，有总计25 分的测试用例的 K 不超过 20。
+
+反馈细节
+在竞赛中, 你提交的程序将用一些正式的数据进行测试，并向你显示测试结果的概要。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+5<br />
+3<br />
+7<br />
+2 2<br />
+5 1<br />
+8 3<br />
+4 1<br />
+2 3<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>有 11 种可能的组合，所以你需要输出4，也就是11 模 7。<br />
+<br />
+这些可能的组合是: [1] [1,2] [1,2,3] [1,2,3,3] [1,3] [1,3,3] [2] [2,3] [2,3,3] [3] 和 [3,3]。 <br />
+(对每一种组合, 我们列出其所包含的宝石。 例如，[2,3,3] 包含一块2型宝石和两块3型宝石)<br />
+这些组合可以由下述方式获得:<br />
+&#8226;[1]: 如果你在第二条鱼 (或第四条) 吃掉任何其它鱼之前捕捉到它。 <br />
+&#8226;[1,2]: 如果第二条鱼吃掉第一条鱼, 它就会有一块 1 型宝石(它在初始时刻吞下的) 和一块2型宝石 (从第一条鱼腹中得到的)。<br />
+&#8226;[1,2,3]: 一种可能的途径是: 第四条鱼吃掉第一条鱼，然后第三条鱼又吃掉它。如果你此时捉到了第三条鱼，那它腹中就会有这三种宝石一样一块。<br />
+&#8226;[1,2,3,3]: 第四条鱼吃掉第一条鱼，第三条鱼吃掉第四条鱼，第三条鱼吃掉第五条鱼，你捉到了第三条鱼。<br />
+&#8226;[1,3]: 第三条鱼吃掉第四条鱼，你捉到了第三条鱼。<br />
+&#8226;[1,3,3]: 第三条鱼吃掉第五条鱼，第三条鱼吃掉第四条鱼，你捉到了第三条鱼。<br />
+&#8226;[2]: 你捉到了第一条鱼。<br />
+&#8226;[2,3]: 第三条鱼吃掉第一条鱼，你捉到了第三条鱼。<br />
+&#8226;[2,3,3]: 第三条鱼吃掉第一条鱼，第三条鱼吃掉第五条鱼，你捉到了第三条鱼。<br />
+&#8226;[3]: 你捉到了第三条鱼。<br />
+&#8226;[3,3]: 第三条鱼吃掉第五条鱼，你捉到了第三条鱼。<br />
+<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

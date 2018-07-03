@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CodePlus 2018 3 月赛]白金元首与莫斯科</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5205. [CodePlus 2018 3 月赛]白金元首与莫斯科</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5205">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5205">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5205">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>寒冷刺骨的天气、疲惫不堪的军队&hellip;&hellip;包围首都的作战计划陷入了困境。空军或许是拯救战况的最后希望了，元首</div>
+<div>Adolf想道。在一个n&times;m的网格区域中存在一个陆军单位需要补给，区域中的每个格子为空地或障碍物中的一种。</div>
+<div>航空舰队需要派遣若干运输机前往此区域，每一架运输机可以向两个相邻（有一条公共边）的空地投放物资。为防</div>
+<div>止不必要的损坏，一个标记为空地的格子至多只能得到一次投放。由于天气原因，陆军单位所在的确切位置并不能</div>
+<div>确定。因此元首想知道，对于每个空地格子，当陆军单位在其中（视作障碍物）时，用若干（可以为0）架运输机</div>
+<div>向其余空地投放任意数量的物资的不同方案数。两个投放方案不同，当且仅当存在一个格子在一个方案中被投放而</div>
+<div>另一方案中未被投放，或存在两个被投放的格子，在一个方案中被同一架运输机投放而在另一方案中非然。若仍有</div>
+<div>疑问，请参考「样例1解释」。</div>
+<div>你需要编写程序帮助元首计算这些值。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个正整数T&mdash;&mdash;数据的组数。</div>
+<div>接下来包含T组数据，格式如下，数据间没有空行。</div>
+<div>第1行：两个空格分隔的正整数n,m&mdash;网格区域的行数和列数。</div>
+<div>接下来n行：其中第i行包含m个空格分隔的整数Ai1,Ai2,&hellip;,Aim&mdash;其中Aij=0表示第iii行第j列的格子为空地；Aij=1表示该格为障碍物。</div>
+<div>1&le;n,m&le;17,Aij&isin;{0,1}</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据输出n行</div>
+<div>第i行包含m个空格分隔的整数Bi1,Bi2,&hellip;,Bim&mdash;若第i行第j列的格子为空地，Bij为该格变为障碍物后投放的方案数；否则Bij=0</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 4<br />
+0 0 0 0<br />
+0 0 0 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>14 13 10 22<br />
+15 11 17 0</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div><br />
+<div>以第 2行第 1 列的空地格为例，其变为障碍物后的网格如下图，其中白色格子代表空地，黑色格子代表障碍物。</div><br />
+<div><img src="upload/201803/1(1).png" width="200" height="104" alt="" /></div><br />
+<div>15种方案如下图所示，不同颜色代表不同运输机的投放位置</div><br />
+<div><img src="upload/201803/2.png" width="400" height="400" alt="" /></div><br />
+</div><br />
+<div>来自 CodePlus 2018 3 月赛，清华大学计算机科学与技术系学生算法与竞赛协会 荣誉出品。</div><br />
+<div>Credit：idea/吕时清　命题/吕时清　验题/吕欣，王聿中</div><br />
+<div>Git Repo：https://git.thusaac.org/publish/CodePlus3</div><br />
+<div>感谢腾讯公司对此次比赛的支持。</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

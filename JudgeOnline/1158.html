@@ -1,0 +1,38 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2005]玩具的重量weight</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1158. [Ctsc2005]玩具的重量weight</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1158">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1158">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1158">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>冰冰有三个玩具：皮卡秋、维妮孙悟空和芭比娃娃。她并不知道这些玩具的具体重量（采用NOI单位），但是知道</div>
+<div>每个玩具重量的大概范围，如下表： 皮卡秋 维妮孙悟空 芭比娃娃最小可能重量 1 2 3 最大可能重量 3 4 5 表1</div>
+<div>. 玩具和它们的最小、最大可能重量 这些范围太粗略，冰冰希望能把它们缩小一些。正好佳佳有一个电子天平，</div>
+<div>不仅可以告诉你左右两边是否一样重，还可以告诉你左边比右边重（或轻）多少。天平很大，左右两边都可以放任</div>
+<div>意多件玩具。冰冰向佳佳借电子天平，希望能算出每个玩具的精确重量。佳佳为了考验冰冰，只允许她把任意一个</div>
+<div>玩具往天平的左侧和右侧最多各放一次。例如，如果她曾经把皮卡秋放在天平的左侧，则她不能再次把它放在天平</div>
+<div>的左侧。冰冰同意了。她一共称量了两次，结果如下（数字表示左边比右边重多少）： 图1. 称量结果根据结果和</div>
+<div>表1，可以确定三个玩具的重量一定是3，4，3，也就是说，通过称量结果所得到的更新后的重量范围是： 皮卡秋&nbsp;</div>
+<div>维妮孙悟空 芭比娃娃最小可能重量 3 4 3 最大可能重量 3 4 3 表2. 根据称量结果所得到的精确范围 冰冰以后</div>
+<div>还会买很多很多玩具，她不想每次都自己计算每个玩具的重量。她需要写一个程序计算每个玩具最精确的重量下限</div>
+<div>和上限，你能帮她吗？</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入文件第一行包含两个整数n和m，即玩具的个数和称量的次数。</div>
+<div>第二行包含2n个数，第2i-1个数和第2i个数分别表示第i个玩具的重量初始下限和初始上限。</div>
+<div>以下m行，每行前三个数L，R，D表示左边的玩具数、右边的玩具数和左右两边的重量差(L, R&gt;=0)，</div>
+<div>接下来的L个数为天平左边的玩具编号，</div>
+<div>再接下来的R个数为天平右边的玩具编号。</div>
+<div>输入保证每个玩具在天平的每一边最多出现一次。</div>
+<div>3&lt;=n&lt;=200, 1&lt;=m&lt;=100，重量上限不超过20000。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出包含2n个整数，第2i-1个数和第2i个数分别表示第i个玩具的重量下限和上限，</div>
+<div>即最小可能的整数重量和最大可能的整数重量。</div>
+<div>如果无解（可能是天平坏了），只输出一个数-1。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输入1】<br />
+3 2<br />
+1 3 2 4 3 5<br />
+1 1 -1 1 2<br />
+1 1 1 2 3<br />
+【样例输入2】<br />
+3 1<br />
+1 5 2 5 1 3<br />
+2 1 1 1 2 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输出1】<br />
+3 3 4 4 3 3<br />
+【样例输出2】<br />
+1 2 2 3 2 3<br />
+//样例1对应于题目描述中的例子。<br />
+//在样例2中，冰冰有三个玩具，重量的原始范围为1~5, 2~5, 1~3。只有一次称量，<br />
+天平的左边是玩具1和玩具2，右边是玩具3。左边比右边重1个单位。<br />
+根据此结果，可以判断三个玩具的重量范围为1~2，2~3和2~3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

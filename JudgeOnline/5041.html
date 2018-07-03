@@ -1,0 +1,46 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>LWD的降临</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5041. LWD的降临</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5041">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5041">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5041">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>Background</div>
+<div>椭圆是平面内到定点F1、F2的距离之和等于一个定值（大于|F1F2|）的动点P的轨迹，F1、F2称为椭圆的两个焦点</div>
+<div>。以下内容均发生在二维平面。DescriptionLWD垂涎YSY星球很久了，他总是幻想着自己有一天能到YSY星球上去生</div>
+<div>活。好心的ZWD决定帮他一个忙，用他的宇宙飞船把LWD送上YSY星球。因为ZWD的飞船不能飞得太远，所以飞船只能</div>
+<div>绕两个定点作椭圆轨道的飞行。并且因为ZWD还有更重要的事情要做，所以只想沿着YSY星球表面高速掠过，然后把</div>
+<div>LWD丢出去。理论上来说，ZWD飞船的椭圆轨道与YSY星球会有两个切点，如下图，有A，B两个切点，所以说ZWD可以</div>
+<div>选择在到A点把LWD丢出去或者到B再丢。但是ZWD想让他的椭圆轨道想尽量小，所以他会选择A点。由于ZWD飞船的导</div>
+<div>航系统被拿去送给ZWD工作过的飞船驾驶学校作纪念了，所以他想请你帮助他解决导航的问题。现在你知道椭圆轨</div>
+<div>道的两个焦点和YSY星球的坐标和半径，请你粗略地告诉ZWD LWD会降落在何处。</div>
+</div>
+<div><img src="upload/201709/vv1.jpg" width="494" height="262" alt="" /></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行一个整数t，表示数据组数。对与每组数据：</div>
+<div>第一行四个实数x1,y1,x2,y2，表示两焦点坐标。</div>
+<div>第二行三个实数x0,y0,r，表示YSY星球(在二维平面中是一个圆)的圆心坐标和半径。</div>
+<div>t&lt;=500,x,y&lt;=1500,r&lt;=250；</div>
+<div>保证一定存在两个可能的切点，即两焦点构成的线段不会与给出的圆相交。</div>
+<div></div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输出共t行，每行两个整数x,y，表示降落点的坐标。</div>
+<div>误差不得超过 0.1（本题设置SPJ）</div>
+<div></div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+671.96 709.16 631.66 143.33<br />
+193.97 46.03 9.45<br />
+260.12 443.55 414.69 159.44<br />
+867.06 413.22 145.39<br />
+661.12 270.16 199.50 762.11<br />
+217.73 88.88 143.38<br />
+393.83 682.29 788.82 425.07<br />
+181.08 239.07 104.56<br />
+146.23 889.95 599.49 296.45<br />
+341.26 157.41 26.60</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>201.87 51.22<br />
+725.78 378.91<br />
+299.74 206.49<br />
+259.56 308.16<br />
+352.26 181.63</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

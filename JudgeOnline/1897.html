@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>tank 坦克游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1897. tank 坦克游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1897">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1897">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1897">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">有这样一款新的坦克游戏。在游戏中，你将操纵一辆坦克，在一个N×M的区域中完成一项任务。在此的区域中，将会有许多可攻击的目标，而你每摧毁这样的一个目标，就将获得与目标价值相等的分数。只有获得了最高的分数，任务才算完成。同时，为了增加游戏的真实性和难度，该游戏还做了以下的限制：
+1)坦克有射程r的限制。为方便计算，射程r规定为：若坦克位于(x, y)格，则它可攻击的目标(x1, y1)必须满足|x-x1|, |y-y1|∈[0, r]。
+2)对坦克完成任务的时间有严格限制，规定为t秒。其中，坦克每进行一次移动都需1秒的时间，每攻击一个目标也需1秒的时间。时间一到t秒，便对此次任务进行记分。
+3)坦克最初位于左上角，且移动方向只准是向右或向下，每次只允许移动一格。
+在以上的限制条件下，要完成该任务便成为了一件很难事情。因此，你必须为此编写一个程序，让它助你完成这个艰巨的任务。
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行四个整数N、M、r、t，分别表示区域的长、宽，以及射程和完成任务时间。
+接下来N行是一个N×M的矩阵，对应每个位置上目标的价值。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输出文件仅一个数max，即该任务中可得到的最高分数。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 5 2 7<br />
+0 5 0 0 4<br />
+0 0 0 0 2<br />
+0 0 0 0 0<br />
+0 0 0 0 0<br />
+5 0 3 0 11<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>21<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>1≤N、M≤500，1≤r≤100，1≤t≤250。<br />
+对于20%的数据有：1≤N、M≤10。<br />
+对于60%的数据有：1≤N、M≤50，1≤r≤10。<br />
+对于80%的数据有：1≤N、M≤100，1≤r≤20。<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

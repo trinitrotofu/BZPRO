@@ -1,0 +1,32 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[2012国家集训队测试]深入虎穴</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2622. [2012国家集训队测试]深入虎穴</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2622">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2622">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2622">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span class="Apple-style-span" style="word-spacing: 0px; font: medium Arial,Microsoft Yahei,Simsun,sans-serif; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; border-collapse: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><span class="Apple-style-span" style="font-size: 16px; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体">虎是中国传统文化中一个独特的意象。我们既会把老虎的形象用到喜庆的节日装饰画上，也可能把它视作一种邪恶的可怕的动物，例如&ldquo;武松打虎&rdquo;或者&ldquo;三人成虎&rdquo;。&ldquo;不入虎穴焉得虎子&rdquo;是一个对虎的威猛的形象的极好体现，而小强确偏偏进入了虎穴，但问题是怎么出来。<br />
+　　有一个复杂的虎穴包括了N个节点(编号为0至N-1)和M条无向的通道，其中通道i（0&lt;=i&lt;M）连接两个节点R[i][0]和R[i][1]，长为L[i]。有K个出口节点，分别为P[0], P[1]至P[K-1]。小强从0号节点出发，他想尽快到达一个出口节点。而洞穴中有一只会瞬间移动的老虎。小强每次到达一个节点，老虎就会瞬间移动到与这个节点相邻的某个通道里使得小强无法使用这个通道。不过，小强一旦选择了另一个没有被封锁的通道，老虎就不会在小强到达这个通道的目的地前改变位置。<br />
+　　老虎非常聪明，它总能让小强离开洞穴所要消耗的时间最长。而小强也非常聪明，他能够计算出最快的逃生方案。<br />
+　　为了让题目更加严谨，我们规定小强的逃生方案是如下的形式：对于每个节点X，给它的所有相邻的边&lt;X,Y&gt;指定一个权值f(X,Y)，注意，f(X,Y)不等于f(Y,X)；在一个节点，小强选择未被封锁的权值最大的通道逃生，直到到达出口。所有的f(X,Y)两两不同。<br />
+　　你要计算小强的最快逃离时间T并输出。</span></span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行三个整数 N M K<br />
+接下来M行 每行三个整数 表示一条无向边的两端和长度（无重边）<br />
+接下来K个整数 表示出口洞穴<br />
+输入直接保留这个就行<br />
+</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>13 12 9<br />
+0 1 1<br />
+0 2 4<br />
+0 3 11<br />
+1 4 11<br />
+1 5 7<br />
+1 6 15<br />
+2 7 3<br />
+2 8 13<br />
+2 9 23<br />
+3 10 3<br />
+3 11 1<br />
+3 12 2<br />
+4 5 6 7 8 9 10 11 12<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>13</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span class="Apple-style-span" style="word-spacing: 0px; font: medium Arial,Microsoft Yahei,Simsun,sans-serif; text-transform: none; color: rgb(0,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; border-collapse: separate; orphans: 2; widows: 2; webkit-border-horizontal-spacing: 0px; webkit-border-vertical-spacing: 0px; webkit-text-decorations-in-effect: none; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px"><span class="Apple-style-span" style="font-size: 16px; color: rgb(32,0,0); font-family: 'Times New Roman', 宋体">时间限制：3秒（包括系统读数据约1.1秒。函数中运行的时间限制约为1.9秒）<br /><br />
+　　空间使用注意：系统大约需要使用116M空间，因此你的程序的所能使用的空间不到400M。<br /><br />
+　　对前6个测试点，3&lt;=N&lt;=1000，M=N-1。<br /><br />
+　　对中间7个测试点，3&lt;=N&lt;=1000，2&lt;=M&lt;=100000。<br /><br />
+　　对最后7个测试点，3&lt;=N&lt;=100000，2&lt;=M&lt;=1000000。<br /><br />
+　　一共20个测试点。</span></span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

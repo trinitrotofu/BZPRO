@@ -1,0 +1,59 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Moving the Hay</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1447. Moving the Hay</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1447">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1447">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1447">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+
+After he partitioned his farm into R (1 <= R <= 200) rows and C (1
+<= C <= 200) squares conveniently labeled 1,1 through R,C, Farmer
+John spent days cutting the hay and stacking a huge amount of it
+in square 1,1. He then undertook the task of mapping out the N (1
+<= N <= 80,000) haypaths through the farm so that he could deduce
+the maximum rate he could move hay from square 1,1 to square R,C.
+
+Each haypath uniquely connects the middle of two rectilinearly
+adjacent partitioned squares and has some capacity limit L_i (1 <=
+L_i <= 20,000,000) that is the maximum amount of hay that can be
+transported in either direction across the haypath.  He's just
+positive that he can move hay at a reasonable rate to the other
+side of the farm but he doesn't know what the fastest rate is. Help
+him learn it.
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>* Line 1: Three separated integers: R, C, and N
+* Lines 2..N+1: Line i+1 describes path i with five space-separated
+        integers: r1, c1, r2, c2, and L_i which denote a haypath
+        connecting (r1,c1) to (r2,c2) with capacity L_i.
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>
+* Line 1: One number, on a line by itself, the maximum amount of
+        material which can be transported from (1,1) to (R,C)
+        simultaneously.
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+3 3 8<br />
+1 1 1 2 5<br />
+1 1 2 1 3<br />
+1 2 2 2 5<br />
+2 1 2 2 2<br />
+2 2 2 3 1<br />
+2 2 3 2 6<br />
+2 3 3 3 4<br />
+3 2 3 3 7<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+The grid is as follows:<br />
+*--5--* . . *<br />
+|     |     <br />
+3     5     :<br />
+|     |    <br />
+*--2--*--1--*<br />
+      |     |<br />
+:     6     4<br />
+      |     |<br />
+* . . *--7--*<br />
+    <br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><br />
+Consider the two edges coming out of (2,2), at most 6+1=7 units of hay can<br />
+be transported. This is indeed feasible.<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

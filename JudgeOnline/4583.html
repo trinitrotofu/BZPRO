@@ -1,0 +1,51 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>购物</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4583. 购物</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4583">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4583">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4583">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>商店出售3种颜色的球，分别为红、绿、蓝。城市里有n个商店，第i个商店在第First_i天开始营业，连续营业Red_</div>
+<div>i+Green_i+Blue_i天，每个商店每天只能出售一种颜色的球。每天最多有两个商店同时营业。如果同一天内有两个</div>
+<div>商店同时营业，那么这两个商店必须出售相同颜色的球。求不同的出售方案数（对1,000,000,007取模）。两种方</div>
+<div>案不同，当且仅当某一天某一个商店出售的球的颜色不同。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行只包含一个整数n，表示商店的个数。</div>
+<div>接下来一行有n个数，第i个数表示First_i。</div>
+<div>接下来一行有n个数，第i个数表示Red_i。</div>
+<div>接下来一行有n个数，第i个数表示Green_i。</div>
+<div>接下来一行有n个数，第i个数表示Blue_i。</div>
+<div>
+<div>1&le;n&le;50</div>
+<div>1&le;First_i&le;500</div>
+<div>0&le;Red_i, Green_i, Blue_i&le;100</div>
+<div>0&lt;Red_i + Green_i + Blue_i</div>
+<div>First_i + Red_i + Green_i + Blue_i - 1&le;500</div>
+<div>保证每天最多有两个商店同时营业。</div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出仅包含一个数，表示对1,000,000,007取模后的方案数。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【Input1】<br />
+1<br />
+1<br />
+1<br />
+1<br />
+1<br />
+<br />
+【Input2】<br />
+2<br />
+1 2<br />
+1 1<br />
+1 1<br />
+1 1<br />
+<br />
+【Input3】<br />
+4<br />
+2 2 70 159<br />
+100 20 21 52<br />
+100 20 29 45<br />
+100 22 39 30</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【Output1】<br />
+6<br />
+<br />
+【Output2】<br />
+6<br />
+<br />
+【Output3】<br />
+139586270</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

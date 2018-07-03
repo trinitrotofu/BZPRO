@@ -1,0 +1,51 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title> Pku3633 Copying DNA </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2485.  Pku3633 Copying DNA </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2485">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2485">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2485">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium"><font face="Times New Roman"><span id="1319334815942S" style="display: none">&nbsp;</span><span id="1319334725885S" style="display: none">&nbsp;</span>
+<p><font face="Times New Roman">Evolution is a seemingly random process which works in a way which resembles certain approaches we use to get approximate solutions to hard combinatorial problems. You are now to do something completely different. <br />
+<br />
+Given a DNA string S from the alphabet {A,C,G,T}, find the minimal number of copy operations needed to create another string T. You may reverse the strings you copy, and copy both from S and the pieces of your partial T. You may put these pieces together at any time. You may only copy contiguous parts of your partial T, and all copied strings must be used in your final T. Example: From S = &ldquo;ACTG&rdquo; create T = &ldquo;GTACTATTATA&rdquo; <br />
+<br />
+Get GT......... by copying and reversing &quot;TG&quot; from S. <br />
+Get GTAC....... by copying &quot;AC&quot; from S. <br />
+Get GTAC...TA.. by copying &quot;TA&quot; from the partial T. <br />
+Get GTAC...TAAT by copying and reversing &quot;TA&quot; from the partial T. <br />
+Get GTACAATTAAT by copying &quot;AAT&quot; from the partial T. <br />
+<br />
+<br />
+<br />
+给你两个字符串S和T，要求你用尽量少的步数从S构造出T。每一步你可以做以下操作：从S或者T的片段中拷贝一个字符串，然后可以将这个字符串反向，然后你得到一个片段。片段可以随时合并，但不能拆分，并且所有的片段都要使用。从T中拷贝字符串只能从一个片段中拷贝。求你最少需要的步数。两个串的字符数&le;18。 <br />
+</font></p>
+</font></span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><font face="Times New Roman">The first line of input gives a single integer, 1 &le; t &le; 100, the number of test cases. Then follow, for each test case, a line with the string S of length 1 &le; m &le; 18, and a line with the string T of length 1 &le; n &le; 18. <br />
+<br />
+</font></span></p>
+<p></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><font face="Times New Roman">Output for each test case the number of copy operations needed to create T from S, or &quot;impossible&quot; if it cannot be done. <br />
+<br />
+</font></span></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p><span id="1319334726112E" style="display: none">&nbsp;</span></p>
+<p></p>
+<p><span id="1319334815310E" style="display: none">&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+ACGT<br />
+GTAC<br />
+A<br />
+C<br />
+ACGT<br />
+TGCA<br />
+ACGT<br />
+TCGATCGA<br />
+A<br />
+AAAAAAAAAAAAAAAAAA<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+impossible<br />
+1<br />
+4<br />
+6<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

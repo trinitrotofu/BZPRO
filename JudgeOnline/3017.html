@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2012 Nov]Cow Breeds</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3017. [Usaco2012 Nov]Cow Breeds</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3017">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3017">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3017">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div style="text-indent: 21pt"><span style="font-size: medium">Farmer John usually brands his cows with a circular mark, but his branding iron is broken, so he instead must settle for branding each cow with a mark in the shape of a parenthesis -- (. He has two breeds of cows on his farm: Holsteins and Guernseys. He brands each of his cows with a parenthesis-shaped mark. Depending on which direction the cow is facing, this might look like either a left parenthesis or a right parenthesis.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">FJ's N cows are all standing in a row, each facing an arbitrary direction, so the marks on the cows look like a string of parentheses of length N. Looking at this lineup, FJ sees a remarkable pattern: if he scans from left to right through just the Holsteins (in the order they appear in the sequence), this gives a balanced string of parentheses; moreover, the same is true for the Guernseys! To see if this is truly a rare event, please help FJ compute the number of possible ways he could assign breeds to his N cows so that this property holds.</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">There are several ways to define what it means for a string of parentheses to be &quot;balanced&quot;. Perhaps the simplest definition is that there must be the same total number of ('s and )'s, and for any prefix of the string, there must be at least as many ('s as )'s. For example, following strings are all balanced: </span></div>
+<div><span style="font-size: medium">()</span></div>
+<div><span style="font-size: medium">(())</span></div>
+<div><span style="font-size: medium">()(()()) </span></div>
+<div><span style="font-size: medium">while these are not: </span></div>
+<div><span style="font-size: medium">)(</span></div>
+<div><span style="font-size: medium">())(</span></div>
+<div><span style="font-size: medium">((())))</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">问题描述</span></div>
+<div style="text-indent: 17.95pt"><span style="font-size: medium">给定一个长度为<i>n</i>的括号序列，每个要么是&rsquo;(&lsquo;，要么是&rsquo;)&rsquo;。你可以把每个位置的括号编号为H，或者是编号为G，要求编号后的括号序列所有编号为H的括号连在一起是合法的，所有编号为G的括号连在一起也是合法的。</span></div>
+<div style="margin: 0cm 0cm 0pt 17.95pt"><span style="font-size: medium">其中：</span></div>
+<div style="margin: 0cm 0cm 0pt 35.95pt; text-indent: -18pt"><span style="font-size: medium">①<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>()是合法的；</span></div>
+<div style="margin: 0cm 0cm 0pt 35.95pt; text-indent: -18pt"><span style="font-size: medium">②<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>若<i>A</i>是合法的，则(<i>A</i>)是合法的；</span></div>
+<div style="margin: 0cm 0cm 0pt 35.95pt; text-indent: -18pt"><span style="font-size: medium">③<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp; </span>若<i>A</i>，<i>B</i>都是合法的，则<i>AB</i>是合法的。</span></div>
+<div><span style="font-size: medium">那么不同的编号方式有多少种？答案对2012取模。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 一个长度为<i>n</i>的括号序列。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 不同的编号方式对2012取模后的值。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+       (())<br />
+ </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+       6<br />
+ <br />
+样例说明<br />
+(())<br />
+HHHH<br />
+(())<br />
+GGGG<br />
+(())<br />
+HGGH<br />
+(())<br />
+GHHG<br />
+(())<br />
+HGHG<br />
+(())<br />
+GHGH<br />
+ <br />
+数据范围<br />
+       对于100%的数据满足：1 <= n <= 1,000。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

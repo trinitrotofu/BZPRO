@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>可见区域</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2640. 可见区域</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2640">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2640">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2640">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">在平面直角坐标系中有n条互不相交(没有公共点)且所在直线不会经过(0,0)的线段。有一个人站在(0,0)，他的视野是360度的。但是他在某一个方向上的视野会被该方向上碰到的第一条线段所阻挡，问他能看到的区域面积有多大（数据保证是有限面积）。如下图（样例），可以看到的面积就是11。<br />
+<img alt="" width="203" height="205" src="upload/201203/ff(1).jpg" /></span></p>
+<p></p>
+<p><span style="font-size: medium">　　为了加大难度，他想知道，在删除一条线段的情况下能看到最大多大的面积（不保证是有限面积）。<br />
+　　进一步，他还想知道，在删除两条线段的情况下能看到最大多大的面积（不保证是有限面积）。<br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行一个整数n表示线段条数。<br />
+　　接下来n行，每行四个整数x1,y1,x2,y2表示一条线段两个端点的坐标。<br />
+</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="pdcont"><span style="font-size: medium">　　第一行一个保留两位小数的实数，表示可见区域的面积。<br />
+　　第二行两种可能，如果删除一条线段以后能使得看到的区域有无限大输出&rdquo;infinite&rdquo;，否则输出一个保留两位小数的实数，表示这种情况下能看到的最大面积。<br />
+　　第三行两种可能，如果删除两条线段以后能使得看到的区域有无限大输出&rdquo;infinite&rdquo;，否则输出一个保留两位小数的实数，表示这种情况下能看到的最大面积。<br />
+</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+-1 -1 0 -1<br />
+0 -2 1 -1<br />
+-1 1 0 2<br />
+0 1 1 1<br />
+2 -2 2 2<br />
+-2 -2 -2 2<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>11.00<br />
+infinite<br />
+infinite<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>数据规模和约定<br /><br />
+　　对于所有数据<br /><br />
+　　1&lt;=n&lt;=50000<br /><br />
+　　坐标的绝对值&lt;=10^3<br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

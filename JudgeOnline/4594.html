@@ -1,0 +1,23 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2015]零件组装机</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4594. [Shoi2015]零件组装机</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4594">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4594">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4594">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;曾经发明了激光发生器的发明家SHTSC又公开了他的新发明：零件组装机--一种可以生产并组装零件的神秘装置。</p>
+<div>一个零件是一张顶点由0 到n-1标号的无向图，零件组装机由以下两条功能。</div>
+<div>（1）生产一个仅有一个顶点标号为0而没有边的零件。</div>
+<div>（2）组合两个已有的零件G1，G2，且G2的顶点数m&gt;=G1的顶点数n，得到新的零件G。G的顶点集合是G1、G2顶点集合的并</div>
+<div>集，并且G2的顶点i(0&lt;=i&lt;m)被重新标号为n+i。G的边集是G1、G2边集的并集再对所有标号为a(a&gt;=n)的顶点添加一</div>
+<div>条连接(a,a mod n)的无向边。</div>
+<div><img src="upload/201605/无标题.png" width="447" height="356" alt="" /></div>
+<div>现在SHTSC正在思考，对于一个给定的零件，能否由零件组装机生产组装得到。注意：零件是带标号的，这意味着</div>
+<div>两个零件即使仅有标号不同也被视为不同的零件。为了帮助你理解问题，SHTSC特地给了你顶点数&lt;=5的零件的图例。</div>
+<div><img src="upload/201605/无标题2.png" width="656" height="563" alt="" /></div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行一个整数t，表示有t组数据。</p>
+<div>每组数据的第一行两个整数n，m。表示某个带标号的无向图有n个顶点0到n-1标号，m是边的数量。</div>
+<div>接下来m行，每行两个整数u，v表示一条从u到v的无向边。</div>
+<div>t&lt;=10，n,m&lt;=100000，0&lt;=u, v&lt;n</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对于每组数据，输出一行。如果这个无向图可以被零件制造机制造输出&quot;YES&quot;否则输出&quot;NO&quot;。</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1 0<br />
+2 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>YES<br />
+NO<br />
+//样例1：n=1的情况和一个不能被产生的零件</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,53 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title> 文理分科</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3894.  文理分科</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3894">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3894">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3894">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>&nbsp;文理分科是一件很纠结的事情！（虽然看到这个题目的人肯定都没有纠</div>
+<div>结过）</div>
+<div>&nbsp;小P所在的班级要进行文理分科。他的班级可以用一个n*m的矩阵进行</div>
+<div>描述，每个格子代表一个同学的座位。每位同学必须从文科和理科中选择</div>
+<div>一科。同学们在选择科目的时候会获得一个满意值。满意值按如下的方式</div>
+<div>得到：</div>
+<div>1．如果第i行第秒J的同学选择了文科，则他将获得art[i][j]的满意值，如</div>
+<div>&nbsp; 果选择理科，将得到science[i][j]的满意值。</div>
+<div>2．如果第i行第J列的同学选择了文科，并且他相邻（两个格子相邻当且</div>
+<div>&nbsp; 仅当它们拥有一条相同的边）的同学全部选择了文科，则他会更开</div>
+<div>&nbsp; 心，所以会增加same_art[i][j]的满意值。</div>
+<div>3．如果第i行第j列的同学选择了理科，并且他相邻的同学全部选择了理</div>
+<div>&nbsp; 科，则增加same_science[i]j[]的满意值。</div>
+<div>&nbsp; 小P想知道，大家应该如何选择，才能使所有人的满意值之和最大。请</div>
+<div>告诉他这个最大值。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div></div>
+<div>第一行为两个正整数：n，m</div>
+<div>接下来n术m个整数，表示art[i][j]；</div>
+<div>接下来n术m个整数．表示science[i][j]；</div>
+<div>接下来n术m个整数，表示same_art[i][j]；</div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div></div>
+<div>输出为一个整数，表示最大的满意值之和</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 4<br />
+13 2 4 13<br />
+7 13 8 12<br />
+18 17 0 5<br />
+<br />
+8 13 15 4<br />
+11 3 8 11<br />
+11 18 6 5<br />
+<br />
+1  2 3 4 <br />
+4  2 3 2<br />
+3  1 0 4<br />
+<br />
+3  2 3 2<br />
+0  2 2 1<br />
+0  2 4 4 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>152</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>样例说明</div><br />
+<div>1表示选择文科，0表示选择理科，方案如下：</div><br />
+<div>1 &nbsp;0 &nbsp;0 &nbsp;1</div><br />
+<div>0 &nbsp;1 &nbsp;0 &nbsp;0</div><br />
+<div>1 &nbsp;0 &nbsp;0 &nbsp;0</div><br />
+<div></div><br />
+<div>N,M&lt;=100,读入数据均&lt;=500</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

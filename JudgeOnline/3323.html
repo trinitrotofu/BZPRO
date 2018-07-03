@@ -1,0 +1,33 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Scoi2013]多项式的运算 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3323. [Scoi2013]多项式的运算 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3323">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3323">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3323">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div align="left"><span style="font-size: 12pt">某天，mzry1992 一边思考着一个项目问题一边在高速公路上骑着摩托车。一个光头踢了他一脚，摩托车损坏，而他也被送进校医院打吊针。现在该项目的截止日期将近，他不得不请你来帮助他完成这个项目。该项目的目的是维护一个动态的关于x 的无穷多项式F(x) = a0 * x^0 + a1 * x^1 + a2 * x^2 + ... ，这个多项式初始时对于所有i有ai = 0。</span></div>
+<div align="left"><span style="font-size: 12pt">操作者可以进行四种操作：</span></div>
+<div align="left"><span style="font-size: 12pt">1. </span><span style="font-size: 12pt">将x^L 到x^R 这些项的系数乘上某个定值v</span></div>
+<div align="left"><span style="font-size: 12pt">2. </span><span style="font-size: 12pt">将x^L 到x^R 这些项的系数加上某个定值v</span></div>
+<div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: 12pt">3. </span><span style="font-size: 12pt">将x^L 到x^R 这些项乘上x变量</span></div>
+<div align="left"><span style="font-size: 12pt">4. </span><span style="font-size: 12pt">将某个定值v代入多项式F(x)，并输出代入后多项式的值，之后多项式还原为代入前的状况</span></div>
+<div align="left"><span style="font-size: 12pt">经过观察，项目组发现使用者的操作集中在前三种，第四种操作不会出现超过10次。mzry1992 负责这个项目的核心代码，你能帮他实现么。</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div align="left"><span style="font-size: 12pt">输入的第一行有一个整数n 代表操作的个数。<br />
+接下来n 行，每行一个操作，格式如下：<br />
+mul L R v 代表第一种操作<br />
+add L R v 代表第二种操作<br />
+mulx L R 代表第三种操作<br />
+query v 代表第四种操作<br />
+<br />
+对于30% 的数据：N &lt;= 5000，0 &lt;= L &lt;= R &lt;= 5000，0 &lt;= v &lt;= 10^9<br />
+另有20% 的数据：N &lt;= 10^5，0 &lt;= L &lt;= R &lt;= 10^5，0 &lt;= v &lt;= 10^9，没有mulx 操作<br />
+剩下的50% 的数据：N &lt;= 10^5，0 &lt;= L &lt;= R &lt;= 10^5，0 &lt;= v &lt;= 10^9 </span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div align="left"><span style="font-size: 12pt">对于每个query 操作，输出对应的答案，结果可能较大，需要模上20130426。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+add 0 1 7<br />
+query 1<br />
+mul 0 1 7<br />
+query 2<br />
+mulx 0 1<br />
+query 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>14<br />
+147<br />
+588<br />
+Hint<br />
+操作一之后，多项式为F(x) = 7x + 7。<br />
+操作三之后，多项式为F(x) = 49x + 49。<br />
+操作五之后，多项式为F(x) = 49x^2 + 49x。 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>应上传者要求，此系列试题不公开,如有异议，本站将删除之。</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

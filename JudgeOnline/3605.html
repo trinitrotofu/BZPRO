@@ -1,0 +1,40 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Sdoi2014]括号序列计数</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3605. [Sdoi2014]括号序列计数</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3605">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3605">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3605">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;Alice和Bob知道，一个由空格、左括号、右括号组成的序列被称为括号序列。有一类特殊的括号序列被称为&ldquo;合法括号序列&rdquo;。已经知道：</p>
+<div>（1）&ldquo;（）&rdquo;是合法的括号序列，空串是合法的括号序列。</div>
+<div>（2）如果S1是合法的括号序列，S2是合法的括号序列，则S1与S2拼接起来的序列S1＋S2也是合法的括号序列。</div>
+<div>（3）如果S是合法的括号序列，在其左右分别插入一个左括号和一个右括号所得到的字符串&ldquo;（&rdquo;＋S1＋&ldquo;）&rdquo;也是合法的括号序列。</div>
+<div>（4）如果S是合法的括号序列，在S的任何位置（包括头尾位置）插入一个空格，得到的序列也是合法的括号序列。</div>
+<div>现在，Alice希望知道：对于某个已知的有限状态自动机中的状态s与t，存在多少以s为起点，t为终点的长度为k的合法括号序列。</div>
+<div>所谓有限状态自动机，又可以被认为是一个有向图G，由n个结点组成，每一个结点表示一个状态，且存在三类以此为起点出去的有向边，对于每一个状态（或结点）来说其出去的同一类有向边将指向同样的状态（或结点）。三类有向边分别代表三种符号：左括号&ldquo;（&rdquo;，右括号&ldquo;）&rdquo;和空格。</div>
+<div>这里，我们将状态（或结点）从0开始编号。对于第i个状态，用dfa[i][0]，dfa[i][1]，dfa[i][2]分别表示从i出发，代表了左括号、右括号和空格的那一类边指向的状态（或结点），再用dfa2[i][0]，dfa2[i][1]，dfa2[i][2]表示每一类边的个数。</div>
+<div>对于一条从s出发到t结束的路径，满足长度为k且路径经过的边对应的符号组成了一组合法的括号匹配，则称作&ldquo;满足[G,s,t,k]的合法括号序列&rdquo;。</div>
+<div>现在，Alice为Bob提供了自动机G，并提出Q组询问。对于每一组询问，Alice会给出s、t和k，她希望Bob可以告诉她满足[G,s,t,k]的合法括号序列有多少组。她只需要知道答案除以47后的余数。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;第一行一个整数n，表示状态数（或结点数）。</p>
+<div>之后n行，对于其中的第i行，有6个32位整数，依次为dfa[i-1][0]，dfa2[i-1][0]，dfa[i-1][1]，dfa2[i-1][1]，dfa[i-1][2]，dfa2[i-1][2]。</div>
+<div>之后一行有一个整数Q，表示Alice的询问次数。</div>
+<div>之后Q行，每一行有3个32位的整数，依次为s，t，k。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;输出文件有Q行。</p>
+<div>其中第i行对应了第i个询问，只有一个整数，表示满足[G,s,t,k]的合法括号序列的个数，答案只需要除以47后的余数。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+0 1 0 2 0 3<br />
+6<br />
+0 0 3<br />
+0 0 4<br />
+0 0 5<br />
+0 0 6<br />
+0 0 7<br />
+0 0 8</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>45<br />
+9<br />
+10<br />
+2<br />
+19<br />
+25</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;样例说明：</p><br />
+<div>对于第一组询问，长度为3的合法括号序列依次有：</div><br />
+<div>（1）三个空格&ldquo; &nbsp; &rdquo;，则在自动机中的合法方案数为：3&times;3&times;3＝27。</div><br />
+<div>（2）对于&ldquo;（ ）&rdquo;、&ldquo;（） &rdquo;和&ldquo; （）&rdquo;，则在自动机中的合法方案数为：1&times;3&times;2＝6。</div><br />
+<div>所以总的可行方案数为：27＋3&times;6＝27＋18＝45。</div><br />
+<div></div><br />
+<div></div><br />
+<div>对于100％的数据，n &lt;= 2，k &lt;= 100000，Q &lt;= 10。</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,47 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2008]Island 岛屿 
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1791. [Ioi2008]Island 岛屿 
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1791">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1791">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1791">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">你将要游览一个有N个岛屿的公园。从每一个岛i出发，只建造一座桥。桥的长度以Li表示。公园内总共有N座桥。尽管每座桥由一个岛连到另一个岛，但每座桥均可以双向行走。同时，每一对这样的岛屿，都有一艘专用的往来两岛之间的渡船。 
+相对于乘船而言，你更喜欢步行。你希望所经过的桥的总长度尽可能的长，但受到以下的限制。 
+
+&#8226; 可以自行挑选一个岛开始游览。 
+&#8226; 任何一个岛都不能游览一次以上。 
+&#8226; 无论任何时间你都可以由你现在所在的岛S去另一个你从未到过的岛D。由S到D可以有以下方法： 
+o 步行：仅当两个岛之间有一座桥时才有可能。对于这种情况，桥的长度会累加到你步行的总距离；或者 
+o 渡船：你可以选择这种方法，仅当没有任何桥和/或以前使用过的渡船的组合可以由S走到D（当检查是否可到达时，你应该考虑所有的路径，包括经过你曾游览过的那些岛）。 
+
+注意，你不必游览所有的岛，也可能无法走完所有的桥。 
+
+任务 
+编写一个程序，给定N座桥以及它们的长度，按照上述的规则，计算你可以走过的桥的最大长度。 
+
+限制 
+2 <= N <= 1,000,000 公园内的岛屿数目。 
+1<= Li <= 100,000,000 桥i的长度。 
+
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>&#8226; 第一行包含N个整数，即公园内岛屿的数目。岛屿由1到N编号。 
+&#8226; 随后的N行每一行用来表示一个岛。第i 行由两个以单空格分隔的整数，表示由岛i筑的桥。第一个整数表示桥另一端的岛，第二个整数表示该桥的长度Li。你可以假设对於每座桥，其端点总是位于不同的岛上。 
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序必须向标准输出写出包含一个整数的单一行，即可能的最大步行距离。 
+注1：对某些测试，答案可能无法放进32-bit整数，你要取得这道题的满分，可能需要用Pascal的int64或C/C++的long long类型。 
+注2：在比赛环境运行Pascal程序，由标准输入读入64-bit数据比32-bit数据要慢得多，即使被读取的数据可以32-bit表示。我们建议把输入数据读入到32-bit数据类型。 
+
+评分 
+N不会超过4,000。 
+
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+3 8<br />
+7 2<br />
+4 2<br />
+1 4<br />
+1 9<br />
+3 4<br />
+2 3<br />
+<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>24<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><img border="0" src="images/1791.jpg"> </p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

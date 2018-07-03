@@ -1,0 +1,39 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>AAQQZ</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4248. AAQQZ</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4248">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4248">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4248">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>IOI2015将要在哈萨克斯坦举行。哈萨克斯坦的&ldquo;哈萨克&rdquo;是用字母的&ldquo;QAZAQ&rdquo;拼写的。这个&ldquo;QAZQA&rdquo;是回文&mdash;</div>
+<div>&mdash;知晓这一点的JOI君出于对回文的喜爱，准备用眼前的字符串制作一个回文。JOI君找到了一个长为N的字符串S=(</div>
+<div>S1,S2,...,SN)，每个字符可以用1...C之间的一个整数来表示。从这个字符串第i个位置到第j个位置的字符串(Si,</div>
+<div>Si+1,...,Sj)称作子串(i,j)。如果子串(i,j)翻转后和原来相等，即(Si,Si+1,...,Sj)=(Sj,Sj-1,...,Si)，则称</div>
+<div>子串(i,j)是回文的。JOI君进行如下操作来制造回文：</div>
+<div>1. &nbsp; &nbsp; &nbsp; &nbsp;首先，选择S的一个子串。不妨设选择的子串为T。</div>
+<div>2. &nbsp; &nbsp; &nbsp; &nbsp;将子串T按照升序排序，得到T&rsquo;</div>
+<div>3. &nbsp; &nbsp; &nbsp; &nbsp;在S中，用T&rsquo;替换T，得到S&rsquo;。我们可以这样描述这三项操作：JOI君选择一个子串(i,j)，将Si,Si+1,</div>
+<div>...,Sj按升序排序得到T&rsquo;i,T&rsquo;i+1,...,T&rsquo;j，最终得到S&rsquo;=(S1,S2,...,Si-1,T&rsquo;i,T&rsquo;i+1,...,T&rsquo;j,Sj+1,...,SN)</div>
+<div>4. &nbsp; &nbsp; &nbsp; &nbsp;在这之后，寻找S&rsquo;中的回文子串</div>
+<div>JOI进行如上操作后，想要得到最长的回文子串</div>
+<div>现在JOI君将字符串S交给了你，请你输出JOI君进行如上操作后能得到的最长回文子串的长度。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个空格分隔的正整数N和C，分别表示字符串的长度和字符集大小</div>
+<div>接下来N行，第i行一个正整数Si，表示字符串S中第i个位置的字符</div>
+<div>
+<div>1&lt;=N&lt;=3000</div>
+<div>1&lt;=C&lt;=3000</div>
+<div>1&lt;=Si&lt;=C</div>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一行一个正整数，表示JOI君进行操作后能得到的最长回文子串的长度。</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12 26<br />
+26<br />
+17<br />
+17<br />
+17<br />
+1<br />
+26<br />
+1<br />
+17<br />
+19<br />
+20<br />
+1<br />
+14<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8<br />
+样例输入中，N=12,C=26,S=(26,17,17,17,1,26,1,17,19,20,1,14)。JOI君可以选择子串(4,8)，将其按照升序排列<br />
+，得到S’=(26,17,17,1,1,17,17,26,19,20,1,14)，这样子串(1,8)就是回文了。这个回文长度为8，是最长可能得<br />
+到的回文子串。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

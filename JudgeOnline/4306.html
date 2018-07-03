@@ -1,0 +1,32 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>玩具厂</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4306. 玩具厂</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4306">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4306">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4306">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在JIH考察的地图中有N个城市，被公路依次连成了一个环，JIH想在这些城市中建一个玩具厂。城市和公路都被编号为1..N，i号公路连接i-1号城市与i号城市（1号公路连接N号城市与1号城市），每个城市对玩具的需求为wi，每条公路的长度为di。当JIH在第i号城市建玩具厂时，JIH需要将玩具运输到其他城市（当然i城市除外）。设第i号城市到第j号城市的两条路径长度分别为l1、l2，则将玩具运输到第j号城市的费用为l1*l2*wj。总的运输费用为将玩具运到所有城市的运输费用的总和。</div>
+<div>JIH当然想要总的运输费用最少，所以他会选最优的城市建玩具厂，如果有多个最优的城市，小月会等概率的选取其中一个建玩具厂。</div>
+<div>由于JIH的调查工作没做好，只知道1..N-1号城市的wi，而N号城市的wi只知道它的取值范围[a,b]，假设wi的值在实数区间[a,b]上的概率是均匀分布的。现在JIH只好去进行第二次调查，于是我们想知道每个城市建玩具厂的概率是多少。</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行有三个正整数N，a，b。</div>
+<div>接下来N-1行每行一个正实数，为w[1]到w[N-1]。</div>
+<div>接下来N行每行一个正实数，为d[1]到d[N]。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>N行，每行一个实数，表示在第i个城市建厂的概率</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 1 100<br />
+50<br />
+25<br />
+25<br />
+50<br />
+1<br />
+2<br />
+3<br />
+2<br />
+1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0.090<br />
+0.000<br />
+0.000<br />
+0.090<br />
+0.821</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>当w[5]&lt;18.75时，将在1或4号城市建玩具厂，当w[5]&gt;18.75时，将在5号城市建玩具厂，</div><br />
+<div>当w[5]=18.75时，将在1或4或5建玩具厂。</div><br />
+<div>100%的数据中：N&lt;=100000,a&lt;=b&lt;=10000,w[i]&lt;=10000,d[i]&lt;=10。</div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

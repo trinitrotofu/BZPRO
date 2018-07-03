@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>动态树</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3589. 动态树</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3589">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3589">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3589">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p></p>
+<div>别忘了这是一棵动态树, 每时每刻都是动态的. 小明要求你在这棵树上维护两种事件</div>
+<div>事件0:</div>
+<div>这棵树长出了一些果子, 即某个子树中的每个节点都会长出K个果子.</div>
+<div>事件1:</div>
+<div>小明希望你求出几条树枝上的果子数. 一条树枝其实就是一个从某个节点到根的路径的一段. 每次小明会选定一些树枝, 让你求出在这些树枝上的节点的果子数的和. 注意, 树枝之间可能会重合, 这时重合的部分的节点的果子只要算一次.</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个整数n(1&lt;=n&lt;=200,000), 即节点数.</div>
+<div>接下来n-1行, 每行两个数字u, v. 表示果子u和果子v之间有一条直接的边. 节点从1开始编号.</div>
+<div>在接下来一个整数nQ(1&lt;=nQ&lt;=200,000), 表示事件.</div>
+<div>最后nQ行, 每行开头要么是0, 要么是1.</div>
+<div>如果是0, 表示这个事件是事件0. 这行接下来的2个整数u, delta表示以u为根的子树中的每个节点长出了delta个果子.</div>
+<div>如果是1, 表示这个事件是事件1. 这行接下来一个整数K(1&lt;=K&lt;=5), 表示这次询问涉及K个树枝. 接下来K对整数u_k, v_k, 每个树枝从节点u_k到节点v_k. 由于果子数可能非常多, 请输出这个数模2^31的结果.</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">对于每个事件1, 输出询问的果子数.<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+1 2<br />
+2 3<br />
+2 4<br />
+1 5<br />
+3<br />
+0 1 1<br />
+0 2 3<br />
+1 2 3 1 1 4<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>13<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">&nbsp;1 &lt;= n &lt;= 200,000, 1 &lt;= nQ &lt;= 200,000, K = 5.<br /><br />
+</span></p><br />
+<p><span style="font-size: medium">生成每个树枝的过程是这样的:先在树中随机找一个节点, 然后在这个节点到根的路径上随机选一个节点, 这两个节点就作为树枝的两端.<br /><br />
+</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

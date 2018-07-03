@@ -1,0 +1,302 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>网管</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4775. 网管</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4775">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4775">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4775">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>经过推选，黎瑟莫名其妙的当上了计算机系的网管。上任后的黎瑟才发现，这里的网络经常断掉。给定一棵边权均</div>
+<div>为1的无根树，点可能是黑色或白色，支持两种操作。</div>
+<div>1 xi pi表示目前点xi的颜色可能发生了翻转(黑变白，白变黑)，发生概率为pi%。</div>
+<div>2 si表示求E((&sum;x&isin;B dist(x,si))^2)，其中B为当前黑点的集合，dist(x,y)表示x号节点和y号节点在树上的最短</div>
+<div>距离。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行三个整数id,n,m，表示数据编号，树的点数和操作个数。</div>
+<div>第二行n个整数ci，若ci=1表示点i为黑色，否则表示点i为白色。</div>
+<div>接下来的n-1行，每行两个整数ui,vi，表示树上有一条ui节点到vi节点的边。</div>
+<div>接下来的m行，每行表示一个操作，格式如题</div>
+<div>
+<div>1 &lt;=id &lt;=20</div>
+<div>1 &lt;=n &lt;=Nid</div>
+<div>0 &lt;=m &lt;=Nid</div>
+<div>1 &lt;=ui, vi, xi, si &lt;=n</div>
+<div>0 &lt;=ci &lt;=1</div>
+<div>0 &lt;=pi &lt;=100</div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问输出一行一个浮点数表示答案，输出与答案绝对误</div>
+<div>差不超过 10^-6 就算正确。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1 100 100<br />
+1 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 0 1 1 0 0 0 1 1 0 1 0 0 1 1 1 0 0 0 0 1 1 0 1 1 0 1 1 1 1 1 1 1 0 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 1 1 0 0 0 0 0 1 1 1 1 0 1 0 1 0 0 0 0 1 0<br />
+22 38<br />
+29 28<br />
+11 12<br />
+21 20<br />
+89 9<br />
+50 78<br />
+100 11<br />
+94 70<br />
+98 83<br />
+21 91<br />
+88 28<br />
+8 7<br />
+7 37<br />
+37 72<br />
+2 1<br />
+80 53<br />
+56 15<br />
+84 46<br />
+23 24<br />
+3 2<br />
+90 73<br />
+37 45<br />
+47 41<br />
+44 27<br />
+25 69<br />
+73 15<br />
+31 30<br />
+93 37<br />
+1 39<br />
+57 65<br />
+83 45<br />
+78 81<br />
+85 21<br />
+50 60<br />
+8 40<br />
+51 79<br />
+18 19<br />
+61 37<br />
+46 39<br />
+19 20<br />
+29 30<br />
+55 12<br />
+4 5<br />
+14 13<br />
+26 67<br />
+43 16<br />
+35 99<br />
+16 52<br />
+21 22<br />
+66 14<br />
+35 9<br />
+59 15<br />
+34 97<br />
+33 34<br />
+6 7<br />
+20 74<br />
+27 26<br />
+13 12<br />
+8 51<br />
+24 36<br />
+58 57<br />
+20 41<br />
+24 25<br />
+28 49<br />
+5 6<br />
+54 17<br />
+4 92<br />
+18 17<br />
+9 10<br />
+48 6<br />
+73 75<br />
+31 32<br />
+27 28<br />
+16 15<br />
+50 47<br />
+63 2<br />
+62 44<br />
+16 17<br />
+4 3<br />
+30 77<br />
+11 10<br />
+9 8<br />
+26 25<br />
+33 32<br />
+95 54<br />
+15 53<br />
+11 71<br />
+1 57<br />
+88 96<br />
+42 34<br />
+82 54<br />
+76 39<br />
+9 87<br />
+62 64<br />
+70 8<br />
+86 37<br />
+14 15<br />
+22 23<br />
+55 68<br />
+2 52<br />
+2 85<br />
+1 46 92<br />
+1 31 31<br />
+1 33 17<br />
+2 29<br />
+2 49<br />
+2 76<br />
+2 63<br />
+2 64<br />
+2 6<br />
+2 70<br />
+2 15<br />
+1 10 81<br />
+2 57<br />
+2 18<br />
+1 66 67<br />
+2 12<br />
+1 19 62<br />
+1 13 33<br />
+2 77<br />
+2 27<br />
+2 94<br />
+2 50<br />
+1 82 49<br />
+2 77<br />
+2 6<br />
+2 59<br />
+2 31<br />
+1 49 5<br />
+2 60<br />
+2 3<br />
+1 62 16<br />
+2 45<br />
+2 21<br />
+2 82<br />
+2 85<br />
+2 59<br />
+2 85<br />
+2 2<br />
+2 47<br />
+2 69<br />
+2 79<br />
+2 32<br />
+2 92<br />
+2 97<br />
+2 43<br />
+2 27<br />
+1 12 100<br />
+2 6<br />
+2 62<br />
+2 8<br />
+2 38<br />
+2 97<br />
+2 72<br />
+2 31<br />
+2 24<br />
+2 29<br />
+1 93 26<br />
+2 9<br />
+2 13<br />
+2 81<br />
+1 18 85<br />
+2 30<br />
+2 57<br />
+1 8 88<br />
+2 41<br />
+1 60 65<br />
+2 28<br />
+1 49 26<br />
+2 42<br />
+2 14<br />
+1 4 60<br />
+2 64<br />
+1 54 14<br />
+1 15 49<br />
+2 85<br />
+1 57 100<br />
+2 9<br />
+1 51 39<br />
+2 33<br />
+2 98<br />
+2 84<br />
+2 86<br />
+2 72<br />
+1 56 75<br />
+2 74<br />
+1 5 95<br />
+2 5<br />
+2 61<br />
+1 97 72<br />
+2 25<br />
+2 43<br />
+2 40<br />
+2 9<br />
+2 84<br />
+1 67 23<br />
+2 30<br />
+1 28 45<br />
+1 11 98<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>285156.0000000000000<br />
+356409.0000000000000<br />
+633144.1888000000000<br />
+645494.1663999999900<br />
+795511.3296000000600<br />
+652911.3264000000200<br />
+744654.5341999999900<br />
+387472.5542000000100<br />
+379903.7423999999900<br />
+241023.5888000000000<br />
+722637.2878000000500<br />
+280453.3862000000100<br />
+262575.0398000000300<br />
+868854.3512000000300<br />
+560120.4240000000000<br />
+470363.8367999999900<br />
+500708.2392000000100<br />
+883592.7672000000000<br />
+420633.3348000000100<br />
+307082.7624000000100<br />
+876612.0191999999800<br />
+583093.3689999999500<br />
+571399.7776000000300<br />
+523911.4600000000200<br />
+344890.9564000000200<br />
+399381.5980000000000<br />
+412288.3829999999700<br />
+308954.6453999999800<br />
+412288.3829999999700<br />
+638584.7225999999800<br />
+440964.3962000000200<br />
+549969.2981999999600<br />
+482785.1850000000000<br />
+975195.7277999999900<br />
+599016.6239999999500<br />
+1317090.1503999999000<br />
+318628.1340000000200<br />
+569323.2412000000500<br />
+416242.4682000000000<br />
+706513.1548000000200<br />
+342447.8570000000200<br />
+427679.4048000000200<br />
+1264839.2104000000000<br />
+513831.8800000000000<br />
+842802.4816000000600<br />
+419775.2777999999800<br />
+678712.3175999999500<br />
+318367.8032000000200<br />
+266443.8376000000300<br />
+657353.4976000000000<br />
+786264.5753999999700<br />
+800298.0938000000300<br />
+361871.2289999999900<br />
+591276.2617999999800<br />
+1225657.3586800001000<br />
+246925.7472000000100<br />
+746625.2759999999500<br />
+378500.7612400000200<br />
+301318.1878000000100<br />
+952459.7794800000300<br />
+655201.7177999999800<br />
+956291.0853999999800<br />
+495966.3180399999800<br />
+495966.3180399999800<br />
+330354.1699999999800<br />
+442598.8577599999800<br />
+486953.4574400000300<br />
+434321.8692000000200<br />
+305110.6744799999900<br />
+414809.1759999999800<br />
+321591.6599999999700<br />
+995697.2360799999400<br />
+713643.6037599999700<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

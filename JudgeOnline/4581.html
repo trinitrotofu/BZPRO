@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2016 Open]Field Reduction</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4581. [Usaco2016 Open]Field Reduction</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4581">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4581">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4581">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>Farmer John's N cows (5&le;N&le;50,000) are all located at distinct positions in his two-dimensional fie</div>
+<div>ld. FJ wants to enclose all of the cows with a rectangular fence whose sides are parallel to the x a</div>
+<div>nd y axes, and he wants this fence to be as small as possible so that it contains every cow (cows on</div>
+<div>&nbsp;the boundary are allowed).FJ is unfortunately on a tight budget due to low milk production last qua</div>
+<div>rter. He would therefore like to build an even smaller fenced enclosure if possible, and he is willi</div>
+<div>ng to sell up to three cows from his herd to make this possible.Please help FJ compute the smallest&nbsp;</div>
+<div>possible area he can enclose with his fence after removing up to three cows from his herd (and there</div>
+<div>after building the tightest enclosing fence for the remaining cows).For this problem, please treat c</div>
+<div>ows as points and the fence as a collection of four line segments (i.e., don't think of the cows as&nbsp;</div>
+<div>&quot;unit squares&quot;). Note that the answer can be zero, for example if all remaining cows end up standing</div>
+<div>&nbsp;in a common vertical or horizontal line.</div>
+<div>给定平面上N个点。现你可以删去至多3个点，接着你需要用一个矩形包含所有的点，点可以在矩形的边上，矩形的</div>
+<div>边须与坐标轴平行。最小化矩形的面积并输出这个值。</div>
+<div>5 &le; N &le; 50000, 1 &le; X_i, Y_i &le; 40000</div>
+</div>
+<div>
+<div style="font-family: Arial; font-size: 14px; line-height: 15.8666658401489px;"></div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of input contains N.</div>
+<div>The next N lines each contain two integers specifying the locati</div>
+<div>on of a cow. Cow locations are positive integers in the range 1&hellip;40,000.</div>
+<p></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;Write a single integer specifying the minimum area FJ can enclose with his fence after removing up t</p>
+<div>o three carefully-chosen cows from his herd.</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+1 1<br />
+7 8<br />
+10 9<br />
+8 12<br />
+4 100<br />
+50 7</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

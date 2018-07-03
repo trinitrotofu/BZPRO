@@ -1,0 +1,48 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2000]丘比特的烦恼</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2539. [Ctsc2000]丘比特的烦恼</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2539">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2539">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2539">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>随着社会的不断发展，人与人之间的感情越来越功利化。最近，爱神丘比特发现，爱情也已不再是完全纯洁的了。</div>
+<div>这使得丘比特很是苦恼，他越来越难找到合适的男女，并向他们射去丘比特之箭。于是丘比特千里迢迢远赴中国，</div>
+<div>找到了掌管东方人爱情的神&mdash;&mdash;月下老人，向他求教。月下老人告诉丘比特，纯洁的爱情并不是不存在，而是他没</div>
+<div>有找到。在东方，人们讲究的是缘分。月下老人只要做一男一女两个泥人，在他们之间连上一条红线，那么它们所</div>
+<div>代表的人就会相爱&mdash;&mdash;无论他们身处何地。而丘比特的爱情之箭只能射中两个距离相当近的人，选择的范围自然就</div>
+<div>小了很多，不能找到真正的有缘人。丘比特听了月下老人的解释，茅塞顿开，回去之后用了人间的最新科技改造了</div>
+<div>自己的弓箭，使得丘比特之箭的射程大大增加。这样，射中有缘人的机会也增加了不少。情人节(Valentine's day</div>
+<div>)的午夜零时，丘比特开始了自己的工作。他选择了一组数目相等的男女，感应到他们互相之间的缘分大小，并依</div>
+<div>此射出了神箭，使他们产生爱意。他希望能选择最好的方法，使被他选择的每一个人被射中一次，且每一对被射中</div>
+<div>的人之间的缘分的和最大。当然，无论丘比特怎么改造自己的弓箭，总还是存在缺陷的。首先，弓箭的射程尽管增</div>
+<div>大了，但毕竟还是有限的，不能像月下老人那样，做到&ldquo;千里姻缘一线牵&rdquo;。其次，无论怎么改造，箭的轨迹终归</div>
+<div>只能是一条直线，也就是说，如果两个人之间的连线段上有别人，那么莫不可向他们射出丘比特之箭，否则，按月</div>
+<div>下老人的话，就是&ldquo;乱点鸳鸯谱&rdquo;了。作为一个凡人，你的任务是运用先进的计算机为丘比特找到最佳的方案。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行为正整数k，表示丘比特之箭的射程</div>
+<div>第二行为正整数n(n&lt;30)</div>
+<div>随后有2n行，表示丘比特选中的人的信息</div>
+<div>其中前n行为男子</div>
+<div>后n行为女子。</div>
+<div>每个人的信息由两部分组成：他的姓名和他的位置。</div>
+<div>姓名是长度小于20且仅包含字母的字符串，忽略大小写的区别</div>
+<div>位置是由一对整数表示的坐标，</div>
+<div>它们之间用空格分隔。格式为Name x y。</div>
+<div>输入剩下的部分描述了这些人的缘分。</div>
+<div>每一行的格式为Name1 Name2 p。</div>
+<div>Name1和Name2为有缘人的姓名，p是他们之间的缘分值(p为小于等于255的正整数)。</div>
+<div>以一个End作为文件结束标志。</div>
+<div>每两个人之间的缘分至多只被描述一次。</div>
+<div>如果没有被描述，则说明他们缘分值为1。</div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: medium"><span style="font-family: 宋体; mso-bidi-font-size: 10.0pt">仅一个正整数，表示每一对被射中的人之间的缘分的总和。这个和应当是最大的。</span></span><span style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt"><span lang="EN-US"><o:p></o:p></span></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt; font-family: 宋体; mso-bidi-font-size: 10.0pt"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+3<br />
+0 0 Adam<br />
+1 1 Jack<br />
+0 2 George<br />
+1 0 Victoria<br />
+0 1 Susan<br />
+1 2 Cathy<br />
+Adam Cathy 100<br />
+Susan George 20<br />
+George Cathy 40<br />
+Jack Susan 5<br />
+Cathy Jack 30<br />
+Victoria Jack 20<br />
+Adam Victoria 15<br />
+End</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>65</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

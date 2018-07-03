@@ -1,0 +1,33 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>pku2758 Checking the Text 文本校对</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2258. pku2758 Checking the Text 文本校对</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：12 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2258">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2258">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2258">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p align="center"><b>&nbsp;</b></p>
+<p><font face="Times New Roman" size="3">为了给Wind买生日礼物，Jiajia不得不找了一份检查文本的工作。这份工作很无聊：给你一段文本 <br />
+要求比对从文本中某两个位置开始能匹配的最大长度是多少。但比无聊更糟糕的是，Jiajia的经理 <br />
+还可能往文本里面插入一些字符。 <br />
+Jiajia想用一个程序来解决这些繁琐的工作。这个程序的速度要足够快，因为Wind的生日就快要到了 <br />
+Jiajia必须赚到足够多的钱，也就是处理足够多的文本。 <br />
+<br />
+</font></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font face="Times New Roman" size="3">输入文件第一行是原始文本。 <br />
+输入文件第二行是操作数n。此后n行，每行描述一条命令，命令有两种形式： <br />
+I ch p：表示将一个字符ch插入到当前文本的第p个字符之前，如果p大于当前文本长度则表示插入到当前文本末尾； <br />
+Q i j：表示询问当前文本从原始文本的第i个和第j个字符现在所在的位置开始能匹配的字符是多少。 <br />
+你可以认为文本初始长度不超过50000，I命令最多200条，Q命令最多20000条。 <br />
+<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font face="Times New Roman" size="3">对于每条Q命令输出一行，为最长匹配长度。 <br />
+<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>abaab<br />
+5<br />
+Q 1 2<br />
+Q 1 3<br />
+I a 2<br />
+Q 1 2<br />
+Q 1 3<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+0<br />
+1<br />
+0<br />
+3<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2013 Jan]Cow Lineup </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3048. [Usaco2013 Jan]Cow Lineup </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：2 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3048">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3048">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3048">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p></p>
+<p><span style="font-size: medium">&nbsp;Farmer John's N cows (1 &lt;= N &lt;= 100,000) are lined up in a row. Each cow is identified by an integer &quot;breed ID&quot; in the range 0...1,000,000,000; the breed ID of the ith cow in the lineup is B(i). Multiple cows can share the same breed ID. FJ thinks that his line of cows will look much more impressive if there is a large contiguous block of cows that all have the same breed ID. In order to create such a block, FJ chooses up to K breed IDs and removes from his lineup all the cows having those IDs. Please help FJ figure out the length of the largest consecutive block of cows with the same breed ID that he can create by doing this. </span></p>
+<p></p>
+<div style="text-indent: 15.05pt"><b><span style="font-size: 15pt">给你一个长度为</span></b><b><span style="font-size: 15pt">n(1&lt;=n&lt;=100,000)</span></b><b><span style="font-size: 15pt">的自然数数列，其中每一个数都小于等于</span></b><b><span style="font-size: 15pt">10</span></b><b><span style="font-size: 15pt">亿，现在给你一个</span></b><b><span style="font-size: 15pt">k</span></b><b><span style="font-size: 15pt">，表示你最多可以删去</span></b><b><span style="font-size: 15pt">k</span></b><b><span style="font-size: 15pt">类数。数列中相同的数字被称为一类数。设该数列中满足所有的数字相等的连续子序列被叫做完美序列，你的任务就是通过删数使得该数列中的最长完美序列尽量长。</span></b></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">* Line 1: Two space-separated integers: N and K. <br />
+* Lines 2..1+N: Line i+1 contains the breed ID B(i). <br />
+<br />
+</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><br />
+* Line 1: The largest size of a contiguous block of cows with identical breed IDs that FJ can create.</p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9 1 <br />
+2 <br />
+7 <br />
+3 <br />
+7 <br />
+7 <br />
+3 <br />
+7 <br />
+5 <br />
+7 <br />
+<br />
+INPUT DETAILS: There are 9 cows in the lineup, with breed IDs 2, 7, 3, 7, 7, 3, 7, 5, 7. FJ would like to remove up to 1 breed ID from this lineup. <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 <br />
+<br />
+OUTPUT DETAILS: By removing all cows with breed ID 3, the lineup reduces to 2, 7, 7, 7, 7, 5, 7. In this new lineup, there is a contiguous block of 4 cows with the same breed ID (7). <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div><b><span style="font-size: 15pt">样例解释：</span></b></div><br />
+<div><b><span style="font-size: 15pt">&nbsp; </span></b><b><span style="font-size: 15pt">长度为</span></b><b><span style="font-size: 15pt">9</span></b><b><span style="font-size: 15pt">的数列，最多只能删去</span></b><b><span style="font-size: 15pt">1</span></b><b><span style="font-size: 15pt">类数。</span></b></div><br />
+<div><b><span style="font-size: 15pt">&nbsp; </span></b><b><span style="font-size: 15pt">不删，最长完美序列长度为</span></b><b><span style="font-size: 15pt">2.</span></b></div><br />
+<div><b><span style="font-size: 15pt">&nbsp; </span></b><b><span style="font-size: 15pt">删去一类数</span></b><b><span style="font-size: 15pt">3</span></b><b><span style="font-size: 15pt">，序列变成</span></b><b><span style="font-size: 15pt">2 7 7 7 7 5 7</span></b><b><span style="font-size: 15pt">，最长完美序列长度为</span></b><b><span style="font-size: 15pt">4.</span></b><b><span style="font-size: 15pt">因此答案为</span></b><b><span style="font-size: 15pt">4.</span></b></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

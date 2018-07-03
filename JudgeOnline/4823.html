@@ -1,0 +1,35 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Cqoi2017]老C的方块</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4823. [Cqoi2017]老C的方块</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4823">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4823">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4823">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>老 C 是个程序员。 &nbsp; &nbsp;</div>
+<div>作为一个懒惰的程序员,老 C 经常在电脑上玩方块游戏消磨时间。游戏被限定在一个由小方格排成的R行C列网格上</div>
+<div>,如果两个小方格有公共的边,就称它们是相邻的,而且有些相邻的小方格之间的公共边比较特殊。特殊的公共边排</div>
+<div>列得有很强的规律。首先规定,第1行的前两个小方格之间的边是特殊边。然后,特殊边在水平方向上每4个小方格为</div>
+<div>一个周期,在竖直方向上每2个小方格为一个周期。所有的奇数列与下一列之间都有特殊边,且所在行的编号从左到</div>
+<div>右奇偶交替。下图所示是一个R = C = 8的网格,蓝色标注的边是特殊边。首先,在第1行,第1列和第2列之间有一条</div>
+<div>特殊边。因为竖直方向周期为2,所以所有的奇数行,第1列和第2列之间都有特殊边。因为水平方向周期为4,所以所</div>
+<div>有奇数行的第5列和第6列之间也有特殊边,如果网格足够大,所有奇数行的第9列和第10列、第13列和第14列之间都</div>
+<div>有特殊边。因为所有的奇数列和下一列之间都有特殊边,所以第3列和第4列、第7列和第8列之间也有特殊边,而所在</div>
+<div>行的编号从左到右奇偶交替,所以它们的特殊边在偶数行。如果网格的规模更大,我们可以用同样的方法找出所有的</div>
+<div>特殊边。 &nbsp; &nbsp;</div>
+<div>&nbsp; &nbsp;&nbsp;</div>
+<div>网格的每个小方格刚好可以放入一个小方块,在游戏的一开始,有些小方格已经放上了小方块,另外的小方格没有放</div>
+<div>。老 C 很讨厌下图所示的图形,如果他发现有一些小方块排列成了它讨厌的形状(特殊边的位置也要如图中所示),</div>
+<div>就很容易弃疗,即使是经过任意次旋转、翻转后排列成讨厌的形状,老 C 也同样容易弃疗。 &nbsp;&nbsp;</div>
+<div>&nbsp; &nbsp;&nbsp;</div>
+<div>为了防止弃疗,老 C 决定趁自己还没有弃疗,赶紧移除一些格子里小方块,使得剩下的小方块不能构成它讨厌的形状</div>
+<div>。但是游戏里每移除一个方块都是要花费一些金币的,每个方块需要花费的金币有多有少参差不齐。老 C 当然希望</div>
+<div>尽可能少的使用游戏里的金币,但是最少要花费多少金币呢?老 C 懒得思考,就把这个问题交给你了</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行有3个正整数C, R, n,表示C列R行的网格中,有n个小方格放了小方块。 &nbsp; &nbsp;</div>
+<div>接下来n行,每行3个正整数x, y, w,表示在第x列第y行的小方格里放了小方块,移除它需要花费w个金币。保证不会</div>
+<div>重复,且都在网格范围内。 &nbsp; &nbsp;</div>
+<div>1 &le; C, R, n &le; 10^5 , 1 &le; w &le; 10^4</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行,包含一个整数,表示最少花费的金币数量。 &nbsp; &nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 2 4<br />
+1 1 5<br />
+1 2 6<br />
+2 1 7<br />
+2 2 8</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+如图所示,2×2的网格里,每个小方格都放了小方块,移除<br />
+需要花费的金币数量如图中标注所示。这4个小方块恰好构成了<br />
+一个老 C 讨厌的图形,将第1列第1行的小方块移除,花费5个金<br />
+币,剩下的方块不能形成老 C 讨厌的图形,显然这种移除方案花<br />
+费的金币最少。    <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

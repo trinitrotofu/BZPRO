@@ -1,0 +1,19 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[POI2004]WYS</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2078. [POI2004]WYS</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2078">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2078">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2078">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">Byteotia 是一个被海洋环绕的岛屿. 岛屿上有很多湖泊. 在这些湖泊上又有一些小岛,小岛上可能又有湖泊和更小的岛. 海洋的级别为0. Byteotia 级别为1. 在Byteotian 上的湖泊的级别为2 ., 如果一个湖泊在一个级别为w的岛屿上,那么这个湖泊的级别为w+1,类似的如果一个岛屿被一个级别为j的湖泊环绕上,那么这个岛屿的级别为j+1. 所有湖泊和岛屿的海岸线都是平行或垂直于坐标轴的. 没有两条海岸线重合或相交. 我们想求出级别最高的那个湖泊或者岛屿的级别. 
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行一个整数n, 表示岛屿和湖泊的总数, 1 <= n <= 40000. 接下来每行描述一个岛屿或者湖泊. 每行首先一个偶数, k, 表示该海岸线包含有多少个顶点, 4 <= k <= 10000. 接下来k 个整数: x1, x2, ..., xk, 0 <= xi <= 108. 这些点的坐标分别为(x1, x2), (x3, x2), (x3, x4), (x5, x4), ... (xk-1, xk), (x1, xk). 他们按照逆时针顺序构成多边形: 
+&#8226;一个湖泊的海岸线在它所在的岛屿的海岸线给出后再给出, 
+&#8226;一个岛屿的海岸线在它被环绕的湖泊的海岸线给出后再给出. 
+地图上不会超过有200,000 个点. 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>一个整数表示最高级别. 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+4 1 0 17 12<br />
+16 10 4 16 11 2 4 8 2 3 3 2 1 16 3 15 2<br />
+8 8 10 3 5 12 8 11 6<br />
+6 10 9 15 10 9 7<br />
+4 4 6 7 9<br />
+4 6 8 5 7<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

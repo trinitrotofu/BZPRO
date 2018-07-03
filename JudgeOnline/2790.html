@@ -1,0 +1,38 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi2012]Distance</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2790. [Poi2012]Distance</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2790">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2790">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2790">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;"><br />
+</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;">对于两个正整数a、b，这样定义函数d(a,b)：每次操作可以选择一个质数p，将a变成a*p或a/p，</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;">如果选择变成a/p就要保证p是a的约数，d(a,b)表示将a变成b所需的最少操作次数。例如d(69,42)=3。</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;">现在给出n个正整数A1,A2,...,An，对于每个i (1&lt;=i&lt;=n)，求最小的j(1&lt;=j&lt;=n)使得i&ne;j且d(Ai,Aj)最小。</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;"><br />
+</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;"><br />
+</span></font></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><span style="color: rgb(68, 68, 68); font-family: Tahoma; font-size: medium; line-height: 22px; ">第一行一个正整数n (2&lt;=n&lt;=100,000)。第二行n个正整数A1,A2,...,An (Ai&lt;=1,000,000)。</span></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px; "><br />
+</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;"><br />
+</span></font></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><span lang="EN-US" style="font-size: 12pt; color: #444444; line-height: 140%; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><span style="color: rgb(68, 68, 68); font-family: Tahoma; font-size: medium; line-height: 22px; ">输出n行，依次表示答案。</span></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px; "><br />
+</span></font></p>
+<p class="MsoNormal" align="left" style="margin-top: 0cm; margin-right: 0cm; margin-bottom: 0pt; margin-left: 0cm; text-align: left; "><font color="#444444" face="Tahoma" size="3"><span style="line-height: 22px;"><br />
+</span></font></p>
+<p class="MsoNormal" align="left" style="margin: 0cm 0cm 0pt; line-height: 140%; text-align: left; mso-pagination: widow-orphan; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt"><span lang="EN-US" style="font-size: 12pt; color: #444444; line-height: 140%; font-family: 宋体; mso-bidi-font-family: 宋体; mso-font-kerning: 0pt"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+1<br />
+2<br />
+3<br />
+4<br />
+5<br />
+6<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1<br />
+1<br />
+2<br />
+1<br />
+2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

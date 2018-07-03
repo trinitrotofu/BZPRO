@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Kpm的MC密码</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3439. Kpm的MC密码</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：15 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3439">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3439">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3439">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium"><br />
+&nbsp;背景</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 想Kpm当年为了防止别人随便进入他的MC，给他的PC设了各种奇怪的密码和验证问题（不要问我他是怎么设的。。。），于是乎，他现在理所当然地忘记了密码，只能来解答那些神奇的身份验证问题了。。。</span></p>
+<p><span style="font-size: medium">&nbsp;描述</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; Kpm当年设下的问题是这样的：</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 现在定义这么一个概念，如果字符串s是字符串c的一个后缀，那么我们称c是s的一个kpm串。</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 系统将随机生成n个由a&hellip;z组成的字符串，由1&hellip;n编号（s1,s2&hellip;,sn），然后将它们按序告诉你，接下来会给你n个数字，分别为k1&hellip;kn，对于每一个ki，要求你求出列出的n个字符串中所有是si的kpm串的字符串的编号中第ki小的数，如果不存在第ki小的数，则用-1代替。（比如说给出的字符串是cd,abcd,bcd,此时k1=2，那么&rdquo;cd&rdquo;的kpm串有&rdquo;cd&rdquo;,&rdquo;abcd&rdquo;,&rdquo;bcd&rdquo;,编号分别为1,2,3其中第2小的编号就是2）（PS：如果你能在相当快的时间里回答完所有n个ki的查询，那么你就可以成功帮kpm进入MC啦~~）</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;</p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 第一行一个整数 n 表示字符串的数目</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 接下来第二行到n+1行总共n行，每行包括一个字符串，第i+1行的字符串表示编号为i的字符串</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 接下来包括n行，每行包括一个整数ki，意义如上题所示</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;</p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 包括n行，第i行包括一个整数，表示所有是si的kpm串的字符串的编号中第ki小的数</span></p>
+<p><span style="font-size: medium">&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+    3<br />
+    cd<br />
+    abcd<br />
+    bcd<br />
+    2<br />
+    3<br />
+    1<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>    2<br />
+    -1<br />
+    2<br />
+<br />
+样例解释<br />
+<br />
+    “cd”的kpm 串有”cd”,”abcd”,”bcd”,编号为1,2,3，第2小的编号是<br />
+<br />
+    2，”abcd”的kpm串只有一个，所以第3小的编号不存在，”bcd”的kpm<br />
+<br />
+    串有”abcd”,”bcd”,第1小的编号就是2。<br />
+<br />
+数据范围与约定<br />
+<br />
+    设所有字符串的总长度为len<br />
+<br />
+<br />
+    对于100%的数据，1<=n<=100000,0<len<=300000<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

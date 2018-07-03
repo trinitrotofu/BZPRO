@@ -1,0 +1,26 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>圈地计划</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2132. 圈地计划</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：2 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2132">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2132">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2132">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>最近房地产商GDOI(Group of Dumbbells Or Idiots)从NOI(Nuts Old Idiots)手中得到了一块开发土地。据了解，</div>
+<div>这块土地是一块矩形的区域，可以纵横划分为N&times;M块小区域。GDOI要求将这些区域分为商业区和工业区来开发。根</div>
+<div>据不同的地形环境，每块小区域建造商业区和工业区能取得不同的经济价值。更具体点，对于第i行第j列的区域，</div>
+<div>建造商业区将得到Aij收益，建造工业区将得到Bij收益。另外不同的区域连在一起可以得到额外的收益，即如果区</div>
+<div>域(I,j)相邻（相邻是指两个格子有公共边）有K块（显然K不超过4）类型不同于(I,j)的区域，则这块区域能增加k</div>
+<div>&times;Cij收益。经过Tiger.S教授的勘察，收益矩阵A,B,C都已经知道了。你能帮GDOI求出一个收益最大的方案么？</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入第一行为两个整数，分别为正整数N和M，分别表示区域的行数和列数；</div>
+<div>第2到N+1列，每行M个整数，表示商业区收益矩阵A；</div>
+<div>第N+2到2N+1列，每行M个整数，表示工业区收益矩阵B；</div>
+<div>第2N+2到3N+1行，每行M个整数，表示相邻额外收益矩阵C。</div>
+<div>任何数字不超过1000&rdquo;的限制</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出只有一行，包含一个整数，为最大收益值。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3<br />
+1 2 3<br />
+4 5 6<br />
+7 8 9<br />
+9 8 7<br />
+6 5 4<br />
+3 2 1<br />
+1 1 1<br />
+1 3 1<br />
+1 1 1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>81<br />
+【数据规模】<br />
+对于100%的数据有N,M≤100<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;数据已加强，并重测--2015.5.15</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

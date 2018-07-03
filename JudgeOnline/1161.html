@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CTSC2004]数字搜索regular</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1161. [CTSC2004]数字搜索regular</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1161">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1161">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1161">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>HURRICANE小组最近接到了一个搜索文本的任务，即从一个由数字构成的长文本中，匹配满足指定条件的子串。搜</div>
+<div>索的条件采用形如&lsquo;(0+10*1)*10*&rsquo;这样的正则表达式来描述。其中正则表达式的归纳定义如下： 1. 0, 1, &hellip;,&nbsp;</div>
+<div>9，0*, 1*, &hellip;, 9*是正则表达式； 2. 如果A和B是正则表达式，则(A)，A+B，AB，(A)*都是正则表达式； 3. 只</div>
+<div>有按以上方法构造出来的表达式才是正则表达式。 其中，A+B表示&ldquo;或者&rdquo;关系，AB表示&ldquo;连接&rdquo;关系，(A)*表示</div>
+<div>A的内容&ldquo;重复&rdquo;零次或者多次。比如正则表达式(12+3)(4+5)6*，就可以匹配以124，125，34，35之一开头，之后</div>
+<div>接零0个或任意多个6的字符串（例如字符串12566）。正则表达式(1+0)*可以匹配所有由0和1构成的字符串，或者</div>
+<div>是空串。如果一个正则表达式不能匹配空串，则称它是非空的。本题考虑的都是非空正则表达式。如果在给定文本</div>
+<div>的某一个位置，存在一个以该位置结束的子串，能够被给定的非空正则表达式匹配，则称该位置是可匹配的。现在</div>
+<div>HURRICANE小组接到的任务就是找出所有可匹配的位置。你能帮助他们完成这个任务么？【任务描述】你的程序需</div>
+<div>要根据给定的输入，给出符合题意的输出： ? 输入包括一个满足如上定义的正则表达式，以及一长串文本；? 你</div>
+<div>需要根据输入的正则表达式及文本，找出文本中所有可匹配的位置；? 你给出的输出需要包括所有可匹配的位置。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行描述一个正则表达式，</div>
+<div>第二行为需要处理的文本：</div>
+<div>第一行的正则表达式包括由一个空格分开的两个部分：一个非负整数n（1&le; n&le; 10），</div>
+<div>表示我们所要考虑的数字集（即在正则表达式和文本中所出现的数字）是0, 1, &hellip;, n&ndash;1。</div>
+<div>接下来是一个正则表达式，它由{&lsquo;(&lsquo;, &rsquo;)&rsquo;, &rsquo;+&rsquo;, &rsquo;*&rsquo;}中的4个符号和{0, &hellip;, n&ndash;1}中的数字构成，</div>
+<div>表达式的长度不超过500个字符。</div>
+<div>第二行为一个由0到n-1之间数字构成的字符串，为需要处理的文本。</div>
+<div>该文本长度不超过10,000,000个字符。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出只有一行，包括一些由空格分开的整数，按从小到大的顺序依次输出所需处理的文本中每一个可匹配的位置。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 12333+33<br />
+312331<br />
+说明：对于输入示例，需要处理的文本是’312331’，其中只有第5个字符所在的位置（下划线所在处）是可匹配的。这时正则表达式’12333+33'中的’33’可以与之匹配。<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>【评分方法】<br /><br />
+本题目一共有十个测试点，每个测试点的分数为总分数的10%。对于每个测试点来说，如果你给出的答案正确，那么你将得到该测试点全部的分数，否则得0分。<br /><br />
+提示：在本次的测试数据中，有6个测试点中的正则表达式不出现&rsquo;*&rsquo;，其中有3个测试点，正则表达式只由数字和&rsquo;+&rsquo;构成。有一个测试点的待处理文本不超过1,000,000个字符。该题有严格的时间限制，请尽量优化你的算法。</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

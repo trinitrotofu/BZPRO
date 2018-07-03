@@ -1,0 +1,99 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Neerc2013 North]intellectual</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4495. [Neerc2013 North]intellectual</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：200 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4495">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4495">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4495">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Erast Kopi 是著名的数独设计者。他的成功引起了一系列的模仿和剽窃。在提起诉讼</div>
+<div>之前，他决定找到更多的证据。</div>
+<div>数独是一张 9*9 的表，被划分成 3*3 的小表格，每个小表格是 3*3 的格子。每个格子可</div>
+<div>能包含 1 到 9 中的一个数字。任务就是往格子里填数字，使每行、每列和每个小表格都包含</div>
+<div>1 到 9 中的所有数字。</div>
+<div>Kopi 有一个数独的数据库，他想检查一下是否有相似的数独。如果数独 P 可以通过一</div>
+<div>系列以下操作转变得到数独 Q，则称 P 相似于 Q.</div>
+<div>1. 选两个数字 x 和 y，即把所有 x 换成 y，所有的 y 换成 x。</div>
+<div>2. 交换行中三行一组中的两大组：1，2，3 行为一组，4，5，6 列为一组，7，8，9 行为一组</div>
+<div>3. 交换两小行。</div>
+<div>4. 交换列中三列一组中的两大组：1，2，3 列为一组，4，5，6 列为一组，7，8，9 列为一组</div>
+<div>5. 交换两小列。</div>
+<div>6. 左上到右下沿斜对称轴的翻转。</div>
+<div>（如下图）</div>
+<div><img src="upload/201604/22(1).png" width="329" height="328" alt="" /></div>
+<div></div>
+<div>因此你需要帮助 Kopi 找到他的数据库中的相似的数独</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一个正整数 n(N&lt;=20)，表示在数据库中的数独个数。</div>
+<div>下面包含 n 个数独：P1,P2...Pn，每个数独用一个 9*9 的方阵表示，1~9 表示有数字的</div>
+<div>格子，点.表示空格子。两个数独间会有一个空行。在数据库的数独中没有空格。</div>
+<div>这些数独不一定能被解出来。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>依 次 检 查 两 个 数 独 是 否 相 似 。 ( 先 检 查 P1 与</div>
+<div>P2,P3,..,Pn，然后 P2 与 P3,P4...Pn，然后 P3 与 P4,P5...Pn，以此类推)</div>
+<div>如果第 Pi 与 Pj 相似，那么输出&ldquo;Yes&rdquo;，否则输出&ldquo;No&rdquo;。如果相似，之后一行输出</div>
+<div>将 Pi 变成 Pj 的步数 Qij，步数不要求最少，但要求不超过 1000。之后 Qij 行每行包括一个</div>
+<div>命令。命令如下：</div>
+<div>1. D x y 交换两个数字 x,y。</div>
+<div>2. R a b 交换行中三大组中的(3a-2,3a-1,3a)三行与(3b-2,3b-1,3b)三行。</div>
+<div>3. r a b 交换行中的两行 a,b。</div>
+<div>4. C a b 交换列中三大组中的(3a-2,3a-1,3a)三列与(3b-2,3b-1,3b)三列。</div>
+<div>5. c a b 交换列中的两列 a,b。</div>
+<div>6. F 左上到右下沿斜对称轴的翻转。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+.....1...<br />
+1........<br />
+.2.....8.<br />
+.........<br />
+8....9...<br />
+.........<br />
+....7....<br />
+...2...1.<br />
+2...4....<br />
+....2....<br />
+...7.4...<br />
+8.......9<br />
+.8...2..1<br />
+..2......<br />
+.........<br />
+.........<br />
+..1.8....<br />
+.........<br />
+1........<br />
+.........<br />
+.........<br />
+.........<br />
+.........<br />
+.........<br />
+.........<br />
+.........<br />
+.........<br />
+.....1...<br />
+1........<br />
+.2.....8.<br />
+.........<br />
+8....9...<br />
+.........<br />
+....7....<br />
+...2...1.<br />
+2...4....<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Yes<br />
+7 C<br />
+1 2<br />
+D 5 3<br />
+F r<br />
+7 9<br />
+c 6 5<br />
+C 2 3<br />
+D 1 8<br />
+No<br />
+Yes<br />
+0<br />
+No<br />
+Yes<br />
+8 R<br />
+1 2<br />
+C 2 3<br />
+c 4 5<br />
+F r<br />
+5 6<br />
+c 7 9<br />
+D 1 8<br />
+D 3 5<br />
+No</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

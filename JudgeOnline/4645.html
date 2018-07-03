@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>graph</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4645. graph</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4645">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4645">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4645">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>图的定义：图G是一个有序二元组(V,E)，其中V称为顶集，E称为边集，</div>
+<div>E与V不相交。它们亦可写成V(G)和E(G)。</div>
+<div>此题中图不允许有重边和自环。</div>
+<div>树的定义：树是一种特殊的图，它是一个连通图，且任意删去一条边，它</div>
+<div>就不连通。</div>
+<div>两个图同构的定义：</div>
+<div>设这两个图为G1=(VI，E1)，G2=(V2，E2)</div>
+<div>1．点数相同。</div>
+<div>2．如果是一个有标号的图，那么他们同构等价于E1=E2。</div>
+<div>3．如果是一个无标号的图，且存在一种对于Gl和G2的标号使得新的两个有</div>
+<div>标号图同构，那么它们同构。</div>
+<div>问题描述：</div>
+<div>1．给定一个整数n，求n个点的有标号的无根树的个数。</div>
+<div>2．给定一个整数n，求n个点的有标号的有根树的个数。</div>
+<div>3．给定一个整数n，求n个点的无标号的无根树的个数。</div>
+<div>4．给定一个整数n，求n个点的无标号的有根树酌个数。</div>
+<div>5．给定一个整数n，求n个点的有标号的所有点的度数均为偶数的图的个数。</div>
+<div>6．给定一个整数n，求n个点的有标号的欧拉图的个数。</div>
+<div>7．给定一个整数n，求n个点的有标号的二分图的个数。</div>
+<div>求方案数对m取模的结果。保证m是质数。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>一行八个数m，nl，n2，n3，n4，n5，n6，n7，分别为原问题中的m和七个问题</div>
+<div>1&lt; nl，n2，n5&lt;10^18，n3，n4，n6，n7&le;1000，l&lt;m&lt;10^9</div>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行七个数，表示七个问题的答案。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 2 2 2 2 2 2 2    </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1 2 1 1 1 0 2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

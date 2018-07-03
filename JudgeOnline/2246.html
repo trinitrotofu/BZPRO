@@ -1,0 +1,120 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[SDOI2011]迷宫探险</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2246. [SDOI2011]迷宫探险</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2246">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2246">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2246">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>这是一个单人游戏。</div>
+<div>游戏开始时，玩家控制的人物出生在迷宫的某个位置，玩家的目标是控制人物走到迷宫的某个出口（出口可能有多个）。迷宫里有k类陷阱（用&ldquo;A&rdquo;、&ldquo;B&rdquo;、&ldquo;C&rdquo;&hellip;&hellip;表示，相同字母代表相同类型的陷阱），每类陷阱可能是有害的或无害的，而在游戏开始时玩家并不知道哪些陷阱是有害的，哪些是无害的。同一类陷阱的状态相同，即用同一个字母标志的陷阱要么全部有害，要么全部无害，不会发生一部分有害而另一部分无害的情况。任何陷阱状态的组合都有一个发生概率，考虑下例：</div>
+<div>当k=2时，迷宫内共有两类陷阱，分别用&ldquo;A&rdquo;和&ldquo;B&rdquo;表示，陷阱状态的组合共有4种：</div>
+<div>1、&ldquo;A&rdquo;是无害陷阱，&ldquo;B&rdquo;是无害陷阱。</div>
+<div>2、&ldquo;A&rdquo;是有害陷阱，&ldquo;B&rdquo;是无害陷阱；</div>
+<div>3、&ldquo;A&rdquo;是无害陷阱，&ldquo;B&rdquo;是有害陷阱；</div>
+<div>4、&ldquo;A&rdquo;是有害陷阱，&ldquo;B&rdquo;是有害陷阱；</div>
+<div>下面给出了一个合法的概率表格：</div>
+<div align="center">
+<table cellspacing="0" cellpadding="0" border="1" style="border-right: medium none; border-top: medium none; border-left: medium none; border-bottom: medium none; border-collapse: collapse">
+    <tbody>
+        <tr>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: windowtext 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: windowtext 1pt solid; width: 142pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">&nbsp;</div>
+            </td>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: windowtext 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 142.05pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">&ldquo;A&rdquo;是无害陷阱</div>
+            </td>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: windowtext 1pt solid; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 142.05pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">&ldquo;A&rdquo;是有害陷阱</div>
+            </td>
+        </tr>
+        <tr>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: windowtext 1pt solid; width: 142pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">&ldquo;B&rdquo;是无害陷阱</div>
+            </td>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 142.05pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">36%</div>
+            </td>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 142.05pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">24%</div>
+            </td>
+        </tr>
+        <tr>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: windowtext 1pt solid; width: 142pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">&ldquo;B&rdquo;是有害陷阱</div>
+            </td>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 142.05pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">24%</div>
+            </td>
+            <td width="189" valign="top" style="border-right: windowtext 1pt solid; padding-right: 5.4pt; border-top: #ece9d8; padding-left: 5.4pt; padding-bottom: 0cm; border-left: #ece9d8; width: 142.05pt; padding-top: 0cm; border-bottom: windowtext 1pt solid; background-color: transparent">
+            <div align="center">16%</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>当K=3时，会有8种不同的陷阱状态组合，如果我们依然坚持使用概率表格，那么这个表格将会是三维的（2*2*2，每一维对应着一类陷阱）。当K&ge;<span>3</span>时，这将使得题目难以描述。因此我们使用一个大小为2<sup>k</sup>的数组p来描述每种情况发生的可能性，p的下标范围为0~2<sup>k</sup>-1。</div>
+<div>p是这样生成的：</div>
+<div>对于每个可能的陷阱状态组合，考虑所有k类陷阱，令1表示某个陷阱有害，0表示某个陷阱无害，把&ldquo;A&rdquo;作为二进制数的第0位（从右边开始计数），&ldquo;B&rdquo;作为第1位，&ldquo;C&rdquo;作为第2位&hellip;&hellip;通过以上操作，我们可以得到一个<i>K</i>位的二进制数，把它转化成十进制后，2<sup>k</sup>种陷阱状态的组合将会与整数0~2<sup>k</sup>-1一一对应。</div>
+<div>定义S表示P中所有元素和，即：</div>
+<div><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></div>
+<div>则陷阱状态组合i出现的概率为P<sub>i </sub><b>/</b>S。上述表格对应的一个合法数组P是：</div>
+<div>P<sub>0</sub> =36</div>
+<div>P<sub>1 </sub>=24</div>
+<div>P<sub>2 </sub>=24</div>
+<div>P<sub>3</sub>=16</div>
+<div>&nbsp;</div>
+<div>当然同一个概率表格可能会对应多个数组P（事实上有无数个数组P能够迎合表格数据），例如上述表格同时也对应着下面的数组P：</div>
+<div>P<sub>0</sub>=72</div>
+<div>P<sub>1</sub>=48</div>
+<div>P<sub>2</sub>=48</div>
+<div>P<sub>3</sub>=32</div>
+<div>玩家控制的人物初始情况下有H点生命，当人物踏上某个陷阱时，如果这个陷阱是有害的，那么会损失1点生命，否则这个陷阱是无害的，不损失生命。无论上述哪种情况发生，玩家会立刻得到这个陷阱的信息（有害或无害）。一旦生命小于等于0，玩家控制的人物会立刻死亡。</div>
+<div>迷宫可以看作m*n的方格地图，每个元素可能是：</div>
+<div>&ldquo;.&rdquo;：表示这是平地，可以通过；</div>
+<div>&ldquo;#&rdquo;：表示这是墙，不能通过；</div>
+<div>&ldquo;A&rdquo;，&ldquo;B&rdquo;，&ldquo;C&rdquo;&hellip;&hellip;：表示这是一个陷阱；</div>
+<div>&ldquo;$&rdquo;：表示这是起点，地图中有且仅有一个；</div>
+<div>&ldquo;@&rdquo;：表示这是终点，地图中可以有多个，也可以一个也没有。</div>
+<div>人物可以向上下左右四个方向行走，不可以走对角线，也不可以走出地图。</div>
+<div>给定m*n的地图、k、h以及大小为2<sup>k</sup>的概率数组。你的任务是求出在执行最优策略时，人物能活着走出迷宫的概率。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含4个整数，分别表示m、n、K、H；</div>
+<div>下面m行每行n个字符描述迷宫地图；</div>
+<div>最后一行包含2<sup>K</sup>个非负整数描述数组P，数组下标从0开始。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>仅包含一个数字，表示在执行最优策略时，人物活着走出迷宫的概率。四舍五入保留3位小数。</div>
+<div style="margin: 13pt 0cm"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>仅包含一个数字，表示在执行最优策略时，人物活着走出迷宫的概率。四舍五入保留3位小数。<br />
+【样例输入1】<br />
+4 3 2 1<br />
+.$.<br />
+A#B<br />
+A#B<br />
+.@.<br />
+30 30 20 20<br />
+【样例输出1】<br />
+0.600<br />
+【样例说明1】<br />
+向右边走，经过“B”，“B”为有害陷阱的概率为 (20+20)/(30+30+20+20=)=0.4，若“B”为有害陷阱那么人物就死掉了，游戏失败，否则玩家得知“B”是无害陷阱，继续经过另一个“B”达到终点，胜利的概率为0.6。<br />
+【样例输入2】<br />
+4 3 2 2<br />
+.$.<br />
+A#B<br />
+A#B<br />
+.@.<br />
+30 30 20 20<br />
+【样例输出2】<br />
+0.800<br />
+【样例说明2】<br />
+向左边走，经过“A”，“A”为有害陷阱的概率为 (30+30)/(30+30+20+20)=0.5。若“A”为有害陷阱，那么损失一点生命，转到右边尝试“B”，要想成功到达终点，此时“B”必须为无害陷阱，而在“A”是有害陷阱的前提下，“B”是无害陷阱的概率是30/(30+20)=0.6，故这种情况发生的概率为0.5*0.6=0.3。若“A”是无害陷阱，玩家可以控制人物连续通过两个“A”到达终点，这种情况发生的概率0.5。所以答案为0.3+0.5=0.8。 <br />
+【样例输入3】<br />
+4 3 2 3<br />
+.$.<br />
+A#B<br />
+A#B<br />
+.@.<br />
+30 30 20 20<br />
+【样例输出3】<br />
+1.000<br />
+【样例说明3】<br />
+玩家控制的人物有3点生命，但最多只需要经过两个陷阱，所以任意选左路或右路走过去就可以到达终点了。<br />
+【样例输入4】<br />
+4 3 3 2<br />
+.$.<br />
+A#B<br />
+A#C<br />
+@@@<br />
+143 37 335 85 95 25 223 57<br />
+【样例输出4】<br />
+0.858</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata></span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>m&lt;=30,N&lt;=29,K&lt;=5,H&lt;=5,0&lt;=pi&lt;=10^5 ，且至少有一个pi&gt;0 </p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

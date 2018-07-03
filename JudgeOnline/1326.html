@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Zju1361Holedox Moving</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1326. Zju1361Holedox Moving</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1326">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1326">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1326">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">有一条蛇在它的洞里面，现在他要出来，问最少要多少步才可以移动到出口。出口的位置是(1,1)。蛇可以弯曲的，但是它的部分必须是连接的，比如：如果它有一个部位在一个坐标，连接它那个部位的坐标一定是它的上下左右。
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>  有多组数据。每组数据的第一行有3个数，N,M,L（N，M）表示洞的大小N*M，L表示蛇的长度。然后下面有L行，每行两个数，表示蛇所有部位的位置。第一组是蛇的头，第L组是蛇的尾巴，也就是说是按顺序给出蛇的头至尾的位置，移动时蛇的蛇的后面一个部位要移到之前那个部位的位置。当然蛇不能走到有石头的地方且它不能走在自己身上。
+  然后给出一个K，表示洞里面有多少块石头。然后下面有K行，每行2个数，表示每块石头的坐标。
+  每个数据之间有一空行，数据以3个0表示结束。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content> 如果蛇可以走出洞的话，那么输出最小步数，如果蛇不能走出洞，那么输出-1；
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 6 4<br />
+4 1<br />
+4 2<br />
+3 2<br />
+3 1<br />
+3<br />
+2 3<br />
+3 3<br />
+3 4<br />
+<br />
+4 4 4<br />
+2 3<br />
+1 3<br />
+1 4<br />
+2 4<br />
+4<br />
+2 1<br />
+2 2<br />
+3 4<br />
+4 2<br />
+<br />
+0 0 0<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case 1: 9<br />
+Case 2: -1<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>注意：出口处是没有石头的。<br />
+<br />
+说明：第一组数据依次按以下坐标走是最短的。           <br />
+<br />
+(4,1)  '(5,1)   (5,2)  '(5,3)  '(4,3)   '(4,2)   '(4,1)'   (3,1)   '(2,1)'(1,1)<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

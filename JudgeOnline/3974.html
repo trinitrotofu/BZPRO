@@ -1,0 +1,56 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[WF2013]Up a Tree</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3974. [WF2013]Up a Tree</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3974">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3974">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3974">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Anatoly Cheng McDougal 在许多方面都是一个典型的新生。如果可以，他会尝试将代码剪切和粘贴从而替代从头写一段代码。显然，这种方法会无法避免地给他带来一些问题。例如，当他第一次学习树的先序，中序和后序遍历后，就写下了一段树的先序遍历的代码（如左下角所示），随后，他简单的剪切和粘贴的这段代码，然后将输出语句调整到正确的位置，并将过程（函数）重命名。但是，他忘记重新书写将会在内部被调用的过程（函数）名，从而导致生成了如下有问题的树的先序，中序和后序遍历代码。</div>
+<div></div>
+<div>void prePrint(TNode t)</div>
+<div>{</div>
+<div>output(t.value);</div>
+<div>if (t.left != null)</div>
+<div>prePrint(t.left);</div>
+<div>if (t.right != null)</div>
+<div>prePrint(t.right);</div>
+<div>}</div>
+<div></div>
+<div>void inPrint(TNode t)</div>
+<div>{</div>
+<div>if (t.left != null)</div>
+<div>prePrint(t.left);</div>
+<div>output(t.value);</div>
+<div>if (t.right != null)</div>
+<div>prePrint(t.right);</div>
+<div>}</div>
+<div></div>
+<div>void postPrint(TNode t)</div>
+<div>{</div>
+<div>if (t.left != null)</div>
+<div>prePrint(t.left);</div>
+<div>if (t.right != null)</div>
+<div>prePrint(t.right);</div>
+<div>output(t.value);</div>
+<div>}</div>
+<div></div>
+<div>译者注 prePrint 先序遍历过程（函数），inPrint 中序遍历过程（函数），postPrint 后序遍历过程（函数），TNode 树结点类型，left 左儿子，right 右儿子，null 空结点，output 输出，void 空类型，if 条件语句标志。</div>
+<div></div>
+<div>此时，Anatoly 表现得不再像一个新生。他其实就测试了自己的代码！不幸地，当输出的结果不正确时，他又变回了新生样。他紧张起来，随即开始随机地改变三个过程中的调用，希望这能奏效。显然，情况更糟了。</div>
+<div>Anatoly 的教授用一个随机的字符树测试了这段代码。当她看到了这段程序的输出之时，她已经正确地猜到了刚才发生的事情。但是，她并不想直接地浏览他的代码，相反地，她决定仅仅通过观察程序的输出，来重构 Anatoly 的代码。为了做到这一点，她正确地做了如下的假设：</div>
+<div>1. 输出语句在各个过程（函数）已经在正确的位置。（例如，在中序遍历中，输出语句在两个递归调用中间）。</div>
+<div>2. 在涉及到这三个过程（函数）的六次递归调用中，恰好有两个调用为先序遍历 (prePrint)，恰好两次为中序遍历 (inPrint)，还有恰好两次为后序遍历 (postPrint)，虽然有可能在错误的过程（函数）里。</div>
+<div>不久教授就觉察到，从他的输出中，重构 Anatoly 的代码和测试数据并非易事，而且结果可能是多元的。你需要帮助他重构出所有可能的 Anatoly 的代码。另外，对于所有这样的重构，请您找到能够产生这种输出的，字典序最小的树（将会在输出中详述）。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入只有一个测试点，各点在三行分别有三个字符串：对于某棵树，Anatoly 的先序，中序和后序遍历的输出（和描述保持相同的顺序）。</div>
+<div>每个字符串包含 n 个大写字母 （4 &le; n &le; 26），且无分隔。数据保证有解。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于测试点，输出所有可能的重构，以如下方式排序。</div>
+<div>输出中，各个重构分为两部分。第一部分为单独一行描述 Anatoly 的代码: 先是两个 Anatoly 的先序遍历中的（递归）调用，随即是中序遍历中的（递归）调用，最后是后序遍历中的（递归）调用。调用用 Pre, In 和 Post 描述，空格隔开。例如，若 Anatoly 的代码正确，那么重构的输出应该是 Pre Pre In In Post Post。</div>
+<div>第二部分包括三行描述会产生观察到的输出的输入数据。第一行为正确的先序遍历，第二行为正确的中序遍历，第三行为正确的后序遍历。</div>
+<div>字典序最小的树拥有字典序最小的先序遍历。如果答案仍然多元，字典序最小的树为这当中拥有字典序最小的中序遍历的树。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>HFBIGEDCJA<br />
+BIGEDCJFAH<br />
+BIGEDCJFAH</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Pre Post In Post In Pre<br />
+HFBJCDEGIA<br />
+BIGEDCJFAH<br />
+IGEDCJBAFH<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>N&lt;=26</p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2006]千年虫</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1496. [NOI2006]千年虫</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1496">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1496">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1496">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>千年虫是远古时代的生物，时隔几千万年，千年虫早已从地球上销声匿迹，人们对其知之甚少。考古生物学家最近</div>
+<div>开始对其有了兴趣，因为一批珍贵的千年虫化石被发现，这些化石保留了千年虫近乎完整的形态。理论科学家们根</div>
+<div>据这些化石归纳出了千年虫的一般形态特征模型，并且据此判定出千年虫就是蜈蚣的祖先！但科学家J发现了实际</div>
+<div>与理论的一些出入，他仔细的研究了上百个千年虫化石，发现其中大部分千年虫的形态都不完全符合理论模型，这</div>
+<div>到底是什么因素造成的呢？理论科学家K敏锐的指出，千年虫的形态保存在化石中很有可能发生各种变化，即便最</div>
+<div>细微的变化也能导致它不符合模型。于是，摆在科学家面前的新问题诞生了：判断一个化石中的千年虫与理论模型</div>
+<div>的差距有多大？具体来说，就是根据一个千年虫化石的形态A，找到一个符合理论模型的形态B，使得B是最有可能</div>
+<div>在形成化石时变成形态A。</div>
+<p><img border="0" src="images/1496_1.jpg" alt="" /></p>
+<div>理论学家提出的&ldquo;千年虫形态特征模型&rdquo;如下（如上图所示）：躯体由头、尾、躯干、足四大部分构成。1.头，尾</div>
+<div>用一对平行线段表示。称平行于头、尾的方向为x方向；垂直于x的方向为y方向；2.在头尾之间有两条互不相交的</div>
+<div>折线段相连，他们与头、尾两条线段一起围成的区域称为躯干，两条折线段都满足以下条件：拐角均为钝角或者平</div>
+<div>角，且包含奇数条线段，从上往下数的奇数条垂直于x方向。3.每条折线段从上往下数的第偶数条线段的躯干的另</div>
+<div>一侧长出一条足，即一个上、下底平行于x方向的梯形或矩形，且其中远离躯干一侧的边垂直于x方向。注意：足不</div>
+<div>能退化成三角形（即底边的长度均大于零），躯干两侧足的数目可以不一样。（如下图，左边有4条足，右边有5条</div>
+<div>足）</div>
+<p><img border="0" src="https://www.lydsy.com/JudgeOnline/images/1496_2.jpg" alt="" /></p>
+<div>可见，x-y直角坐标系内，躯干和所有足组成的实心区域的边界均平行或垂直于坐标轴。为了方便，我们假设所有</div>
+<div>这些边界的长度均为正整数。因此可以认为每个千年虫的躯体都由一些单位方格拼成。每个单位方格都由坐标(x,y</div>
+<div>)唯一确定。设头尾之间的距离为n，则我们可以用2&times;n个整数来描述一条千年虫B（如右图）：将B沿平行x轴方向</div>
+<div>剖分成n条宽度为1的横条，每个横条最左边一格的x坐标设为Li，最右一格的的x坐标设为Ri。则(n,L1,L2,..,Ln,R</div>
+<div>1,R2,..Rn)就确定了一条千年虫。 由于岁月的侵蚀，在实际发现的化石中，千年虫的形状并不满足上面理论模型</div>
+<div>的规则，一些格子中的躯体已经被某些矿物质溶解腐蚀了。 地质、物理、生物学家共同研究得出： 1、腐蚀是以</div>
+<div>格子为单位的，只能一整格被腐蚀； 2、腐蚀是分步进行的，每一步只有一格被腐蚀； 3、如果去掉一个格子后躯</div>
+<div>体不连通了，那么这个格子当前不会被腐蚀； 4、如果一个格子的左边邻格和右边邻格都还没被腐蚀，那么这个格</div>
+<div>子当前不会被腐蚀； 5、与头相邻的格子不能全部被腐蚀，与尾相邻的格子不能全部被腐蚀； 倘若满足上面五条</div>
+<div>，我们仍然可以用(n,L&rsquo;1,L&rsquo;2,..,L&rsquo;n,R&rsquo;1,R&rsquo;2,..R&rsquo;n)来描述一个化石里头的千年虫的形态。其中L&rsquo;i&le;R</div>
+<div>&rsquo;i。 例如下图：</div>
+<p><img border="0" src="https://www.lydsy.com/JudgeOnline/images/1496_3.jpg" alt="" /></p>
+<div>现在你的任务是，输入一个化石里的千年虫的描述A，找一个满足理论模型的千年虫的描述B，使得B可以通过腐蚀</div>
+<div>过程得以变为A，且由B转化为A的代价(须被腐蚀的格子数)最少。输出此最小代价。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行为一个整数n； 以下n行，每行两个整数，其中第i行为两个整数L&rsquo;i,R&rsquo;i，用一个空格分开； 保证输入数</div>
+<div>据合法。n&le;1000000, 0&le;L&rsquo;i&le;R&rsquo;i&le;1000000</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>仅一行，为一个整数，表示最少代价。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+4 4<br />
+3 4<br />
+3 5<br />
+1 3<br />
+2 2<br />
+2 4<br />
+3 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img border="0" src="https://www.lydsy.com/JudgeOnline/images/1496_4.jpg" alt="" />&nbsp;</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,24 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi1999]空立方体问题</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2926. [Poi1999]空立方体问题</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2926">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2926">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2926">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">如果满足下面条件我们称这个立方体是规则的: </span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">它的顶点中的一个是坐标为(0,0,0)的点， </span></li>
+    <li><span style="font-size: medium">开始于这个顶点的位于坐标系统的正半轴， </span></li>
+    <li><span style="font-size: medium">边不长于10<sup>6</sup> </span></li>
+</ul>
+<div><span style="font-size: medium">有一个给定的空间点的集合A，坐标为间隔为[1..10<sup>6</sup>]的整数。我们试着找出最大体积的规则立方体，它不包括集合A的任何点。如果一个点属于一个立方体之内，那么这个点属于这个立方体，它是这个立方体的点，但它的墙不是。</span></div>
+<div style="margin: auto 0cm"><span style="font-size: medium"><b>任务</b></span></div>
+<div><span style="font-size: medium">写一个程序:&nbsp;</span></div>
+<ul type="disc">
+    <li><span style="font-size: medium">读取来自集合A的点的坐标， </span></li>
+    <li><span style="font-size: medium">找出一个最大体积的规则立方体，它不包括来自集合A的任何点， </span></li>
+    <li><span style="font-size: medium">把结果输出 </span></li>
+</ul></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="margin: auto 0cm"><span style="font-size: medium">首行，一个非零的整数n被写出来（<i>n</i> &lt;= <i>5000</i>）。它是集合A的元素数。在文件PUS.IN接下来的n行中有三个一组的整数，其范围在[1..10<sup>6</sup>]，它们是来自集合A的点的坐标（分别为x，y，z）。每一行的数字被单空格号隔开。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">一行应该有三个被单空格号分隔的整数。这些是最大体积的规则立方体的顶点的坐标（分别为x，y，z）。我们要求坐标为正数。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+3 3 300000<br />
+2 200000 5<br />
+90000 3 2000<br />
+2 2 1000<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata> <br />
+1000000 200000 1000<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

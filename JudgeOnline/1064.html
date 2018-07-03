@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Noi2008]假面舞会</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1064. [Noi2008]假面舞会</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1064">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1064">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1064">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">一年一度的假面舞会又开始了，栋栋也兴致勃勃的参加了今年的舞会。今年的面具都是主办方特别定制的。每个参加舞会的人都可以在入场时选择一 个自己喜欢的面具。每个面具都有一个编号，主办方会把此编号告诉拿该面具的人。为了使舞会更有神秘感，主办方把面具分为k (k&ge;3)类，并使用特殊的技术将每个面具的编号标在了面具上，只有戴第i 类面具的人才能看到戴第i+1 类面具的人的编号，戴第k 类面具的人能看到戴第1 类面具的人的编号。 参加舞会的人并不知道有多少类面具，但是栋栋对此却特别好奇，他想自己算出有多少类面具，于是他开始在人群中收集信息。 栋栋收集的信息都是戴第几号面具的人看到了第几号面具的编号。如戴第2号面具的人看到了第5 号面具的编号。栋栋自己也会看到一些编号，他也会根据自己的面具编号把信息补充进去。由于并不是每个人都能记住自己所看到的全部编号，因此，栋栋收集的信 息不能保证其完整性。现在请你计算，按照栋栋目前得到的信息，至多和至少有多少类面具。由于主办方已经声明了k&ge;3，所以你必须将这条信息也考虑进去。</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行包含两个整数n, m，用一个空格分隔，n 表示主办方总共准备了多少个面具，m 表示栋栋收集了多少条信息。接下来m 行，每行为两个用空格分开的整数a, b，表示戴第a 号面具的人看到了第b 号面具的编号。相同的数对a, b 在输入文件中可能出现多次。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">包含两个数，第一个数为最大可能的面具类数，第二个数为最小可能的面具类数。如果无法将所有的面具分为至少3 类，使得这些信息都满足，则认为栋栋收集的信息有错误，输出两个-1。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【输入样例一】<br />
+<br />
+6 5<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 1<br />
+3 5<br />
+<br />
+【输入样例二】<br />
+<br />
+3 3<br />
+1 2<br />
+2 1<br />
+2 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【输出样例一】<br />
+4 4<br />
+<br />
+【输出样例二】<br />
+-1 -1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">100%的数据，满足n &le; 100000, m &le; 1000000。 </span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

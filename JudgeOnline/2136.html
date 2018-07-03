@@ -1,0 +1,24 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>CounterStrike</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2136. CounterStrike</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2136">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2136">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2136">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>1.管道从y轴负方向延伸到y轴正方向。 2.称x轴负方向为左边，x轴正方向为右边，z轴正方向为上边，z轴负方向</div>
+<div>为下边。 3.管道是由若干四棱柱拼接而成，每个四棱柱的两个底面都是边长为1的正方形，且这两个底面都平行于</div>
+<div>xoz平面。也就是说，对于管道的任何一个垂直于y轴的的截面，它都是正方形，只要知道右上角顶点的坐标(x,y,z</div>
+<div>)就可以知道正方形剩下三个点的坐标(x-1,y,z), (x,y,z-1), (x-1,y,z-1)。 4.知道了管道右上方的折线，通过</div>
+<div>向左平移1、再向下平移1、再向右平移1，再向上平移1，可以得到该管道的边界。所以给出管道右上方的折线的每</div>
+<div>个顶点的坐标，我们就可以确定整个管道的形状。 对于gx的枪，有如下说明: 1.gx的枪沿一条直线射出一颗子弹</div>
+<div>。我们把子弹视作是一个半径为r的圆，所以轨迹可以视作一个底面半径为r的狭长圆柱。对于某个y=y0的截面，如</div>
+<div>果子弹能够完整地通过，称此处是被gx控制的。反之，子弹在接触目标前会发生偏折，因此该截面是不被控制的。</div>
+<div>子弹刚好擦边而过的情况也算作可以通过。 2.gx站在y轴负方向的那一端，面向y轴正方向。gx的枪可以在管道外</div>
+<div>任何位置以任何角度，从y轴负方向向y轴正方向进行瞄准。 现在面对这个蜿蜒曲折的管道，gx想知道他能控制的</div>
+<div>最远截面的y坐标值是多少。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行包含整数n和实数r。</div>
+<div>接下来n行每行三个实数，第i行的三个实数表示第i个正方形右上角顶点的坐标(x, y, z)。</div>
+<div>输入保证y坐标值是严格递增的。</div>
+<div>3&le;n&le;20000, 0&le;r&le;0.5, -100000&le;xi, yi, zi&le;100000</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一个实数，表示最远的控制点。保留三位小数。数据保证gx的子弹不能贯穿整个管道。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 0<br />
+0.0 -2.0 1.0<br />
+0.0 0.0 1.0<br />
+1.0 1.0 0.0<br />
+0.0 1.5 1.0<br />
+2.0 3.0 0.0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2.250<br />
+【样例说明1】<br />
+沿y轴正方向，最远可以控制到y=2.250</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

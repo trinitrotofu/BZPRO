@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Jsoi2017]税收</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5208. [Jsoi2017]税收</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5208">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5208">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5208">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>JSOI王国的交通网络可以看成是一个N个点M条边的带权有向图。图中每个顶点代表一个城市，每条边代表连接两个</div>
+<div>城市的道路，同一对城市之间可能有多条道路连接。每条道路i有两个权值Di,和Ci，分别表示它的初始税收和在这</div>
+<div>条道路上增加1单位的税收所需要承受的民众不满意程度。一条路径的税收是路径上所有道路的税收之和。</div>
+<div>国王JS想要尽可能地增加从城市s到t旅行的税收，但这并不是个简单的事情。JSOI的民众非常聪明，无论你如何调</div>
+<div>整税收，他们只会走从s到t的税收总和最小的路径，而另一方面，如果调整税收导致的不满意程度之和超过某个值</div>
+<div>p将会引发社会危机。因此，JYY需要在承受的不满意程度之和不超过p的情况下使s到t的税收总和最小的路径的税</div>
+<div>收尽可能地大。需要注意的是，JYY不能减少某条道路的税收，但他可以对任意道路增加任意实数单位的税收。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行包含五个整数，分别为N,M,P,S,T</div>
+<div>
+<div>接下来M行，每行四个整数Ui,Vi,Di,Ci描述一条从Ui,到Vi,的有向边</div>
+<div>初始税收是Di,，每增加一单位的税收带来的不满意程度是Ci。</div>
+<div>1&le;N&le;200,1&le;M&le;2&times;10O00,1&le;P&le;1000000</div>
+<div>1&le;Ci,Di&le;10。保证至少存在一条从s到t的合法路径。</div>
+</div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行一个实数，表示可能的s到t的最大税收。</div>
+<div>与标准答案误差在10^-4以内即认为正确。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 2 3 1 3<br />
+1 2 2 1<br />
+2 3 1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6.000000</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

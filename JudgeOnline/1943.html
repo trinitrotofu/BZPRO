@@ -1,0 +1,50 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ceoi2007]Nasty Calculations
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1943. [Ceoi2007]Nasty Calculations
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：4 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1943">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1943">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1943">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">你的朋友Joe忘记做数学作业了。他的老师非常生气（你猜是为什么），他命令Joe放学后留下来计算一个巨长的表达式。可是该老师十分懒，以致想不出许多不同的表达式，因此他给Joe一个带有变量x的公式f，并且x可能是个巨大的数（显然你明白这是多么容易的一件事情），Joe的任务就是对于每个给出的x值，计算该表达式f(x)的结果。
+实际上，Joe不需要计算出f(x)的精确值，因为可能结果十分巨大，他只要写出f(x)的最后一个数字即可（Joe想当然认为老师能计算的上限为100，但是……，只有天知道！）。
+因为上次课的内容是讲数制字系统，因此实际上老师给出的是基于B进制的数值表达式f(x)。
+
+任务
+
+对于x的给出包含x的巨大公司，Joe希望寻求你的帮助，因为他知道你是一个优秀的程序设计员，他认为你可以使用计算机来解决该问题，为了帮助你完成任务，他重写了该公式，将f变成了一个后缀表达式（下面会解释），这有利于计算机的计算，你的任务就是在B进制系统下，计算这个巨大公式的数值。
+
+后缀表达式
+
+后缀表达式（也称之为逆波兰表达式RPN）是一个二元数学表达式的方式。当然使用最多的是中缀表达式，操作符放在操作数的中间，例如，1+2,1+2*3，or （1+2）*3。通常不喜欢后缀表达式，操作符放在操作数的后面，例如上面的表达式形式为1 2+，1 2 3 * +，和1 2 + 3 * 。
+这种RNP表达式尽管人们看起来十分不习惯，但计算机写程序计算起来方便，因为它没有括号，容易编程。
+
+B进制数值系统
+
+一个数通常使用十进制数值系统，在这个系统中，一个数字序列dkdk-1&not;……d1d0表示数dk10k+dk-110k-1+……+d.1101+d0100。如果数值10用整数B，B≥2，and 0≤di≤B-1，我们称之为B进制数字系统。B进制数值系统可以写成dkdk-1&not;……d1d0形式，表示dkBk+dk-1Bk-1+……+d.1B1+d0B0。当然因为我们只有10个数字，因此大于9的数字不许用字母表示：A表示10，B表示11，等等，例如十进制数29用6进制系统表示为45，用16进制系统表示为1D。
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>
+第一行包含两个整数B和N，B（2≤B≤36），N（1≤N≤100 000）
+第二行为后缀表达式。数据元素之间用一个空格分开。这些元素为：
+&#8226;一个基于B进制数值系统下的数字和大写字母的竖列，最大数值不超过2 000 000 000。
+&#8226;小写字母 x，表示表达式中的变量。
+&#8226;操作符号 +。
+&#8226;操作符号 -。
+&#8226;操作符号 *。
+接下来有N行，每行一个包含数字和大写字母的序列，表示基于B进制数值系统下的变量x的数值，x不超过2 000 000 000。
+假设表达式对于所有的输入数据都正确，第二行的表达式的长度不超过100 000个字符。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>
+输出包括N行，第i行为输入的第i+2个数据对应的表达式结果的最后一个数字（基于B进制数值系统下）。你可以假设对所有的x,f(x)的结果非负。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+15 4<br />
+2 x * 123A +<br />
+1<br />
+2<br />
+3<br />
+4<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+C<br />
+E<br />
+1<br />
+3<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

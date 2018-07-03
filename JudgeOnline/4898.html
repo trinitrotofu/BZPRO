@@ -1,0 +1,56 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Apio2017]商旅</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4898. [Apio2017]商旅</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4898">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4898">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4898">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在广阔的澳大利亚内陆地区长途跋涉后，你孤身一人带着一个背包来到了科巴。你被这个城市发达而美丽的市场所</div>
+<div>深深吸引，决定定居于此，做一个商人。科巴有个集市，集市用从1到N的整数编号，集市之间通过M条单向道路连</div>
+<div>接，通过每条道路都需要消耗一定的时间。在科巴的集市上，有K种不同的商品，商品用从1到K的整数编号。每个</div>
+<div>集市对每种商品都有自己的定价，买入和卖出商品的价格可以是不同的。并非每个集市都可以买卖所有的商品：一</div>
+<div>个集市可能只提供部分商品的双向交易服务；对于一种商品，一个集市也可能只收购而不卖出该商品或只卖出而不</div>
+<div>收购该商品。如果一个集市收购一种商品，它收购这种商品的数量是不限的，同样，一个集市如果卖出一种商品，</div>
+<div>则它卖出这种商品的数量也是不限的。为了更快地获得收益，你决定寻找一条盈利效率最高的环路。环路是指带着</div>
+<div>空的背包从一个集市出发，沿着道路前进，经过若干个市场并最终回到出发点。在环路中，允许多次经过同一个集</div>
+<div>市或同一条道路。在经过集市时，你可以购买或者卖出商品，一旦你购买了一个商品，你需要把它装在背包里带走</div>
+<div>。由于你的背包非常小，任何时候你最多只能持有一个商品。在购买一个商品时，你不需要考虑你是否有足够的金</div>
+<div>钱，但在卖出时，需要注意只能卖出你拥有的商品。从环路中得到的收益为在环路中卖出商品得到的金钱减去购买</div>
+<div>商品花费的金钱，而一条环路上消耗的时间则是依次通过环路上所有道路所需要花费的时间的总和。环路的盈利效</div>
+<div>率是指从环路中得到的收益除以花费的时间。需要注意的是，一条没有任何交易的环路的盈利效率为0。你需要求</div>
+<div>出所有消耗时间为正数的环路中，盈利效率最高的环路的盈利效率。答案向下取整保留到整数。如果没有任何一条</div>
+<div>环路可以盈利，则输出0。</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含3个正整数N,M和K,分别表示集市数量、道路数量和商品种类数量。</div>
+<div>接下来的N行，第行中包含2K个整数描述一个集市Bi,1 Si,1 Bi,2 Si,2...Bik Si,k。</div>
+<div>对于任意的1&lt;=j&lt;=k,整数和分别表示在编号为的集市上购买、卖出编号为的商品时的交易价格。</div>
+<div>如果一个交易价格为-1，则表示这个商品在这个集市上不能进行这种交易。</div>
+<div>接下来M行，第行包含3个整数Vp,Wp和Tp,表示存在一条从编号为Vp的市场出发前往编号为Wp的市场的路径花费Tp分钟。</div>
+<div>1&lt;=N&lt;=100,1&lt;=M&lt;=9900</div>
+<div>如果在编号为的集市i中，编号为j的商品既可以购买又可以卖出则0&lt;Si,j&lt;=Bi,j&lt;=10^9</div>
+<div>对于编号为P(1&lt;=P&lt;=M)的道路，保证Vp&lt;&gt;Wp且1&lt;=Tp&lt;=10^7</div>
+<div>不存在满足1&lt;=P&lt;Q&lt;=M的P,Q,使得(Vp,Wp)=(Vq,Wq) 。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输出包含一个整数，表示盈利效率最高的环路盈利效率，答案向下取整保留到整数。</div>
+<div>如果没有任何一条环路可以盈利，则输出0。</div>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 5 2<br />
+10 9 5 2<br />
+6 4 20 15<br />
+9 7 10 9<br />
+-1 -1 16 11<br />
+1 2 3<br />
+2 3 3<br />
+1 4 1<br />
+4 3 1<br />
+3 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+在样例中，我们考虑下面两条环路，“1 - 2 - 3 - 1” 和 “1 - 4 - 3 - 1”。<br />
+考虑环路 “1 - 2 - 3 - 1” ：这条环路消耗的总时间是 分钟。在这条环路中，<br />
+最佳的交易方式是：在编号为 1 的集市中购买编号为 2 的商品（花费的金钱为 5 ）；在编号<br />
+为 2 的集市中卖出编号为 2 的商品（得到的金钱为 15 ），然后立即购买编号为 1 的商品<br />
+（花费的金钱为 6 ）；带着编号为 1 的商品经过编号为 3 的集市，在回到编号为 1 的城市后<br />
+卖出（得到的金钱为 9 ）。在这个环路中，总盈利为13。 这个环路的盈利效率为13/7 ，向下取整后为 1 。<br />
+考虑环路 “1 - 4 - 3 - 1” ：这条环路消耗的总时间是 分钟。在这条环路中，<br />
+最佳的交易方式是：在编号为 1 的集市中购买编号为 2 的商品（花费的金钱为 5 ）；在编号<br />
+为 4 的集市中卖出编号为 2 的商品（得到的金钱为 11 ）；然后经过编号为 3 的集市回到编<br />
+号为 1 的城市。在这个环路中，总盈利为 6。 这个环路的盈利效率为6/3 ，向下取整后为 2 。<br />
+综上所述，盈利效率最高的环路的盈利效率为 2 。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="color: rgb(255, 0, 0);">由于是非官方数据，可能有误，详见讨论版!</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

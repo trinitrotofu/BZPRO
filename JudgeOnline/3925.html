@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Zjoi2015]地震后的幻想乡</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3925. [Zjoi2015]地震后的幻想乡</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3925">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3925">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3925">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;傲娇少女幽香是一个很萌很萌的妹子，而且她非常非常地有爱心，很喜欢为幻想乡的人们做一些自己力所能及的事情来帮助他们。&nbsp;这不，幻想乡突然发生了地震，所有的道路都崩塌了。现在的首要任务是尽快让幻想乡的交通体系重新建立起来。幻想乡一共有n个地方，那么最快的方法当然是修复n-1条道路将这n个地方都连接起来。&nbsp;幻想乡这n个地方本来是连通的，一共有m条边。现在这m条边由于地震的关系，全部都毁坏掉了。每条边都有一个修复它需要花费的时间，第i条边所需要的时间为ei。地震发生以后，由于幽香是一位人生经验丰富，见得多了的长者，她根据以前的经验，知道每次地震以后，每个ei会是一个0到1之间均匀分布的随机实数。并且所有ei都是完全独立的。&nbsp;现在幽香要出发去帮忙修复道路了，她可以使用一个神奇的大魔法，能够选择需要的那n-1条边，同时开始修复，那么修复完成的时间就是这n-1条边的ei的最大值。当然幽香会先使用一个更加神奇的大魔法来观察出每条边ei的值，然后再选择完成时间最小的方案。&nbsp;幽香在走之前，她想知道修复完成的时间的期望是多少呢？&nbsp;</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个数n,m，表示地方的数量和边的数量。其中点从1到n标号。&nbsp;</div>
+<div>接下来m行，每行两个数a,b，表示点a和点b之间原来有一条边。&nbsp;</div>
+<div>这个图不会有重边和自环。&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行输出答案，四舍五入保留6位小数。&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 4<br />
+1 2<br />
+1 5<br />
+4 3<br />
+5 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0.800000</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>提示：&nbsp;</div><br />
+<div><br />
+<div>（以下内容与题意无关，对于解题也不是必要的。）&nbsp;</div><br />
+<div>对于n个[0,1]之间的随机变量x1,x2,...,xn，第k小的那个的期望值是k/(n+1)。&nbsp;</div><br />
+<div></div><br />
+<div>样例解释：&nbsp;</div><br />
+<div>对于第一个样例，由于只有4条边，幽香显然只能选择这4条，那么答案就是4条边的ei中最大的数的期望，由提示中的内容，可知答案为0.8。&nbsp;</div><br />
+<div></div><br />
+<div>数据范围：&nbsp;</div><br />
+<div>对于所有数据：n&lt;=10, m&lt;=n(n-1)/2, n,m&gt;=1。&nbsp;</div><br />
+<div>对于15%的数据：n&lt;=3。&nbsp;</div><br />
+<div>另有15%的数据：n&lt;=10, m=n。&nbsp;</div><br />
+<div>另有10%的数据：n&lt;=10, m=n(n-1)/2。&nbsp;</div><br />
+<div>另有20%的数据：n&lt;=5。&nbsp;</div><br />
+<div>另有20%的数据：n&lt;=8。</div><br />
+</div><br />
+<div></div><br />
+<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

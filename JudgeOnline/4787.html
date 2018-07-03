@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Cerc2016]Appearance Analysis</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4787. [Cerc2016]Appearance Analysis</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4787">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4787">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4787">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>你在萨格勒布拍摄了一张电气工程与计算机&ldquo;C&rdquo;楼的照片，它的尺寸相同的窗户整齐地排列在行列上。一些窗户</div>
+<div>上画着美妙的图案，你现在正在尝试分析有多少本质不同的创意画。我们用一个r行c列的矩形格子图来描述一张照</div>
+<div>片。每个窗户都占据了一个矩形区域，并且所有窗户都有着相同的尺寸。一个窗户里的每个格子要么是空白的（用</div>
+<div>&ldquo;.&rdquo;表示），要么是被画过的（用&ldquo;+&rdquo;表示）。两个窗户的图案被认为是相同的，当且仅当其中有一个窗户旋转</div>
+<div>90度、180度、270度或360度后，放在另一个窗户上会完全匹配（包括边框）。当比较图案时，我们不允许翻转窗</div>
+<div>户。所有窗户都规则地分布在行列中，窗户之间的边框用一格&ldquo;#&rdquo;字符表示。确切地说，在上下相邻的两个窗户</div>
+<div>之间，有恰好一行&ldquo;#&rdquo;字符，同时在第一行窗户之上或者最后一行窗户之下，也有恰好一行&ldquo;#&rdquo;字符。同理，在</div>
+<div>左右相邻的两个窗户之间，有恰好一列&ldquo;#&rdquo;字符，同时在第一列窗户之左或者最后一列窗户之右，也有恰好一列</div>
+<div>&ldquo;#&rdquo;字符。窗户的行数与列数是任意的，窗户的长宽也是任意的，不一定是正方形。但是，每个窗户至少占据一</div>
+<div>个格子，而且所有窗户的尺寸都是相同的。请统计有多少本质不同的创意画。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个正整数r,c(3&lt;=r,c&lt;=111)，分别表示照片的行数和列数。</div>
+<div>接下来r行，每行c个字符，分别表示照片的每一行。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行一个整数，即本质不同的创意画的数量。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>11 16<br />
+################<br />
+#....#++++#+...#<br />
+#....#++.+#+...#<br />
+#....#.++.#++.+#<br />
+#....#....#++++#<br />
+################<br />
+#....#.+..#++++#<br />
+#..++#.+..#++.+#<br />
+#+...#....#.++.#<br />
+#+...#..++#....#<br />
+################</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

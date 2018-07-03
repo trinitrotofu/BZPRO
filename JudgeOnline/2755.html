@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[SCOI2012]喵星人入侵</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2755. [SCOI2012]喵星人入侵</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2755">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2755">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2755">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>a180285幸运地被选作了地球到喵星球的留学生，其实是作为特工去调查喵星人是否有侵略地球的企图。喵星人果</div>
+<div>然打算入侵地球！从a180285口中得到确切消息之后，地球防御小组成员决定制定反侵略计划。喵星到地球的一段</div>
+<div>必经之路可以看作n*m的格点，喵星人将会从地图上的S位置出发，目的地是地球的入口T。为了抵抗喵星人的入侵</div>
+<div>，地球防御小组打算在地图的格点上放置一些炮塔（最多放置K个），炮塔攻击周围的8个方向（8个方向分别是：</div>
+<div>东，南，西，北，东北，西北，东南，西南）（如下左图所示，中间格子的炮塔可以攻击周围的八个格子）。此外</div>
+<div>地球防御小组还可以在地图上放置无限多个障碍，使得喵星人无法从有障碍的格子经过。右图是3*3地图的一个示</div>
+<div>例，其中X表示炮塔，#表示障碍，有炮塔或障碍的格子喵星人都无法经过，在这张地图中喵星人从S走到T受到的伤</div>
+<div>害如下:在S(1,0)处受到伤害为2（炮塔(0,0)和(2,1)能攻击到S）,在空地(1,1)处受到伤害为3（同时被炮塔(0,0)</div>
+<div>和(0,2)和(2,1)攻击），在T(1,2)处受到伤害为2（炮塔(0,2)和(2,1)能攻击到T），于是受到的总伤害为2+3+2=7</div>
+<div>。作为地球防御小组的一员，请你为喵星人布阵，使得喵星人受到的伤害最大。注意如果有多条从S到T的路径，喵</div>
+<div>星人会选择伤害最小的一条。</div>
+<p><span style="font-size: medium"><img height="310" width="656" alt="" src="upload/201204/11(3).jpg" /></span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行为三个整数n，m，K，分别表示地图的长和宽，以及最多能放置的炮塔数量。&nbsp;</div>
+<div>接下来的n行，每行包含m个字符，&lsquo;#&rsquo;表示地图上原有的障碍，&lsquo;.&rsquo;表示该处为空地，</div>
+<div>数据保证在原地图上存在S到T的路径。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出在合理布阵下，喵星人采取最优策略后，会受到的最大伤害。&nbsp;</div>
+<div>注意必须保证在布阵结束后喵星人仍然可以沿一条或以上的路径从起点S到达终点T，</div>
+<div>否则他们组织更大规模的侵略。&nbsp;</div>
+<div>1&lt;=N&lt;=6，1&lt;=M&lt;=20，1&lt;=K&lt;=15，且从S到T的路径必定存在。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3 1<br />
+S.T<br />
+...<br />
+...</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7 <br />
+【提示】 <br />
+样例的一种最优布局方案如下 <br />
+S#T <br />
+.X. <br />
+... </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

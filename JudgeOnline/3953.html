@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[WF2013]Self-Assembly</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3953. [WF2013]Self-Assembly</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3953">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3953">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3953">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>自动化学制造（Automatic Chemical Manufacturing，简称ACM）正在对一个叫自组装（self-assembly）的过程进行实验。在这个过程中，有着天然相互吸引力的分子被混合在溶液中，任由它们聚集组合成更大的结构。但是有一个问题随之出现：有时候，分子们会把自身组合成一个无限大的结构体，以至于把容器撑爆。</div>
+<div></div>
+<div>　　你需要写一个程序来判断一个给定的分子集合是否可能组合成一个无限大的结构体。为了使问题简化，你可以作以下两个假设：</div>
+<div>　　1. 问题被限制在二维平面上。</div>
+<div>　　2. 分子集合中的每个分子都被表示成一个正方形。其中正方形的四条边分别代表分子间相连接的四个表面。</div>
+<div></div>
+<div>　　你将从数据中得到每种分子的描述。每种分子有四个连接标识来分别表示每条边能与另外分子的哪种边相连。连接标识有两种：</div>
+<div>　　● 一个大写字母(A,&hellip;,Z)加上一个 &lsquo;＋&rsquo; 号或一个 &lsquo;－&rsquo; 号。两条边能并在一起当且仅当两者的字母相等且符号相反。比方说，&lsquo;A＋&rsquo; 与 &lsquo;A－&rsquo; 兼容，但与 &lsquo;A＋&rsquo; 或 &lsquo;B－&rsquo; 不兼容</div>
+<div>　　● 两个零 &lsquo;00&rsquo;。这条边将不和任意一条边兼容（包括&lsquo;00&rsquo;）。</div>
+<div></div>
+<div>　　假设每种分子都有无限个，并且每个分子都可以旋转和翻转。当分子将自身组成一个结构体时，相互贴合的边必须能够相互兼容，当然，无论边的连接标识是什么，它都可以不与另外边贴合。</div>
+<div></div>
+<div>　　图 1 是一个由三种分子组成的一个有限的结构体（它们也有可能组成另外的有限结构体）。</div>
+<div><img src="upload/201504/RequireFile_do.jpg" width="1681" height="961" alt="" /></div>
+<div class="probtitle" id="ptit" style="margin: 0px; padding: 0px; font-size: 24pt; text-align: left; font-weight: bold; font-family: 微软雅黑, 黑体, 'Times New Roman';">
+<div></div>
+<div></div>
+</div>
+<div id="pcont1" style="margin: 20px 0px 0px; padding: 0px; font-family: 宋体, 'Times New Roman';">
+<div class="pdcont" style="margin: 0px; padding: 0px; font-family: 'Times New Roman', 宋体; font-size: 14px; color: rgb(32, 0, 0);"></div>
+</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入第一行一个数 n，表示分子的种类。</p>
+<div>第二行包含 n 个由一个空格隔开的长度为 8 的字符串，每个串描述一种分子。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;输出一行一个英文单词，如果能组成无限大的结构体，输出 unbounded，否则输出 bounded。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+A+00A+A+ 00B+D+A- B-C+00C+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>bounded</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;100%的数据 n &le; 40000。</p><br />
+<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

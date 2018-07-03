@@ -1,0 +1,26 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2013]二重镇</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4420. [Shoi2013]二重镇</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4420">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4420">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4420">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>这是一个充满爱的村子，它的名字叫二重镇。在这个爱意浓浓的村子里，居民们的生活快乐又安宁。二重镇呈长条形状，可分为排成一行的N个方格。每个格子可能是空地，也可能是小草、灌木、大树、房屋或城堡中的一种物品。每种物品都有一个等级，小草的等级是1，灌木的等级是2，依此类推。</div>
+<div>你是这个村庄的建造者。你会陆续获得D件物品，你要将它们合理地放置在村庄的空地上。你的目标是要让村子的总人气尽可能大。人气的获得规则在后面说明。关于放置的规则有以下几条：</div>
+<div>第一，每件物品都必须放在一个地方，不可丢弃，如果没有空地了，游戏直接结束；</div>
+<div>第二，物品可以放在一格空地上，或者临时放在仓库里。仓库同时最多只能放一件物品，它一开始是空的。只存在一个仓库；</div>
+<div>第三，一旦物品放在某个空格上，只要符合条件，系统就会自动将一些物品合成一个大的物品，这是强制被动的，也是瞬间的。直到合成结束后，才能放置下一个物品。</div>
+<div>第四，存放在仓库中的物品，随时可以取出放到空地上（但注意不能在合成的过程中放置），也可以一直留在仓库里。</div>
+<div>第五，除非利用仓库，不然不能更改物品的放置顺序；</div>
+<div>总结起来，这个游戏的流程就是获得一个新物品，决定是否将这个物品存入仓库，再决定将仓库中的物品或新物品放到哪个空地上，系统自动判定合成，获得人气，直到所有物品都被放置完毕，或空地用完为止。</div>
+<div>最后是关于合成的规则。合成是自动完成的，也是强制性的。如果有连续两个或以上相邻的格子里有相同等级的物品，它们会自动合成成一个新的物品，新物品的等级比之前高一个级别。合成分三步：</div>
+<div>第一步，确定有多少物品参与合成，这些物品的位置必须连在一起，等级相同。参与合成的物品会全部消失，对应的格子边成空地；</div>
+<div>第二步，假设有A个K级物品参与合成，那么将获得A*(2^B)点人气。例如有一次五棵小草进行了合成，那么总人气就会增加5*(2^1)=10；</div>
+<div>第三步，一个K+1等级的物品会出现在一个格子里。如果K+1大于5，则跳过这步，但第二步中的人气仍然要算，第一步中的旧物品也会被清除。这个高等级的物品只会出现在参与合成的格子上。每个格子会记录最后一次被放置物品的时间，新的物品会出现在该时间最晚的那个格子里，换而言之，就是出现在最近被放置过东西的格子里；</div>
+<div>最后，请注意合成是会触发多次的，比如两个小草合成一个灌木，如果这棵灌木旁边还有其他灌木，合成将继续发生下去。</div>
+<div>现在，给出N和获得物品的顺序及等级，请你要合理地将这些物品放置在一个初始全是空地的村子里，使得村子最终的人气值尽可能高。当所有物品都被放置，或者村子不能再放物品了，都会结束村子的建设，而此时村子里累计人气值就是最终成果。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行给出两个整数N和D，用空格隔开。N表示村庄大小，D表示物品数量。</div>
+<div>第二行为一个字符串，每个字符为'1'..'5'之间的一个字符，表示每天你可以放置的物品的等级。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一个整数，表示你能得到的最大的人气值。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 10<br />
+1132411235</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>168<br />
+【数据规模】<br />
+3<=N<=6<br />
+D<=101<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

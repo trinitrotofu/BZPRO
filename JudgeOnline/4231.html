@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>回忆树</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4231. 回忆树</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4231">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4231">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4231">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>回忆树是树。</div>
+<div>具体来说，是n个点n-1条边的无向连通图，点标号为1~n，每条边上有一个字符（出于简化目的，我们认为只有小写字母）。</div>
+<div>对一棵回忆树来说，回忆当然是少不了的。</div>
+<div>一次回忆是这样的：你想起过往，触及心底&hellip;唔,不对，我们要说题目。</div>
+<div>这题中我们认为回忆是这样的：给定2个点u，v(u可能等于v)和一个非空字符串s，问从u到v的简单路径上的所有边按照到u的距离从小到大的顺序排列后，边上的字符依次拼接形成的字符串中给定的串s出现了多少次。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行2个整数，依次为树中点的个数n和回忆的次数m。</div>
+<div>接下来n-1行，每行2个整数u、v和1个小写字母c，表示回忆树的点u、v之间有一条边，边上的字符为c</div>
+<div>接下来2m行表示m次回忆，每次回忆2行：第1行2个整数u、v，第2行给出回忆的字符串s。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每次回忆，输出串s出现的次数。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12 3<br />
+1 2 w<br />
+2 3 w<br />
+3 4 x<br />
+4 5 w<br />
+5 6 w<br />
+6 7 x<br />
+7 8 w<br />
+8 9 w<br />
+9 10 x<br />
+10 11 w<br />
+11 12 w<br />
+1 7<br />
+wwx<br />
+1 12<br />
+www<br />
+1 12<br />
+w</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+0<br />
+8</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>对于100%的数据，n&lt;=100000,m&lt;=100000,询问串的总长&lt;=300000</div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

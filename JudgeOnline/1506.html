@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2004]曼哈顿</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1506. [NOI2004]曼哈顿</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1506">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1506">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1506">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>P城是M国的著名旅游城市。在市长G先生的治理下，人民安居乐业，城市欣欣向荣。然而，G市长并没有被自己的政</div>
+<div>绩冲昏头脑，他清醒地意识到城市的治理还存在着一些问题，其中之一就是交通问题。 P城有m条横向街道和n条纵</div>
+<div>向街道，横向街道横贯东西，纵向街道纵穿南北，构成了P城整齐的交通网络（如下图所示）。</div>
+<div></div>
+<p><img border="0" src="https://www.lydsy.com/JudgeOnline/images/1506_1.jpg" alt="" /></p>
+<div>由于街道狭窄，每条街道都只允许单向行驶，单向行驶的方向是事先设定好了的。一条横向街道的行驶方向只能是</div>
+<div>向东或者向西，一条纵向街道的行驶方向只能是向南或者向北，逆向行驶是绝对禁止的。 这项限制给交通带来了</div>
+<div>巨大的不便。如图1，很多游人希望从宾馆前往购物中心，但限于街道的行驶方向，他们不得不绕一个大圈才能够</div>
+<div>到达。这个问题一直困扰着G市长，每天他都会收到不少游人的来信，抱怨P城不合理的交通设计。但由于街道数目</div>
+<div>过多，他和他的部下始终不能解决这个问题&hellip;&hellip; 令人高兴的是这个问题不久就可能得以解决。因为最近他们以重</div>
+<div>金聘请了著名的交通规划大师B先生，请他对P城的交通进行有效合理的改造。B先生知道不能通过拓宽街道的方法</div>
+<div>解决问题，因为这样势必影响到街道两旁的旅游景点，这是大家都不希望看到的。于是他准备重新设计街道的行驶</div>
+<div>方向（整条街道的行驶方向），使之尽可能满足大家的要求。 B先生先把P城的街道编号，横向街道由北向南编号</div>
+<div>为1，2，&hellip;&hellip;，m，纵向街道由西向东编号为1，2，&hellip;&hellip;，n。这样任何一个十字路口的位置都可以用一对正整数来</div>
+<div>表示，第一个数是该路口所在的横向街道的编号，第二个数是它所在的纵向街道的编号，这对整数被称为该十字路</div>
+<div>口的坐标。比如图1中宾馆所在的十字路口的坐标是(2,3)。 经过长期调查，他整理出了游人们提得相对集中的一</div>
+<div>些要求。每条要求都可以写成如下的形式：从一个十字路口到另一个十字路口的最短路径的长度必须等于它们之间</div>
+<div>的曼哈顿距离。所谓曼哈顿距离是指两个十字路口在东西方向上的距离加上在南北方向上的距离，坐标分别为(x1,</div>
+<div>y1)和(x2,y2)的两个十字路口之间的曼哈顿距离为|x1-x2|+|y1-y2|。 好了，B先生已经知道了P城目前所有街道的</div>
+<div>行驶方向和游人们提得相对集中的要求，他能不能重新设计街道的行驶方向，使之满足所有要求呢？ 另外，改变</div>
+<div>每条街道的行驶方向都有一定的工作量，工作量的大小因道路而异。B先生不仅想找到一个可行的改造计划，而且</div>
+<div>还希望这个计划的总工作量尽可能小。你能帮帮他吗？</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入文件的第一行有两个正整数m和n，分别表示横向街道和纵向街道的数目。&nbsp;</div>
+<div>第二行是一个长度为m的字符串，由北向南列出了m条横向街道改造前的行驶方向。E表示向东，W表示向西。&nbsp;</div>
+<div>第三行是一个长度为n的字符串，由西向东列出了n条纵向街道改造前的行驶方向。S表示向南，N表示向北。&nbsp;</div>
+<div>第四行有m个非负整数，由北向南列出了改变每条横向街道的行驶方向的工作量。&nbsp;</div>
+<div>第五行有n个非负整数，由西向东列出了改变每条纵向街道的行驶方向的工作量。&nbsp;</div>
+<div>第六行是一个正整数k，表示游人们提得相对集中的要求的数目。&nbsp;</div>
+<div>接下来的k行，每行有四个正整数x1，y1，x2，y2，表示一条要求。</div>
+<div>这条要求的内容是希望从坐标为(x1,y1)的十字路口到坐标为(x2,y2)的十字路口的最短路径的长度等于这两个路口之间的曼哈顿距离。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行是一个字符串，&ldquo;possible&rdquo;或者&ldquo;impossible&rdquo;（引号不输出）。</div>
+<div>输出&ldquo;possible&rdquo;表示可以通过改变街道的行驶方向满足输入数据中的所有要求，</div>
+<div>输出&ldquo;impossible&rdquo;表示无论怎么设计都不可能满足输入数据中的所有要求。&nbsp;</div>
+<div>如果在第一行输出的是&ldquo;possible&rdquo;的话，在第二行输出一个整数，表示最小的总工作量&nbsp;</div>
+<div>【约定】 改变一条街道的行驶方向的工作量不超过10000</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 3<br />
+WE<br />
+NNS<br />
+3 9<br />
+1 4 2<br />
+2<br />
+1 3 2 1<br />
+2 3 2 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>possible<br />
+9</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

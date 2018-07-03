@@ -1,0 +1,24 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>布娃娃</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2161. 布娃娃</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2161">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2161">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2161">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小时候的雨荨非常听话，是父母眼中的好孩子。在学校是老师的左右手，同学的好榜样。后来她成为艾利斯顿第二</div>
+<div>代考神，这和小时候培养的良好素质是分不开的。雨荨的妈妈也为有这么一个懂事的女儿感到高兴。一次期末考试</div>
+<div>，雨荨不知道第多少次，再次考了全年级第一名。雨荨的妈妈看到女儿100分的成绩单时，脸上又泛起了幸福的笑</div>
+<div>容，作为奖励，她给雨荨买了n个布娃娃。细心的雨荨发现，第i个布娃娃有一个耐心值P[i]以及一个魅力值C[i]，</div>
+<div>并且还有能够忍受的耐心值的上限R[i]以及下限L[i]。当一个布娃娃j满足L[j]&lt;=P[i]并且P[i]&lt;=R[j]，那么布娃</div>
+<div>娃j喜欢布娃娃i。雨荨还发现，一个布娃娃有可能喜欢它自己。每个布娃娃心中都有一个谜团，具体来说就是：第</div>
+<div>i个布娃娃想知道喜欢它的布娃娃中，魅力值第i大的布娃娃的魅力值是多少，并且称这个布娃娃的谜团答案为这个</div>
+<div>魅力值的大小，如果不存在，那么这个布娃娃的谜团答案为0。鉴于雨荨的上司栋栋不让题目的数据过大，下面给</div>
+<div>出数据的生成方法：给出16个参数：</div>
+<div>Padd, Pfirst, Pmod, Pprod, Cadd, Cfirst, Cmod, Cprod, Ladd, Lfirst, Lmod, Lprod, Radd, Rfirst, Rmod, Rprod。</div>
+<div>----------------------------------------------------------------------------------------</div>
+<div>P[1] = Pfirst % Pmod, P[i] = (P[i-1] &nbsp; Pprod + Padd + i) % Pmod (i &gt; 1)。</div>
+<div>----------------------------------------------------------------------------------------</div>
+<div>对于C、L、R数组也有类似的得到方式, %代表取余运算。注意：L和R数组生成完之后，如果某个布娃娃的忍耐度上</div>
+<div>限小于下限，那么交换它的上限和下限。当然，雨荨也不会让你告诉她每个布娃娃的谜团答案，因为那样会使输出</div>
+<div>数据很大。所以雨荨希望你告诉她，所有布娃娃谜团答案的和除以19921228的余数是多少。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行有一个整数n，代表布娃娃的个数。</div>
+<div>输入的第二行有16个用空格隔开的整数</div>
+<div>分别代表Padd,Pfirst,Pmod,Pprod,Cadd,Cfirst,Cmod,Cprod,Ladd,Lfirst,Lmod,Lprod,Radd,Rfirst,Rmod,Rprod。</div>
+<div>16个参数均为1到100,000,000中的整数。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一个整数，代表所有布娃娃谜团答案的和除以19921228的余数。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+2 3 4 3 1 4 5 2 3 6 9 1 1 2 3 4 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>密码安全</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4750. 密码安全</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4750">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4750">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4750">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>有些人在社交网络中使用过许多的密码，我们通过将各种形式的信息转化为 01 信号，再转化为整数，可以将这个</div>
+<div>人在一段时间内使用过的密码视为一个长度为 n 的非负整数序列 A_1,A_2,...,A_n 。一个人相邻几次在社交网络</div>
+<div>中使用的密码很有可能是类似的，这使得密码并不是足够安全。为了检验某些人在某些时间段内是否可能受到不安</div>
+<div>全的影响，我们需要计算上述序列的复杂程度。</div>
+<div><img src="upload/201701/aa.jpg" width="833" height="170" alt="" /></div>
+<div></div>
+<div></div>
+<div>的值，这将作为我们评估密码复杂程度的一个部分。由于答案可能很大，你只需要给出答案对10^9+61 取模的值即可。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个正整数 T ，表示有 T 组测试数据。</div>
+<div>接下来依次给出每组测试数据。对于每组测试数据：</div>
+<div>第一行包含一个正整数 n 。</div>
+<div>第二行包含 n 个非负整数，表示 A_1,A_2,?,A_n 。</div>
+<div>保证在一行中的每个整数之间有恰好一个空格，没有其他额外的空格。</div>
+<div>100% 的数据满足：1&le;T&le;200,1&le;n&le;10^5,1&le;&sum;n&le;10^6,0&le;A_i&le;10^9</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据输出一行，包含一个整数，表示答案对10^9+61 取模的值。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+1<br />
+61<br />
+5<br />
+1 2 3 4 5<br />
+5<br />
+10187 17517 24636 19706 18756</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3721<br />
+148<br />
+821283048<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,62 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Nwerc2015]Hole in One一杆进洞</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4431. [Nwerc2015]Hole in One一杆进洞</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4431">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4431">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4431">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Janine recently went to her local game store and bought &ldquo;Hole in One&rdquo;, a new mini-golf game for her computer. As indicated by the name, the objective of the game is to shoot a ball into a hole using just one shot. The game also borrows elements from brick breaker style games: in the playing field, several walls are placed that will be destroyed upon being hit by the ball. The score of a successful shot depends on the number of destroyed walls, so Janine wonders: what is the maximum number of walls that can be hit while performing a &ldquo;Hole in One&rdquo;?</div>
+<div></div>
+<div>For the purposes of this problem you can think of the playing field as a cartesian plane with the initial position of the ball at the origin. The walls are non-intersecting axis-parallel line segments in this plane (i.e., parallel to either the x axis or the y axis). The diameter of the ball is negligible so it is represented as a single point.</div>
+<div></div>
+<div>Figure 1: Illustration of the first sample input: The ball first bounces off two walls at points 1 and 2. When it passes point 3 the wall has already vanished.</div>
+<div>Whenever the ball hits a wall, two things happen:</div>
+<div></div>
+<div>The direction of the ball changes in the usual way: the angle of incidence equals the angle of reflection.</div>
+<div>The wall that the ball touched is destroyed. Following common video game logic, no rubble of the wall remains; it will be as though it vanished.</div>
+<div>The behaviour of the ball is also affected by the power of the shot. In particular, an optimal shot may need to first roll over the hole, then hit some more walls, and only later drop into the hole.</div>
+<div></div>
+<div></div>
+<div>The input consists of:</div>
+<div>one line with one integer n (0&le;n&le;8), the number of walls;</div>
+<div>one line with two integers x and y, the coordinates of the hole;</div>
+<div>nn lines each with four integers x1, y1, x2, and y2 (either x1=x2, or y1=y2, but not both), representing a wall with end points (x1,y1) and (x2,y2).</div>
+<div>The hole is not at the origin and not on a wall. The walls do not touch or intersect each other. No wall lies completely on the x axis or the y axis. All coordinates in the input are integers with absolute value at most 1000.</div>
+<div></div>
+<div></div>
+<div>If there is no way to shoot the ball such that it reaches the hole, print &ldquo;impossible&rdquo;. Otherwise, print the maximum number of walls that can be destroyed in a single &ldquo;Hole in One&rdquo; shot.</div>
+<div></div>
+<div>珍妮最近去当地的游戏商店买了&ldquo;一杆进洞&rdquo;，一个新的迷你高尔夫电脑游戏。正如名称所示，这个游戏的目标是，将球只用一击击进洞里。游戏还借鉴了打砖块风格的游戏元素：在场上，放置了一些墙，它们被球击中就会被摧毁。一个成功的击球的得分取决于破坏墙的数量，所以珍妮不禁要问：在一次&ldquo;一杆进洞&rdquo;中能够摧毁的最多的墙数量是多少？</div>
+<div></div>
+<div>对于这个问题的意向，你可以认为，比赛场地为笛卡尔坐标平面，球的最初位置在原点。墙壁为在该平面中互不相交且与坐标轴平行的线段（即平行于x轴或y轴）。球的直径非常小以至于把它当成一个点。</div>
+<div></div>
+<div>&nbsp;</div>
+<div>图1：第一个样例输入的插图：球首先经过1,2号点，并在3号点时穿过了被摧毁的墙。</div>
+<div><img src="upload/201603/无标题.png" width="467" height="241" alt="" /></div>
+<div>每当球碰到一堵墙，会发生：</div>
+<div>球的方向以通常的方式改变：入射角等于反射角。</div>
+<div>被球触碰的墙被破坏。 游戏逻辑规定，没有墙的废墟存在，认为它消失了。</div>
+<div>球的行为也受到击球的力影响。特别的是，最佳的击球可能需要将鼠标放在洞上，然后摧毁一些墙壁，并且只是延迟入洞。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行一个整数n（0&le;n&le;8），墙壁的数量。</div>
+<div>一行两个整数x和y，洞的坐标。</div>
+<div>n行，每行各有四个整数x1，y1，x2与y2（x1 = x2或y1 = y2，但不会满足两者），表示墙壁的两个端点。</div>
+<div>洞不会在原点也不会在墙上。墙壁不会互相接触或交叉。没有墙会完全在x轴或y轴上。输入的所有的坐标都是整数且绝对值最大1000。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>如果没有办法一击入洞，输出&ldquo;impossible&rdquo;。否则，输出在一次&ldquo;一杆进洞&rdquo;中能够摧毁的最多的墙的数量。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample Input 1<br />
+3<br />
+4 2<br />
+1 1 1 2<br />
+2 1 2 2<br />
+3 1 3 2 <br />
+Sample Input 2<br />
+1<br />
+2 0<br />
+1 -1 1 1 <br />
+Sample Input 3<br />
+2<br />
+-2 4<br />
+2 4 2 2<br />
+0 6 -2 6<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample Output 1<br />
+2<br />
+Sample Output 2<br />
+Impossible<br />
+Sample Output 3<br />
+2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

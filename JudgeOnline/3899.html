@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>仙人掌树的同构</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3899. 仙人掌树的同构</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3899">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3899">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3899">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>首先，先介绍仙人掌树。仙人掌树是一张无向图，但是每个节点最多只会在一个环里面，而且这张图的环全部都是简单环，即A-&gt;B-&gt;C-&gt;A这种。</div>
+<div>比如下图就是一颗仙人掌树。</div>
+<div>&nbsp;<img src="upload/201503/abc.PNG" width="418" height="269" alt="" /></div>
+<div>好的，知道了仙人掌树之后，我们现在要计算一个东西。</div>
+<div>我们现在已经知道了一个N个节点的仙人掌树，称作为原图。接下来，我们要用1-N的一个排列A[1]-A[N]去变换这棵树，具体的，如果原图中有一条边i-j，那么变换出来的图中必须有一条A[i]-A[j]的边。同样的，如果变换出来的图中有一条A[i]-A[j]的边，那么原图中必有一条i-j的边。（简单而言就是点重新编号）</div>
+<div>小A为了超脱宇宙的束缚，必须要知道，有多少种排列，可以使得变换出来的新图和原图是一模一样的，具体的，原图中如果存在一条i-j的边，新图也存在一条i-j的边，新图中存在一条i-j的边，原图中也存在i-j的边。</div>
+<div>方案数目答案mod 1000000003。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行有两个正整数，N和M，节点个数和边的个数。</div>
+<div>接下来M行，每行有2个正整数S，T，表示一条原图的无向边。数据保证没有重边。</div>
+</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>一行一个正整数表示方案书目。</div>
+</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 5<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+1 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>所有的答案包括(i,(i+1) % 5 + 1,(i+2) % 5 + 1,(i+3) % 5 + 1,(i+4) % 5 + 1)和(i,(i+4) % 5 + 1,(i+3) % 5 + 1,(i+2) % 5 + 1,(i+1) % 5 + 1)这两种类型。每种类型的i可以是12345，所以答案是2*5=10。</div><br />
+<div>N&lt;=1000</div><br />
+<div></div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

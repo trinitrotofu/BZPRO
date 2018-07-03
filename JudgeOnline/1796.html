@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2008]Teleporters 传送器</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1796. [Ioi2008]Teleporters 传送器</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1796">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1796">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1796">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">你正在参加一项沿着直线路线自西向东横穿埃及的比赛。开始时你位于这条直线路线的最西端。根据比赛规则，你必须要沿着这条直线路线始终向东行进。
+在这条直线路线上有N 个传送器。每个传送器都有两个端点。每当你到达某个传送器的两个端点之一时，传送器都会立即将你传送到该传送器的另一个端点（注意，根据你所在的端点位置，传送器能够将你从当前位置向东或者向西传送）。当你被传送到另一个端点之后，你必须继续沿这条直线路线向东行进；你无法避开你前进路上的任何传送器端点。绝不会出现两个端点在同一位置的情形。所有端点都严格位于这条直线路线的起点和终点之间。
+每当你被传送一次，你就会获得1分。比赛的目标就是获取尽可能多的分数。为使获得的分数最多，允许你在比赛开始前在这条路线上增设M 个新的传送器。使用这些新的传送器你也同样可以获得分数。
+你可以将这些新传送器的端点设在任何位置上（甚至是非整数坐标点也可以），只要这些坐标点并不出现在已经被另一个端点占用的位置上即可。换句话说，所有传送器的端点位置必须是唯一的。同样，新传送器的端点都必须严格位于这条直线路线的起点和终点之间。
+题目可以保证，不管你如何增设这些传送器，你一定可以到达比赛路线的终点。
+任务
+试编写一个程序，对于给定的N 个传送器的端点位置和你可以增设的新传送器的数目M ，计算你能获得的最高分数。
+限制条件
+1 <= N <= 1,000,000开始时在路线上的传送器的数目
+1 <= M <= 1,000,000你可以增设的新传送器的最大数目
+1 <= WX < EX <= 2,000,000分别为从路线的起点到传送器X 的西端点和东端点的距离
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序必须从标准输入中读入下列数据：
+&#8226;第1行包含一个整数N ，表示开始时在路线上的传送器数目
+&#8226;第2行包含一个整数M，表示你可以增设的新传送器的最大数目
+&#8226;随后的N 行每行描述一个传送器。第i行描述第i个传送器。每行有两个整数Wi 和 Ei，以一个空格分隔。这两个整数分别描述从路线起点到该传送器的两个端点的距离。
+对于给定的这些传送器，没有任何两个端点在同一位置上。比赛路线的起点为位置0，而终点则在位置2,000,001上。
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序必须向标准输出写一行数据，这行数据只包含一个整数，表示你找到的能获得的最高分数。
+
+评测
+在总计30分的测试数据中N <= 500 并且 M <= 500。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+1<br />
+10 11<br />
+1 4<br />
+2 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><img border="0" src="images/1796.jpg"> </p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,41 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Falsita</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3683. Falsita</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3683">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3683">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3683">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">描述<br />
+到海边了呢......<br />
+如果没有那次选择,现在是不是会好些呢......<br />
+都过去了。<br />
+仰望着星空,迎面吹过一阵阵海风,倚靠着护栏,Fine 在海边静静地伫立着,在一个个无际的长夜后,Fine 终于放下了往事的痛楚,得到了治愈。<br />
+但是作为 Fine 的另一重人格的 Falsita 就没那么幸运了。她仍然被各种繁忙的事务困扰着。<br />
+虽然同在一副躯体中,Fine 与 Falsita 的精神世界却相差甚远,Fine 可以轻易地构造出幻梦时,Falsita 却只能停留在现实的痛楚中。<br />
+但是为了生活需要,她们还是需要经常达成共识。<br />
+让我们形式化的描述一下吧。<br />
+她们所在的精神世界是一棵以 1 号节点为根的树,每个树上的节点 u 都有一个权值Wu,她们每个人分别都在一个节点上,达成共识的方法就是两个人都到达一个共识节点(即到达它们的最近公共祖先)。<br />
+一个点 u 与另外一个点 v 之间想要达到共识需要花费的代价为Wu+Wv。<br />
+有时两人的精神有所触动时,有时点的权值会改变成某个数,有时以某个点的子树中的所有点的权值会加上某个数。<br />
+Falsita 和 Fine 经常需要达成共识,每一次询问,已知达成的共识节点,求她们花费的期望代价。</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">输入共 m + 3 行。<br />
+第一行两个整数 n, m ,表示节点个数和操作数。<br />
+第二行 n - 1 个整数Pi,表示节点 i ( i = 2 . . . n ) 的父亲节点的编号。<br />
+第三行 n 个整数Wi。<br />
+接下来 m 行,每行表示一个操作。<br />
+1.&nbsp;S u delta 表示将节点 u 的权值加上 delta 。<br />
+2.&nbsp;M u delta 表示将以节点 u 为根的子树中的所有节点的权值加上 delta。<br />
+3.&nbsp;Q u 表示询问共识节点为 u 时的答案。<br />
+询问保证 u 不是叶子节点。</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">对于每组询问,输出答案,答案精确到小数点后 6 位。<br />
+你的程序输出的答案需要与标准答案之差不超过10^(-5)。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 6<br />
+1 2 2 <br />
+0 -6 3 0 <br />
+S 2 -5<br />
+M 3 8<br />
+S 1 -1<br />
+M 4 7<br />
+M 3 2<br />
+Q 1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2.000000<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">前5个操作后，四个节点的权值分别为-1,-11,13,7。最近公共祖先为1的点对有(1,2),(1,3),(1,4)，权值和分别为-12,12,6，故答案为(-12+12+6)/3=2。<br /><br />
+<br /><br />
+<br /><br />
+对于 100% 的数据,1 &le; n, m &le; 300000, 0&le; |delta|, |Wi|&le; 20000。</span></p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

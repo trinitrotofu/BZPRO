@@ -1,0 +1,110 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>披萨</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3220. 披萨</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3220">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3220">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3220">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div align="left"><span style="font-size: medium">&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">在遥远的Utopia City里，有一种美食让人们为之倾倒：披萨。披萨是一种做工非常讲究的美食，必须由N种原料共同制作（饼皮，红肠，大虾，各种酱料，各种装饰，等等）。Utopia City的主干道上有B个商业园区，每个园区里都有一座PizzaHut大楼；在早先的青铜时代里，PizzaHut的运营方式很简单，一楼是一个巨大的PizzaHut柜台，贩卖各种各样的Pizza。在大楼的其他地方有恰好N家原料商，每一家都供应PizzaHut的一种原料。</span></div>
+<div align="left"><span style="font-size: medium">这样的日子持续了很多年。不知从黑铁时代的哪个年头开始，原料商们觉得售卖单一原料已经无利可图，因此所有的原料商都开始售卖所有的N种原料做Pizza。原料商们提供的原料良莠不齐，所幸可以用一个统一指标&mdash;&mdash;质量来衡量。我们假设第I个商业园区里第J个原料商提供的第K种原料的质量为Q[i,j,k]。（1&lt;=i&lt;=B,1&lt;=j&lt;=N,1&lt;=k&lt;=N）。</span></div>
+<div align="left"><span style="font-size: medium">问题又来了。一楼的PizzaHut柜台由于进货渠道混乱已经毫无消息，而虽然一家原料商能供应做Pizza的所有原料，但要在所有的B*N个原料店中找到一家在各种原料上都可圈可点的店面是十分困难的。国家的披萨工业陷入了困境。</span></div>
+<div align="left"><span style="font-size: medium">所幸的是这个问题最终得到了解决：位于同一座大楼里的原料商们开始进行合作推广，贩售由两个原料商共同提供原料制作的Pizza。人们发现两种来自不同商铺的相同原料混合将带来意想不到的效果，使得原先的美味上升了一大个层次。</span></div>
+<div align="left"><span style="font-size: medium">具体地说，两种相同原料的混合将导致他们对应的质量进行相乘。因此，一个由第I座大楼里第J1和第J2个商户联手制作的披萨，其质量是&Sigma;(Q[i,j1,k]*Q[i,j2,k])(1&lt;=k&lt;=n)。这也是这种披萨的最终定价。</span></div>
+<div align="left"><span style="font-size: medium">&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">Tarat和Ratar通过一个偶然机会得到了Utopia City的限期居留权。虽然限期很长，但他们还是希望能抓紧时间，品尝城市里的美味披萨。在若干天后，他们尝遍了所有市场上售卖的B*N*(n-1)/2种披萨。虽然在接下来去哪里吃披萨起了很大的争执，但是最终他们还是达成了一个共识：只在一个园区里吃披萨实在是太无聊了。</span></div>
+<div align="left"><span style="font-size: medium">于是Tarat和Ratar找到了Polaris，她是一个地下披萨商，经常在两个不同大楼的原料商里进原料做披萨。和上面的公式类似，如果Polaris从第I1座大楼的第J1个商户，以及第I2座大楼的第J2个商户那里进原料，做出的披萨质量和价格就是&Sigma;(Q[i1,j1,k]*Q[i2,j2,k]) (1&lt;=k&lt;=n)。她会严格按照这个价格将披萨卖给Tarat和Ratar，不收取额外费用。</span></div>
+<div align="left"><span style="font-size: medium">&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">计算之后，他们发现剩余的时间不是很多。Tarat和Ratar决定把原料商限制在两座楼B1和B2里。(1&lt;=B1&lt;B2&lt;=B)接下来的每一天，他们都会从两座楼里的所有2N个商店里进原料，请Polaris做出N个披萨。具体来说，Polaris将指定一个排列P=(P1,P2,..,Pn)，之后她做出的N个披萨中，第I个披萨的原料来自第B1个大楼的第I个供货商，以及第B2个大楼的第Pi个供货商，因此第I个披萨的价格是&Sigma;(Q[B1,i,k]*Q[B2,P[i],k])。</span></div>
+<div align="left"><span style="font-size: medium">很明显，排列P一共有N!种可能，因此Tarat和Ratar决定在这里逗留N!天，在这些日子里，Polaris将严格按照字典序，枚举P的每一种可能来制作披萨。我们假设某一天制作的披萨价格为(Prize[1],Prize[2],Prize[3],&hellip;,Prize[n])。</span></div>
+<div align="left"><span style="font-size: medium">&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">还有最后一个问题。Tarat和Ratar都是懒人，而Polaris的店面在很隐秘的地方，要走很久的路才能到。每当Polaris做好一个披萨，她就会要求他们随便派一个人马上过来取，并支付所需费用。Tarat和Ratar讨论了很久，最终得到了一个看似很公平的方案：</span></div>
+<div align="left"><span style="font-size: medium">&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">在开始的安排中，Tarat和Ratar将均摊吃披萨的费用。由于1元钱不能分割，当某个Prize[x]是奇数时，就有一个人要多出1元钱。在最终安排中，Tarat和Ratar会让Polaris提前告诉他们今天所有披萨的价格Prize[]。如果所有的Prize[]都是偶数，他们会多花几个钱，让城里的另一个附近的朋友Albus帮他们拿披萨。否则他们将轮流出动，而待在住处的人的代价就是要负责今天所有披萨价格的零头。在第一个这样的日子里，Tarat将负责去拿披萨，而第二次遇到则是Ratar负责，第三次遇到又由Tarat负责，如此往复。</span></div>
+<div align="left"><span style="font-size: medium">&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">Tarat并不在乎钱，其实他也不是很在乎披萨，他只是很懒不想动。</span></div>
+<div align="left"><span style="font-size: medium">特别是不想比Ratar还忙。</span></div>
+<div align="left"><span style="font-size: medium">但是Tarat发现根据上面的计划，只会有两种可能：(1)他比Ratar多跑一天路。(2)他和Ratar负责跑路拿披萨的天数相同。</span></div>
+<div align="left"><span style="font-size: medium">而Ratar是一个很死板的人，她会强制两个人严格按照规则办事。</span></div>
+<div align="left"><span style="font-size: medium">于是Tarat偷懒的最后希望就在于两座建筑B1和B2的选择，虽然这个选择权在Ratar手上。</span></div>
+<div align="left"><span style="font-size: medium">他相信只要他说服Ratar选择某两座建筑B1和B2，他就不需要比Ratar多跑一天路。</span></div>
+<div align="left"><span style="font-size: medium">但是Ratar看出了他的计划。因此她想要选择两座建筑B1和B2(B1&lt;B2)，使得根据上面的安排，Tarat需要多跑一天的路。</span></div>
+<div align="left"><span style="font-size: medium"><b>你的任务，就是求出有多少种可行的建筑对</b><b>(B1,B2)</b><b>，使得</b><b>Tarat</b><b>必须多跑一天路。</b></span></div>
+<div align="left"><span style="font-size: medium"><b>&nbsp;</b></span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div align="left"><span style="font-size: medium">本题有多组数据，第一行就是数据组数T。</span></div>
+<div align="left"><span style="font-size: medium">每组数据的开始是两个数：N和B，分别表示披萨原料的种数和Pizzahut大楼的数量。注意一座Pizzahut大楼里的原料商数量也恰好为N。</span></div>
+<div align="left"><span style="font-size: medium">现在输入矩阵Q[B][N][N]的信息，Q[i][j][k]表示第i个建筑中第j个原料商提供的第k种原料质量。接下来将依次输入B个矩阵，依次表示第i个建筑的信息。</span></div>
+<div align="left"><span style="font-size: medium">为了防止输入文件过于庞大，我们把输入方式分为两种：raw和random，在每个建筑信息的第一行进行标识。</span></div>
+<div align="left"><span style="font-size: medium">如果输入方式是raw，那么接下来N行N列表示Q[i]的值。&nbsp;</span></div>
+<div align="left"><span style="font-size: medium">如果输入方式是random，那么下一行将有三个参数Si,Pi,Ai用于生成矩阵Q[i]。</span></div>
+<div align="left"><span style="font-size: medium">为了生成矩阵Q[i]，需要先生成长度为n^2的序列Xi[j]。</span></div>
+<div align="left"><span style="font-size: medium">Xi[j]的生成方式如下：</span></div>
+<div align="left"><span style="font-size: medium">Xi[1] = Si,Xi[k] = (Pi*Xi[k-1]+Ai) mod M。</span></div>
+<div align="left"><span style="font-size: medium">M=2^32 = 4294967296。</span></div>
+<div align="left"><span style="font-size: medium">之后我们可以通过Xi[j]计算Q[i,j,k]：</span></div>
+<div align="left"><span style="font-size: medium">Q[i,j,k] = (floor(Xi[(j-1)*n+k]/D) mod 100)+1</span></div>
+<div align="left"><span style="font-size: medium">D=2^12 = 4096。</span></div>
+<div align="left"><span style="font-size: medium">Floor(x)表示取下整。样例里有这种输入方式的一个例子。</span></div>
+<div align="left"><span style="font-size: medium">注意：一个数据里可以同时存在两种输入方式。Si,Pi,Ai是纯粹的随机数种子，分析它们对解题完全没有意义。</span></div>
+<div align="left"><span style="font-size: medium">&nbsp;</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div align="left">&nbsp;</div>
+<div align="left"><span style="font-size: medium">T行，每行一个数表示答案。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+3 3<br />
+raw<br />
+82 51 44<br />
+41 10 38<br />
+23 33 58<br />
+raw<br />
+19 84 64<br />
+17 43 44<br />
+30 81 57<br />
+raw<br />
+61 84 31<br />
+52 90 82<br />
+29 16 45<br />
+4 8<br />
+random<br />
+11708 9521 15107<br />
+random<br />
+5874 19373 36492<br />
+random<br />
+11504 36617 16182<br />
+random<br />
+33487 35453 8669<br />
+random<br />
+33741 25749 9927<br />
+random<br />
+12099 17221 19740<br />
+random<br />
+5587 2589 14716<br />
+random<br />
+36950 17607 32881<br />
+10 2<br />
+random<br />
+29163 283 8737<br />
+raw<br />
+55 23 6 47 7 89 4 96 77 97<br />
+19 20 85 35 72 70 77 71 32 82<br />
+44 40 75 68 9 66 10 40 51 46<br />
+47 64 73 77 40 49 89 81 50 95<br />
+20 88 5 98 52 3 3 26 35 48<br />
+25 55 29 49 30 27 70 73 85 93<br />
+6 27 81 74 51 21 76 71 12 66<br />
+6 49 65 59 92 70 95 56 4 21<br />
+98 39 50 13 22 38 31 70 63 29<br />
+3 60 93 22 81 95 7 21 12 49<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+5<br />
+1<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">在第一个数据中，只有(B1,B2)=(1,2)满足要求。为了对题目有更深了解，我们可以来分析这个情况。用(i,j)表示Polaris使用第1个建筑里的第i个供货商和第2个建筑里第j个供货商两个商人的原料做出Pizza的价格。<br /><br />
+那么(1, 1)的价格是82*19+51*84+44*64 = 8658，(1, 2)的价格是82*17+51*43+44*44 = 5523，(1, 3)的价格是82*30+51*81+44*57 = 9099，(2, 1)的价格是41*19+10*84+38*64 = 4051，(2, 2)的价格是41*17+10*43+38*44 = 2799，(2, 3)的价格是41*30+10*81+38*57 = 4206，(3, 1)的价格是23*19+33*84+58*64 = 6921，(3, 2)的价格是23*17+33*43+58*44 = 4362，(3, 3)的价格是23*30+33*81+58*57 = 6669。<br /><br />
+在所有的3!=6天中，有5天出现了至少1个奇数价格的披萨，需要两个人跑腿：<br /><br />
+[(1, 1), (2, 2), (3, 3)]，[(1, 2), (2, 1), (3, 3)]，[(1, 2), (2, 3), (3, 1)]，[(1, 3), (2, 1), (3, 2)]，[(1, 3), (2, 2), (3, 1)]<br /><br />
+因此有三天Tarat要出门拿披萨，有两天Ratar要出门。<br /><br />
+而(1,1), (2,3), (3,2)这一天因为披萨价格都是偶数，他们会让Albus去拿披萨。<br /><br />
+在第二个数据中，使用了random的构造方法。为了让你验证你的构造正确性，我们给出X1[i]的值和Q[1]的值：<br /><br />
+X1[1] = 11708,X1[2] = 111486975,X1[3] = 610581970,X1[4] = 2260199989,X1[5] = 1577957416,X1[6] = 4231938731,X1[7] = 1200469182,X1[8] = 759122273,X1[9] = 3468184468,X1[10] = 875763287,X1[11] = 1610749098,X1[12] = 2908930445,X1[13] = 1977657344,X1[14] = 138961667,X1[15] = 204119446, X1[16] = 2096042681.<br /><br />
+Q[1, 1, 1] = 3, Q[1, 1, 2] = 19, Q[1, 1, 3] = 68, Q[1, 1, 4] = 7,<br /><br />
+Q[1, 2, 1] = 44, Q[1, 2, 2] = 89, Q[1, 2, 3] = 84, Q[1, 2, 4] = 33,<br /><br />
+Q[1, 3, 1] = 25, Q[1, 3, 2] = 10, Q[1, 3, 3] = 50, Q[1, 3, 4] = 89,<br /><br />
+Q[1, 4, 1] = 27, Q[1, 4, 2] = 27, Q[1, 4, 3] = 34, Q[1, 4, 4] = 30.<br /><br />
+你可以手动watch判断正确性。这个数据里合法的(B1,B2)是(1, 4), (1, 6), (2, 5), (4, 5), (4, 6)。<br /><br />
+数据范围<br /><br />
+对于所有数据：1&lt;=Q[i,j,k]&lt;=100，生成数据用的Si,Pi,Ai&lt;=40000，T&lt;=5，&Sigma;(B)&lt;=8000。<br /><br />
+考虑读入数据可能占用大部分时间，测试数据输入文件大小&lt;=3000KB。<br /><br />
+在大数据中，以raw读入的Q[i]大约有3%~10%，也就是说大部分数据是random的。<br /><br />
+对于100%的数据：N&lt;=60,B&lt;=4000.&Sigma;(B)&lt;=8001.</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

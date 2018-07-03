@@ -1,0 +1,70 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeiJing wc2012]孵化者 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2664. [BeiJing wc2012]孵化者 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：3 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2664">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2664">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2664">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">&ldquo;我要将有关魔法和奇迹的一切，封印于卡片之中！&rdquo; <br />
+&ldquo;这个心愿&bdquo;&bdquo;要是这个心愿能够实现&bdquo;&bdquo;&rdquo; <br />
+&ldquo;对，这样你我都将化为卡片！&rdquo; <br />
+&nbsp;<br />
+现在，孵化者被封印在了一张卡片里。这张卡片的效果是：可以使一张魔法<br />
+卡片变为两张（可能是其他类型的）魔法卡片。显然，它是非常珍贵且有价值的<br />
+卡片。 <br />
+&nbsp;<br />
+我们接下来要关注的是一个以它为背景的，用于训练SpellCard的使用技巧，<br />
+以及：体现了孵化者无与伦比的再生能力的单人卡片游戏，叫做《Incubator》。 <br />
+&nbsp;<br />
+游戏的道具是一些卡片，分为两类，一类是 Spell，一类是 Witch。我们用大<br />
+写字母&rsquo;A&rsquo;、&rsquo;B&rsquo;、&bdquo;&bdquo;来表示不同的 Spell，用小写字母&rsquo;a&rsquo;、&rsquo;b&rsquo;、&bdquo;&bdquo;来表示不同<br />
+的 Witch。 <br />
+&nbsp; 游戏用到两个牌堆，我们称它们为 S 堆和 W 堆，S 堆中只可能有 Spell，W<br />
+堆中只可能有 Witch。 <br />
+&nbsp; 游戏开始时，S 堆仅有一张卡片&rsquo;S&rsquo;，而 W堆中会有若干张卡片，我们把这个<br />
+信息用一个字符串 w来表示，其中 w的首个字符对应 W堆顶部的卡片，w的下<br />
+一个字符对应 W堆从上向下数第二张卡片（如果有的话） ，依次类推。 <br />
+&nbsp; 游戏的目标是进行操作，使得这两个牌堆都变成空的，一共有两种操作： <br />
+&nbsp;&nbsp;&nbsp; 1. 使用魔法消灭 Witch： <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果S 堆顶部的Spell克制 W堆顶部的 Witch 才可以进行。 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 使用后，这两张卡片都被移除。 <br />
+&nbsp;&nbsp;&nbsp; 2. 使用Incubator 进行孵化： <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果S 堆非空就可以进行。 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 需要依照某一孵化规则。 <br />
+&nbsp; 将S堆顶部的卡片移除， 由孵化规则在S堆顶部加入两张新的卡片。 <br />
+&nbsp;&nbsp; <br />
+&nbsp; 这个游戏一共有N1个克制关系以及 N2个孵化规则。 <br />
+每一个&ldquo;克制&rdquo;关系由一个字符串给出，例如： &ldquo;A-&gt;a&rdquo;表示&rsquo;A&rsquo;克制&rsquo;a&rsquo;。 <br />
+每一个孵化规则也由一个字符串给出，例如： &ldquo;S-&gt;AB&rdquo; ，表示可以将&rsquo;S&rsquo;从堆<br />
+顶移除，之后加入&rsquo;A&rsquo;和&rsquo;B&rsquo;，其中&rsquo;A&rsquo;在&rsquo;B&rsquo;的上面。 <br />
+&nbsp;<br />
+在给定规则以及串 w的情形下，如果存在一个有限多步就可以使得两牌堆均<br />
+为空的操作方法，那么我们称：这个游戏是有解的。 <br />
+&nbsp;<br />
+你的任务是：给定规则以及 T个串：w1、w2、&bdquo;&bdquo;、wT，分别判定这个规则<br />
+和串所对应的游戏是否有解。 </span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行一共有两个正整数：N1、N2。 <br />
+接下来 N1行，每行一个串，表示一个克制关系。 <br />
+接下来 N2行，每行一个串，表示一个孵化规则。 <br />
+接下来 T 行，每行一个串 wi。&nbsp;<br />
+</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4"><br />
+一共输出 T行： <br />
+每行为&ldquo;YES&rdquo;或&ldquo;NO&rdquo;（不包含引号），表示对应的串和规则组成的游戏是<br />
+否是有解的。（有解则输出&ldquo;YES&rdquo;，否则输出&ldquo;NO&rdquo;） </font></p>
+<p><span style="font-size: medium"><br />
+</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>  2 1 <br />
+  A->a <br />
+  B->b <br />
+  S->AB <br />
+  ab <br />
+  cd <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>YES <br />
+NO <br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>对于100%的数据： 1&le;&nbsp; N1&le;20， 1 &le;&nbsp; N2&le;20， 1 &le;&nbsp; |wi|&le;&nbsp; 20， 1&le;&nbsp; T&le;100。 <br /><br />
+保证所有的克制关系串都是合法的，即具有&ldquo;A-&gt;a&rdquo;的形式，其中 A 是某<br /><br />
+个大写字母，a 是某个小写字母。 <br /><br />
+保证所有的孵化规则串都是合法的，即具有&ldquo;S-&gt;AB&rdquo;的形式，其中 S、A、<br /><br />
+B是某些大写字母，它们可以相同。 <br /><br />
+&ldquo;-&gt;&rdquo;是一个长度为 2 的串，其首个字符的 ASCII 码为 45，下一个字符的<br /><br />
+ASCII 码为62 （均是在十进制下） ，这个符号也是 C++中的 Structure dereference。 <br /><br />
+保证串 wi仅包含小写字母。 <br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

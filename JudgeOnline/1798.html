@@ -1,0 +1,50 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ahoi2009]Seq 维护序列seq
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1798. [Ahoi2009]Seq 维护序列seq
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1798">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1798">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1798">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">    老师交给小可可一个维护数列的任务，现在小可可希望你来帮他完成。
+    有长为N的数列，不妨设为a1,a2,…,aN 。有如下三种操作形式：
+(1)把数列中的一段数全部乘一个值;
+(2)把数列中的一段数全部加一个值;
+(3)询问数列中的一段数的和，由于答案可能很大，你只需输出这个数模P的值。
+
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行两个整数N和P(1≤P≤1000000000）。第二行含有N个非负整数,从左到右依次为a1,a2,…,aN, (0≤ai≤1000000000,1≤i≤N)。第三行有一个整数M，表示操作总数。从第四行开始每行描述一个操作，输入的操作有以下三种形式：
+操作1：“1 t g c”(不含双引号)。表示把所有满足t≤i≤g的ai改为ai×c (1≤t≤g≤N,0≤c≤1000000000)。
+操作2：“2 t g c”(不含双引号)。表示把所有满足t≤i≤g的ai改为ai+c (1≤t≤g≤N,0≤c≤1000000000)。
+操作3：“3 t g”(不含双引号)。询问所有满足t≤i≤g的ai的和模P的值
+(1≤t≤g≤N)。
+       同一行相邻两数之间用一个空格隔开，每行开头和末尾没有多余空格。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>    对每个操作3，按照它在输入中出现的顺序，依次输出一行一个整数表示询问结果。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7 43<br />
+1 2 3 4 5 6 7<br />
+5<br />
+1 2 5 5<br />
+3 2 4<br />
+2 3 7 9<br />
+3 1 3<br />
+3 4 7<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+35<br />
+8<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>【样例说明】<br />
+<br />
+初始时数列为(1,2,3,4,5,6,7)。<br />
+经过第1次操作后，数列为(1,10,15,20,25,6,7)。<br />
+对第2次操作，和为10+15+20=45，模43的结果是2。<br />
+经过第3次操作后，数列为(1,10,24,29,34,15,16}<br />
+对第4次操作，和为1+10+24=35，模43的结果是35。<br />
+对第5次操作，和为29+34+15+16=94,模43的结果是8。<br />
+<br />
+<br />
+<br />
+测试数据规模如下表所示<br />
+<br />
+数据编号12345678910<br />
+N=10100010001000060000700008000090000100000100000<br />
+M=10100010001000060000700008000090000100000100000<br />
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

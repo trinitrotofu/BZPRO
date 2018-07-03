@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>最短路(road)</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3040. 最短路(road)</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：200 MiB</span> <span class="ui label">时间限制：60 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3040">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3040">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3040">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">N个点，M条边的有向图，求点1到点N的最短路（保证存在）。<br />
+1&lt;=N&lt;=1000000，1&lt;=M&lt;=10000000</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
+第一行两个整数N、M，表示点数和边数。<br />
+第二行六个整数T、rxa、rxc、rya、ryc、rp。</span></p>
+<p><span style="font-size: medium">前T条边采用如下方式生成：<br />
+1.初始化x=y=z=0。<br />
+2.重复以下过程T次：<br />
+x=(x*rxa+rxc)%rp;<br />
+y=(y*rya+ryc)%rp;<br />
+a=min(x%n+1,y%n+1);<br />
+b=max(y%n+1,y%n+1);<br />
+则有一条从a到b的，长度为1e8-100*a的有向边。</span></p>
+<p><span style="font-size: medium">后M-T条边采用读入方式：<br />
+接下来M-T行每行三个整数x,y,z，表示一条从x到y长度为z的有向边。</span></p>
+<p><span style="font-size: medium">1&lt;=x,y&lt;=N，0&lt;z,rxa,rxc,rya,ryc,rp&lt;2^31</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
+一个整数，表示1~N的最短路。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3<br />
+0 1 2 3 5 7<br />
+1 2 1<br />
+1 3 3<br />
+2 3 1<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>【注释】<br /><br />
+请采用高效的堆来优化Dijkstra算法。</p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

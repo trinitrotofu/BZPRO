@@ -1,0 +1,23 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Gty的游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3729. Gty的游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3729">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3729">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3729">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>某一天gty在与他的妹子玩游戏。<br />
+妹子提出一个游戏，给定一棵有根树，每个节点有一些石子，每次可以将不多于L的石子移动到父节点，询问<br />
+将某个节点的子树中的石子移动到这个节点先手是否有必胜策略。<br />
+gty很快计算出了策略。<br />
+但gty的妹子十分机智，她决定修改某个节点的石子或加入某个新节点。<br />
+gty不忍心打击妹子，所以他将这个问题交给了你。<br />
+另外由于gty十分绅士，所以他将先手让给了妹子。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行两个数字，n和L,n&lt;=5*10^4,L&lt;=10^9<br />
+第二行n个数字，表示每个节点初始石子数。<br />
+接下来n-1行，每行两个整数u和v，表示有一条从u到v的边。<br />
+接下来一行一个数m，表示m组操作。<br />
+接下来m行，每行第一个数字表示操作类型<br />
+若为1，后跟一个数字v，表示询问在v的子树中做游戏先手是否必胜。<br />
+若为2，后跟两个数字x，y表示将节点x的石子数修改为y。<br />
+若为3，后跟三个数字u,v,x，表示为u节点添加一个儿子v，初始石子数为x。<br />
+在任意时刻，节点数不超过5*10^4。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对于每个询问，若先手必胜，输出&quot;MeiZ&quot;,否则输出&quot;GTY&quot;。<br />
+另，数据进行了强制在线处理，对于m组操作，除了类型名以外，都需要异或之前回答为&quot;MeiZ&quot;的个数。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 1000<br />
+0 0<br />
+1 2<br />
+1<br />
+1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>GTY</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

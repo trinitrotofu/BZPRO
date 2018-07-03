@@ -1,0 +1,32 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Jsoi2015]地铁线路</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4489. [Jsoi2015]地铁线路</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4489">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4489">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4489">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>【故事背景】</div>
+<div>JSOI王国的地铁又涨价了！正在JSOI旅游的JYY非常不开心L。这次票价改革后，乘客并不是按照乘坐的距离收费，</div>
+<div>而是按照换乘次数进行收费的！JYY也要按此更新他的线路搜索软件了。JYY心想，在支付同样票价的前提下，岂不</div>
+<div>是坐的站数越多，自己就赚的越多嘛！于是JYY希望开发一个线路搜索软件，使得自己总能够&ldquo;赚&rdquo;的最多！JSOI</div>
+<div>地铁一共有N条线路S个车站。第i条地铁线路包含Li个站。所有地铁线路都是一条从首发站到终点站的直线型线路</div>
+<div>（不存在例如北京地铁2号线或者10号线那样奇葩的环线）。同时，每一条地铁线路都是双向运行的。如果有不同</div>
+<div>的线路经过同一个地铁站，那么乘客就可以在那个地铁站进行换乘。根据JSOI地铁的最新收费方式，每当乘客进入</div>
+<div>一列正在运行的地铁列车，都需要支付1的费用。因此，假设乘客一共换乘了x次，那么就需要总共支付x+1的乘车</div>
+<div>费用。由于地铁线路都是双向运行的，因此在任意一站都可以换乘该线地铁反方向运行的列车。不过，需要注意的</div>
+<div>是，即使是换乘同样线路的反方向列车，也是需要付费的（因为总是需要先下车，再重新上车的）。JYY现在要从A</div>
+<div>站坐地铁前往B站。假设对于任意一条地铁线路，相邻两站间地铁的运行时间均为1分钟，并且列车停站和换乘均不</div>
+<div>耗时间，JYY想知道</div>
+<div>1)他最少需要支付的票价是多少钱；</div>
+<div>2)在支付最少票价的前提下，他最多可以乘坐多少分钟的地铁。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个正整数N和S；</div>
+<div>第二行包含S个由空格隔开的字符串，表示S个站点的站名；每个字符串长度不超过40，</div>
+<div>并且仅包含字母，数字，以及横线&lsquo;-&rsquo;；</div>
+<div>接下来N行，每行描述一条地铁线路；</div>
+<div>对于其中第i行，首先包含一个正整数Li，接下来Li个字符串，表示这条地</div>
+<div>铁线路上的站点名称；一条线路允许多次停靠同一个站点。</div>
+<div>第N+3行，包含两个不同的字符串A和B，表示JYY目前在A站，希望坐地铁前往B站。</div>
+<div>2&lt;=N&lt;=50,000,S&lt;=3?10N,Sigma(iLi)&lt;=8*10^5</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行包含一个整数C，表示JYY最少需要支付的乘车费用；<br />
+第二行包含一个整数T，表示JYY在花费C的前提下，可以乘坐地铁的最长时间。<br />
+如果不存在两个站点之间的路线，第一行输出&ldquo;-1&rdquo;，第二行输出&ldquo;0&rdquo;（均不包含引号）。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 5 <br />
+A B C D E <br />
+4 A B C D <br />
+3 C D E <br />
+A D </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+3<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

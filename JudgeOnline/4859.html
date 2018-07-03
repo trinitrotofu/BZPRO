@@ -1,0 +1,82 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeiJing2017]机动训练</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4859. [BeiJing2017]机动训练</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4859">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4859">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4859">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>AM 4:45</div>
+<div>又是晴朗的好天气。</div>
+<div>AM 5:00</div>
+<div>不要嘛，再睡一会</div>
+<div>AM 5:05</div>
+<div>呜&hellip;&hellip;欺负人</div>
+<div>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</div>
+<div>睡眼朦胧的菜酱(?)已经被二爷拉起来晨跑了。而这个时间你在做什么呢？咳咳，言归正传，最近菜酱的训练遇到</div>
+<div>了点小麻烦。凌晨绕格瑞赛亚岛跑一圈是基本，在那之后，菜酱还要接受严格的机动训练所谓机动训练，就是在紧</div>
+<div>急情况(?)下，高速且隐蔽地从位置 X 移动到位置 Y 的训练一般来说， X 和 Y 是根据二爷的心情随机决定的但</div>
+<div>是由于菜酱已经熟悉了地形，每次总是能找到不太费劲的路径，二爷决定增大难度所谓增大难度，其实就是指定整</div>
+<div>条路径，这样菜酱就没办法抄近道了当然，由于是为了实战而进行的训练，二爷也不会随便乱指定路径，至少不会</div>
+<div>故意绕路然后发生的问题就是，如何才能&ldquo;随机&rdquo;一整条路径出来二爷统计了全岛所有的合法路径，打算每次在这</div>
+<div>个表格里随机抽一条出来但是很快二爷发现，许多路径所经过的地形是完全相同的，这类路径的训练会更加有用于</div>
+<div>是二爷修改了随机策略，地形较为常见的路径权重会变得更大。一次偶然的机会，菜酱看到了二爷的随机策略，并</div>
+<div>发动技能&quot;过目不忘(?)&quot;记了下来现在你要帮菜酱分析数据。为什么是你？当然是因为否则就会被菜酱爆头(并不)</div>
+<div></div>
+<div>整个岛可以看作一片 n*m 的区域，每个格子有自己的地形。一条路径由一系列八连通的格子组成，两个格子八连</div>
+<div>通当且仅当这两个格子拥有公共的顶点。定义一条&ldquo;机动路径&rdquo;如下：1、它是一条不自交的路径，即路径上任意</div>
+<div>两个格子都不是同一个2、它的起点和终点处于不同位置，换言之这条路径至少包含 2 个格子3、从起点开始，任</div>
+<div>何一步只能向不远离终点的方向移动，这里不远离指的是 x 和 y 两个方向都不远离举例说明(字符画需要用等宽</div>
+<div>字体查看)：</div>
+<div>.....y ...... .---.</div>
+<div>-++... ---... .-x-.</div>
+<div>-x+... -x+..y .-+-.</div>
+<div>---... ---... ..y..</div>
+<div>图中加号和减号标明了与 x 八连通的所有格子，其中加号是&ldquo;不远离 y&rdquo;的方向因此可以看出，如下路径是机动</div>
+<div>路径：</div>
+<div>++++++y ......+y .......y</div>
+<div>+...... .....++. ......+.</div>
+<div>+...... ..++++.. ...+++..</div>
+<div>x...... x++..... x+++....</div>
+<div>而如下路径不是机动路径：</div>
+<div>\../---y .......y .x.</div>
+<div>|--..... ....../. /..</div>
+<div>|....... x..../.. \..</div>
+<div>x....... .\--/... .y.</div>
+<div>需要注意的是，某些不合法的路径甚至比机动路径还要短，这是因为机动路径不是按照长度来定义的。接下来定义</div>
+<div>一条机动路径的地形，岛上的地形由一个矩阵给出，如</div>
+<div>.**.</div>
+<div>*..*</div>
+<div>*..*</div>
+<div>.**.</div>
+<div>那么，一条机动路径的地形序列就是它所经过的地形排成一列，如</div>
+<div>x-\.</div>
+<div>...\</div>
+<div>...|</div>
+<div>...y</div>
+<div>的地形序列就是&quot;.****.&quot;(不包含引号)每条机动路径的权重就是与之拥有相同地形序列的机动路径数量之和，例如</div>
+<div>与这条路径拥有相同地形序列的路径有</div>
+<div>./-y y... ...x x-\. ./-x x... ...y y-\.</div>
+<div>/... |... ...| ...\ /... |... ...| ...\</div>
+<div>|... \... .../ ...| |... \... .../ ...|</div>
+<div>x... .\-x y-/. ...y y... .\-y x-/. ...x</div>
+<div>共 8 条，注意回文时正反算两条，以及自己也算一条。所以这条机动路径的权重是 8，同时所有这 8 条机动路径</div>
+<div>的权重都是 8。现在你需要统计所有的机动路径权重之和。如果对这种统计方式没有直观的感受，可以查看样例说明。</div>
+<div></div>
+<div></div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数 n, m，表示岛的大小。</div>
+<div>接下来 n 行，每行 m 个字符，表示岛的地形。</div>
+<div>字符集随数据规模给出。</div>
+<div>对于 100%的数据， 1 &le; n, m &le; 30，字符集由大小写字母，数字和&quot;.&quot;、 &quot;*&quot;构成</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>仅一个数，表示所有机动路径的权重之和。</div>
+<div>由于这个数可能很大，你只需要输出它对 1000000009 取模的结果。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 2<br />
+.*<br />
+*.</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>72<br />
+【样例解释 1】<br />
+用中括号括起来的一些数对表示一条机动路径，坐标先行后列<br />
+地形序列".*"： [(1, 1), (1, 2)], [(1, 1), (2, 1)], [(2, 2), (2, 1)], [(2, 2),<br />
+(1, 2)]，共 4 条，每条权重为 4，计 16<br />
+地形序列"*."： [(1, 2), (1, 1)], [(2, 1), (1, 1)], [(2, 1), (2, 2)], [(1, 2),<br />
+(2, 2)]，共 4 条，每条权重为 4，计 16<br />
+地形序列".."： [(1, 1), (2, 2)], [(2, 2), (1, 1)]，共 2 条，每条权重为 2，计 4<br />
+地形序列"**"： [(1, 2), (2, 1)], [(2, 1), (1, 2)]，共 2 条，每条权重为 2，计 4<br />
+地形序列".*."： [(1, 1), (1, 2), (2, 2)], [(1, 1), (2, 1), (2, 2)], [(2, 2),<br />
+(2, 1), (1, 1)], [(2, 2), (1, 2), (1, 1)]，共 4 条，每条权重为 4，计 16<br />
+地形序列"*.*"： [(1, 2), (1, 1), (2, 1)], [(2, 1), (1, 1), (1, 2)], [(1, 2),<br />
+(2, 2), (2, 1)], [(2, 1), (2, 2), (1, 2)]，共 4 条，每条权重为 4，计 16<br />
+共计 16+16+4+4+16+16=72</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

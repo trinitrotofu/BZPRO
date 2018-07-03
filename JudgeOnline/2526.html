@@ -1,0 +1,49 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi2011]Inspection</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2526. [Poi2011]Inspection</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：35 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2526">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2526">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2526">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p></p>
+<p></p>
+<div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">The railway network of the Byteotian Railways (BR) consists of bidirectional tracks connecting certain pairs of stations. Each pair of stations is connected by at most one segment of tracks. Furthermore, there is a unique route from every station to every other station. (The route may consist of several segments of tracks, but it may not pass through any station more than once.) </span></span></div>
+<div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">Byteasar is an undercover inspector of the BR. His job is to pick one of the stations (denote it by S) for centre of his operations and to travel to all other stations. His journey should be as follows: </span></span></div>
+<div style="margin: 0cm 0cm 0pt 191.25pt; text-indent: -18pt; line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">&middot;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Byteasar starts in station S. </span></span></div>
+<div style="margin: 0cm 0cm 0pt 191.25pt; text-indent: -18pt; line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">&middot;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Next, he picks one of the stations he did not yet control and goes to it along the shortest path (by train, of course), inspects the station, and then goes back to S. </span></span></div>
+<div style="margin: 0cm 0cm 0pt 191.25pt; text-indent: -18pt; line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">&middot;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The crooked employees of BR warn one another of Byteasar's comings. To deceive them, Byteasar picks the next station for control in such a way that he sets off from the station Sin different direction than the last time, i.e., along a different segment of tracks leaving from S. </span></span></div>
+<div style="margin: 0cm 0cm 0pt 191.25pt; text-indent: -18pt; line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">&middot;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Each station (except S) is inspected exactly once. </span></span></div>
+<div style="margin: 0cm 0cm 0pt 191.25pt; text-indent: -18pt; line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">&middot;<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>After inspecting the last station Byteasar <b>does not come back</b> to S. </span></span></div>
+<div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">The travel time along every segment of tracks takes the same amount of time: one hour. </span></span></div>
+<div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">Byteasar intends to consider all the stations as the initial station S. For each of them he wants to know the order of inspecting the remaining stations that minimises the total travel time, provided that it is possible at all for that particular S. </span></span></div>
+<div style="line-height: 140%"></div>
+<div style="line-height: 140%"><span style="font-size: medium">Byteasar是Byteoian Railways的一名便衣巡视员。BR的铁路架构是一棵N个节点的树，Byteasar需要检查所有的N个节点。他按照如下方式行动：</span></div>
+<p></p>
+<pre style="font-family: arial, verdana, helvetica, sans-serif! important"><span style="font-size: medium">首先选定一个行动中心S，并且检查S。
+从S出发前往任意一个未检查的点（沿树上两点的唯一最短路走），检查该节点，然后返回S。
+特别地，检查完最后一个节点后不需要返回。
+检查节点不需要时间，走过一条路的时间为1。
+为了不暴露身份，Byteasar规定相邻两次检查所经过的道路不允许有重复。
+也就是说，除第一次检查之外，他每次从S出发走过的第一条边不能和上一次出发相同。
+输入：
+第一行是一个整数N。(1&lt;=n&lt;=1000000)
+接下来N-1行每行有2个整数A,B，表示A和B之间有一条边。
+输出：&nbsp;</span></pre>
+<p></p>
+<div style="line-height: 140%"></div>
+<p><span style="font-size: medium">N行，第I行表示如果以I作为行动中心，Byteasar检查完所有车站需要的最小时间。如果不可能做到，该行输出-1。<br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">The first line of the standard input contains a single integer N(1&lt;=N&lt;=1000000) that denotes the number of stations. These are numbered from 1 to n . The following &nbsp;n -1 lines specify the track segments, one per line. Each of them holds two integers a,b(1&lt;=A,B&lt;=N,A&lt;&gt;B), separated by a single space, indicating that there is a track segment connecting the stations &nbsp;a and b. Each track segments appears exactly once in the description. </span></span></div>
+<div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">In tests worth at least 30% of the points it holds additionally that n&lt;=2000. </span></span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="line-height: 140%"><span style="font-size: medium"><span style="color: #444444; line-height: 140%">Your program should print lines on the standard output, each holding a single integer. The one in the i-th line should be the minimum number of hours Byteasar has to spend travelling to inspect the stations when s=i- if inspecting them all is possible for s=i; if it is not, the i-th line should hold the number -1. </span></span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9<br />
+3 6<br />
+2 4<br />
+2 6<br />
+2 5<br />
+1 7<br />
+2 7<br />
+8 9<br />
+7 8<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>-1<br />
+23<br />
+-1<br />
+-1<br />
+-1<br />
+-1<br />
+-1<br />
+-1<br />
+-1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

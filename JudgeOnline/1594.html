@@ -1,0 +1,26 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2008 Jan]猜数游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1594. [Usaco2008 Jan]猜数游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1594">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1594">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1594">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>为了提高自己低得可怜的智商，奶牛们设计了一个新的猜数游戏，来锻炼她们的逻辑推理能力。 游戏开始前，一</div>
+<div>头指定的奶牛会在牛棚后面摆N(1 &lt;= N&lt;= 1,000,000)堆干草，每堆有若干捆，并且没有哪两堆中的草一样多。所</div>
+<div>有草堆排成一条直线，从左到右依次按1..N编号，每堆中草的捆数在1..1,000,000,000之间。 然后，游戏开始。</div>
+<div>另一头参与游戏的奶牛会问那头摆干草的奶牛 Q(1 &lt;= Q &lt;= 25,000)个问题，问题的格式如下： 编号为Ql..Qh(1&nbsp;</div>
+<div>&lt;= Ql &lt;= Qh &lt;= N)的草堆中，最小的那堆里有多少捆草？ 对于每个问题，摆干草的奶牛回答一个数字A，但或许</div>
+<div>是不想让提问的奶牛那么容易地得到答案，又或许是她自己可能记错每堆中干草的捆数，总之，她的回答不保证是</div>
+<div>正确的。 请你帮助提问的奶牛判断一下，摆干草的奶牛的回答是否有自相矛盾之处。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>* 第1行: 2个用空格隔开的整数：N 和 Q</div>
+<div>* 第2..Q+1行: 每行为3个用空格隔开的整数Ql、Qh、A，描述了一个问题以及它 对应的回答</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>* 第1行: 如果摆干草的奶牛有可能完全正确地回答了这些问题</div>
+<div>（也就是说，能 找到一种使得所有回答都合理的摆放干草的方法），输出0，</div>
+<div>否则输出 1个1..Q中的数，表示这个问题的答案与它之前的那些回答有冲突之处</div>
+<div>注意:如果有冲突出现输出一个数m,使得前M-1个命题不冲突。</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>20 4<br />
+1 10 7<br />
+5 19 7<br />
+3 12 8<br />
+11 15 12<br />
+输入说明:<br />
+编号为1..10的草堆中，最小的那堆里有7捆草，编号为5..19的草堆中同样如此；编号为3..12的草堆中最小的堆里<br />
+是8捆草，11..15堆中的最小的堆里是12捆。</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+输出说明:<br />
+对于第3个问题“3 12”的回答“8”与前面两个回答冲突。因为每堆中草的捆数唯一，从前两个回答中我们能推断<br />
+出，编号为5..10的干草堆中最小的那堆里有7捆干草。很显然，第3个问题的回答与这个推断冲突。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

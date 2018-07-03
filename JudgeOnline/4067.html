@@ -1,0 +1,46 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2015]gender</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4067. [Ctsc2015]gender</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4067">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4067">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4067">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;21世纪是生命科学的世纪。人类投入了大量人力物力研究生命科学，旨在对各类生物的生存机理产生更加深入的理解，</p>
+<div>以更好地了解人类自身，提高生活质量。Q国政府首先在绵羊中开展了性别改造研究，希望通过基因重组改变性别的方式</div>
+<div>增强整个绵羊种群的生存能力。若此计划能够顺利研究成功，人类将掌握随意改变动物性别的黑科技，这将是生命科学</div>
+<div>研究史上一个重要的里程碑。&nbsp;</div>
+<div>Q国政府从绵羊群中挑出M只绵羊作为实验样本，这M只绵羊中存在K条长度为N的单一性别的血缘链。所谓&ldquo;血缘链&rdquo;</div>
+<div>是指的一条由父（母）子（女）关系组成的链，比如爷爷-爸爸-儿子就是一条血缘链。&ldquo;单一性别&rdquo;的意思是每条血缘链</div>
+<div>中所有个体的性别均一致，同为雄性或同为雌性。血缘链长度指的是一条血缘链中个体的数量，比如爷爷-爸爸-儿子是一</div>
+<div>条长度为3的血缘链。这K条血缘链并不相交。&nbsp;</div>
+<div>注意并不是每只绵羊都必须属于一条血缘链，有些绵羊可能不属于任何血缘链，因此N*K&lt;=M。除去血缘链外，同辈绵羊还</div>
+<div>会有&ldquo;繁衍关系&rdquo;的存在。两只异性绵羊如果曾经繁殖过后代，那么它们之间就会产生&ldquo;繁衍关系&rdquo;。注意繁衍关系只会</div>
+<div>出现在同辈异性绵羊个体之间，这里&ldquo;同辈&rdquo;表示两只绵羊的辈份相同，即绵羊只会与它的兄弟姐妹辈产生&ldquo;繁衍关系&rdquo;，</div>
+<div>而不会与父母或子女或其他更远的辈份之间产生&ldquo;繁衍关系&rdquo;。&nbsp;</div>
+<div>对绵羊进行性别修改需要花费巨大的实验开销，修改绵羊i的性别需要花费ci的修改代价。除此以外，修改绵羊性别还会对</div>
+<div>繁衍关系的稳定度产生影响：每对繁衍关系j有初始稳定度bj和衰减系数dj，当所有的性别修改操作完成后，若双方性别均</div>
+<div>未改变，则此关系稳定度sj=bj，若双方性别互换，则稳定度sj=floor(bjdj)，其他情况下稳定度sj=0。&nbsp;</div>
+<div>给定每只绵羊的性别、性别修改代价、所有血缘链关系很繁衍关系，Q国政府希望你来设计一套性别搞糟方案，使总收益最大。</div>
+<div>收益计算方式如下：&nbsp;</div>
+<div>&nbsp;<img src="upload/201505/1.bmp" width="294" height="39" alt="" /></div>
+<div>其中A为改造后血缘链相邻两者为异性的情况数量，S为改造后繁衍关系稳定度之和，即S=&sum;jsj，C为修改绵羊性别带来的代价</div>
+<div>之和，即C=&sum;ici。&nbsp;</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;第一行包含四个非负整数N,K,M,P，分别为血缘链的长度，血缘链的数量，实验样本中的总绵羊数和繁衍关系的数量。&nbsp;</p>
+<div>第二行为一个M个字符的字符串，每个字符为'M'或'F'，描述了这M只绵羊的初始性别。'M'表示雄性，'F'表示雌性。&nbsp;</div>
+<div>第三行M个正整数ci，表示修改每只绵羊性别的代价。&nbsp;</div>
+<div>下面K行每行N个整数，分别描述这K个血缘链中绵羊编号（所有绵羊用1到M的整数编号），保证每条链中的绵羊均为同性，</div>
+<div>且链互补交叠。&nbsp;</div>
+<div>下面P行每行三个整数x,y,b和一个实属d，表示绵羊x与绵羊y存在繁衍关系，且初始关系稳定度为b，衰减系数为d。</div>
+<div>保证x与y的初始性别不同，x和y为同辈，同一条关系只会在数据中描述一次。&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>仅包含一行一个整数，表示改造计划的最大收益。&nbsp;</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 2 6 2<br />
+MMMFFF<br />
+10000 200 10 10000 200 10<br />
+1 2 3 <br />
+4 5 6 <br />
+2 5 20 0.1<br />
+3 6 20 0.9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>360</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;样例解释1：&nbsp;</p><br />
+<div>改性别为MMFFFM。收益为<img src="upload/201505/2.bmp" width="398" height="39" alt="" />。&nbsp;</div><br />
+<div>A=2是因为血缘链1-2-3中2与3性别的不同，血缘链4-5-6中5与6的性别不同。&nbsp;</div><br />
+<div></div><br />
+<div></div><br />
+<div>数据范围&nbsp;</div><br />
+<div>对于10%的数据，满足M&lt;=20；&nbsp;</div><br />
+<div>对于10%的数据，满足dj=0；&nbsp;</div><br />
+<div>对于10%的数据，满足dj=0.5；&nbsp;</div><br />
+<div>上述三类数据两两没有交集。&nbsp;</div><br />
+<div>对于100%的数据，N&lt;=50，K&lt;=4，M&lt;=1000，P&lt;=10000，0.0&lt;=dj&lt;=1.0，bj和ci均不大于10000，dj的小数位数不超过6。&nbsp;<img src="upload/201505/3.bmp" width="294" height="39" alt="" /></div><br />
+<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

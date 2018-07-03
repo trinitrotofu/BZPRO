@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2017 Jan]Cow Navigation</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4761. [Usaco2017 Jan]Cow Navigation</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4761">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4761">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4761">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Bessie has gotten herself stuck on the wrong side of Farmer John's barn again, and since her vision&nbsp;</div>
+<div>is so poor, she needs your help navigating across the barn.The barn is described by an N&times;N grid of&nbsp;</div>
+<div>square cells (2&le;N&le;20), some being empty and some containing impassable haybales. Bessie starts in&nbsp;</div>
+<div>the lower-left corner (cell 1,1) and wants to move to the upper-right corner (cell N,N). You can gui</div>
+<div>de her by telling her a sequence of instructions, each of which is either &quot;forward&quot;, &quot;turn left 90 d</div>
+<div>egrees&quot;, or &quot;turn right 90 degrees&quot;. You want to issue the shortest sequence of instructions that wi</div>
+<div>ll guide her to her destination. If you instruct Bessie to move off the grid (i.e., into the barn wa</div>
+<div>ll) or into a haybale, she will not move and will skip to the next command in your sequence.Unfortun</div>
+<div>ately, Bessie doesn't know if she starts out facing up (towards cell 1,2) or right (towards cell 2,1</div>
+<div>). You need to give the shortest sequence of directions that will guide her to the goal regardless o</div>
+<div>f which case is true. Once she reaches the goal she will ignore further commands.</div>
+<div></div>
+<div>给定一个N*N的网格(N&lt;=20)，你从左下角出发，要到达右上角，网格中会有障碍物你要给定一个长度最短的行为序</div>
+<div>列（往前走，左转，右转），使得无论Bessie处于左下角时是头朝向上还是朝向左都可以在执行完这个序列后到达</div>
+<div>右上角如果当前的行为会导致Bessie走到障碍物上或者越界，则Bessie会忽视这个行为</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of input contains N.</div>
+<div>第一行为N表示网格大小</div>
+<div>Each of the NN following lines contains a string of exactly N characters, representing the barn. The</div>
+<div>&nbsp;first character of the last line is cell 1,1. The last character of the first line is cell N, N.Eac</div>
+<div>h character will either be an H to represent a haybale or an E to represent an empty square.</div>
+<div></div>
+<div>接下来N行每行N列，描述这个网格，H表示障碍物，E表示空地</div>
+<div></div>
+<div>It is guaranteed that cells 1,1 and N,N will be empty, and furthermore it is guaranteed that there i</div>
+<div>s a path of empty squares from cell 1,1 to cell N,N</div>
+<div></div>
+<div>数据保证左下角和右上角一定是空地，且一定有解</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>On a single line of output, output the length of the shortest sequence of directions that will guide</div>
+<div>&nbsp;Bessie to the goal, irrespective whether she starts facing up or right.</div>
+<div>输出最短命令序列的长度</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+EHE<br />
+EEE<br />
+EEE</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9<br />
+In this example, the instructions "Forward, Right, Forward, Forward, Left, Forward, Left, Forward, F<br />
+orward" will guide Bessie to the destination irrespective of her starting orientation.<br />
+当Bessie在左下角的时候，执行前进，右转，前进，前进，左转，前进，左转，前进，前进无论Bessie一开始是朝<br />
+向上还是朝向下，都可以到达右上角。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">1.&ldquo;无论Bessie处于左下角时是头朝向上还是朝向左&rdquo;根据英文原文&ldquo;Bessie doesn't know if she starts out facing up (towards cell 1,2) or right (towards cell 2,1).&rdquo;应为无论Bessie处于左下角时是头朝向上还是朝向右</span><br style="font-family: arial, verdana, helvetica, sans-serif;" /><br />
+<span style="font-family: arial, verdana, helvetica, sans-serif;">2.漏了原题很重要的一点:&quot;Once she reaches the goal she will ignore further commands.&quot;即如果Bessie已经到达终点，她会忽视以后的所有行为</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

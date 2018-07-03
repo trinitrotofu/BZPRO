@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Aerial Tramway </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4254. Aerial Tramway </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4254">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4254">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4254">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>You own a park located on a mountain, which can be described as a sequence of n points (xi, yi) from left to right, where xi,yi&gt;0, xi&lt;xi+1, yi!=yi+1 &nbsp;(that means there will not be horizontal segments in the mountain skyline), illustrated below(the numbers are the corresponding x-coordinate):&nbsp;</div>
+<div><img src="upload/201509/ff.PNG" width="754" height="277" alt="" /></div>
+<div></div>
+<div>You own a park located on a mountain, which can be described as a sequence of n points (xi, yi) from left to right, where xi,yi&gt;0, xi&lt;xi+1, yi!=yi+1 &nbsp;(that means there will not be horizontal segments in the mountain skyline), illustrated below(the numbers are the corresponding x-coordinate): Since the mountain is very sloppy, some aerial tramways across the park would be very helpful. In the figure above, people can go from p4 to p9 directly, by taking a tram. Otherwise he must follow a rather&nbsp;</div>
+<div>zigzag path: p4-p5-p6-p7-p8-p9.&nbsp;</div>
+<div>Your job is to design an aerial tramway system. There should be exactly m &nbsp;trams, each following a horizontal &nbsp;segment in the air, &nbsp;between &nbsp;two points pi &nbsp;and pj. &quot;Horizontal&quot; means yi=yj, &nbsp;&ldquo;in the air&quot; means all the points in between are strictly below, i.e. yk&lt;yi for every i&lt;k&lt;j. For example, no tram can travel between p2 and p9, because p4 is not strictly below p2-p9. However, you can have two trams, one&nbsp;</div>
+<div>from p2 to p4, and one p4 to p9. There is another important restriction: no point can be strictly below k or more tramways, because it&rsquo;ll be dangerous. For example, if k=3, we cannot build these 3 tramways simultaneously: p1-p14, p4-p9, p6-p8, because p7 would be dangerous. You want to make this system as useful as possible, so you would like to maximize the total length of all tramways. For example, if m=3, k=3, the best design for the figure above is p1-p14, p2-p4 and p4-p9,the total length is 20. If m=3, k=2, you have to replace p1-p14 with p11-p13, the total length becomes 9.&nbsp;</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>There will be at most 200 test cases. Each case begins with three integers n, m and k(1&lt;=n,m&lt;=200, 2&lt;=k&lt;=10), the number of points, the number of trams in your design and the dangerous parameter introduced earlier. The next line contains n pairs of positive integers xi and yi.(1&lt;=xi,yi&lt;=10^5).&nbsp;&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>For each test case, print the case number and the maximal sum. If it is impossible to have exactly m tramways, print -1.&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>14 3 3 <br />
+1 8 <br />
+2 6 <br />
+3 4 <br />
+4 6 <br />
+5 3 <br />
+6 4 <br />
+7 1 <br />
+8 4 <br />
+9 6 <br />
+10 4 <br />
+11 6 <br />
+12 5 <br />
+13 6 <br />
+14 8 <br />
+14 3 2 <br />
+1 8 <br />
+2 6 <br />
+3 4 <br />
+4 6 <br />
+5 3 <br />
+6 4 <br />
+7 1 <br />
+8 4 <br />
+9 6 <br />
+10 4 <br />
+11 6 <br />
+12 5 <br />
+13 6 <br />
+14 8 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case 1: 20 <br />
+Case 2: 9 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;2015年湖南省大学生程序设计竞赛</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

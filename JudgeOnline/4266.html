@@ -1,0 +1,41 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>小强的动态方程</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4266. 小强的动态方程</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4266">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4266">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4266">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小强在解一个关于x[1..n]的同余方程组，每个的形式都是：</div>
+<div>x[i]=k[i]*x[p[i]]+b[i] &nbsp; mod &nbsp;m</div>
+<div>其中 m=10007。然而，小强还想要让这个方程组不停地变化。每次，它可能更改</div>
+<div>a[i]、b[i]、p[i]的值，而你要动态地回答当前方程组中x[i]的值。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行是一个整数 N。接下来N 行，每行三个整数</div>
+<div>k[i]、p[i]、b[i]。下面Q行，每行一个操作，格式是以下两种：</div>
+<div>A a &nbsp; 表示询问x[a]的解。</div>
+<div>C a k[a] p[a] b[a] 表示把第a个方程修改成x[a]=k[a]*x[p[a]]+b[a]。</div>
+<div>输入数据保证：所有的 k都是介于1~10006 之间的正整数，b 都是介于0~10006 之间</div>
+<div>的正整数，p是介于1~N之间的正整数。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于询问操作，你要输出一个介于0~10006之间的整数，表示x[a]的解。注意：</div>
+<div>方程组中可能有相互矛盾的等式。如果 x[a]有唯一解，或者你通过删除方程中若干个等式</div>
+<div>之后，可以使得x[a]有唯一解，那么你要输出这个唯一解。否则，输出-1。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+1 1 1<br />
+2 3 1<br />
+3 2 1<br />
+4<br />
+A 2<br />
+C 1 2 2 3<br />
+C 3 2 1 5<br />
+A 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8005 <br />
+2857</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>【样例解释】</div><br />
+<div>一开始，方程是（模10007意义下的）：</div><br />
+<div>x[1]=x[1]+1;</div><br />
+<div>x[2]=2*x[3]+1;</div><br />
+<div>x[3]=3*x[2]+1;</div><br />
+<div>第一个等式是自相矛盾的，删去它之后，这个方程的解是</div><br />
+<div>x[2]=8005，x[3]=4002，x[3]=0..10006</div><br />
+<div>两次修改之后，方程变成：</div><br />
+<div>x[1]=2*x[2]+3;</div><br />
+<div>x[2]=2*x[3]+1;</div><br />
+<div>x[3]=2*x[1]+5;</div><br />
+<div>这个方程的解是：x[1]=1426;x[2]=5715;x[3]=2857;</div><br />
+<div></div><br />
+<div>100%的数据保证：N&lt;=50000，Q&lt;=100000</div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

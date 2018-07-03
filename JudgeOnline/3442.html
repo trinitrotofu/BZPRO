@@ -1,0 +1,20 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>学习小组</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3442. 学习小组</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3442">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3442">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3442">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">【背景】</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">坑校准备鼓励学生参加学习小组。</span></div>
+<div><span style="font-size: medium">【描述】</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 共有n个学生，m个学习小组，每个学生有一定的喜好，只愿意参加其中的一些学习小组，但是校领导为学生考虑，规定一个学生最多参加k个学习小组。财务处的大叔就没那么好了，他想尽量多收钱，因为每个学生参加学习小组都要交一定的手续费，不同的学习小组有不同的手续费。然而，事与愿违，校领导又决定对学习小组组织者进行奖励，若有a个学生参加第i个学习小组，那么给这个学习小组组织者奖励Ci*a^2元。在参与学生（而不是每个学习小组的人数总和）尽量多的情况下，求财务处最少要支出多少钱（若为负数，则输出负数）（支出=总奖励费-总手续费）。</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">输入有若干行，第一行有三个用空格隔开的正整数n、m、k。接下来的一行有m个正整数，表示每个Ci。第三行有m个正整数，表示参加每个学习小组需要交的手续费Fi。再接下来有一个n行m列的矩阵，表若第i行j列的数字是1，则表示第i个学生愿意参加第j个学习小组，若为0，则为不愿意。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;</div>
+<div style="text-indent: 21pt"><span style="font-size: medium">输出只有一个整数，为最小的支出。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+3 3 1<br />
+1 2 3<br />
+3 2 1<br />
+111<br />
+111<br />
+111<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+-2<br />
+【样例解释】<br />
+    参与学生最多为3，每个学生参加一个学习小组，若有两个学生参加第一个学习小组，一个学生参加第二个学习小组（一定要有人参加第二个学习小组），支出为-2，可以证明没有更优的方案了。<br />
+【数据范围与约定】<br />
+100%的数据，0＜n≤100，0＜m≤90，0＜k≤m，0＜Ci≤10，0＜Fi≤100。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

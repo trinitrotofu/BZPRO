@@ -1,0 +1,51 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>最优选择</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3774. 最优选择</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3774">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3774">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3774">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p class="MsoNormal" align="center" style="text-align:center"></p>
+<p class="MsoNormal" style="text-align: left;">小N手上有一个N*M的方格图，控制某一个点要付出Aij的代价，然后某个点如果被控制了，或者他周围的所有点(上下左右)都被控制了，那么他就算是被选择了的。一个点如果被选择了，那么可以得到Bij的回报，现在请你帮小N选一个最优的方案，使得回报-代价尽可能大。</p>
+<p class="MsoNormal" style="text-indent:21.0pt"></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<p class="MsoNormal">第一行两个正整数N,M表示方格图的长与宽。</p>
+<p class="MsoNormal">接下来N行每行M个整数Aij表示控制的代价。</p>
+<p class="MsoNormal">接下来N行每行M个整数Bij表示选择的回报。</p>
+</div>
+<div>
+<p></p>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<p class="MsoNormal">一个整数，表示最大的回报-代价(如果一个都不控制那么就是0)。</p>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 3<br />
+1 100 100<br />
+100 1 100<br />
+1 100 100<br />
+2 0 0<br />
+5 2 0<br />
+2 0 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;<br />
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;<br />
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">对于</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;<br />
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:<br />
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:<br />
+AR-SA">100%</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;<br />
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;<br />
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">的数据，</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;<br />
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:<br />
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:<br />
+AR-SA">N,M&lt;=50</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;<br />
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;<br />
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">，</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;<br />
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:<br />
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:<br />
+AR-SA">Aij,Bij</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;<br />
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;<br />
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">都是小于等于</span><span lang="EN-US" style="font-size:10.5pt;mso-bidi-font-size:11.0pt;font-family:Calibri;<br />
+mso-fareast-font-family:宋体;mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:<br />
+1.0pt;mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:<br />
+AR-SA">100</span><span style="font-size:10.5pt;mso-bidi-font-size:11.0pt;<br />
+font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri;<br />
+mso-bidi-font-family:&quot;Times New Roman&quot;;mso-font-kerning:1.0pt;mso-ansi-language:<br />
+EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">的正整数。</span></p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

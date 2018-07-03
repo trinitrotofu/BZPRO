@@ -1,0 +1,32 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Cqoi2018]九连环</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5300. [Cqoi2018]九连环</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5300">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5300">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5300">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>九连环是一种源于中国的传统智力游戏。</div>
+<div><img src="upload/201804/v1.png" width="217" height="165" alt="" /></div>
+<div>如图所示，九个的圆环套在一把&ldquo;剑&rdquo;上，并且互相牵连。游戏的目标是把九个圆环全部从&ldquo;剑&rdquo;上卸下。</div>
+<div>圆环的装卸需要遵守两个规则</div>
+<div>1．第一个（最右边）环任何时候都可以任意装上或卸下</div>
+<div>2．如果第k个环没有被卸下，且第k个环右边的所有环都被卸下，则第k+l个环（第k个环左边相邻的环）</div>
+<div>可以任意装上或卸下与魔方的千变万化不同，解九连环的最优策略是唯一的。</div>
+<div>为简单起见，我们以&ldquo;四连环&rdquo;为例，演示这一过程。这里用1表示环在&ldquo;剑&rdquo;上，0表示环已经卸下。</div>
+<div>初始状态为1111，每步的操作如下</div>
+<div>1. 1101（根据规则2卸下第2个环）</div>
+<div>2. 1100（根据规则1卸下第1个环）</div>
+<div>3. 0100（根据规则2卸下第4个环）</div>
+<div>4. 0101（根据规则1装上第1个环）</div>
+<div>5. 0111（根据规则2装上第2个环）</div>
+<div>6. 0110（根据规则1卸下第1个环）</div>
+<div>7. 0010（根据规则2卸下第3个环）</div>
+<div>8. 0001（根据规则1装上第1个环）</div>
+<div>9. 0001（根据规则2卸下第2个环）</div>
+<div>10. 0000（根据规则1卸下第1个环）</div>
+<div>由此可见，卸下&ldquo;四连环&rdquo;至少需要10步。</div>
+<div>随着环数增加，需要的步数也会随之增多。例如卸下九连环．就至少需要341步。</div>
+<div>请你计算，有n个环的情况下，按照规则，全部卸下至少需要多少步。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入文件第一行，为一个整数m，表示测试点数目。</div>
+<div>接下来m行，每行一个整数n。</div>
+<div>1&le;n&le;10^5，1&le;m&le;10</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出文件共m行，对应每个测试点的计算结果。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+3<br />
+5<br />
+9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+21<br />
+341</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

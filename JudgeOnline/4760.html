@@ -1,0 +1,47 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2017 Jan]Hoof, Paper, Scissors</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4760. [Usaco2017 Jan]Hoof, Paper, Scissors</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4760">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4760">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4760">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>You have probably heard of the game &quot;Rock, Paper, Scissors&quot;. The cows like to play a similar game th</div>
+<div>ey call &quot;Hoof, Paper, Scissors&quot;</div>
+<div>你可能玩过石头剪刀布这个游戏，奶牛们也喜欢玩类似的游戏，叫做&ldquo;蹄子剪刀布&rdquo;</div>
+<div>The rules of &quot;Hoof, Paper, Scissors&quot; are simple. Two cows play against each-other. They both count t</div>
+<div>o three and then each simultaneously makes a gesture that represents either a hoof, a piece of paper</div>
+<div>, or a pair of scissors. Hoof beats scissors (since a hoof can smash a pair of scissors), scissors b</div>
+<div>eats paper (since scissors can cut paper), and paper beats hoof (since the hoof can get a papercut).</div>
+<div>&nbsp;For example, if the first cow makes a &quot;hoof&quot; gesture and the second a &quot;paper&quot; gesture, then the sec</div>
+<div>ond cow wins. Of course, it is also possible to tie, if both cows make the same gesture.</div>
+<div></div>
+<div>蹄子剪刀布的规则和石头剪刀布的规则是一样的，蹄子踩碎剪刀，剪刀剪布，布包蹄子</div>
+<div></div>
+<div>Farmer John wants to play against his prize cow, Bessie, at N games of &quot;Hoof, Paper, Scissors&quot; (1&le;N</div>
+<div>&le;100,000). Bessie, being an expert at the game, can predict each of FJ's gestures before he makes i</div>
+<div>t. Unfortunately, Bessie, being a cow, is also very lazy. As a result, she tends to play the same ge</div>
+<div>sture multiple times in a row. In fact, she is only willing to switch gestures at most KK times over</div>
+<div>&nbsp;the entire set of games (0&le;K&le;20). For example, if K=2, she might play &quot;hoof&quot; for the first few ga</div>
+<div>mes, then switch to &quot;paper&quot; for a while, then finish the remaining games playing &quot;hoof&quot;.</div>
+<div></div>
+<div>现在FJ想要和他的最机智的奶牛Bessie玩蹄子剪刀布（我也不知道FJ为什么有蹄子），一共进行了N轮(N&lt;=1e5)，B</div>
+<div>essie，作为一个奶牛，非常的怠惰，无论她出什么，都喜欢连续的出，最多变化K次(K&lt;=20)，也就是说，对于她</div>
+<div>所出的，记为序列f(i)，记sum=有多少个i满足f(i)!=f(i-1)(i&gt;1)，而她的sum一定不会超过k</div>
+<div>Given the sequence of gestures FJ will be playing, please determine the maximum number of games that</div>
+<div>&nbsp;Bessiecan win.</div>
+<div></div>
+<div>现在FJ已经给出了他出的东西，你要告诉Bessie，在不确定她出的东西的情况下，她最多能赢多少次</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of the input file contains N and K.</div>
+<div>输入数据第一行为N,K</div>
+<div>The remaining N lines contains FJ's gestures, each either H, P, or S</div>
+<div>接下来N行表示FJ所出的东西，H表示hoof,P表示paper,S表示Scissors</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div></div>
+<div>
+<div>Print the maximum number of games Bessie can win, given that she can only change gestures at most KK times.</div>
+<div>输出在变化不超过K次的前提下，最多能赢多少次</div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 1<br />
+P<br />
+P<br />
+H<br />
+P<br />
+S</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,60 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>神牛的养成计划</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4212. 神牛的养成计划</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4212">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4212">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4212">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Hzwer成功培育出神牛细胞，可最终培育出的生物体却让他大失所望......</div>
+<div></div>
+<div>后来，他从某同校女神 牛处知道，原来他培育的细胞发生了基因突变，原先决定神牛特征的基因序列都被破坏了，神牛hzwer很生气，但他知道基因突变的低频性，说不定还有以下优秀基因没有突变，那么他就可以用限制性核酸内切酶把它们切出来，然后再构建基因表达载体什么的，后面你懂的......</div>
+<div></div>
+<div>黄学长现在知道了N个细胞的DNA序列，它们是若干个由小写字母组成的字符串。一个优秀的基因是两个字符串s1和s2,当且仅当s1是某序列的前缀的同时，s2是这个序列的后缀时，hzwer认为这个序列拥有这个优秀基因。</div>
+<div></div>
+<div>现在黄学长知道了M个优秀基因s1和s2，它们想知道对于给定的优秀基因，有多少个细胞的DNA序列拥有它。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行：N，表示序列数</div>
+<div>
+<div>接下来N行，每行一个字符串，代表N个DNA序列，它们的总长为L1</div>
+<div>接下来一个M，表示询问数</div>
+<div>接下来M行，每行两个字符串s1和s2，由一个空格隔开，hzwer希望你能在线回答询问，所以s1等于&ldquo;s1&rdquo;的所有字符按字母表的顺序向后移动ans位（字母表是一个环），ans为上一个询问的答案，s2同理。例如ans=2 &nbsp;&ldquo;s1&rdquo;=qz</div>
+<div>则s1=sb。对于第一个询问，ans=0</div>
+<div>s1和s2的总长度为L2</div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出M行，每行一个数，第i行的数表示有多少个序列拥有第i个优秀基因。</div>
+<div>
+<p></p>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10<br />
+emikuqihgokuhsywlmqemihhpgijkxdukjfmlqlwrpzgwrwozkmlixyxniutssasrriafu<br />
+emikuqihgokuookbqaaoyiorpfdetaeduogebnolonaoehthfaypbeiutssasrriafu<br />
+emikuqihgokuorocifwwymkcyqevdtglszfzgycbgnpomvlzppwrigowekufjwiiaxniutssasrriafu<br />
+emikuqihgokuorociysgfkzpgnotajcfjctjqgjeeiheqrepbpakmlixyxniutssasrriafu<br />
+emikuqihgokuorociysgfrhulymdxsqirjrfbngwszuyibuixyxniutssasrriafu<br />
+emikuqihgokuorguowwiozcgjetmyokqdrqxzigohiutssasrriafu<br />
+emikuqihgokuorociysgsczejjmlbwhandxqwknutzgdmxtiutssasrriafu<br />
+emikuqihgokuorociysgvzfcdxdiwdztolopdnboxfvqzfzxtpecxcbrklvtyxniutssasrriafu<br />
+emikuqihgokuorocsbtlyuosppxuzkjafbhsayenxsdmkmlixyxniutssasrriafu<br />
+emikuqihgokuorociysgfjvaikktsixmhaasbvnsvmkntgmoygfxypktjxjdkliixyxniutssasrriafu<br />
+10<br />
+emikuqihgokuorociysg yxniutssasrriafu<br />
+aiegqmedckgqknky eqpoowonnewbq<br />
+xfbdnjbazhdnhkhvb qrqgbnmlltlkkbtyn<br />
+bjfhrnfedlhrlolzfv qppxpoofxcr<br />
+zhdfpldcbjf stsidponnvnmmdvap<br />
+zhdfpldcbjfpjmjxdt gdstsidponnvnmmdvap<br />
+dlhjtphgfnjtnqnbhxr wxwmhtsrrzrqqhzet<br />
+bjfhrnfedlhrlolzfv frqppxpoofxcr<br />
+zhdfpldcbjf dponnvnmmdvap<br />
+ucyakgyxweakehes nondykjiiqihhyqvk<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+7<br />
+3<br />
+5<br />
+5<br />
+1<br />
+3<br />
+5<br />
+10<br />
+4<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>N&lt;=2000</div><br />
+<div>L1&lt;=2000000</div><br />
+<div>M&lt;=100000</div><br />
+<div>L2&lt;=2000000</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2005 dec]Cow Patterns 牛的模式匹配</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1729. [Usaco2005 dec]Cow Patterns 牛的模式匹配</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1729">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1729">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1729">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;约翰的N(1&le;N&le;100000)只奶牛中出现了K(1&le;K&le;25000)只爱惹麻烦的坏蛋．奶牛们按一定的顺序排队的时候，这些坏蛋总会站在一起．为了找出这些坏蛋，约翰让他的奶牛排好队进入牛棚，同时需要你的慧眼来识别坏蛋,为了区分，约翰给所有奶牛都发了号牌，上面写着一个1．．S(1&le;S&le;25)之间的数字．虽然这不是一个完美的方法，但也能起一点作用．现在，约翰已经不记得坏蛋们的具体号码．但是凭他的记忆，他给出一个&ldquo;模式串&rdquo;．原坏蛋的号码如果相同，模式串中他们的号码依然相同．模式串中坏蛋们之间号码的大小关系也与原号码相同的．比如，对于这样一个模式串：<span lang="EN-US" style="font-family: &quot;Times New Roman&quot;; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 宋体; mso-font-kerning: 1.0pt; mso-ansi-language: EN-US; mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA">1,4,4,3,,2,1 。</span>原来的6只坏蛋，排最前面的与排最后的号码相同（尽管不一定是1），而且他们的号码在团伙中是最小的．第2，3位置的坏蛋，他们的号码也相同（不一定是4），且是坏蛋团伙中最大的．&nbsp;&nbsp;&nbsp;&nbsp;现在所有奶牛排成队列，号码依次是这样：&nbsp;&nbsp;&nbsp;&nbsp;5，6，2，10，10，7，3，2，9存在子串2，10，10，7，3，2，满足模式串的相同关系和大小关系，所以这就是坏蛋团伙,&nbsp;请找出K个坏蛋的困伙的所有可能性．</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入三个整数N，K，S．接下来N行每行输入一只牛的号码．接下来K行每行输入一个模式串的号码．</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输出一个整数B.接下来B行，每行一个整数，表示一种可能下的坏蛋团伙的起始位置．</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9 6 10<br />
+5<br />
+6<br />
+2<br />
+10<br />
+10<br />
+7<br />
+3<br />
+2<br />
+9<br />
+1<br />
+4<br />
+4<br />
+3<br />
+2<br />
+1<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+The sample input corresponds to the example given in the problem statement.<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+3<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+There is only one match, at position 3 within FJ's sequence of N cows.</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

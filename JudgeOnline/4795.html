@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CERC2016]Jazz Journey</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4795. [CERC2016]Jazz Journey</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4795">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4795">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4795">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Ivan正在为他的爵士乐队计划一场规模盛大的欧洲巡演。在欧洲一共有n个城市，编号依次为1到n。Ivan计划举办d</div>
+<div>场演出，分别在城市a_1,a_2,...,a_d，并且严格遵循这个顺序，而且不会在同一个城市连续巡演两次（即a_i!=a_</div>
+<div>{i+1}），但在整个过程中，他可能在一个城市巡演多次。最终，他一定会回到开始的城市进行巡演（即a_1=a_d）</div>
+<div>。Ivan每次总是选择搭乘一趟从a_i到a_{i+1}的直达航班。然而，他希望变得聪明一些，尽量节省机票的开支。你</div>
+<div>也知道，机票的价格取决于供给和需求，比如一张单程票可能会比相同目的地的双程票还要贵。</div>
+<div></div>
+<div>一共有两种可以购买的机票：</div>
+<div></div>
+<div>1.从a到b的单程票，每张只能从a飞到b一次，但不能从b飞到a。</div>
+<div></div>
+<div>2.从a到b的双程票，只需购买一张，就能从a飞到b一次，然后从b飞回a一次，但先从b飞回a是不允许的。</div>
+<div>当然，你也可以选择从a飞到b之后就再也不返回a。</div>
+<div></div>
+<div>给定可以购买的机票集合，每种机票都是无限量供应的。请帮助Ivan找到一种最省钱的方案。你可以认为合法方案必然存在。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个正整数n,d(2&lt;=n,d&lt;=300000)，分别表示城市的个数和巡演的次数。</div>
+<div>第二行包含d个正整数a_1,a_2,...,a_d(1&lt;=a_i&lt;=n,a_i!=a_{i+1},a_1=a_d)，依次表示巡演计划中每一场所在的城市。</div>
+<div>接下来一行包含一个正整数m(3&lt;=m&lt;=300000)，表示机票的种类数。</div>
+<div>接下来m行，每行首先是两个正整数s_i,d_i(1&lt;=s_i,d_i&lt;=n,s_i!=d_i)，分别表示起点与终点；</div>
+<div>接下来一个字符t_i，表示机票的类型，其中&ldquo;O&rdquo;表示单程票，&ldquo;R&rdquo;表示双程票；</div>
+<div>最后是一个正整数p_i(1&lt;=p_i&lt;=10^9)，表示票价。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行一个整数，即完成巡演所需支付的最小机票总费用。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 5<br />
+1 2 1 2 1<br />
+4<br />
+1 2 R 6<br />
+1 2 O 3<br />
+2 1 O 3<br />
+1 2 R 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

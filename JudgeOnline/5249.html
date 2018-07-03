@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[2018多省省队联测]IIIDX</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5249. [2018多省省队联测]IIIDX</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5249">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5249">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5249">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>【题目背景】</div>
+<div>Osu听过没？那是Konano最喜欢的一款音乐游戏，而他的梦想就是有一天自己也能做个独特酷炫的音乐游戏。现在</div>
+<div>，他在世界知名游戏公司KONMAI内工作，离他的梦想也越来越近了。这款音乐游戏内一般都包含了许多歌曲，歌曲</div>
+<div>越多，玩家越不易玩腻。同时，为了使玩家在游戏上氪更多的金钱花更多的时间，游戏一开始一般都不会将所有曲</div>
+<div>目公开，有些曲目你需要通关某首特定歌曲才会解锁，而且越晚解锁的曲目难度越高。</div>
+<div>【题目描述】</div>
+<div>这一天，Konano接到了一个任务，他需要给正在制作中的游戏《IIIDX》安排曲目的解锁顺序。游戏内共有n首曲目</div>
+<div>，每首曲目都会有一个难度d，游戏内第i首曲目会在玩家Pass第trunc(i/k)首曲目后解锁（x为下取整符号）若tru</div>
+<div>nc(i/k)=0，则说明这首曲目无需解锁。举个例子：当k=2时，第1首曲目是无需解锁的（trunc(1/2)=0），第7首曲</div>
+<div>目需要玩家Pass第trunc(7/2)=3首曲目才会被解锁。Konano的工作，便是安排这些曲目的顺序，使得每次解锁出的</div>
+<div>曲子的难度不低于作为条件需要玩家通关的曲子的难度，即使得确定顺序后的曲目的难度对于每个i满足Di&ge;Dtrun</div>
+<div>c(i/k)。当然这难不倒曾经在信息学竞赛摸鱼许久的Konano。那假如是你，你会怎么解决这份任务呢</div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第1行1个正整数n和1个小数k，n表示曲目数量，k其含义如题所示。</div>
+<div>第2行n个用空格隔开的正整数d，表示这n首曲目的难度。</div>
+<div>1 &le; n &le; 500000</div>
+<div>1 &lt; k &le; 10^9</div>
+<div>1 &lt; d &le; 10^9</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出1行n个整数，按顺序输出安排完曲目顺序后第i首曲目的难度。</div>
+<div>若有多解，则输出d1最大的；若仍有多解，则输出d2最大的，以此类推。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 2.0<br />
+114 514 1919 810<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>114 810 514 1919</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

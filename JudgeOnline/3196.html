@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Tyvj 1730 二逼平衡树</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3196. Tyvj 1730 二逼平衡树</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3196">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3196">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3196">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">您需要写一种数据结构（可参考题目标题），来维护一个有序数列，其中需要提供以下操作：<br />
+1.查询k在区间内的排名<br />
+2.查询区间内排名为k的值<br />
+3.修改某一位值上的数值<br />
+4.查询k在区间内的前驱(前驱定义为小于x，且最大的数)<br />
+5.查询k在区间内的后继(后继定义为大于x，且最小的数)</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行两个数 n,m 表示长度为n的有序序列和m个操作<br />
+第二行有n个数，表示有序序列<br />
+下面有m行，opt表示操作标号<br />
+若opt=1 则为操作1，之后有三个数l,r,k 表示查询k在区间[l,r]的排名<br />
+若opt=2 则为操作2，之后有三个数l,r,k 表示查询区间[l,r]内排名为k的数<br />
+若opt=3 则为操作3，之后有两个数pos,k 表示将pos位置的数修改为k<br />
+若opt=4 则为操作4，之后有三个数l,r,k 表示查询区间[l,r]内k的前驱<br />
+若opt=5 则为操作5，之后有三个数l,r,k 表示查询区间[l,r]内k的后继</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">对于操作1,2,4,5各输出一行，表示查询结果</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9 6<br />
+4 2 2 1 9 4 0 1 1<br />
+2 1 4 3<br />
+3 4 10<br />
+2 1 4 3<br />
+1 2 5 9<br />
+4 3 9 5<br />
+5 2 8 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+4<br />
+3<br />
+4<br />
+9</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">1.n和m的数据范围：n,m&lt;=50000</span></p><br />
+<p><span style="font-size: medium">2.序列中每个数的数据范围：[0,1e8]</span></p><br />
+<div><span style="font-size: medium">3.虽然原题没有，但事实上5操作的k可能为负数</span></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

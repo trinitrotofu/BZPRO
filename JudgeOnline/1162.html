@@ -1,0 +1,33 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CTSC2004]网络改造network</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1162. [CTSC2004]网络改造network</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1162">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1162">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1162">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>从前，HURRICANE小组承担了一项重要的工作&mdash;&mdash;把校园内的计算机接入到Internet上面去。他们首先把每个人的</div>
+<div>计算机编组并把同一组的连在一台基层础交换机上，然后设立了一个对外的顶级网关交换机，再用其他的一些中间</div>
+<div>交换机把这些交换机一层一层的连接起来接到顶级网关交换机上。而且交换机都是严格的按照一层一层的连接起来</div>
+<div>的，低一层的交换机只会连接到一台高一层的交换机上面，但一台高层的交换机可能同时和几台低一层的交换机相</div>
+<div>连。但最近，由于原来架设的网络服务有限，需要把网络中的一些交换机升级为核心交换机并对整个网络提供更多</div>
+<div>的服务。不过由于改造的时间所限，只来得及把不超过p台交换机升级为核心交换机，而所有剩下的交换机则需要</div>
+<div>通过改造网络的方法和这几台核心交换机直接连接。但是无论是升级交换机还是改造网络都需要花费一定的资金。</div>
+<div>现在请你给出一个改造网络的方案。使得按照该方案升级后每一个交换机要么是核心交换机，要么直接和核心交换</div>
+<div>机相连。并且要求提供的方案使改造所用的总费用最小。</div>
+<div>【任务描述】你的程序必须根据给出的输入，提供符合题意的输出：? 输入包括网络的拓扑结构，升级网络中每台</div>
+<div>交换机的费用，以及改造网络的费用，还有可以升级的交换机的最大数目；? 你必须根据输入，找出一个升级的方</div>
+<div>案，满足升级后的核心交换机的数目不超过给定的可升级交换机最大值p，且使得总费用最少；? 其中总费用的计</div>
+<div>算包括两个部分：? 一部分是升级交换机为核心交换机所需要的费用，该部分的费用按照所有的需要升级的交换机</div>
+<div>所需的费用之和来计算；? 另一部分是改造网络所需要的费用，该部分的费用按照所有未升级的交换机到最近的核</div>
+<div>心交换机的距离之和来计算；? 如果两台交换机直接相连，那么该距离即为他们之间的网络距离；? 如果两台交换</div>
+<div>机是通过其他的交换机间接连接在一起的，那么它们之间的距离定义为它们之间的唯一一条路径上相邻的交换机之</div>
+<div>间网络长度之和；? 注意：当网络中没有任何交换机升级到核心交换机的时候，由于也没有交换机可以连接到核心</div>
+<div>交换机，所以我们定义此时的总费用为无穷大。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行为两个整数n（n &le; 400）和p，分别表示网络中交换机的数目和可升级交换机的最大值。</div>
+<div>接下来的n行每行一个正整数ci，表示把标号为i的交换机升级为核心交换机所需要的费用。</div>
+<div>接下来的n-1行每行三个整数i、j、di,j，表示编号为i的交换机为编号为j的交换机的上层交换机，</div>
+<div>而di,j表示两台交换机之间的网络长度。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>你的输出第一行为一个整数M，表示你的方案的最小总费用。</div>
+<div>接下来一行包括一个整数p0，表示你的方案所需要升级为核心交换机的交换机数目。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 2<br />
+20<br />
+20<br />
+20<br />
+20<br />
+1 3 1<br />
+1 2 1<br />
+1 4 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>23<br />
+1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

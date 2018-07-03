@@ -1,0 +1,55 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[ZJOI2011]细胞</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2323. [ZJOI2011]细胞</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2323">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2323">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2323">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">2222<font face="宋体">年，人类在银河系外的某颗星球上发现了生命，并且携带了一个细胞回到了地球。经过反复研究，人类已经完全掌握了这类细胞的发展规律：</font></span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">这种细胞最初的形态是&ldquo;长条形&rdquo;，一端是头，一端是尾，中间是躯干。细胞内部含有一列密码（你可以认为它是这种细胞的<font face="Times New Roman">DNA</font><font face="宋体">）。密码是一个长度为</font></span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">n</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">的数字串，且仅含有<font face="Times New Roman">1~9</font><font face="宋体">这</font><font face="Times New Roman">9</font><font face="宋体">种数字，沿着细胞的躯干从头到尾排列着。</font></span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">首先，细胞会经历一次分裂。细胞将沿躯干方向分裂成若干个球体，躯干将退化成丝状物，连接着相邻的球体。在分裂过程中，质量是均匀分布的。换句话说，若分裂成</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">k</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">个球体，每个球体的质量为原来的<font face="Times New Roman">1/</font></span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">k</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">。然而，密码的分布是不确定的。若分割成</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">k</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">个球体，密码会被切割成</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">k</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">段（每段长度至少为<font face="Times New Roman">1</font><font face="宋体">），并</font></span><span style="font-size: 12pt; font-family: '宋体'; text-decoration: underline; mso-spacerun: 'yes'">按从头到尾的顺序</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">分布在各个球体中。如图，为其中一种合法的一次分裂：</span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-align: center"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-align: center"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><img height="270" width="456" alt="" src="upload/201106/1.jpg" /></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">接下来，细胞会经历二次分裂。对于每个球体，其中会含有一小段密码（注意他是有序的），我们把它看作一个十进制的数</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">T</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">。这个球体会被分割成</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">T</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">个小球体，并排成一排，之间用躯干退化成的丝状物相连接，并且质量仍然是均匀分布的，每个小球体的质量都是原球体的<font face="Times New Roman">1/</font></span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">T</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">。至此，密码已经发挥了它的作用，便消失了。如图，为二次分裂：</span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-align: center"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p><img height="218" width="583" alt="" src="upload/201106/2.jpg" /></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">最后，细胞会进行变异。相邻小球体之间的丝状物可能会退化掉，这两个小球体便会以相切的方式直接连接。显然，二次分裂后，除两端外的每个小球体都有两段丝状物与其连接（头尾两端的小球体只有一段丝状物与其相连）。对于每个小球体，必须至少退化一段与其相连的丝状物，否则这个结构不稳定，会继续变异。如图，为一种稳定的变异：</span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-align: center"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p><img height="200" width="568" alt="" src="upload/201106/3.jpg" /></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">现在，我们想知道，对于一个给定密码的细胞，总共有多少种稳定的结构。两种结构被认为相同，当且仅当他们拥有相同个数的小球体，从头到尾每个小球体的质量相同，并且从头到尾每对相邻小球体之间的连接方式相同（都是通过丝状物相连或都是通过相切直接相连）。你只需要回答这个结果&nbsp;<font face="Times New Roman">mod&nbsp;1000000007</font><font face="宋体">即可。</font></span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">第一行为一个正整数</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">n</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">，表示细胞密码的长度。</span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 24pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">第二行共</span><span style="font-size: 12pt; font-style: italic; font-family: '宋体'; mso-spacerun: 'yes'">n</span><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'">个数字，为给定的细胞密码，中间没有空格。</span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p16" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="p16" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 12pt; font-family: '宋体'; mso-spacerun: 'yes'"><font face="宋体">只包含一个整数，为细胞的种数&nbsp;</font><font face="Times New Roman">mod&nbsp;1000000007</font><font face="宋体">的结果。</font></span><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p20" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 12pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输入一】<br />
+<br />
+1<br />
+<br />
+1<br />
+<br />
+【样例输入二】<br />
+<br />
+1<br />
+<br />
+5<br />
+<br />
+【样例输入三】<br />
+<br />
+2<br />
+<br />
+11<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输出一】<br />
+<br />
+0<br />
+<br />
+【样例输出二】<br />
+<br />
+3<br />
+<br />
+【样例输出三】<br />
+<br />
+56<br />
+<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>【数据规模】</p><br />
+<p>对于5%的数据满足，n &le; 6；</p><br />
+<p>对于25%的数据满足，n &le; 25；</p><br />
+<p>对于60%的数据满足，n &le; 100；</p><br />
+<p>对于70%的数据满足，n &le; 300；</p><br />
+<p>对于100%的数据满足，n &le; 1 000。<br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

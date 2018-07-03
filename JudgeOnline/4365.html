@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[IOI2014]gondola缆车</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4365. [IOI2014]gondola缆车</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4365">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4365">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4365">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>猫空缆车（Mao-Kong Gondola）是台北市的一个著名景点。这个缆车系统包括一个环形轨道、一个缆车站和n个编号为1到n的缆车。这些缆车以固定的方向在轨道上循环运行。在缆车 经过缆车站之后，下一个经过缆车站的缆车将会是i+1（i&lt;n时），或者是缆车1（i=n时）。<br />
+缆车可能会发生故障。幸运的是，我们有无限多个后备的空闲缆车，其编号依次为n+1,n+2等等。当某个缆车发生故障时，我们会在轨道上的同一位置用最前一个空闲缆车替换它，也就是说，编号最小的空闲缆车。举个例子，如果当前有五辆缆车而缆车1发生了故障，那么我们将用缆车6来替换它。<br />
+你喜欢去缆车站上观察缆车过站。一个缆车序列（ gondola sequence ） 是由缆车过站次序形成的n个缆车编号的序列。在你到达缆车站之前，有可能会有一到多个缆车发生故障（并且被替换掉），但是在你观察过程中是不会有缆车发生故障的。<br />
+注意，在轨道上的相同一组缆车，有可能给出多种缆车序列，这取决于当你到缆车站时哪辆缆车最先过站。举个例子，如果没有任何缆车发生故障，那么(2, 3, 4, 5, 1)和(4, 5, 1, 2, 3)都可能是缆车序列，但是(4, 3, 2, 5, 1)不可能是（因为缆车的次序有误）。<br />
+如果缆车1发生故障，那么我们可能会观察到缆车序列(4, 5, 6, 2, 3)。如果接着缆车4发生故障而我们用缆车7替换它，就有可能会观察到缆车序列(6, 2, 3, 7, 5)。如果缆车7在此后发生故障而我们用缆车8替换它，那么现在就有可能会观察到缆车序列(3, 8, 5, 6, 2)。<br />
+&nbsp;<br />
+一个 替换序列（ replacement sequence ） 是一个由故障缆车编号组成的序列，其次序与故障发生次序相同。在前面的例子中，替换序列是(1, 4, 7)。如果一个替换序列 对应的故障发生后，我们由此有可能观察到缆车序列 ，就称替换序列 生成缆车序列。<br />
+缆车序列检查<br />
+在前三个子任务中，你必须检查某个输入序列是否是一个缆车序列。下表举例说明了哪些序列是缆车序列而哪些不是。<br />
+输出一行一个整数0或1，当输入序列是一个缆车序列时，输出1，否则输出0。<br />
+替换序列<br />
+在接下来的三个子任务中，你必须构造一个能够生成给定缆车序列的可能的替换序列。满足条件的任意替换序列都可以。<br />
+输出一行，第一个整数l表示替换序列的长度，后面l个整数，第i个表示replacementSeq[i]。<br />
+replacementSeq: 一个足够大的能存下替换序列的数组；你应当将替换序列中的<br />
+第i个元素存放到replacementSeq[i]做为返回结果，这里0&le;i&le;l-1。<br />
+替换序列计数<br />
+在接下来的四个子任务中，你必须计算所有能够生成给定序列（有可能是缆车序列，也有可能不是）的可能替换序列的数目，并将其对1,000,000,009取模。 <br />
+如果输入序列是一个缆车序列，则计算能够生成该缆车序列的可能的替换序列的<br />
+数目（有可能会非常大）， 然后输出将该数值对 1,000,000,009 取模的结果。如果输入序列不是一个缆车序列，应输出0。如果输入序列是一个缆车序列，<br />
+但是没有缆车发生故障，应输出1。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第1行: T，你的程序需要解决的子任务编号(1&le;T&le;10)。<br />
+第2行: n，输入序列的长度。<br />
+第3行: 如果T是4、5或者6，此行包含gondolaSeq[0], ..., gondolaSeq[n-1]。否则此行包含inputSeq[0], ..., inputSeq[n-1]。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出格式见题目描述。<br />
+&nbsp;</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+30<br />
+16 26 18 19 20 13 22 21 24 25 17 27 28 29 30 1 2 3 11 5 6 8 7 9 10 12 4 23 14 15<br />
+ <br />
+ </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img width="661" height="1279" src="upload/201512/aa.png" alt="" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

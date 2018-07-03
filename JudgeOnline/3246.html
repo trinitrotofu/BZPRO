@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2013]Dreaming</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3246. [Ioi2013]Dreaming</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3246">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3246">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3246">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">Serpent(水蛇)生活的地方有N个水坑，编号为0，...，N - 1，有M条双向小路连接这些水坑。每两个水坑之间至多有一条路径（路径包含一条或多条小路）相互连接，有些水坑之间根本无法互通(即M &le; N-1 )。Serpent走过每条小路需要一个固定的天数，不同的小路需要的天数可能不同。Serpent的朋友袋鼠希望新修 N - M - 1条小路，让Serpent可以在任何两个水坑间游走。袋鼠可以在任意两个水坑之间修路，Serpent通过每条新路的时间都是L天。袋鼠希望找到一种修路方式使得修路之后Serpent在每两个水坑之间游走的最长时间最短。</span></p>
+<p><span style="font-size: medium">举例说明</span></p>
+<p><span style="font-size: medium"><img height="433" width="544" alt="" src="upload/201307/1.jpg" /></span></p>
+<p><span style="font-size: medium">上图中有12个水坑8条小路(&nbsp;N = 12,&nbsp;M = 8)。假如L = 2&nbsp;,即Serpent通过任何一条新路都需要2天。那么，袋鼠可以修建3条新路： <br />
+水坑1和水坑2之间；<br />
+水坑1和水坑6之间；<br />
+水坑4和水坑10之间。</span></p>
+<p><span style="font-size: medium"><img height="402" width="574" alt="" src="upload/201307/1(1).jpg" /></span></p>
+<p><span style="font-size: medium">上图显示了修路后的最终状态。从水坑0走到水坑11的时间最长，需要18天。这是 最佳结果，无论袋鼠如何选择修路方式，总会存在一些水坑对，Serpent需要18天 或者更长时间从其中一个走到另一个。<br />
+&nbsp;</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">N&nbsp;: 水坑的数目。<br />
+M&nbsp;: 原本存在的小路的数目。<br />
+L&nbsp;: Serpent通过新修的路经的时间。<br />
+A, B 和&nbsp;T: 三个包含M个元素的数组，分别表示每条小路的两个端点和通过这条小路的时间。例如，第i条小路连接水坑&nbsp;A[i-1]和水坑B[i-1],通过这条小路的时间是T[i-1]天。<br />
+&nbsp;<br />
+&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><br />
+<font size="4">如上所述，表示游走于两个距离最远的水坑之间所需的时间。</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12 8 2<br />
+0 8 4<br />
+8 2 2<br />
+2 7 4<br />
+5 11 3<br />
+5 1 7<br />
+1 3 1<br />
+1 9 5<br />
+10 6 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>18</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">n &lt;= 500000</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

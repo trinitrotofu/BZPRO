@@ -1,0 +1,70 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>长跑</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2959. 长跑</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2959">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2959">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2959">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">　　某校开展了同学们喜闻乐见的阳光长跑活动。为了能&ldquo;为祖国健康工作五十年&rdquo;，同学们纷纷离开寝室，离开教室，离开实验室，到操场参加3000米长跑运动。一时间操场上熙熙攘攘，摩肩接踵，盛况空前。<br />
+　　为了让同学们更好地监督自己，学校推行了刷卡机制。<br />
+　　学校中有n个地点，用1到n的整数表示，每个地点设有若干个刷卡机。<br />
+　　有以下三类事件：<br />
+　　1、修建了一条连接A地点和B地点的跑道。<br />
+　　2、A点的刷卡机台数变为了B。<br />
+　　3、进行了一次长跑。问一个同学从A出发，最后到达B最多可以刷卡多少次。具体的要求如下：<br />
+　　当同学到达一个地点时，他可以在这里的每一台刷卡机上都刷卡。但每台刷卡机只能刷卡一次，即使多次到达同一地点也不能多次刷卡。<br />
+　　为了安全起见，每条跑道都需要设定一个方向，这条跑道只能按照这个方向单向通行。最多的刷卡次数即为在任意设定跑道方向，按照任意路径从A地点到B地点能刷卡的最多次数。<br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">　　输入的第一行包含两个正整数n,m，表示地点的个数和操作的个数。<br />
+　　第二行包含n个非负整数，其中第i个数为第个地点最开始刷卡机的台数。<br />
+　　接下来有m行，每行包含三个非负整数P,A,B，P为事件类型，A,B为事件的两个参数。<br />
+　　最初所有地点之间都没有跑道。<br />
+　　每行相邻的两个数之间均用一个空格隔开。表示地点编号的数均在1到n之间，每个地点的刷卡机台数始终不超过10000，P=1,2,3。<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><br />
+<font size="4">　　输出的行数等于第3类事件的个数，每行表示一个第3类事件。如果该情况下存在一种设定跑道方向的方案和路径的方案，可以到达，则输出最多可以刷卡的次数。如果A不能到达B，则输出-1。<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9 31<br />
+10 20 30 40 50 60 70 80 90<br />
+3 1 2<br />
+1 1 3<br />
+1 1 2<br />
+1 8 9<br />
+1 2 4<br />
+1 2 5<br />
+1 4 6<br />
+1 4 7<br />
+3 1 8<br />
+3 8 8<br />
+1 8 9<br />
+3 8 8<br />
+3 7 5<br />
+3 7 3<br />
+1 4 1<br />
+3 7 5<br />
+3 7 3<br />
+1 5 7<br />
+3 6 5<br />
+3 3 6<br />
+1 2 4<br />
+1 5 5<br />
+3 3 6<br />
+2 8 180<br />
+3 8 8<br />
+2 9 190<br />
+3 9 9<br />
+2 5 150<br />
+3 3 6<br />
+2 1 210<br />
+3 3 6<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+-1<br />
+-1<br />
+80<br />
+170<br />
+180<br />
+170<br />
+190<br />
+170<br />
+250<br />
+280<br />
+280<br />
+270<br />
+370<br />
+380<br />
+580<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>数据规模及约定<br /><br />
+　　对于100%的数据，m&lt;=5n，任意时刻，每个地点的刷卡机台数不超过10000。N&lt;=<span style="display: inline! important; float: none; word-spacing: 0px; font: 14px 'Times New Roman', ����; text-transform: none; color: rgb(32,0,0); text-indent: 0px; white-space: normal; letter-spacing: normal; background-color: rgb(255,255,255); orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">1.5&times;10</span><sup style="font-weight: normal; word-spacing: 0px; text-transform: none; color: rgb(32,0,0); text-indent: 0px; line-height: normal; font-style: normal; font-family: 'Times New Roman', ����; white-space: normal; letter-spacing: normal; background-color: rgb(255,255,255); font-variant: normal; orphans: 2; widows: 2; webkit-text-size-adjust: auto; webkit-text-stroke-width: 0px">5</sup></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

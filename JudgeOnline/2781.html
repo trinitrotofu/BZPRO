@@ -1,0 +1,33 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>机器人走步</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2781. 机器人走步</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2781">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2781">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2781">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>&nbsp;定义<span>r(s)为一个0/1序列S的补充翻转序列（例如：r(100011)=001110）</span></div>
+<div>&nbsp;现在有一种方法生成一种序列即：<span>sn=sn-1+&rsquo;1&rsquo;+r(sn-1)</span></div>
+<div>&nbsp;S0=1</div>
+<div>&nbsp;S1=110</div>
+<div>&nbsp;S2=1101100</div>
+<div>&nbsp;S3=110110011100100</div>
+<div>&nbsp;&hellip;&hellip;</div>
+<div>&nbsp;此题所需的序列来自<span>S30</span></div>
+<div>&nbsp;现在有一个机器人放在（<span>0，0）这个点且面朝东方（上北下南左西右东）</span></div>
+<div>&nbsp;它每秒走一步，然后读<span>0/1序列的一个数，如果是1则向左转否则向右转</span></div>
+<div>&nbsp;求经过<span>X步后机器人到了哪里</span></div>
+<div>&nbsp;</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;若干组数据，每行一个正整数（<span>X&lt;=10<sup>9</sup>）</span></div>
+<div>&nbsp;数据组数<span>&lt;=200</span></div>
+<div>&nbsp;-1结尾</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;</p>
+<div>&nbsp;坐标，用括号围起来</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+ 1<br />
+ 2<br />
+ 3<br />
+ -1<br />
+ <br />
+ </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+ （1，0）<br />
+ （1，1）<br />
+ （0，1）<br />
+  <br />
+ </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;对于100%的数据 x&lt;=1000000000</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

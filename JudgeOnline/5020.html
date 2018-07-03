@@ -1,0 +1,60 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[THUWC 2017]在美妙的数学王国中畅游</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5020. [THUWC 2017]在美妙的数学王国中畅游</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：80 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5020">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5020">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5020">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>数字和数学规律主宰着这个世界。</div>
+<div></div>
+<div>机器的运转，</div>
+<div></div>
+<div>生命的消长，</div>
+<div></div>
+<div>宇宙的进程，</div>
+<div></div>
+<div>这些神秘而又美妙的过程无不可以用数学的语言展现出来。</div>
+<div></div>
+<div>这印证了一句古老的名言：</div>
+<div></div>
+<div>&ldquo;学好数理化，走遍天下都不怕。&rdquo;</div>
+<div></div>
+<div>学渣小R被大学的数学课程虐得生活不能自理，微积分的成绩曾是他在教室里上的课的最低分。然而他的某位陈姓室友却能轻松地在数学考试中得到满分。为了提升自己的数学课成绩，有一天晚上（在他睡觉的时候），他来到了数学王国。</div>
+<div></div>
+<div>数学王国中，每个人的智商可以用一个属于 [0,1]的实数表示。数学王国中有 n 个城市，编号从 0 到 n&minus;1 ，这些城市由若干座魔法桥连接。每个城市的中心都有一个魔法球，每个魔法球中藏有一道数学题。每个人在做完这道数学题之后都会得到一个在 [0,1] 区间内的分数。一道题可以用一个从 [0,1] 映射到 [0,1]的函数 f(x) 表示。若一个人的智商为 x ，则他做完这道数学题之后会得到 f(x)分。函数 f有三种形式：</div>
+<div></div>
+<div>&nbsp; &nbsp; 正弦函数 sin(ax+b) (a&isin;[0,1],b&isin;[0,&pi;],a+b&isin;[0,&pi;])</div>
+<div></div>
+<div>&nbsp; &nbsp; 指数函数 e^(ax+b) (a&isin;[&minus;1,1],b&isin;[&minus;2,0],a+b&isin;[&minus;2,0])</div>
+<div></div>
+<div>&nbsp; &nbsp; 一次函数 ax+b (a&isin;[&minus;1,1],b&isin;[0,1],a+b&isin;[0,1]</div>
+<div>数学王国中的魔法桥会发生变化，有时会有一座魔法桥消失，有时会有一座魔法桥出现。但在任意时刻，只存在至多一条连接任意两个城市的简单路径（即所有城市形成一个森林）。在初始情况下，数学王国中不存在任何的魔法桥。</div>
+<div>数学王国的国王拉格朗日很乐意传授小R数学知识，但前提是小R要先回答国王的问题。这些问题具有相同的形式，即一个智商为 x 的人从城市 u 旅行到城市 v（即经过 u 到 v 这条路径上的所有城市，包括 u和 v ）且做了所有城市内的数学题后，他所有得分的总和是多少。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个正整数 n,m 和一个字符串 type 。</div>
+<div>表示数学王国中共有 n 座城市，发生了 m 个事件，该数据的类型为 type 。&nbsp;</div>
+<div>typet 字符串是为了能让大家更方便地获得部分分，你可能不需要用到这个输入。</div>
+<div>其具体含义在【数据范围与提示】中有解释。</div>
+<div></div>
+<div>接下来 n 行，第 i 行表示初始情况下编号为 i 的城市的魔法球中的函数。</div>
+<div>一个魔法用一个整数 f表示函数的类型，两个实数 a,b 表示函数的参数，若</div>
+<div>&nbsp; &nbsp; f=1,则函数为 f(x)=sin(ax+b)(a&isin;[0,1],b&isin;[0,&pi;],a+b&isin;[0,&pi;])</div>
+<div>&nbsp; &nbsp; f=2,则函数为 f(x)=e^(ax+b)(a&isin;[&minus;1,1],b&isin;[&minus;2,0],a+b&isin;[&minus;2,0])</div>
+<div>&nbsp; &nbsp; f=3,则函数为 f(x)=ax+b(a&isin;[&minus;1,1],b&isin;[0,1],a+b&isin;[0,1])</div>
+<div>接下来 m行，每行描述一个事件，事件分为四类。</div>
+<div>&nbsp; &nbsp; appear u v 表示数学王国中出现了一条连接 u 和 v 这两座城市的魔法桥 (0&le;u,v&lt;n,u&ne;v) ，保证连接前 u和 v 这两座城市不能互相到达。</div>
+<div>&nbsp; &nbsp; disappear u v 表示数学王国中连接 u 和 v 这两座城市的魔法桥消失了，保证这座魔法桥是存在的。</div>
+<div>&nbsp; &nbsp; magic c f a b 表示城市 c 的魔法球中的魔法变成了类型为 f ，参数为 a,b 的函数</div>
+<div>&nbsp; &nbsp; travel u v x 表示询问一个智商为 x 的人从城市 u 旅行到城市 v&nbsp;</div>
+<div>（即经过 u到 v 这条路径上的所有城市，包括 u 和 v ）后，他得分的总和是多少。</div>
+<div>&nbsp;若无法从 u 到达 v ，则输出一行一个字符串 unreachable。</div>
+<div>1&le;n&le;100000,1&le;m&le;200000</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问，输出一行实数，表示得分的总和。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 7 C1<br />
+1 1 0<br />
+3 0.5 0.5<br />
+3 -0.5 0.7<br />
+appear 0 1<br />
+travel 0 1 0.3<br />
+appear 0 2<br />
+travel 1 2 0.5<br />
+disappear 0 1<br />
+appear 1 2<br />
+travel 1 2 0.5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9.45520207e-001<br />
+1.67942554e+000<br />
+1.20000000e+000</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

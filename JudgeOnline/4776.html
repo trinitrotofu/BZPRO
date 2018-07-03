@@ -1,0 +1,54 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2017 Open]Modern Art</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4776. [Usaco2017 Open]Modern Art</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4776">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4776">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4776">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>modeArt critics worldwide have only recently begun to recognize the creative genius behind the great</div>
+<div>bovine painter, Picowso.Picowso paints in a very particularway. She starts with an N&times;N blank canvas</div>
+<div>, represented by an N&times;N grid of zeros, where a zero indicates an empty cell of the canvas. She then</div>
+<div>draws N2 rectangles on the canvas, one in each of N2 colors (conveniently numbered 1&hellip;N2). For examp</div>
+<div>le, she might start by painting a rectangle in color 2, giving this intermediate canvas:</div>
+<div>2 2 2 0&nbsp;</div>
+<div>2 2 2 0&nbsp;</div>
+<div>2 2 2 0&nbsp;</div>
+<div>0 0 0 0</div>
+<div></div>
+<div>She might then paint a rectangle in color 7:</div>
+<div></div>
+<div>2 2 2 0&nbsp;</div>
+<div>2 7 7 7&nbsp;</div>
+<div>2 7 7 7&nbsp;</div>
+<div>0 0 0 0</div>
+<div></div>
+<div>And then she might paint a small rectangle in color 3:</div>
+<div></div>
+<div>2 2 3 0&nbsp;</div>
+<div>2 7 3 7&nbsp;</div>
+<div>2 7 7 7&nbsp;</div>
+<div>0 0 0 0</div>
+<div>Each rectangle has sides parallel to the edges of the canvas, and a rectangle could be as large as t</div>
+<div>he entire canvas or as small as a single cell. Each color from 1&hellip;N^2is used exactly once, although&nbsp;</div>
+<div>later colors might completely cover up some of the earlier colors.Given the final state of the canva</div>
+<div>s, please count how many of the N^2colors could have possibly been the first to be painted.</div>
+<div>
+<div>给定一个n*n的矩阵，初始都为0，选择一个1到n*n的排列，然后按照这个排列的顺序，每次选择这个矩阵的一个非</div>
+<div>空子矩形，然后涂上当前数字。现在给定最终的矩阵，求哪些数字可能是排列的第一位。</div>
+</div>
+<div></div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of input contains N, the size of the canvas (1&le;N&le;1000). The next N lines describe t</div>
+<div>he final picture of the canvas, each containing N integers that are in the range 0&hellip;N^2. The input i</div>
+<div>s guaranteed to have been drawn as described above, by painting successive rectangles in different c</div>
+<div>olors.</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>Please output a count of the number of colors that could have been drawn first.</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+2 2 3 0<br />
+2 7 3 7<br />
+2 7 7 7<br />
+0 0 0 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>14<br />
+<br />
+In this example, color 2 could have been the first to be painted. Color 3 clearly had to have been p<br />
+ainted after color 7, and color 7 clearly had to have been painted after color 2. Since we don't see<br />
+ the other colors, we deduce that they also could have been painted first.</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

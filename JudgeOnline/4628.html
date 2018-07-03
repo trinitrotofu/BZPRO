@@ -1,0 +1,38 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeiJing2016]IP地址</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4628. [BeiJing2016]IP地址</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4628">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4628">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4628">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>路由表中每一项对应了一个形如 1011101?????????????????????????的规则，会匹配指定的前缀为给定形式的 ip</div>
+<div>。 当有多个规则匹配时，前缀最长的生效。同一时刻不会有多个匹配的规则的前缀一样长。每一个时刻，会有一</div>
+<div>条规则被加入，或者之前被加入的某条规则会过期。给一系列 ip，问每一个 ip 在一个给定的时间区间内匹配到</div>
+<div>的生效规则变了几次？</div>
+<div>例如，有一系列事件：</div>
+<div>Add 110</div>
+<div>Add 11</div>
+<div>Del 110</div>
+<div>Del 11</div>
+<div>Add 110</div>
+<div>那么,IP 地址 11011101001001010101011101000010在这五个时刻之后匹配到</div>
+<div>的生效规则分别是：</div>
+<div>110（第一条），</div>
+<div>110（第一条），</div>
+<div>11（第二条），</div>
+<div>空，</div>
+<div>110（第三条）。</div>
+<div>其中，在第二个事件后到第五个事件后的这段过程中，一共变了3次。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数 N 和 Q，表示时刻的个数与查询的个数。</div>
+<div>接下来 N 行，每行描述一个事件。事件的格式是</div>
+<div>Add s 表示新建一个规则，匹配前缀为 s 的所有 ip.</div>
+<div>Del s 表示把当前前缀 s 对应的规则删掉（过期）。保证之前有这样的一条规则还没被删。</div>
+<div>接下来 Q 行，每行一个 ip 与两个整数 a,b，表示查询 ip 在第 a 个事件（从 1 开始数）</div>
+<div>后到第 b 个事件后的这段时间里，这个 ip 匹配到的生效规则变化的次数。 ip 用01字符串来表示。</div>
+<div>1 &le; N, Q &le; 10^5，串长不超过32</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对每个查询，输出所求的变化次数.</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 1<br />
+Add 110<br />
+Add 11<br />
+Del 110<br />
+Del 11<br />
+Add 110<br />
+11011101001001010101011101000010 2 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

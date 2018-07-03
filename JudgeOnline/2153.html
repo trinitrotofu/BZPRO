@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>设计铁路</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2153. 设计铁路</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2153">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2153">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2153">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>A省有一条东西向的公路经常堵车，为解决这一问题，省政府对此展开了调查。调查后得知，这条公路两侧有很多村落，每个村落里都住着很多个信仰c教的教徒，每周日都会开着自家的车沿公路到B地去&ldquo;膜拜&rdquo;他们的教主，这便是堵车的原因。详细调查显示：这里总共有N个村落，并且它们都在B地的东边。编号为i的村落住有Ri个信仰c教的教徒，距离B地的距离为Ti（单位：公里）。为解决这一问题，A省政府决定在这条公路下修建一条地下快速铁路来缓解交通，并沿线修建若干个车站（B地会修建终点站，不算车站）。每名教徒都会先往B地方向开车（如果他所在村庄处恰好有车站就不必开车了），到最近的一个快速铁路车站时换乘（如果直接开到B地就不用换乘了），再通过快速铁路到B地。但A政府遇到一个难题：修建多少个车站以及在哪修建车站。一个修建车站的方案中，如果修建过多的车站则会花费过多的钱，但修建的车站少了或者修建的位置不对又会导致公路的拥堵。A政府为了协调这两方面，采用评分的方式来衡量一个方案的好坏（分数越大方案越坏）：每修建一个车站会增加m的分数，在某一次&ldquo;膜拜&rdquo;中（只考虑去，不考虑返回），每导致1个教徒开车行驶1公里会增加1分。现请你设计一个修建车站的方案，使得分数最小。请输出这个最小的分数。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入的第一行包含两个正整数n、m。之后n行每行两个正整数Ti、Ri。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一个整数，表示最小的分数。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输入1】<br />
+4 20<br />
+25 3<br />
+5 3<br />
+25 2<br />
+20 5<br />
+【样例输入2】<br />
+4 30<br />
+25 3<br />
+5 3<br />
+25 2<br />
+20 5<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>【样例输出1】<br />
+55<br />
+<br />
+【样例输出2】<br />
+70<br />
+【样例说明】<br />
+样例1中，在距B地20km处和距B地25km处修建车站，1、3、4号村落里的教徒就不必开车了，得分20*2=40分。2号村落里的教徒直接开车到B地，得分3*5=15分。总共得分55分。<br />
+样例2中，在距B地20km处修建车站，4号村落里的教徒就不必开车了，得分30分。1号和3号村落里的教徒先开车到距B地20km处的车站，得分3*5+2*5=25分。2号村落里的教徒直接开车到B地，得分3*5=15分。总共得分70分。<br />
+【数据规模】<br />
+对于100%的数据，n<=40000，m<=2000000000，Ti<=1000000，Ri<=1000。<br />
+提示：请注意使用64位整型存储某些数据和结果。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

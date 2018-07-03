@@ -1,0 +1,19 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Coci 2000 Kolo</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3088. Coci 2000 Kolo</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：32 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3088">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3088">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3088">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">有1个方框, 和 N-1 个圆, 排成一个环形.<br />
+初始时, 方框里的数字是 1, 然后延逆时针方向, 依次是 2..N<br />
+一共执行 K 轮游戏, 对于每一轮游戏<br />
+&nbsp;&nbsp;&nbsp; 设当前是第 k 轮游戏.</span></p>
+<p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 然后考虑这一轮开始时, 方框里的数. <br />
+&nbsp;&nbsp;&nbsp; 对这个数 执行 p_k 次交换, 每次都和它当前右边的数交换<br />
+&nbsp;&nbsp;&nbsp; (但是 方框 和 圆 不交换, 只交换里面的数字)<br />
+&nbsp;&nbsp;&nbsp; 每个数面对的方向是环形的中心<br />
+&nbsp;&nbsp;&nbsp; p_k 表示 第k小的质数<br />
+最后给定一个 A, 求 游戏全部结束时, A这个数 的 右边的数 和 左边的数</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">&nbsp;&nbsp;&nbsp; 第1行: 3 个整数, N, K, A (1 &lt;= A &lt;= N)</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
+&nbsp;&nbsp;&nbsp; 第1行: 两个用 1个空格 隔开的整数, 分别表示 A 右边的数 和 左边的数</span></p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 3 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>589 407<br />
+140<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">3 &lt;= N &lt;= 5000000, 1 &lt;= K &lt;= 500000</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

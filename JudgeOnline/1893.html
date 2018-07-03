@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Ural 鹰蛋</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1893. Ural 鹰蛋</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：4 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1893">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1893">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1893">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">Imagine that you are in a building with F floors (starting at floor 1, the lowest floor), and you have a large number of identical eggs, each in its own identical protective container. For each floor in the building, you want to know whether or not an egg dropped from that floor will break. If an egg breaks when dropped from floor i, then all eggs are guaranteed to break when dropped from any floor j ≥ i. Likewise, if an egg doesn't break when dropped from floor i, then all eggs are guaranteed to never break when dropped from any floor j ≤ i.
+We can define Solvable(F, D, B) to be true if and only if there exists an algorithm to determine whether or not an egg will break when dropped from any floor of a building with F floors, with the following restrictions: you may drop a maximum of D eggs (one at a time, from any floors of your choosing), and you may break a maximum of B eggs. You can assume you have at least D eggs in your possession.
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>The first line of input gives the number of cases, N. N test cases follow. Each case is a line formatted as:
+F D B
+Solvable(F, D, B) is guaranteed to be true for all input cases.
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>For each test case, output one line containing "Case #x: " followed by three space-separated integers: Fmax, Dmin, and Bmin. 
+The definitions are as follows:
+1.Fmax is defined as the largest value of F' such that Solvable(F', D, B) is true, or -1 if this value would be greater than or equal to 232 .(In other words, Fmax = -1 if and only if Solvable(232, D, B) is true.)
+2.Dmin is defined as the smallest value of D' such that Solvable(F, D', B) is true.
+3.Bmin is defined as the smallest value of B' such that Solvable(F, D, B') is true.
+
+Limits
+1 ≤ N ≤ 100. 
+Small dataset
+1 ≤ F ≤ 100,
+1 ≤ D ≤ 100,
+1 ≤ B ≤ 100. 
+Large dataset
+1 ≤ F ≤ 2000000000,
+1 ≤ D ≤ 2000000000,
+1 ≤ B ≤ 2000000000. 
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+3 3 3<br />
+7 5 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case #1: 7 2 1<br />
+Case #2: 25 3 2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

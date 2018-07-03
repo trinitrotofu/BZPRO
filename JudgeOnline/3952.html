@@ -1,0 +1,36 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>字符串集合</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3952. 字符串集合</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3952">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3952">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3952">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>有三个字符串集合， Pre 、 Mid 和 Suf 。我们称一个字符串的二元组 (p, q) 合法，当且仅当：</div>
+<div>1. p 属于集合 Pre ；</div>
+<div>2. q 属于集合 Suf ；</div>
+<div>3. 存在 p 的一个长度不小于 k1 的子串 p'、 q 的一个长度不小于 k2 的子串 q' ，以及集合 Mid 中的一个字符串 s ，使得 p' + q' 是 s 的一个子串。这里的 + 代表字符串的连接。</div>
+<div>你可以进行任意次操作，一次操作中，你需要选择一个合法的二元组 (p, q) ，并从集合 Pre 中删去字符串 p ，从集合 Suf 中删去字符串 q 。求最多的操作次数。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行包含三个正整数 s1 、 s2 和 s3 ，分别代表集合 Pre 、 Mid 和 Suf 中字符串的个数。</div>
+<div>第二行包含两个正整数 k1 和 k2 ，含义如问题描述中所述。</div>
+<div>接下来 s1 行，每行包含一个字符串，代表集合 Pre 中的一个字符串。</div>
+<div>接下来 s2 行，每行包含一个字符串，代表集合 Mid 中的一个字符串。</div>
+<div>接下来 s3 行，每行包含一个字符串，代表集合 Suf 中的一个字符串。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行，包含一个正整数，表示最多可以操作的次数。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 1 4<br />
+2 3<br />
+aab<br />
+bbb<br />
+aabbcdd<br />
+cdd<br />
+bcd<br />
+zz<br />
+bcde</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>样例中合法的二元组有 (aab, bcd) 、 (aab, bcde) 和 (bbb, ccd) 。</div><br />
+<div>字符串 zz 的长度小于 k2 ，因此不存在包含这个字符串的合法二元组。</div><br />
+<div>数据规模和约定</div><br />
+<div>令 len(S) 为集合 S 中所有字符串的长度和。再令 L = max{len(Pre), len(Mid), len(Suf)} 。</div><br />
+<div>对于 10% 的数据， s1, s2, s3 &le; 5 ， L &le; 30 。</div><br />
+<div>对于 20% 的数据， s1, s2, s3 &le; 30 ， L &le; 300 。</div><br />
+<div>对于 50% 的数据， s1, s2, s3 &le; 500 ， L &le; 10000 。</div><br />
+<div>对于 100% 的数据， s1, s2, s3 &le; 25000 ， L &le; 50000 ， 0 &le; k1, k2 &le; L 。字符串只含有小写英文字母。</div><br />
+<div>注意题目中的&ldquo;集合&rdquo;和数学中定义的集合不同，其中可以有相同的字符串。</div><br />
+<div>尚无数据，请不要提交！求此题数据！</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

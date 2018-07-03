@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Wf2016]What Really Happened on Mars?</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4620. [Wf2016]What Really Happened on Mars?</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4620">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4620">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4620">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>
+<div>火星探险者的飞船上的实时软件遇到了名为&quot;优先级倒置&quot;的问题。一种解决该难题的技术是&quot;优先级置顶协议&quot;。这</div>
+<div>个问题中，你要模拟一些按照该协议执行的进程。这些进程共用一些资源，但每个资源同时只能被一个进程使用。</div>
+<div>为了确保这点，资源在用前会被锁定，用完以后才解锁。每个进程用开始时间、基础优先级（两两不同）、一系列</div>
+<div>指令来描述。执行过程中每个进程的优先级可能改变。指令分为3种：</div>
+<div>compute：进行计算，消耗一微秒。</div>
+<div>lock k：锁定资源k（不耗时）</div>
+<div>unlock k：解锁资源k（不耗时）</div>
+<div>锁定一个资源后，这个进程就拥有了这个资源，直到它解锁。每个进程只会解锁它拥有的资源中最近一次锁定的资</div>
+<div>源，不会锁定它已经拥有的资源，结束时一定没有拥有任何资源。每个资源有着固定的&quot;最高优先级&quot;，即会发出指</div>
+<div>令锁定该资源的进程中基础优先级最高的进程的基础优先级。一个处理器将处理这些进程。开始时，处理器将自身</div>
+<div>时钟设为0，然后开始无限循环以下步骤：</div>
+<div>①检测正在运行的进程。正在运行的进程是指开始时间小于等于当前处理器时间且指令未被全部执行完毕的进程。</div>
+<div>②决定所有进程的当前优先级，并决定哪些进程将被阻塞。如果进程T的下一个指令是锁定资源k，而k已经被其它</div>
+<div>进程拥有，或者至少有一个其它进程拥有某个资源l，且l的最高优先级大于或等于T当前优先级，那么T将会被阻塞</div>
+<div>。此时，我们称进程T被每一个拥有这样的k或l的进程阻塞。T的当前优先级是T的基础优先级和所有被T阻塞的进程</div>
+<div>的当前优先级中取最大值。</div>
+<div>③执行当前优先级最高且没有被阻塞的进程的下一条指令（如果有的话）。如果当前没有这样的进程，或者处理器</div>
+<div>执行了一条compute指令，则把处理器时钟增加1微秒。执行lock或unlock指令后不要增加时钟值。</div>
+<div>优先级置顶协议认定以上的操作满足以下性质：当前优先级以当前优先级和进程阻塞来定义，而进程阻塞以当前优</div>
+<div>先级定义。尽管这看起来似乎是循环的，一定存在一组唯一的当前优先级满足定义。所有进程最终会结束。第③步</div>
+<div>中，优先级最高且没有被阻塞的进程一定只有一个。</div>
+</div>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div></div>
+<div>
+<div>第一行有两个数t（1&le;t&le;20）、r(1&le;r&le;20)，分别表示进程数量和资源数量</div>
+<div>接下来t行每行描述一个进程。开始有3个数：</div>
+<div>进程开始时间s（1&le;s&le;10000）、它的基础优先级b（1&le;b&le;t）、一个整数a（1&le;a&le;100）。</div>
+<div>接下来a个字符串描述指令。每个字符串为一个字母（C、L、U）加上一个整数。</div>
+<div>Cn（1&le;n&le;100）表示n个compute操作。Lk和Uk（1&le;k&le;r）分别表示锁定和解锁资源k。</div>
+<div>没有两个进程基础优先级相同。</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个进程，输出它执行结束时的时间，按输入顺序输出。</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 1<br />
+50 2 5 C1 L1 C1 U1 C1<br />
+1 1 5 C1 L1 C100 U1 C1<br />
+70 3 1 C1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>106<br />
+107<br />
+71<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

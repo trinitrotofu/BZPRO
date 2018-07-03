@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2007]Miners 矿工配餐
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1806. [Ioi2007]Miners 矿工配餐
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1806">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1806">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1806">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"> 
+现有两个煤矿，每个煤矿都雇用一组矿工。采煤工作很辛苦，所以矿工们需要良好饮食。每当一辆食品车到达煤矿时，矿工们便会产出一定数量的煤。有三种类型的食品车：肉车，鱼车和面包车。
+
+矿工们喜欢变化的食谱。如果提供的食品能够不断变化，他们的产煤量将会增加。每当一个新的食品车到达煤矿时，矿工们就会比较这种新的食品和前两次（或者少于两次，如果前面运送食品的次数不足两次）的食品，并且：
+&#8226; 如果这几次食品车都是同一类型的食品，则矿工们产出一个单位的煤。
+&#8226; 如果这几次食品车中有两种不同类型的食品，则矿工们产出两个单位的煤。
+&#8226; 如果这几次食品车中有三种不同类型的食品，则矿工们产出三个单位的煤。
+
+预先已知食品车的类型及其被配送的顺序。通过确定哪车食品送到哪个煤矿可以影响产煤量。食品车不能被拆分，每个食品车必须被全部送到一个或另一个煤矿。两个煤矿也并不要求接收相同数量的食品车（事实上，也允许将所有食品车都送到一个煤矿）。
+
+任务
+给出食品车的类型及其被配送的顺序，要求你写一个程序，确定哪个食品车应被送到煤矿1，哪个食品车应被送到煤矿2，以使得两个煤矿的产煤量的总和最大。
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输入的第一行包含一个整数N (1 ≤ N ≤ 100 000),  表示食品车的数目。
+第二行包含一个由N个字符组成的字符串，按照配送顺序依次表示食品车配送的食品的类型。每个字符是以下三个大写字母之一：'M' (表示肉类), 'F' (表示鱼类) 或 'B' (表示面包)。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输出一个整数，表示最大的总产煤量。
+
+评分
+在45分的测试数据中，食品车的数目至多为20
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 <br />
+MBMFFB <br />
+<br />
+<br />
+ </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

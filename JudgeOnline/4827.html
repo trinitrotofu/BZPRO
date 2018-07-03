@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Hnoi2017]礼物</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4827. [Hnoi2017]礼物</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4827">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4827">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4827">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>我的室友最近喜欢上了一个可爱的小女生。马上就要到她的生日了，他决定买一对情侣手 环，一个留给自己，一</div>
+<div>个送给她。每个手环上各有 n 个装饰物，并且每个装饰物都有一定的亮度。但是在她生日的前一天，我的室友突</div>
+<div>然发现他好像拿错了一个手环，而且已经没时间去更换它了！他只能使用一种特殊的方法，将其中一个手环中所有</div>
+<div>装饰物的亮度增加一个相同的自然数 c（即非负整数）。并且由于这个手环是一个圆，可以以任意的角度旋转它，</div>
+<div>但是由于上面 装饰物的方向是固定的，所以手环不能翻转。需要在经过亮度改造和旋转之后，使得两个手环的差</div>
+<div>异值最小。在将两个手环旋转且装饰物对齐了之后，从对齐的某个位置开始逆时针方向对装饰物编号 1,2,&hellip;,n，</div>
+<div>其中 n 为每个手环的装饰物个数，第 1 个手环的 i 号位置装饰物亮度为 xi，第 2 个手 环的 i 号位置装饰物</div>
+<div>亮度为 yi，两个手环之间的差异值为(参见输入输出样例和样例解释)： \sum_{i=1}^{n}(x_i-y_i)^2麻烦你帮他</div>
+<div>计算一下，进行调整（亮度改造和旋转），使得两个手环之间的差异值最小， 这个最小值是多少呢？</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入数据的第一行有两个数n, m，代表每条手环的装饰物的数量为n，每个装饰物的初始 亮度小于等于m。</div>
+<div>接下来两行，每行各有n个数，分别代表第一条手环和第二条手环上从某个位置开始逆时 针方向上各装饰物的亮度。</div>
+<div>1&le;n&le;50000, 1&le;m&le;100, 1&le;ai&le;m</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一个数，表示两个手环能产生的最小差异值。</div>
+<div>注意在将手环改造之后，装饰物的亮度 可以大于 m。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 6<br />
+1 2 3 4 5<br />
+6 3 3 4 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+【样例解释】<br />
+需要将第一个手环的亮度增加1，第一个手环的亮度变为： 2 3 4 5 6 旋转一下第二个手环。对于该样例，是将第<br />
+二个手环的亮度6 3 3 4 5向左循环移动 2017-04-15 第 6 页，共 6 页 一个位置，使得第二手环的最终的亮度为<br />
+：3 3 4 5 6。 此时两个手环的亮度差异值为1。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

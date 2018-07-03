@@ -1,0 +1,42 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>集会</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4039. 集会</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4039">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4039">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4039">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Fictitia是一个很大的城市，他的街道由许多横向和纵向的街道垂直交叉组成，每两条相邻的横向街道距离为1，每两条相邻的横向街道距离也为1。每个十字路口有一个整数坐标(x,y)。所有的市民都居住在某个十字路口。</div>
+<div>有一天，Fictitia中有一群不高兴的市民准备集会。他们想选一个十字路口(x&rsquo;,y&rsquo;)作为集会地点，使得所有人离集会地点的曼哈顿距离的总和最小。如果某个市民居住在(x,y)，那么他与集会地点的曼哈顿距离为|x-x&rsquo;|+|y-y&rsquo;|。</div>
+<div>但为了让所有人及时赶到，集会地点离每个市民的曼哈顿距离不能超过d。市民们想知道最小的距离总和为多少，如果不存在合理的集会地点，输出&ldquo;impossible&rdquo;。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>每个文件有多个输入数据，文件最后一行为一个数0。</div>
+<div>对于每组输入数据</div>
+<div>第一行为一个正整数n（n&gt;=2），表示集会市民的人数。</div>
+<div>接下来的n行，每行两个整数x，y（0&lt;=x，y&lt;=10^9），表示每个市民居住地点的坐标。</div>
+<div>最后一行一个整数d（0&lt;=d&lt;=2*10^9），表示集会地点与每个市民居住地点的最大距离。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个测试输入，如果存在合理地点，输出一行，包含一个整数为最小的距离总和；否则输出一行&ldquo;impossible&rdquo;。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+3 1<br />
+4 1<br />
+5 9<br />
+2 6<br />
+5 3<br />
+10<br />
+5<br />
+3 1<br />
+4 1<br />
+5 9<br />
+2 6<br />
+5 3<br />
+5<br />
+5<br />
+3 1<br />
+4 1<br />
+5 9<br />
+2 6<br />
+5 3<br />
+4<br />
+0<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>18<br />
+20<br />
+impossible<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p class="MsoNormal" align="left"><span lang="EN-US">100%</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">的数据，</span><span lang="EN-US">n&lt;=100000</span><span style="font-family:宋体;mso-ascii-font-family:<br />
+Calibri;mso-hansi-font-family:Calibri">，每个文件中所有数据</span><span lang="EN-US">n</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;mso-hansi-font-family:Calibri">的总和不超过</span><span lang="EN-US">300000</span><span style="font-family:宋体;mso-ascii-font-family:Calibri;<br />
+mso-hansi-font-family:Calibri">；</span></p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

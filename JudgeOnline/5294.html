@@ -1,0 +1,25 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Bjoi2018]二进制</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5294. [Bjoi2018]二进制</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5294">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5294">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5294">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>pupil 发现对于一个十进制数，无论怎么将其的数字重新排列，均不影响其是不是333 的倍数。他想研究对于二进</div>
+<div>制，是否也有类似的性质。于是他生成了一个长为n 的二进制串，希望你对于这个二进制串的一个子区间，能求出</div>
+<div>其有多少位置不同的连续子串，满足在重新排列后（可包含前导0 ）是一个3 的倍数。两个位置不同的子区间指开</div>
+<div>始位置不同或结束位置不同。由于他想尝试尽量多的情况，他有时会修改串中的一个位置，并且会进行多次询问。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入第一行包含一个正整数n ，表示二进制数的长度。</div>
+<div>之后一行n 个空格隔开的整数，保证均是0 或1 ，表示该二进制串。</div>
+<div>之后一行一个整数m ，表示询问和修改的总次数。</div>
+<div>之后m 行每行为1 i，表示pupil 修改了串的第i个位置（0 变成1 或1 变成0 ），或2 l r</div>
+<div>表示pupil 询问的子区间是[l,r] 。</div>
+<div>串的下标从1 开始。</div>
+<div>1&le;n,m&le;100000</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每次询问，输出一行一个整数表示对应该询问的结果。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+1 0 1 0<br />
+3<br />
+2 1 3<br />
+1 3<br />
+2 3 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+3<br />
+说明<br />
+样例解释<br />
+对于第一个询问，区间[2,2] 只有数字0 ，是3 的倍数，区间[1,3] <br />
+可以重排成011(2)=3(10)，是3 的倍数，其他区间均不能重排成3 的倍数。<br />
+对于第二个询问，全部三个区间均能重排成3 的倍数（注意00 也是合法的）。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

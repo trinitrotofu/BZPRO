@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Neerc2011 Lanes</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3807. Neerc2011 Lanes</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3807">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3807">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3807">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>某座大桥上有n1条从左至右的车道，n2(n1,n2&le;10)</div>
+<div>条从右至左的车道，还有一条潮汐车道。</div>
+<div>在早上从左向右行驶的车辆较多，潮汐车道的方向是</div>
+<div>从左向右；晚上正好相反。</div>
+<div>也就是说早上有n1+1条左右车道，n2条右左车道；晚</div>
+<div>上有n1条左右车道，n2+1条右左车道。</div>
+<div>交通是很复杂的问题，我们有如下的抽象模型：</div>
+<div>从早到晚被分为m(m&le;100000)个离散的时刻，编号从1开始。</div>
+<div>在每个时刻，两侧均有一些车抵达。</div>
+<div>设左右车道和右左车道各有L,R条车道，那么左侧通行L辆车</div>
+<div>（即减少L辆车），右侧通行R辆车。</div>
+<div>剩下的车等待下一时刻。</div>
+<div>如果在时刻m后仍有车辆在等待，那么后面的时刻仍按同样模</div>
+<div>型进行，只是不会有新到达的车辆了。</div>
+<div>你的任务是决定在哪一时刻改变潮汐车道的方向，能</div>
+<div>使所有车辆等待时间的总和最小化。</div>
+<div>不过潮汐车道也不是瞬间就能改变方向的，它需要r</div>
+<div>个时刻来改变方向。也就是说，如果在t时刻改变方向，那么在[t,t+r-1]</div>
+<div>时刻内潮汐车道不能使用，即左右和右左车道各有n1和n2条。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 2 10 2<br />
+1 0<br />
+2 1<br />
+3 2<br />
+4 2<br />
+3 3<br />
+2 3<br />
+1 5<br />
+0 3<br />
+1 2<br />
+0 1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

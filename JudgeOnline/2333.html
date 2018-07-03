@@ -1,0 +1,53 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[SCOI2011]棘手的操作</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2333. [SCOI2011]棘手的操作</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2333">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2333">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2333">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">有<font face="Times New Roman">N</font><font face="宋体">个节点，标号从</font><font face="Times New Roman">1</font><font face="宋体">到</font><font face="Times New Roman">N</font><font face="宋体">，这</font><font face="Times New Roman">N</font><font face="宋体">个节点一开始相互不连通。第</font><font face="Times New Roman">i</font><font face="宋体">个节点的初始权值为</font><font face="Times New Roman">a[i]</font><font face="宋体">，接下来有如下一些操作：</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">U&nbsp;x&nbsp;y:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">加一条边，连接第<font face="Times New Roman">x</font><font face="宋体">个节点和第</font><font face="Times New Roman">y</font><font face="宋体">个节点</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A1&nbsp;x&nbsp;v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将第<font face="Times New Roman">x</font><font face="宋体">个节点的权值增加</font><font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A2&nbsp;x&nbsp;v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将第<font face="Times New Roman">x</font><font face="宋体">个节点所在的</font>连通块的所有节点的权值都增加<font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">A3&nbsp;v:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">将所有节点的权值都增加<font face="Times New Roman">v</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F1&nbsp;x:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出第<font face="Times New Roman">x</font><font face="宋体">个节点当前的权值</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F2&nbsp;x:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出第<font face="Times New Roman">x</font><font face="宋体">个节点所在的连通块中，权值最大的节点的权值</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">F3:</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"> </span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输出所有节点中，权值最大的节点的权值</span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span>&nbsp;</p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">输入的第一行是一个整数<font face="Times New Roman">N</font><font face="宋体">，代表节点个数。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">接下来一行输入<font face="Times New Roman">N</font><font face="宋体">个整数，</font><font face="Times New Roman">a[1],&nbsp;a[2],&nbsp;&hellip;,&nbsp;a[N]</font><font face="宋体">，代表</font><font face="Times New Roman">N</font><font face="宋体">个节点的初始权值。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">再下一行输入一个整数<font face="Times New Roman">Q</font><font face="宋体">，代表接下来的操作数。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 20.25pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">最后输入<font face="Times New Roman">Q</font><font face="宋体">行，每行的格式如题目描述所示。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'">对于操作<font face="Times New Roman">F1,&nbsp;F2,&nbsp;F3</font><font face="宋体">，输出对应的结果，每个结果占一行。</font></span><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; margin-left: 21pt"><span style="font-size: 10.5pt; font-family: 'Times New Roman'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+<br />
+0 0 0<br />
+<br />
+8<br />
+<br />
+A1 3 -20<br />
+<br />
+A1 2 20<br />
+<br />
+U 1 3<br />
+<br />
+A2 1 10<br />
+<br />
+F1 3<br />
+<br />
+F2 3<br />
+<br />
+A3 -10<br />
+<br />
+F3<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+-10<br />
+<br />
+10<br />
+<br />
+10<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><br /><br />
+&nbsp;对于30%的数据，保证 N&lt;=100，Q&lt;=10000</p><br />
+<p>对于80%的数据，保证 N&lt;=100000，Q&lt;=100000</p><br />
+<p>对于100%的数据，保证 N&lt;=300000，Q&lt;=300000</p><br />
+<p>对于所有的数据，保证输入合法，并且 -1000&lt;=v, a[1], a[2], &hellip;, a[N]&lt;=1000<br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

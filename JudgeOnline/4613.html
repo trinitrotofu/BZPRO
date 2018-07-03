@@ -1,0 +1,26 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Wf2016]Longest Rivers</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4613. [Wf2016]Longest Rivers</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：100 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4613">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4613">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4613">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>有n条河流的发源地，有m个汇合点，每个汇合点都有若干条河流汇合，最后所有的河流汇合到一个点。给每个河流</div>
+<div>定义一个长度，即从汇合终点开始，遇到分叉即只保留一条主干，剩下的都是支流。现在对于每条河流询问最好可</div>
+<div>能的排名。n,m&lt;=500000。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个整数n(1&lt;n&lt;=500000)代表河流源头数，m(0&lt;=m&lt;n)表示汇合点数，这些汇合点被标号为1~m。</div>
+<div>接下来n行描述河流，每行包含一个字符串（长度不超过10），表示河流源头的名字，</div>
+<div>然后有两个整数c(0&lt;=c&lt;=m)和d(1&lt;=d&lt;=10^9)，c表示离其最近的河流下游交汇处的标号，d是到交汇处的距离。</div>
+<div>最后m行描述交汇点1~m。每行两个数该交汇点下游最近的交汇点和距离。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出n行，每行输出河流的名字和最高的可能排名。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 3<br />
+Chi 1 1047<br />
+Mekong 2 2650<br />
+Mun 1 800<br />
+Nan 3 710<br />
+Salween 0 2815<br />
+Yom 3 787<br />
+2 100<br />
+0 1700<br />
+0 30<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Chi 1<br />
+Mekong 1<br />
+Mun 3<br />
+Nan 6<br />
+Salween 1<br />
+Yom 4<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

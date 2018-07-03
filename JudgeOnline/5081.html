@@ -1,0 +1,38 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>树</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5081. 树</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5081">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5081">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5081">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>给出一棵n个点的树，每个点有两层，每层有权值和颜色（黑白）。要</div>
+<div>求支持以下操作。</div>
+<div>1. Cover s t color，将 s 到 t 的路径上的点的两层的颜色全部置为 color(0</div>
+<div>白 1 黑)</div>
+<div>2. CVal index layer val 将 index 号点的 layer 层的权值修改为 val</div>
+<div>3. CColor index layer color 将 index 号点的 layer 层的颜色修改为 color</div>
+<div>4. QMax s t 询问 s 到 t 的路径上的白色最大权值和路径的权值（任意</div>
+<div>白色层为起点，每次只能往相同点不同层或者相邻点同一层上移动，</div>
+<div>每个点的每一层最多走一次，路径经过的层必须都是白色），若 s 到</div>
+<div>t 上的路径没有白点则输出&rdquo;Bad Request.&rdquo;</div>
+<div>5. QLen s t 询问 s 到 t 的路径上的白色最大权值和路径的最大长度，若</div>
+<div>s 到 t 的路径上没有白点则输出 0</div>
+<div>初始树上权值均为1，颜色均为白色。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个整数n表示树的点数</div>
+<div>接下来n&minus;1行每行两个数s,t表示s,t有边相连</div>
+<div>接下来一行一个数Q表示操作数</div>
+<div>接下来Q行表示一个操作</div>
+<div>n, Q &le; 50000, val &le; 1000</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个 Qmax QLen 输出一行表示答案</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata><br />
+6<br />
+1 2<br />
+2 4<br />
+2 5<br />
+1 3<br />
+3 6<br />
+7<br />
+CVal 1 0 5<br />
+CVal 1 1 3<br />
+CColor 1 0 1<br />
+CVal 2 0 5<br />
+CVal 3 0 3<br />
+QMax 5 6<br />
+QLen 5 6</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>17<br />
+9</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

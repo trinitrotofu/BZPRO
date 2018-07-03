@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>可持久化权值妹子树</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5214. 可持久化权值妹子树</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：700 MiB</span> <span class="ui label">时间限制：15 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5214">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5214">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5214">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小y有n个妹子，编号分别为1, 2，... n。为了更好管理这些妹子，小y想把他们分成若干组～</div>
+<div></div>
+<div>在开始的开始（我们记作分组方案0）中，每个妹子各成一组。</div>
+<div>每次小y会选择一个已有的分组方案i，挑出其中两个不在同组的妹子x, y，将她们所在的组合并。</div>
+<div>我们将第j次操作得到的分组方案记作分组方案j。这样就可以得到许多不同的分组方案啦！</div>
+<div></div>
+<div></div>
+<div>为了知道这些分组方案孰优孰劣，因此小y想知道关于分组方案的一些信息。</div>
+<div>每次，小y会选择某一个分组方案i，询问x所在的组中编号第k小的妹子是谁。</div>
+<div></div>
+<div></div>
+<div>为了小y的幸福（划掉），来帮帮他把（逃</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数n, m。表示妹子数和操作数。</div>
+<div>接下来的m行，首先有一个整数opt。</div>
+<div>如果opt=0，接下来三个整数i, x, y，表示一次合并。保证分组方案i已经出现过，x, y在不同组中。</div>
+<div>如果opt=1，接下来三个整数i, x, k，表示一次询问。保证x所在的组中至少有k个妹子。</div>
+<div>1 &lt;=n, q &lt;= 100000，合并不超过60000次，询问不超过60000次</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个询问操作输出一个整数，表示该妹子的编号</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 6<br />
+0 0 1 2<br />
+1 1 1 2<br />
+1 1 2 1<br />
+0 1 2 3<br />
+0 1 1 3<br />
+1 3 3 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1<br />
+2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

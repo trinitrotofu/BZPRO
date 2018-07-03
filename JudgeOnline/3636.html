@@ -1,0 +1,51 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>教义问答手册</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3636. 教义问答手册</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3636">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3636">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3636">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">&ldquo;汉中沃野如关中，四五百里烟蒙蒙。黄云连天夏麦熟，水稻漠漠吹秋风。&rdquo;&mdash;&mdash;摘自 黄裳《汉中行》<br />
+&ldquo;泉岭精神不朽，汉中诸球永生。&rdquo;&mdash;&mdash;摘自《泉岭精神创立者语录》<br />
+&ldquo;把神犇烤一烤，味道会更好。&rdquo;&mdash;&mdash;摘自《xhr语录》<br />
+&ldquo;秀恩爱有利于身心健康！&rdquo;&mdash;&mdash;摘自《泉岭精神集大成者语录》<br />
+&ldquo;楼上说的对！&rdquo;&mdash;&mdash;摘自《泉岭精神信徒语录合集》<br />
+&ldquo;不会做积分，怎么找妹子！&rdquo;&mdash;&mdash;摘自《xhr语录》<br />
+&ldquo;切实保护耕地以放置更多的哨戒炮。&rdquo;&mdash;&mdash;摘自《泉岭精神信徒语录合集》<br />
+&ldquo;就算两个包子一起吃掉，也不能阻止我修筑梯田。&rdquo;&mdash;&mdash;摘自《泉岭精神创立者语录》<br />
+&ldquo;我来自泉岭，他来自汉中，我们半道而逢。&rdquo;&mdash;&mdash;摘自《泉岭精神集大成者语录》<br />
+【问题描述】<br />
+&nbsp;&nbsp;&nbsp; 作为泉岭精神的缔造者、信奉者、捍卫者、传承者，Pear决定印制一些教义问答手册，以满足泉岭精神日益增多的信徒。Pear收集了一些有关的诗选、语录，其中部分内容摘录在了【题目背景】里。这些语录是按出现的时间排好序的&mdash;&mdash;Pear很喜欢这样的作风，于是决定在按时间排好序的基础上，选择部分语录，制作成若干本教义问答手册。<br />
+&nbsp;&nbsp;&nbsp; 一共有N条语录。Pear决定从中选出某一段时间内的所有语录，在此基础上印制大小为L的若干本教义问答手册。Pear对印制的手册有如下要求：<br />
+&nbsp;&nbsp;&nbsp; 1.每本手册必须包含这个区间内连续的恰好L条语录。<br />
+&nbsp;&nbsp;&nbsp; 2.不同手册包含的语录不能相同。<br />
+&nbsp;&nbsp;&nbsp; 3.每条语录有一个&ldquo;主题相关程度&rdquo;，这个数可正可负。Pear希望所有手册的语录的&ldquo;主题相关程度&rdquo;之和尽可能大。<br />
+&nbsp;&nbsp;&nbsp; 例如，对于区间[3,15]和L=3，一种选择方法是：[4,6]+[9,11]+[12,14]。这三个区间长度都恰好为L，且互不重叠。<br />
+&nbsp;&nbsp;&nbsp; Pear并没有决定选哪段时间的语录，因此他有Q次询问。每次询问，给出两个数[l,r]表示候选语录的范围是第l条到第r条。你能回答出每个询问的最大&ldquo;主题相关程度&rdquo;之和么？<br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">&nbsp;&nbsp;&nbsp; 第一行两个正整数N，L，含义如上所述。注意对于所有询问，L都是一样的。<br />
+&nbsp;&nbsp;&nbsp; 第二行N个整数，绝对值&lt;=10000。第i个数表示第i条语录的&ldquo;主题相关程度&rdquo;。<br />
+&nbsp;&nbsp;&nbsp; 接下来Q行，每行两个正整数l和r，表示询问区间。<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">&nbsp;&nbsp;&nbsp; 输出Q行，每行表示这组询问的答案。注意，这个答案可以是0，如果区间负数过于多的话。<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>    15 3<br />
+    3 1 5 -2 3 -2 -2 2 2 2 0 3 2 -1 0 <br />
+    9<br />
+    8 10<br />
+    10 10<br />
+    9 11<br />
+    2 14<br />
+    5 14<br />
+    5 13<br />
+    12 13<br />
+    7 13<br />
+    2 10<br />
+<br />
+  </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+    0<br />
+    4<br />
+    17<br />
+    11<br />
+    11<br />
+    0<br />
+    11<br />
+    12<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">【数据范围】<br /><br />
+&nbsp;&nbsp;&nbsp; 对于10%的数据，N=1000,Q=1000,L&lt;=50<br /><br />
+&nbsp;&nbsp;&nbsp; 对于另外20%的数据，N=100000,Q=100000,L&lt;=5<br /><br />
+&nbsp;&nbsp;&nbsp; 对于另外20%的数据，N=100000,Q=100000,L&lt;=10<br /><br />
+&nbsp;&nbsp;&nbsp; 对于100%的数据，N=100000,Q=100000,L&lt;=50</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

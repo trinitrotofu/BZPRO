@@ -1,0 +1,531 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Sdoi2010]猪国杀</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1972. [Sdoi2010]猪国杀</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1972">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1972">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1972">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="line-height: 20px; white-space: pre-wrap; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; font-size: 14px;">概述</span></p>
+<div id="ed15812f81fb00b1" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; font-size: 14px;">
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="9215812f86ba510d" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="9215812f86ba510d" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="9215812f86ba510d" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">《猪国杀》是一种多猪牌类回合制游戏，一共有三种角色：主猪，忠猪，反猪。</div>
+</div>
+</div>
+<div id="25215812f871140ec" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="25215812f871140ec" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="25215812f871140ec" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">每局游戏主猪有且只有一只，忠猪和反猪可以有多只，每只猪扮演一种角色。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="27515812f88ec80d8" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; font-size: 14px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="27515812f88ec80d8" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="27515812f88ec80d8" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">游戏目的</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="25e15812f8aae90b2" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="25e15812f8aae90b2" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="25e15812f8aae90b2" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">主猪（MP）：自己存活的情况下消灭所有的反猪。</div>
+</div>
+</div>
+<div id="30315812f8aae905e" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="30315812f8aae905e" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="30315812f8aae905e" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">忠猪（ZP）：不惜一切保护主猪，胜利条件与主猪相同。</div>
+</div>
+</div>
+<div id="36815812f8aae9044" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="36815812f8aae9044" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="36815812f8aae9044" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">反猪（AP）：杀死主猪。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="21b15812f8b8df024" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; font-size: 14px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="21b15812f8b8df024" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="21b15812f8b8df024" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">游戏过程</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="8315812f9091e04e" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="8315812f9091e04e" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="8315812f9091e04e" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">游戏开始时候，每个玩家手里都会有 4 张牌，且体力上限和初始体力都是 4 。</div>
+</div>
+</div>
+<div id="37715812f8f41114e" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="37715812f8f41114e" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="37715812f8f41114e" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">开始游戏时，从主猪开始，按照逆时针方向（数据中就是按照编号从 1, 2, 3...n, 1... 的顺序）依次行动。</div>
+</div>
+</div>
+<div id="1b015812f9a0c5197" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1b015812f9a0c5197" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1b015812f9a0c5197" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">每个玩家自己的回合可以分为 4 个阶段</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="8a158130495f508" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="8a158130495f508" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="8a158130495f508" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">摸牌阶段</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1815812f9a5790fc" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1815812f9a5790fc" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1815812f9a5790fc" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">从牌堆顶部摸两张牌，依次放到手牌的最右边。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="36c1581304a18509b" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="36c1581304a18509b" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="36c1581304a18509b" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">出牌阶段</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="961581304b163119" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="961581304b163119" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="961581304b163119" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">你可以使用 0 张到任意张牌，每次使用牌的时候都使用最靠左的能够使用的牌。</div>
+</div>
+</div>
+<div id="29315812f9cae4153" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="29315812f9cae4153" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="29315812f9cae4153" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">当然，要满足如下规则</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1b815812fa2d2117d" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1b815812fa2d2117d" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1b815812fa2d2117d" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">如果没有猪哥连弩，每个出牌阶段只能使用一次&ldquo;杀&rdquo;来攻击。</div>
+</div>
+</div>
+<div id="1315813048072152" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1315813048072152" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1315813048072152" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">任何牌被使用后被弃置（武器是装备上）。</div>
+</div>
+</div>
+<div id="35c15812fa53130a8" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="35c15812fa53130a8" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="35c15812fa53130a8" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">被弃置的牌以后都不能再用，即与游戏无关。</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="14315812fa943204" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; font-size: 14px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="14315812fa943204" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="14315812fa943204" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">各种牌介绍</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="2e615812fa628b173" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="2e615812fa628b173" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="2e615812fa628b173" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">每张手牌用一个字母表示，字母代表牌的种类。</div>
+</div>
+</div>
+<div id="23115812fab2890e9" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="23115812fab2890e9" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="23115812fab2890e9" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">基本牌</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="36a15812fad074152" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="36a15812fad074152" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="36a15812fad074152" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『桃(P)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="2fc15812faf3e2187" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 44px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="2fc15812faf3e2187" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="2fc15812faf3e2187" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">在自己的回合内，如果自己的体力值不等于体力上限，那么使用一个桃可以为自己补充一点体力；否则不能使用桃。</div>
+</div>
+</div>
+<div id="34715812fafb0f0f2" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="34715812fafb0f0f2" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="34715812fafb0f0f2" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">桃只能对自己使用。</div>
+</div>
+</div>
+<div id="29515812fab289056" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="29515812fab289056" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="29515812fab289056" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">在自己的回合外，如果自己的血变为 0 或者更低，那么也可以使用。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="19915812fb2dbd0c6" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="19915812fb2dbd0c6" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="19915812fb2dbd0c6" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『杀(K)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="e315812fb1c9205c" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="e315812fb1c9205c" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="e315812fb1c9205c" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">在自己的回合内，对攻击范围内除自己以外的一名角色使用。</div>
+</div>
+</div>
+<div id="1f015812fb4683054" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1f015812fb4683054" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1f015812fb4683054" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">如果没有被『闪』抵消，则造成 1 点伤害。</div>
+</div>
+</div>
+<div id="1ae15812fab28900f" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1ae15812fab28900f" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1ae15812fab28900f" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">无论有无武器，杀的攻击范围都是 1。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="22515812fb54220ae" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="22515812fb54220ae" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="22515812fb54220ae" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『闪(D)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="35b15812fab2890de" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="35b15812fab2890de" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="35b15812fab2890de" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">当你受到杀的攻击时，可以弃置一张闪来抵消杀的效果。</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="3d015812fba74803d" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="3d015812fba74803d" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="3d015812fba74803d" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">锦囊牌</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="c115812fbdead152" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="c115812fbdead152" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="c115812fbdead152" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『决斗(F)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="b715812fbb692113" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 44px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="b715812fbb692113" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="b715812fbb692113" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">出牌阶段，对除自己以外任意一名角色使用，由目标角色先开始，自己和目标角色轮流弃置一张杀，首先没有杀可弃的一方受到1点伤害，另一方视为此伤害的来源。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="36c15812fbf508139" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="36c15812fbf508139" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="36c15812fbf508139" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『南猪入侵(N)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1eb15812fbb69202b" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 44px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1eb15812fbb69202b" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1eb15812fbb69202b" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">出牌阶段，对除你以外所有角色使用，按逆时针顺序从使用者下家开始依次结算，除非弃置一张杀，否则受到1点伤害。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="7215812fc03af13c" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="7215812fc03af13c" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="7215812fc03af13c" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『万箭齐发(W)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1c815812fbb6920b6" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1c815812fbb6920b6" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1c815812fbb6920b6" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">和南猪入侵类似，不过要弃置的不是杀而是闪。</div>
+</div>
+</div>
+</div>
+</div>
+<div id="30d15812fc0fa9016" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="30d15812fc0fa9016" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="30d15812fc0fa9016" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『无懈可击(J)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="29215812fc3d760ca" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="29215812fc3d760ca" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="29215812fc3d760ca" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">在目标锦囊生效前抵消其效果。</div>
+</div>
+</div>
+<div id="1d315812fc44ed0db" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 44px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1d315812fc44ed0db" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1d315812fc44ed0db" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">每次有一张锦囊即将生效时，从使用这张锦囊的猪开始，按照逆时针顺序，依次得到使用无懈可击的机会。</div>
+</div>
+</div>
+<div id="3e815812fc4b0f0df" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="3e815812fc4b0f0df" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="3e815812fc4b0f0df" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">效果</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="2ae15812fc5248013" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="2ae15812fc5248013" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="2ae15812fc5248013" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">用于决斗时，决斗无效并弃置。</div>
+</div>
+</div>
+<div id="38c15812fc6006177" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 44px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="38c15812fc6006177" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="38c15812fc6006177" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">用于南猪入侵或万箭齐发时，当结算到某个角色时才能使用，当前角色不需弃置牌并且不会受到伤害（仅对一个角色产生效果）。</div>
+</div>
+</div>
+<div id="39915812fbb692072" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="39915812fbb692072" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="39915812fbb692072" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">用于无懈可击时，成为目标的无懈可击被无效。</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="22815812fc974c176" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="22815812fc974c176" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="22815812fc974c176" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">装备牌</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1015812fcb994114" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1015812fcb994114" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1015812fcb994114" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">『猪哥连弩(Z)』</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="29c15812fd0f77122" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="29c15812fd0f77122" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="29c15812fd0f77122" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">武器，攻击范围 1，出牌阶段你可以使用任意张杀。</div>
+</div>
+</div>
+<div id="36c15812fd172f056" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="36c15812fd172f056" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="36c15812fd172f056" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">同一时刻最多只能装一个武器。</div>
+</div>
+</div>
+<div id="bf15812fca29f077" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="bf15812fca29f077" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="bf15812fca29f077" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">如果先前已经有了一把武器，那么之后再装武器的话，会弃置以前的武器来装现在的武器。</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="2d15812fd204b0c1" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif; font-size: 14px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="2d15812fd204b0c1" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="2d15812fd204b0c1" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">特殊事件及概念解释</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1bd15812fd63d416b" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1bd15812fd63d416b" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1bd15812fd63d416b" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">伤害来源</div>
+</div>
+<div class="children" style="border-left-width: 1px; border-left-style: solid; border-left-color: rgb(235, 235, 235); margin-left: 15px; padding-left: 15px; padding-bottom: 4px;">
+<div id="1fb15812fd714402a" class="node" style="position: relative; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px;">
+<div class="content-wrapper" style="position: relative;">
+<div class="content-hotspot" style="position: absolute; top: 0px; right: 0px; width: 770px; height: 24px; cursor: default;"></div>
+<div class="bullet-wrapper" style="position: absolute; left: 6px; top: 3px; z-index: 2;">
+<div class="bullet" data-id="1fb15812fd714402a" style="width: 6px; height: 6px; border-top-left-radius: 50%; border-top-right-radius: 50%; border-bottom-right-radius: 50%; border-bottom-left-radius: 50%; border: 6px solid transparent; cursor: pointer; transition: none; -webkit-transition: none; background: content-box rgb(102, 102, 102);"></div>
+</div>
+<div class="content" data-id="1fb15812fd714402a" spellcheck="false" style="line-height: 20px; min-height: 20px; padding: 2px 0px 2px 30px; position: relative; z-index: 1; -webkit-user-select: text; white-space: pre-wrap;">杀、南猪入</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>第一行包含两个正整数n(2 &lt;= n &lt;= 10) 和m( m &lt;= 2000)，分别代表玩家数和牌堆中牌的数量。数据保证牌的数量够用。 接下来n行，每行5个字符串，依次表示对第i只猪的角色和初始4张手牌描述。编号为1的肯定是主猪。 再接下来一行，一共m个字符串，按照从牌堆顶部到牌堆底部的顺序描述每张牌。 所有的相邻的两个字符串都严格用1个空格隔开，行尾没有多余空格。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出数据第一行包含一个字符串代表游戏结果。如果是主猪胜利，那么输出&ldquo;MP&rdquo;，否则输出&ldquo;FP&rdquo;。数据保证游戏总会结束。 接下来n行，第i行是对第i只猪的手牌描述（注意只需要输出手牌），按照手牌从左往右的顺序输出，相邻两张牌用一个空格隔开，行末尾没有多余空格。如果这只猪已阵亡，那么只要输出&ldquo;DEAD&rdquo;即可。注意如果要输出手牌而没有手牌的话，那么只需输出一个空行。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 10<br />
+MP D D F F<br />
+ZP N N N D<br />
+FP J J J J<br />
+F F D D J J F F K D<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>FP<br />
+DEAD<br />
+DEAD<br />
+J J J J J D<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>样例1说明：第一回合主猪没有目标可以表敌意；接下来忠猪使用了3张南猪入侵，主猪掉了3点体力，并认为该角色为类反猪，3号角色尽管手里有无懈可击，但是因为自己未表明身份，所以同样不能对自己用，乖乖掉3点体力；下一回合反猪无牌可出；接下来主猪对着类反猪爆发，使用4张决斗，忠猪死亡，结果主猪弃掉所有牌；下来反猪摸到一张杀直接杀死主猪获胜。  数据说明：一共20组测试数据，每个点5分。10%的数据没有锦囊牌，另外20%的数据没有无懈可击。</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

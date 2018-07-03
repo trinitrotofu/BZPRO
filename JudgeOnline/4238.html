@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>电压</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4238. 电压</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4238">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4238">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4238">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>你知道Just Odd Inventions社吗？这个公司的业务是&ldquo;只不过是奇妙的发明(Just Odd Inventions)&rdquo;。这里简称为JOI社。</div>
+<div>JOI社的某个实验室中有着复杂的电路。电路由n个节点和m根细长的电阻组成。节点被标号为1~N</div>
+<div>每个节点有一个可设定的状态【高电压】或者【低电压】。每个电阻连接两个节点，只有一端是高电压，另一端是低电压的电阻才会有电流流过。两端都是高电压或者低电压的电阻不会有电流流过。</div>
+<div>某天，JOI社为了维护电路，选择了一根电阻，为了能让【只有这根电阻上的电流停止流动，其他M-1根电阻中都有电流流过】，需要调节各节点的电压。为了满足这个条件，能选择的电阻共有多少根？</div>
+<div>对了，JOI社这个奇妙的电路是用在什么样的发明上的呢？这是公司内的最高机密，除了社长以外谁都不知道哦~</div>
+<div>现在给出电路的信息，请你输出电路维护时可以选择使其不流的电阻的个数。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个空格分隔的正整数N和M，表示电路中有N个节点和M根电阻。</div>
+<div>接下来M行，第i行有两个空格分隔的正整数Ai和Bi(1&lt;=Ai&lt;=N,1&lt;=Bi&lt;=N,Ai&ne;Bi)，表示第i个电阻连接节点Ai和节点Bi。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行一个整数，代表电路维护时可选择的使其不流的电阻个数。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 4<br />
+1 2<br />
+2 3<br />
+3 2<br />
+4 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>可以选择第一根电阻或第四根电阻。</div><br />
+<div>&nbsp;<img src="upload/201508/bb.jpg" width="364" height="174" alt="" /></div><br />
+<div>2&lt;=N&lt;=10^5</div><br />
+<div>1&lt;=M&lt;=2*10^5</div><br />
+<div>不保证图是连通的，不保证没有重边</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

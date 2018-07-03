@@ -1,0 +1,39 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Haoi2016]食物链</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4562. [Haoi2016]食物链</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4562">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4562">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4562">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>如图所示为某生态系统的食物网示意图，据图回答第1小题</div>
+<div>现在给你n个物种和m条能量流动关系，求其中的食物链条数。</div>
+<div>物种的名称为从1到n编号</div>
+<div>M条能量流动关系形如</div>
+<div>a1 b1</div>
+<div>a2 b2</div>
+<div>a3 b3</div>
+<div>......</div>
+<div>am-1 bm-1</div>
+<div>am bm</div>
+<div>其中ai bi表示能量从物种ai流向物种bi,注意单独的一种孤立生物不算一条食物链</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行两个整数n和m,接下来m行每行两个整数ai bi描述m条能量流动关系。</div>
+<div>（数据保证输入数据符号生物学特点，且不会有重复的能量流动关系出现）</div>
+</div>
+<div>1&lt;=N&lt;=100000 0&lt;=m&lt;=200000</div>
+<div>题目保证答案不会爆 int</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>一个整数即食物网中的食物链条数</p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10 16<br />
+1 2<br />
+1 4<br />
+1 10<br />
+2 3<br />
+2 5<br />
+4 3<br />
+4 5<br />
+4 8<br />
+6 5<br />
+7 6<br />
+7 9<br />
+8 5<br />
+9 8<br />
+10 6<br />
+10 7<br />
+10 9</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>9</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

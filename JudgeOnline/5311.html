@@ -1,0 +1,38 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>贞鱼</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5311. 贞鱼</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：3 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5311">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5311">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5311">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>众所周知，贞鱼是一种高智商水生动物。不过他们到了陆地上智商会减半。</div>
+<div>这不？他们遇到了大麻烦！</div>
+<div>n只贞鱼到陆地上乘车，现在有k辆汽车可以租用。</div>
+<div>由于贞鱼们并不能在陆地上自由行走，一辆车只能载一段连续的贞鱼。</div>
+<div>贞鱼们互相有着深深的怨念，每一对贞鱼之间有怨气值。</div>
+<div>第i只贞鱼与第j只贞鱼的怨气值记为Y<sub>ij</sub>，且Y<sub>ij</sub>=Y<sub>ji</sub>，Y<sub>ii</sub>=0。</div>
+<div>每辆车载重不限，但是每一对在同辆车中的贞鱼都会产生怨气值。</div>
+<div>当然,超级贞鱼zzp长者希望怨气值的总和最小。</div>
+<div>不过他智商已经减半,想不出分配方案。</div>
+<div>他现在找到了你,请你帮助他分配贞鱼们,并输出最小怨气值之和ans。</div>
+<div></div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数:n,k。</div>
+<div>接下来读入一个n行n列的矩阵。矩阵中第i行j列的元素表示Y<sub>ij</sub>。</div>
+<div>当然这个矩阵是对称的。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一个整数ans，表示：最小的怨气值之和</div>
+<div>★注意：同辆车中，贞鱼i,j之间的怨气只算一次！</div>
+<div>1 &le; n &le;4000 ，1 &le; k &le;min(n , 800) , 0 &le; Yij&le;10&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8 3<br />
+0 1 1 1 1 1 1 1<br />
+1 0 1 1 1 1 1 1<br />
+1 1 0 1 1 1 1 1<br />
+1 1 1 0 1 1 1 1<br />
+1 1 1 1 0 1 1 1<br />
+1 1 1 1 1 0 1 1<br />
+1 1 1 1 1 1 0 1<br />
+1 1 1 1 1 1 1 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+编号为1，2，3的贞鱼一辆车：怨气值和为3；<br />
+编号为4，5，6的贞鱼一辆车：怨气值和为3；<br />
+编号为7，8的贞鱼一辆车：怨气值和为1。<br />
+最小怨气值总和为 3 + 3 + 1 = 7 。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

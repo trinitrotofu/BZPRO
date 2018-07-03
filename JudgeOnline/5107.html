@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CodePlus2017]找爸爸</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5107. [CodePlus2017]找爸爸</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5107">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5107">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5107">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小A最近一直在找自己的爸爸，用什么办法呢，就是DNA比对。小A有一套自己的DNA序列比较方法，其最终目标是最</div>
+<div>大化两个DNA序列的相似程度，具体步骤如下：1.给出两个DNA序列，第一个长度为n，第二个长度为m。2.在两个序</div>
+<div>列的任意位置插入任意多的空格，使得两个字符串长度相同3.逐位进行匹配，如果两个序列相同位置上的字符都不</div>
+<div>是空格，假设第一个是x，第二个是y，那么他们的相似程度由d(x,y)定义。对于两个序列中任意一段极长的长度为</div>
+<div>k的连续空格，我们定义这段空格的相似程度为g(k)=-A-B(k-1)。那么最终两个序列的相似程度就是所有的d(x,y)</div>
+<div>加上所有的极长空格段的相似程度之和。现在小A通过某种奥妙重重的方式得到了小B的DNA序列中的一段，他想请</div>
+<div>你帮他算一下小A的DNA序列和小B的DNA序列的最大相似程度。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输入第1行一个字符串，表示小A的DNA序列。</div>
+<div>输入第2行一个字符串，表示小B的DNA序列。</div>
+<div>接下来4行，每行4个整数，用空格隔开，表示d数组，</div>
+<div>具体顺序如下所示。</div>
+<div>d(A,A)d(A,T)d(A,G)d(A,C)</div>
+<div>d(T,A)d(T,T)d(T,G)d(T,C)</div>
+<div>d(G,A)d(G,T)d(G,G)d(G,C)</div>
+<div>d(C,A)d(C,T)d(C,G)d(C,C)</div>
+<div>最后一行两个用空格隔开的正整数A,B，意义如题中所述。</div>
+<div>对于所有测试点</div>
+<div>有0&lt;B&lt;A&le;1000,-1000&le;d(x,y)&le;1000,d(x,y)=d(y,x)，</div>
+<div>序列只包含{A,T,G,C}四种字符。</div>
+<div>N+M&lt;=3000</div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出共一行，表示两个序列的最大相似程度</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>ATGG<br />
+ATCC<br />
+5 -4 -4 -4<br />
+-4 5 -4 -4<br />
+-4 -4 5 -4<br />
+-4 -4 -4 5<br />
+2 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+首先，将序列补成如下形式（"-"代表空格）<br />
+ATGG--<br />
+AT--CC<br />
+然后所有d(x,y)的和为d(A,A)+d(T,T)=10所有极长连续空格段的相似程度之和为g(2)+g(2)=-6总和为4，可以验证<br />
+，这是相似程度最大的情况。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>来自 CodePlus 2017 11 月赛，清华大学计算机科学与技术系学生算法与竞赛协会 荣誉出品。</div><br />
+<div>Credit：idea/邢健开　命题/邢健开　验题/陈宇</div><br />
+<div>Git Repo：https://git.thusaac.org/publish/CodePlus201711</div><br />
+<div>本次比赛的官方网址：cp.thusaac.org</div><br />
+<div>感谢腾讯公司对此次比赛的支持。</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

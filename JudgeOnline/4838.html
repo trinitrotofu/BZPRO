@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Lydsy1704月赛]平方计数器</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4838. [Lydsy1704月赛]平方计数器</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：80 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4838">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4838">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4838">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>给定一个长度为n的非负整数序列a_1,a_2,?,a_n，你需要支持以下三种类型的操作：</div>
+<div>1.给定l,r，满足1&le;l&le;r&le;n，将a_l,a_(l+1),?,a_r依次修改为a_l^2,a_(l+1)^2,?,a_r^2。</div>
+<div>2.给定l,r,x，满足1&le;l&le;r&le;n,0&le;x&lt;2017，将a_l,a_(l+1),?,a_r分别修改为x。</div>
+<div>3.给定l,r，满足1&le;l&le;r&le;n，统计a_l,a_(l+1),?,a_r在模2017意义下有多少个互不相同的数字。</div>
+<div>现在按时间顺序给出m个操作，你需要给出第三种操作的结果。</div>
+<div></div>
+<div></div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个正整数T，表示有T组数据，满足T&le;200。</div>
+<div>接下来依次给出每组测试数据。对于每组测试数据：</div>
+<div>第一行包含两个正整数n和m，满足1&le;n,m&le;10^5。</div>
+<div>第二行包含n个非负整数，表示a_1,a_2,?,a_n，满足0&le;a_i&lt;2017。</div>
+<div>接下来m行按时间顺序描述所有操作。每行表示一个操作，第一个整数是s，表示这是第s种操作，满足1&le;s&le;3，其他参数紧跟其后。</div>
+<div>约10组数据满足n&ge;10^3或m&ge;10^3。</div>
+<div></div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对于每个第三种操作，输出一行一个正整数表示答案。</p>
+<div></div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+5 6<br />
+1 2 3 4 5<br />
+3 1 5<br />
+1 1 4<br />
+1 2 3<br />
+3 2 4<br />
+2 3 5 4<br />
+3 1 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+2<br />
+3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

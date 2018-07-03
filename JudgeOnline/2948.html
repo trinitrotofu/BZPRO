@@ -1,0 +1,25 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Poi2001]绿色游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2948. [Poi2001]绿色游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2948">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2948">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2948">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div align="center"></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">绿色游戏是一种两人游戏，双方分别称Ann和Billy。游戏的内容主要是轮流在棋盘上移动一颗棋子。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">棋盘上的点一部分是绿色的，其余是白色的；全部从1至a+b编号。编号1至a的点属于Ann，编号(a+1)至(a+b)的点属于Billy。每个点都有一些后继点，均可一步到达。属于Ann的点的后继点一定属于Billy，反之亦然。所有的点都至少有一个后继点，这样总可以往下走一步。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">游戏开始时把棋子放在任意的一点P上，然后双方轮流移动棋子至当前所在点（属于移动方）的一个后继点上（属于对手）。游戏由点P的拥有者开始，结束时棋子第二次到达了某一点，称点Q。如果在从点Q至点Q的一连串移动中，棋子至少一次被放到绿色点上，则Ann赢。若从点P开始，不管Billy如何移动，Ann总能保证赢得这次游戏，则称Ann对起始点P有必胜的策略。</span></div>
+<div><span style="font-size: medium"><b>任务：</b></span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 编写一个程序，完成下列工作：</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium">1、&nbsp;读入对棋盘的描述；</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium">2、&nbsp;算出Ann有必胜策略的起始点；</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="margin: 0cm 0cm 0pt 39pt; text-indent: -18pt"><span style="font-size: medium">首行有两个整数a和b，两个整数之间用一个空格分开，分别表示属于Ann和Billy的点数(1&le;a，b&le;3000)。以下a+b行是对各点的描述，先描述Ann的点，再描述Billy的点。第i+1行（1&le;i&le;a+b）以整数z，k开始：z表示点i的颜色(O－白色，I－绿色)，k表示后继点的数目。然后是K个整数（1&le;k＜a+b），写在同一行，代表点i后继点的编号，这些整数均用一个空格分开。绿点的个数不超过100，所有点的后继点的个数之和不超过30000。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">首行仅一个整数L，代表Ann有L个有必胜策略的起始点。以下L行按升序顺序依次给出这些点的编号。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 3<br />
+0 2 6 7<br />
+0 3 6 7 8<br />
+0 1 8<br />
+1 1 7<br />
+1 1 8<br />
+1 2 1 2<br />
+0 2 1 2<br />
+0 2 3 4 <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+1<br />
+2<br />
+4<br />
+6<br />
+7</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

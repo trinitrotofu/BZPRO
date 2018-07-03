@@ -1,0 +1,29 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[WF2011]Chips Challenge</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3961. [WF2011]Chips Challenge</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3961">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3961">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3961">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>一位著名的微处理器公司邀请您帮忙在他们的电脑芯片上安排一些组件，每个芯片被设计成拥有N &times; N个插槽的正方形。一个插槽可以存放一个组件，你要尽可能多地在芯片上安装组件。</div>
+<div>现代的处理器设计是相当复杂的。不幸地，你需要满足以下的限制。</div>
+<div>* 一些插槽是不可用的</div>
+<div>* 一些插槽已经被其他的组件所占据，无法用于固定额外的组件。</div>
+<div>* 芯片水平和垂直边界上连接着着一些内存总线,他们的带宽负载需要匹配。也就是说，第一行和第一列的组件数目必须一样多，第二行和第二列的组件数目必须一样多，依此类推。这里的组件数要包括之前已经存在于芯片之上和后来加上去的。</div>
+<div>* 类似地，每行每列都有能量供应系统。为了避免局部过热，对于给定的一组A，B，任何一行/一列的组件数都不能超过总组件数的A / B。</div>
+<div>你希望计算出最多可以在芯片上再安装多少个组件。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div></div>
+<div>对于每组数据，第一行包括三个正整数N，A，B。</div>
+<div>接下来包含 N 行,每行包含 N 个字符，表示了描述芯片的矩阵。其中 '.' 表示可用插槽，'/' 表示不可用插槽，'C'&nbsp;</div>
+<div>表示插槽已被一个部件占据。整个测试以&quot;0 0 0&quot;表示结束</div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>如果有解，输出一行包括一个正整数，表示最多能再安装多少个组件。</div>
+<div>否则，输出&quot;impossible&quot;（不包含引号）。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 1 1<br />
+/.<br />
+//<br />
+2 50 100<br />
+/.<br />
+C/<br />
+0 0 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case 1: 0<br />
+Case 2: 1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>1 &le; N &le; 40，1 &le; B &le; 1000， 0 &le; A &le; B。</p><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

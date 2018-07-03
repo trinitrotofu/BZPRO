@@ -1,0 +1,36 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CROATIAN2009]OTOCI</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1180. [CROATIAN2009]OTOCI</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1180">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1180">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1180">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>给出n个结点以及每个点初始时对应的权值wi。起始时点与点之间没有连边。有3类操作：&nbsp;</div>
+<div>1、bridge A B：询问结点A与结点B是否连通。</div>
+<div>如果是则输出&ldquo;no&rdquo;。否则输出&ldquo;yes&rdquo;，并且在结点A和结点B之间连一条无向边。&nbsp;</div>
+<div>2、penguins A X：将结点A对应的权值wA修改为X。&nbsp;</div>
+<div>3、excursion A B：如果结点A和结点B不连通，则输出&ldquo;impossible&rdquo;。</div>
+<div>否则输出结点A到结点B的路径上的点对应的权值的和。</div>
+<div>给出q个操作，要求在线处理所有操作。</div>
+<div>数据范围：1&lt;=n&lt;=30000, 1&lt;=q&lt;=300000, 0&lt;=wi&lt;=1000。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个整数n(1&lt;=n&lt;=30000)，表示节点的数目。</div>
+<div>第二行包含n个整数，第i个整数表示第i个节点初始时对应的权值。</div>
+<div>第三行包含一个整数q(1&lt;=n&lt;=300000)，表示操作的数目。</div>
+<div>以下q行，每行包含一个操作，操作的类别见题目描述。</div>
+<div>任意时刻每个节点对应的权值都是1到1000的整数。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出所有bridge操作和excursion操作对应的输出，每个一行。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+4 2 4 5 6<br />
+10<br />
+excursion 1 1<br />
+excursion 1 2<br />
+bridge 1 2<br />
+excursion 1 2<br />
+bridge 3 4<br />
+bridge 3 5<br />
+excursion 4 5<br />
+bridge 1 3<br />
+excursion 2 4<br />
+excursion 2 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+impossible<br />
+yes<br />
+6<br />
+yes<br />
+yes<br />
+15<br />
+yes<br />
+15<br />
+16</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

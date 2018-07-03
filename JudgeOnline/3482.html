@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[COCI2013]hiperprostor</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3482. [COCI2013]hiperprostor</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3482">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3482">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3482">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>在遥远的未来，行星之间的食品运输将依靠单向的贸易路线。每条路径直接连接两个行星，且其运输时间是已知的</div>
+<div>。贸易商协会打算利用一项最近发现的新技术&mdash;&mdash;超空间旅行，以增加一些新的航线。通过超空间旅行的航线也是</div>
+<div>单向的。由于该项技术仍处于试验阶段，超空间旅行的时间目前是未知的，但它不取决于行星之间的距离，所以每</div>
+<div>个超空间旅行的路线将花费等量的时间。下图是三个相互联通的行星及其运输时间的例子。行星使用正整数标号，</div>
+<div>超空间旅行时间记为&ldquo;x&rdquo;（图片对应第输入样例）：过境的时间以天计，并且始终是一个正整数。贸易商协会希</div>
+<div>望对引进新航线的后果进行分析：对于某两个行星A和B，他们想知道对于任意的x，从A到B的最短路径的总中转时</div>
+<div>间的所有可能的值。例如，在上述情况中，从星球2到星球1的最短路径所需时间可以取值5（如果x&ge;5），4，3，2</div>
+<div>，或1天（如果x&lt;5）</div>
+</div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "><img src="upload/201403/aa.jpg" width="339" height="186" alt="" /></p>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"><span style="font-size: medium; "><span lang="EN-US">&nbsp;</span></span></p>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行包含两个整数P和R，分别代表行星的数目和航线数量，1&le;P&le;500，0&le;R&le;10000。接下来的R条航线</div>
+<div>路径包含两或三个整数：行星标号C和D（1&le;C，D&le;P，C&ne;D），和T，从C到D的旅行时间。对于传统的路径，T是一</div>
+<div>个整数（1&le;T&le;1000000），超空间航线中，T是字符&ldquo;x&rdquo;。 可以存在多行有两个相同的行星。下面的行中包含的</div>
+<div>整数Q（1&le;Q&le;10），表示查询的数量。以下Q行包含两个整数星球标号（A和B，A&ne;B），为贸易商协会的查询：&ldquo;</div>
+<div>从A到B的最短路径时间的可能值是什么？</div>
+<div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"></p>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出必须包含q行，每行??一个查询。每一行都必须包含两个整数：不同的可能值的数目和它们的总和。如果不同</div>
+<div>的可能值的数目是无限的，该行只输出&ldquo;inf&rdquo;。如果没有从A到B的路径，不同的可能值的数目及它们的总和都是0</div>
+<div>。</div>
+<div>
+<p class="MsoNormal" align="left" style="text-indent: 27pt; "></p>
+<p class="MsoNormal"></p>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 4<br />
+1 2 x<br />
+2 3 x<br />
+3 4 x<br />
+1 4 8<br />
+3<br />
+2 1<br />
+1 3<br />
+1 4<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0 0<br />
+inf<br />
+3 17</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;2016.6.15新加数据一组，未重测</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

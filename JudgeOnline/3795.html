@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>魏总刷DP</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3795. 魏总刷DP</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3795">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3795">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3795">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>魏总，也就是DP魏又开始刷DP了。一共有n道题，第i道题魏总原本需要u[i]秒的时间。不过，为了表达对这些水题的藐视，魏总决定先睡k秒再开始刷题。魏总并不清楚自己会睡多久，只知道k是不超过m的正实数。并且魏总还忘了这节课有多长，只记得这节课的长度T（单位：秒）是在L到R之间。（魏总是从开始上课的时候开始睡的）睡醒后，魏总神奇地发现自己做每道题所需的时间变成了原来的k倍。不过DP魏就是DP魏，他可以同时做这n道DP，互不影响。</div>
+<div></div>
+<div>魏总本想虐场，但他很快发现自己低估这些题了。于是他决定将题分为HARD和EASY。对于每道HARD的题，他希望能最晚在下课后late[i]秒内完成，而对于EASY的题，他希望在下课前rest[i]秒之前完成。</div>
+<div></div>
+<div>求魏总达到目标的概率。</div>
+<div></div>
+<p class="MsoNormal" align="center" style="text-align:center"></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行，一个整数n</div>
+<div></div>
+<div>第二行，三个实数m，L，R</div>
+<div></div>
+<div>第三行，n个整数，第i个为u[i]</div>
+<div></div>
+<div>就下来n行，每行一个字符串和一个整数，字符串为&rdquo;HARD&rdquo;或&rdquo;EASY&rdquo;，整数为对应的late[i]或rest[i]。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一行，魏总达到目标的概率，保留4位小数。</div>
+<div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1.50 0.630 1.810<br />
+2 2 <br />
+EASY 1<br />
+EASY 0<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0.0618</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>对于100%的数据，0&lt;n&lt;=100000,0&lt;m&lt;100000,0&lt;L&lt;R&lt;100000,0&lt;late[i],rest[i]&lt;=100000。</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

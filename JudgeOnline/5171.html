@@ -1,0 +1,46 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Jsoi2013]黑白棋</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5171. [Jsoi2013]黑白棋</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5171">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5171">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5171">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小Z最近在玩一个叫做黑白棋的单机小游戏。</div>
+<div>这个游戏的规则如下：</div>
+<div>（1）棋盘为一个n*m的矩阵，每个格子可能是黑色或白色；</div>
+<div>（2）游戏目标是将所有格子变为黑色；</div>
+<div>（3）游戏参与者的每次操作是：选出一个白色格子，将它以及它所在行的格子与所</div>
+<div>在列的格子全部染成黑色；</div>
+<div>（4）当所有的格子都变为黑色时，游戏结束。</div>
+<div>完成这个游戏有许多种方案，每种方案可以表示成若干格子的一个序列。若两种方案长度不同或者存在i使得两种</div>
+<div>方案中的第i个格子不同，则认为这两种方案不同。由于完成这个游戏的难度系数为0，聪明的小Z自然不满足于此</div>
+<div>，他还想知道一共有多少种方案可以完成这个游戏。现在给你这个棋盘的初始状态，请你算一下不同方案的个数。</div>
+<div>由于方案可能很多，所以只需要求出答案对1000000007取模后的余数。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>每个测试点包含多组测试数据。</div>
+<div>第一行，包含一个整数，T，表示数据组数。</div>
+<div>接下来依次给出T组数据。</div>
+<div>每组数据第一行，包含两个整数，n、m，表示棋盘的大小。</div>
+<div>接下来n行，每行一个长度为m的字符串。</div>
+<div>其中第i行、第j个字符描述棋盘的第i行第j列的格子。&ldquo;B&rdquo;表示为黑色格子，&ldquo;.&rdquo;表示为白色格子。</div>
+<div>&nbsp;1&le;n,m,T&le;20，每个棋盘中的黑色格子不超过 8 个</div>
+<div></div>
+<div>
+<div></div>
+</div>
+<div>
+<div></div>
+</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>一共包含T行，第i行包含一个整数，表示第i组数据的答案。</div>
+<div></div>
+<div></div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+2 3<br />
+. . .<br />
+B B .<br />
+4 4<br />
+. . . .<br />
+. . . .<br />
+. . . .<br />
+. . . .</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5<br />
+576</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

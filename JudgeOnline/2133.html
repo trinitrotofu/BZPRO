@@ -1,0 +1,18 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>切割</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2133. 切割</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2133">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2133">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2133">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p></p>
+<div>有一棵n个节点的无根树，节点编号为1..n。每个节点有一个非负权值。现在需要把这棵树分成若干个联通块（不</div>
+<div>能有剩下的点），每个联通块的节点个数在k1和k2之间，每个联通块的得分就是该联通块中所有节点权值的平均值</div>
+<div>。总得分就是指对这个树切割后所有联通块的得分的和。你需要求出一种分割的方案使得总得分尽量小。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行三个整数n,k1,k2，1&le;k1&le;k2&le;n，2&le;n&le;50；</div>
+<div>第二行n个整数，第i个数表示编号为i的节点的权值，每两个相邻整数之间用一个空格隔开；</div>
+<div>接下来n-1行，每行两个整数x,y，表示编号为x的节点和编号为y的节点之间有一条边。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>如果存在一个切割方案，那么输出一个实数(四舍五入保留二位小数)，表示所有分割方案中最小的总得分。如果不</div>
+<div>存在切割方案，那么输出所有节点权值和的两倍。如果对于某个测试点你的输出和标准输出完全一样，那么将得到</div>
+<div>该测试点全部的分，否则该测试点不得分（我的sp貌似有问题，大家可以使用double类型存储数据，输出结果的整</div>
+<div>数部分保证不超过9位（十进制），使用double类型可以保证小数部分至少是6位，因而精度应该不存在问题）。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 1 1<br />
+1 1 1<br />
+1 2<br />
+2 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3.00<br />
+【数据规模】<br />
+对于100%的数据，n<=50，每个点的权值不超过10^9。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

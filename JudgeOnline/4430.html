@@ -1,0 +1,38 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Nwerc2015]Guessing Camels赌骆驼</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4430. [Nwerc2015]Guessing Camels赌骆驼</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4430">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4430">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4430">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Jaap, Jan, and Thijs are on a trip to the desert after having attended the ACM ICPC World Finals 2015 in Morocco. The trip included a camel ride, and after returning from the ride, their guide invited them to a big camel race in the evening. The camels they rode will also participate and it is customary to bet on the results of the race.</div>
+<div>One of the most interesting bets involves guessing the complete order in which the camels will finish the race. This bet offers the biggest return on your money, since it is also the one that is the hardest to get right.</div>
+<div></div>
+<div>Jaap, Jan, and Thijs have already placed their bets, but the race will not start until an hour from now, so they are getting bored. They started wondering how many pairs of camels they have put in the same order. If camel cc is before camel d on Jaap's, Jan's and Thijs' bet, it means that all three of them put c and d in the same order. Can you help them to calculate the number of pairs of camels for which this happened?</div>
+<div></div>
+<div>Jaap，Jan和Thijs在摩洛哥参加完ACMICPC2015全球总决赛后去沙漠进行了一次旅行。旅行包括了骑骆驼。在骑完回来之后，他们的向导邀请他们在晚上去看一场盛大的骆驼赛跑。他们骑的骆驼也会参加，而赌比赛的结果是一个习惯。其中一个最有趣的赌涉及猜测完成比赛的骆驼的完整名单。这个赌可以为你赢得最多的钱，因为它也是最难猜对的。</div>
+<div>Jaap，Jan和Thijs已经下了注，但比赛要在一个小时后才开始，所以他们觉得很无聊。他们开始想知道有多少对骆驼他们赌了同样的顺序。如果在他们三人的猜测名单中，骆驼c在骆驼d前，就意味着c和d在他们的名单中有相同的顺序。你能帮他们计算有多少对骆驼是这样的吗？</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The input consists of:</div>
+<div>one line with an integer n ( 2&le;n&le;200000), the number of camels;</div>
+<div>one line with n integers a1,&hellip;,ana1,&hellip;,an ( 1&le;ai&le;n for all i ), Jaap's bet. Here a1 is the camel in the first position of Jaap's bet, a2 is the camel in the second position, and so on;</div>
+<div>one line with Jan's bet, in the same format as Jaap's bet;</div>
+<div>one line with Thijs' bet, in the same format as Jaap's bet.</div>
+<div>The camels are numbered 1,&hellip;,n . Each camel appears exactly once in each bet.</div>
+<div>输入包括：</div>
+<div>第一行是一个整数n（2&lt;=n&lt;=200000），骆驼的数量。</div>
+<div>第二行有n个整数a1&hellip;an（1&lt;=ai&lt;=n），是Jaap的下赌名单。a1是名单中第一位，a2是第二位，等等。</div>
+<div>第三行是Jan的名单，格式同上。</div>
+<div>第四行是Thijs的名单，格式同上。</div>
+<div>骆驼从1到n编号，每头骆驼在一份名单中只出现一次。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>Output the number of pairs of camels that appear in the same order in all 3 bets.</div>
+<div>输出在三份名单中同样顺序的骆驼有多少对。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample input 1<br />
+3<br />
+3 2 1<br />
+1 2 3<br />
+1 2 3<br />
+Sample input 2<br />
+4<br />
+2 3 1 4<br />
+2 1 4 3<br />
+2 4 3 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample output 1<br />
+0<br />
+Sample output 2<br />
+3<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

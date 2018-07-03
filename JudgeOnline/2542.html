@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2001]终极情报网 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2542. [Ctsc2001]终极情报网 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2542">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2542">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2542">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><font face="Times New Roman" size="3">在最后的诺曼底登陆战开始之前，盟军与德军的情报部门围绕着最终的登陆地点展开了一场规模空前的情报战。 <br />
+这场情报战中，盟军的战术是利用那些潜伏在敌军内部的双重间谍，将假的登陆消息发布给敌军的情报机关的负责人。那些已经潜入敌后的间谍们都是盟军情报部的精英，忠实可靠；但是如何选择合适的人选，以及最佳的消息传递方法，才能保证假消息能够尽快而且安全准确地传递到德军指挥官们的耳朵里，成了困扰盟军情报部长的最大问题。他需要你的帮助。 <br />
+<br />
+以下是情报部长提供的作战资料： <br />
+<br />
+在敌后一共潜伏着我方最优秀的N名间谍，分别用数字1, 2, &hellip;, N编号。在给定的作战时间内，任意两人之间至多只进行一次点对点的双人联系。 <br />
+我将给你一份表格，表格中将提供任意两位间谍i和j之间进行联系的安全程度，用一个 [0, 1] 的实数Si j表示；以及他们这次联系时，能够互相传递的消息的最大数目，用一个正整数表示Mi j (如果在表格中没有被提及，那么间谍i和j之间不进行直接联系)。 <br />
+假消息从盟军总部传递到每个间谍手里的渠道也不是绝对安全，我们用 [0, 1] 的实数ASj表示总部与间谍j之间进行联系的安全程度，AMj则表示总部和间谍j之间进行联系时传递的消息的最大数目。对于不和总部直接联系的间谍，他的AMj=0（而表格中给出的他的ASj是没有意义的）。 <br />
+当然，假消息从间谍手中交到敌军的情报部官员的办公桌上的过程是绝对安全的，也即是说，间谍与敌军情报部门之间要么不进行直接联系，要么其联系的安全程度是1（即完全可靠）。 <br />
+<br />
+现在情报部打算把K条假消息&ldquo;透露&rdquo;到德军那里。消息先由总部一次性发给N名间谍中的一些人，再通过他们之间的情报网传播，最终由这N名间谍中的某些将情报送到德军手中。 <br />
+对于一条消息，只有安全的通过了所有的中转过程到达敌军情报部，这个传递消息的过程才算是安全的；因此根据乘法原理，它的安全程度P就是从总部出发，经多次传递直到到达德军那里，每一次传递该消息的安全程度的乘积。 <br />
+而对于整个计划而言，只有当N条消息都安全的通过情报网到达德军手中，没有一条引起怀疑时，才算是成功的。所以计划的可靠程度是所有消息的安全程度的乘积。 <br />
+显然，计划的可靠性取决于这些消息在情报网中的传递方法。 <br />
+我需要一个方案，确定消息应该从哪些人手中传递到哪些人手中，使得最终计划的可靠性最大。 <br />
+<br />
+你可以利用计算机，来求得这个最可靠的消息传递方案。 <br />
+<br />
+</font></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font face="Times New Roman" size="3">第一行包括两个整数N和K，分别是间谍的总人数和计划包含的消息总数。 <br />
+第二行包括2N个数，前N个数是实数AS1, AS2, &hellip;, ASN（范围在[0, 1]以内）；后N个数是整数AM1, AM1, &hellip;, AMN。 <br />
+第三行包含了N个整数，其中第i（i = 1, 2, &hellip;, N）个整数如果为0表示间谍i与德军情报部不进行联系，如果为1则表示间谍与德军情报部进行联系。 <br />
+第四行开始，每行包括4个数，依次分别是：代表间谍编号的正整数i和j，间谍i和j联系的安全性参数Si j（[0，1]范围内的实数），以及i、j之间传递的最大消息数 Mi j（每一行的i均小于j ）。 <br />
+最后的一行包含两个整数-1 -1，表示输入数据的结束。 <br />
+0 <br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p align="left">&nbsp;</p>
+<p><font face="Times New Roman" size="3">只有一行。这一行中包含一个实数P，给出的是整个计划的可靠程度P，保留5位有效数字（四舍五入）。 <br />
+如果情报网根本不能将K条消息传到德军手中，那么计划的可靠性为0。 <br />
+（你可以假定，如果计划存在，那么它的可靠性大于1e-12） <br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6 13<br />
+0.9 0.7 0.8 0 0 0 2 6 8 0 0 0<br />
+0 0 0  1  0  1<br />
+1 4 0.5 2<br />
+2 3 0.9 5<br />
+2 5 0.8 2<br />
+2 6 0.8 7<br />
+3 5 0.8 2<br />
+5 6 0.8 4<br />
+-1 -1<br />
+<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0.00021184<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

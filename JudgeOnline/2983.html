@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Balkan2009]reading</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2983. [Balkan2009]reading</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：25 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2983">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2983">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2983">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div style="text-indent: 15.75pt"><span style="font-size: medium">定义任意两小写字母间有一个差别值X（1&lt;=X&lt;=5），假设26个小写字母随意排列构成的都是单词，则对于一个单词可算出差别总和为sum，例如：</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">假设X[e-l]=3，X[l-y]=2，X[l-l]=1，则单词&ldquo;elly&rdquo;的sum值为3+1+2=6。</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">现在给出N和M，N表示sum值的上限（可以等于N），M表示已知关系个数，接下来M行，每行三个数L1，L2，F，表示字母L1到L2和L2到L1的X值都为F，若未提及的字母对则默认它们的X值为1，则问总共可形成多少符合条件的单词？</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="text-indent: 15.75pt"><span style="font-size: medium">第一行N,M&nbsp;（1&lt;=N&lt;=1000 000 000）</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">之后M行，每行三个数L1，L2，F，保证每对字母最多出现一次。</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp; 符合条件的单词总数 mod 1000 000 007 的结果。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">数据范围</span></div>
+<div><span style="font-size: medium">&nbsp;&nbsp; 50% N&lt;=1000 000</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">100% N&lt;=1000 000 000&nbsp;&nbsp; 1&lt;=F&lt;=5</span></div>
+<div style="text-indent: 15.75pt"><span style="font-size: medium">&nbsp;</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>20 10<br />
+e l 3<br />
+e o 1<br />
+o n 2<br />
+o r 4<br />
+r a 4<br />
+i n 5<br />
+e n 2<br />
+n t 3<br />
+t w 3<br />
+w i 5<br />
+ <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata> 470059518</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

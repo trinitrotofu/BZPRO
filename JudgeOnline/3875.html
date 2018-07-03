@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ahoi2014&Jsoi2014]骑士游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3875. [Ahoi2014&Jsoi2014]骑士游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3875">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3875">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3875">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>&nbsp;【故事背景】</div>
+<div>长期的宅男生活中，JYY又挖掘出了一款RPG游戏。在这个游戏中JYY会</div>
+<div>扮演一个英勇的骑士，用他手中的长剑去杀死入侵村庄的怪兽。</div>
+<div>【问题描述】</div>
+<div>在这个游戏中，JYY一共有两种攻击方式，一种是普通攻击，一种是法术攻</div>
+<div>击。两种攻击方式都会消耗JYY一些体力。采用普通攻击进攻怪兽并不能把怪兽彻底杀死，怪兽的尸体可以变出其他一些新的怪兽，注意一个怪兽可能经过若干次普通攻击后变回一个或更多同样的怪兽；而采用法术攻击则可以彻底将一个怪兽杀死。当然了，一般来说，相比普通攻击，法术攻击会消耗更多的体力值（但由于游戏系统bug，并不保证这一点）。</div>
+<div>游戏世界中一共有N种不同的怪兽，分别由1到N编号，现在1号怪兽入</div>
+<div>侵村庄了，JYY想知道，最少花费多少体力值才能将所有村庄中的怪兽全部杀死呢？</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p></p>
+<div>第一行包含一个整数N。</div>
+<div>接下来N行，每行描述一个怪兽的信息；</div>
+<div>其中第i行包含若干个整数，前三个整数为Si，Ki和Ri，表示对于i号怪兽，</div>
+<div>普通攻击需要消耗Si的体力，法术攻击需要消耗Ki的体力，同时i号怪兽死亡后会产生Ri个新的怪兽。表示一个新出现的怪兽编号。同一编号的怪兽可以出现多个。</div>
+<div>
+<div></div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;输出一行一个整数，表示最少需要的体力值。</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4<br />
+4 27 3 2 3 2<br />
+3 5 1 2<br />
+1 13 2 4 2<br />
+5 6 1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>26</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>【样例说明】</div><br />
+<div>首先用消耗4点体力用普通攻击，然后出现的怪兽编号是2，2和3。花费</div><br />
+<div>10点体力用法术攻击杀死两个编号为2的怪兽。剩下3号怪兽花费1点体力进</div><br />
+<div>行普通攻击。此时村庄里的怪兽编号是2和4。最后花费11点体力用法术攻击</div><br />
+<div>将这两只怪兽彻底杀死。一共花费的体力是4+5+5+1+5+6=26。</div><br />
+<div>【数据范围】</div><br />
+<div>2&lt;=N&lt;=2*10^5,1&lt;=Ri,Sigma(Ri)&lt;=10^6,1&lt;=Ki,Si&lt;=5*10^14</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

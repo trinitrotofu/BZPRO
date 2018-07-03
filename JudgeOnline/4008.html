@@ -1,0 +1,70 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[HNOI2015]亚瑟王</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4008. [HNOI2015]亚瑟王</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4008">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4008">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4008">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>小 K 不慎被 LL 邪教洗脑了，洗脑程度深到他甚至想要从亚瑟王邪教中脱坑。</p>
+<div>他决定，在脱坑之前，最后再来打一盘亚瑟王。既然是最后一战，就一定要打得漂</div>
+<div>亮。众所周知，亚瑟王是一个看脸的游戏，技能的发动都是看概率的。作为一个非</div>
+<div>洲人，同时作为一个前 OIer，小 K 自然是希望最大化造成伤害的期望值。但他已</div>
+<div>经多年没写过代码，连 Spaly都敲不对了，因此，希望你能帮帮小 K，让他感受一</div>
+<div>下当欧洲人是怎样的体验。&nbsp;</div>
+<div>本题中我们将考虑游戏的一个简化版模型。&nbsp;</div>
+<div>玩家有一套卡牌，共 n张。游戏时，玩家将 n 张卡牌排列成某种顺序，排列后</div>
+<div>将卡牌按从前往后依次编号为 1 ~ &nbsp;n。本题中，顺序已经确定，即为输入的顺序。</div>
+<div>每张卡牌都有一个技能。第 i 张卡牌的技能发动概率为 pi，如果成功发动，则会对</div>
+<div>敌方造成di点伤害。也只有通过发动技能，卡牌才能对敌方造成伤害。基于现实因</div>
+<div>素以及小K非洲血统的考虑，pi不会为 0，也不会为 1，即 0 &lt; pi &lt; 1。&nbsp;</div>
+<div>一局游戏一共有 r 轮。在每一轮中，系统将从第一张卡牌开始，按照顺序依次</div>
+<div>考虑每张卡牌。在一轮中，对于依次考虑的每一张卡牌：&nbsp;</div>
+<div>1如果这张卡牌在这一局游戏中已经发动过技能，则&nbsp;</div>
+<div>1.1 如果这张卡牌不是最后一张，则跳过之（考虑下一张卡牌）；&nbsp;</div>
+<div>否则（是最后一张），结束这一轮游戏。&nbsp;</div>
+<div>2否则（这张卡牌在这一局游戏中没有发动过技能），设这张卡牌为第 i 张&nbsp;</div>
+<div>2.1将其以 pi的概率发动技能。&nbsp;</div>
+<div>2.2如果技能发动，则对敌方造成 di点伤害，并结束这一轮。&nbsp;</div>
+<div>2.3如果这张卡牌已经是最后一张（即 i 等于n），则结束这一轮；否则，</div>
+<div>考虑下一张卡牌。&nbsp;</div>
+<div>请帮助小 K 求出这一套卡牌在一局游戏中能造成的伤害的期望值。&nbsp;</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入文件的第一行包含一个整数 T，代表测试数据组数。&nbsp;</p>
+<div>接下来一共 T 组数据。&nbsp;</div>
+<div>每组数据的第一行包含两个用空格分开的整数 n和r，分别代表卡牌的张数和</div>
+<div>游戏的轮数。&nbsp;</div>
+<div>接下来 n行，每行包含一个实数和一个整数，由空格隔开，描述一张卡牌。第</div>
+<div>i 行的两个数为 pi和 di，分别代表第 i 张卡牌技能发动的概率（实数）和技能发动</div>
+<div>造成的伤害（整数）。保证 pi最多包含 4位小数，且为一个合法的概率。&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;对于每组数据，输出一行，包含一个实数，为这套卡牌在这一局游戏中造成的</p>
+<div>伤害的期望值。对于每一行输出，只有当你的输出和标准答案的相对误差不超过</div>
+<div>10^-8时&mdash;&mdash;即|a-o|/a&lt;=10-8时(其中a是标准答案，o是输出)，你的输出才会被判为正确。</div>
+<div>建议输出10 位小数。&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1 <br />
+3 2 <br />
+0.5000 2 <br />
+0.3000 3 <br />
+0.9000 1 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3.2660250000 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;一共有 13 种可能的情况：&nbsp;</p><br />
+<div>1. &nbsp;第一轮中，第 1张卡牌发动技能；第二轮中，第 2张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.15，伤害为5。&nbsp;</div><br />
+<div>2. &nbsp;第一轮中，第 1张卡牌发动技能；第二轮中，第 3张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.315，伤害为3。&nbsp;</div><br />
+<div>3. &nbsp;第一轮中，第 1张卡牌发动技能；第二轮不发动技能；&nbsp;</div><br />
+<div>概率为 0.035，伤害为2。&nbsp;</div><br />
+<div>4. &nbsp;第一轮中，第 2张卡牌发动技能；第二轮中，第 1张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.075，伤害为5。&nbsp;</div><br />
+<div>5. &nbsp;第一轮中，第 2张卡牌发动技能；第二轮中，第 3张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.0675，伤害为4。&nbsp;</div><br />
+<div>6. &nbsp;第一轮中，第 2张卡牌发动技能；第二轮不发动技能；&nbsp;</div><br />
+<div>概率为 0.0075，伤害为3。&nbsp;</div><br />
+<div>7. &nbsp;第一轮中，第 3张卡牌发动技能；第二轮中，第 1张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.1575，伤害为3。&nbsp;</div><br />
+<div>8. &nbsp;第一轮中，第 3张卡牌发动技能；第二轮中，第 2张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.04725，伤害为4。&nbsp;</div><br />
+<div>9. &nbsp;第一轮中，第 3张卡牌发动技能；第二轮不发动技能；&nbsp;</div><br />
+<div>概率为 0.11025，伤害为1。&nbsp;</div><br />
+<div>10. &nbsp;第一轮不发动技能；第二轮中，第 1张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.0175，伤害为2。&nbsp;</div><br />
+<div>11. &nbsp;第一轮不发动技能；第二轮中，第 2张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.00525，伤害为3。&nbsp;</div><br />
+<div>12. &nbsp;第一轮不发动技能；第二轮中，第 3张卡牌发动技能；&nbsp;</div><br />
+<div>概率为 0.011025，伤害为1。&nbsp;</div><br />
+<div>13. &nbsp;第一轮不发动技能；第二轮亦不发动技能；&nbsp;</div><br />
+<div>概率为 0.001225，伤害为0。&nbsp;</div><br />
+<div>造成伤害的期望值为概率与对应伤害乘积之和，为 3.266025。&nbsp;</div><br />
+<div></div><br />
+<div>对于所有测试数据， 1 &lt;= T &lt;= 444， 1 &lt;= n &lt;= 220， 0 &lt;= r &lt;= 132， 0 &lt; pi &lt; 1， 0 &lt;= di &lt;= 1000。 &nbsp;</div><br />
+<div>除非备注中有特殊说明，数据中 pi与di均为随机生成。&nbsp;</div><br />
+<div>请注意可能存在的实数精度问题，并采取适当措施。&nbsp;</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

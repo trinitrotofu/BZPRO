@@ -1,0 +1,22 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Noi2015]程序自动分析</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4195. [Noi2015]程序自动分析</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4195">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4195">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4195">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;在实现程序自动分析的过程中,常常需要判定一些约束条件是否能被同时满足。</p>
+<div>考虑一个约束满足问题的简化版本：假设x1,x2,x3,&hellip;代表程序中出现的变量，给定n个形如xi=xj或xi&ne;xj的变量相等/不等的约束条件，请判定是否可以分别为每一个变量赋予恰当的值，使得上述所有约束条件同时被满足。例如，一个问题中的约束条件为：x1=x2，x2=x3，x3=x4，x1&ne;x4，这些约束条件显然是不可能同时被满足的，因此这个问题应判定为不可被满足。</div>
+<div>现在给出一些约束满足问题，请分别对它们进行判定。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入文件的第1行包含1个正整数t，表示需要判定的问题个数。注意这些问题之间是相互独立的。</p>
+<div>对于每个问题，包含若干行：</div>
+<div>第1行包含1个正整数n，表示该问题中需要被满足的约束条件个数。</div>
+<div>接下来n行，每行包括3个整数i,j,e，描述1个相等/不等的约束条件，相邻整数之间用单个空格隔开。若e=1，则该约束条件为xi=xj；若e=0，则该约束条件为xi&ne;xj。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出文件包括t行。</p>
+<div>输出文件的第k行输出一个字符串&ldquo;YES&rdquo;或者&ldquo;NO&rdquo;（不包含引号，字母全部大写），&ldquo;YES&rdquo;表示输入中的第k个问题判定为可以被满足，&ldquo;NO&rdquo;表示不可被满足。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+2<br />
+1 2 1<br />
+1 2 0<br />
+2<br />
+1 2 1<br />
+2 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>NO<br />
+YES</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;在第一个问题中，约束条件为：x1=x2,x1&ne;x2。这两个约束条件互相矛盾，因此不可被同时满足。</p><br />
+<div>在第二个问题中，约束条件为：x1=x2,x2=x1。这两个约束条件是等价的，可以被同时满足。</div><br />
+<div></div><br />
+<div>1&le;n&le;1000000</div><br />
+<div>1&le;i,j&le;1000000000</div><br />
+<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

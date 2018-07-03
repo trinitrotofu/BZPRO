@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Quelling Blade</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2491. Quelling Blade</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2491">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2491">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2491">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class="panel_content"><span style="font-size: medium">Mr. Sheep lost himself in a computer game. In this game, he plays the part of a super hero and fight with the evil. The equipment is very important in this game and Mr. Sheep thinks the Quelling Blade is the most powerful weapon.<br />
+<br />
+&nbsp;&nbsp;In this game, each type of weapon costs hero some money, and brings the hero benefits. If the hero buys two weapons (no matter they have the same type or not), the benefit values are accumulated. That is to say, if the hero buys two weapons with benefit 3 and 5, the hero will get total benefit value 8=3+5.<br />
+&nbsp;&nbsp;There are some requirements for each weapon. If the hero wants to buy a certain weapon, he may need some other weapons first. For example, if hero wants to buy a &ldquo;Divine Rapier&rdquo;, he needs a &ldquo;Demon Edge&rdquo; and a &ldquo;Scared Relic&rdquo;. Of course, if he wants to buy the second &ldquo;Devine Rapier&rdquo;, he must buy another &ldquo;Demon Edge&rdquo; and another &ldquo;Scared Relic&rdquo; first. Notice that the existing weapon will not disappear after the trade. Note that a weapon may need multiple weapons with same type. And you may assume that a type of weapon is required by at most one other type of weapon.<br />
+&nbsp;&nbsp;The hero is busy with combat and has no time to earn money. Fortunately, the game will give the hero 1 coin per second. So if the hero wants to buy a &ldquo;Quelling Blade&rdquo;, the minimum total time for him to achieve his goal can be easily calculated.<br />
+&nbsp;&nbsp;Mr. Sheep is a perfectionist. He not only wants to get the &ldquo;Quelling Blade&rdquo; as soon as possible, but also wants to optimize every second during the game. He defines the utility of the game as the sum of the benefit value of the hero in each second. He calculates the utility from the start of the game until the second he gets &ldquo;Quelling Blade&rdquo;, exclusively. You may refer to the samples for further clarification. In the other words, you should define a way of process to buy the weapons for the hero, which minimize the total time to get &ldquo;Quelling Blade&rdquo; and optimize the utility of the game.</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="panel_content"><span style="font-size: medium">&nbsp;&nbsp;There are hundreds of test cases, the number of test case are in the first line of the input. Notice that most of the test cases are relatively small.<br />
+&nbsp;&nbsp;For each test case, the first line contains a single integer N denoting the number of different types of weapons. (1 &lt;= N &lt;= 1000)<br />
+&nbsp;&nbsp;The next lines are describing the weapons. For each weapon, the first line contains two integers B and C, denoting the benefit value and the cost of this kind of weapon. (1 &lt;= B, C &lt;= 2^31-1) Then a single integer P in the next line describes the number of requirements of this weapon. Next P lines, each line contains two integers I and A, means that this weapon needs A weapons of index I.<br />
+&nbsp;&nbsp;The indexes of weapons are start from 1 to N. The &ldquo;Quelling Blade&rdquo; is the first type of weapon. And you may assume that the total numbers of weapons which are needed by the &ldquo;Quelling Blade&rdquo; is less than 1000000. Also notice that &ldquo;Quelling Blade&rdquo; can be brought in a finite game time and a type of weapon can be required by at most one other type of weapon.</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">&nbsp;For each test case, output a single integer denoting the optimal utility. You may assume that the answer is fit in 64-bit signed integer.<br />
+</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Sample Input<br />
+2<br />
+3<br />
+1 1<br />
+1<br />
+2 2<br />
+2 1<br />
+1<br />
+3 1<br />
+1 1<br />
+0<br />
+3<br />
+1 1<br />
+1<br />
+2 2<br />
+1 1<br />
+1<br />
+3 1<br />
+2 1<br />
+0<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case #1: 14<br />
+Case #2: 17</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

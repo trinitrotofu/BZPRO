@@ -1,0 +1,62 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2017]寿司餐厅</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4873. [Shoi2017]寿司餐厅</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4873">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4873">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4873">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Kiana最近喜欢到一家非常美味的寿司餐厅用餐。每天晚上，这家餐厅都会按顺序提供n种寿司，第i种寿司有一个</div>
+<div>代号ai和美味度di,i，不同种类的寿司有可能使用相同的代号。每种寿司的份数都是无限的，Kiana也可以无限次</div>
+<div>取寿司来吃，但每种寿司每次只能取一份，且每次取走的寿司必须是按餐厅提供寿司的顺序连续的一段，即Kiana</div>
+<div>可以一次取走第1,2种寿司各一份，也可以一次取走第2,3种寿司各一份，但不可以一次取走第1,3种寿司。由于餐</div>
+<div>厅提供的寿司种类繁多，而不同种类的寿司之间相互会有影响：三文鱼寿司和鱿鱼寿司一起吃或许会很棒，但和水</div>
+<div>果寿司一起吃就可能会肚子痛。因此，Kiana定义了一个综合美味度di,j(i&lt;j)，表示在一次取的寿司中，如果包含</div>
+<div>了餐厅提供的从第i份到第j份的所有寿司，吃掉这次取的所有寿司后将获得的额外美味度。由于取寿司需要花费一</div>
+<div>些时间，所以我们认为分两次取来的寿司之间相互不会影响。注意在吃一次取的寿司时，不止一个综合美味度会被</div>
+<div>累加，比如若Kiana一次取走了第1,2,3种寿司各一份，除了d1,3以外，d1,2,d2,3也会被累加进总美味度中。神奇</div>
+<div>的是，Kiana的美食评判标准是有记忆性的，无论是单种寿司的美味度，还是多种寿司组合起来的综合美味度，在</div>
+<div>计入Kiana的总美味度时都只会被累加一次。比如，若Kiana某一次取走了第1,2种寿司各一份，另一次取走了第2,3</div>
+<div>种寿司各一份，那么这两次取寿司的总美味度为d1,1+d2,2+d3,3+d1,2+d2,3，其中d2,2只会计算一次。奇怪的是，</div>
+<div>这家寿司餐厅的收费标准很不同寻常。具体来说，如果Kiana一共吃过了c(c&gt;0)种代号为x的寿司，则她需要为这些</div>
+<div>寿司付出mx^2+cx元钱，其中m是餐厅给出的一个常数。现在Kiana想知道，在这家餐厅吃寿司，自己能获得的总美</div>
+<div>味度（包括所有吃掉的单种寿司的美味度和所有被累加的综合美味度）减去花费的总钱数的最大值是多少。由于她</div>
+<div>不会算，所以希望由你告诉她</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个正整数n,m，分别表示这家餐厅提供的寿司总数和计算寿司价格中使用的常数。</div>
+<div>
+<div>第二行包含n个正整数，其中第k个数ak表示第k份寿司的代号。</div>
+<div>接下来n行，第i行包含n-i+1个整数，其中第j个数di,i+j-1表示吃掉寿司能</div>
+<div>获得的相应的美味度，具体含义见问题描述。</div>
+<div>N&lt;=100,Ai&lt;=1000</div>
+<div></div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出共一行包含一个正整数，表示Kiana能获得的总美味度减去花费的总钱数的最大值。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 1<br />
+2 3 2<br />
+5 -10 15<br />
+-10 15<br />
+15</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>12<br />
+【样例1说明】<br />
+在这组样例中，餐厅一共提供了3份寿司，它们的代号依次为a1=2，a2=3，a3=2，计算价格时的常数m=1。在保证每<br />
+次取寿司都能获得新的美味度的前提下，Kiana一共有14种不同的吃寿司方案：<br />
+1.Kiana一个寿司也不吃，这样她获得的总美味度和花费的总钱数都是0，两者相减也是0；<br />
+2.Kiana只取1次寿司，且只取第1个寿司，即她取寿司的情况为{[1,1]}，这样获得的总美味度为5，花费的总钱数<br />
+为1-2^2+1*2=6，两者相减为-1；<br />
+3.Kiana只取1次寿司，且只取第2个寿司，即她取寿司的情况为{[2,2]}，这样获得的总美味度为-10，花费的总钱<br />
+数为1-3^2+1*3=12，两者相减为-22；<br />
+4.Kiana只取1次寿司，且只取第3个寿司，即她取寿司的情况为{[3,3]}，这样获得的总美味度为15，花费的总钱数<br />
+为1*2^2+1*2=6，两者相减为9；<br />
+5.Kiana只取1次寿司，且取第1,2个寿司，即她取寿司的情况为{[1,2]}，这样获得的总美味度为5+(-10)+(-10)=-1<br />
+5，花费的总钱数为(1-2^2+1*2)+(1-3^2+1*3)=18，两者相减为-33；<br />
+6.Kiana只取1次寿司，且取第2,3个寿司，即她取寿司的情况为{[2,3]}，这样获得的总美味度为(-10)+15+15=20，<br />
+花费的总钱数为(1-2^2+1*2)+(1*3^2+1*3)=18，两者相减为2；<br />
+7.Kiana只取1次寿司，且取第1,2,3个寿司，即她取寿司的情况为{[1,3]}，这样获得的总美味度为5+(-10)+15+(-1<br />
+0)+15+15=30，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减为10。<br />
+8.Kiana取2次寿司，第一次取第1个寿司，第二次取第2个寿司，即她取寿司的情况为{[1,1],[2,2]}，这样获得的<br />
+总美味度为5+(-10)=-5，花费的总钱数为(1*2^2+1*2)+(1*3^2+1*3)=18，两者相减为-23；<br />
+9.Kiana取2次寿司，第一次取第1个寿司，第二次取第3个寿司，即她取寿司的情况为{[1,1],[3,3]}，这样获得的<br />
+总美味度为5+15=20，花费的总钱数为1*2^2+2*2=8，两者相减为12；<br />
+10.Kiana取2次寿司，第一次取第2个寿司，第二次取第3个寿司，即她取寿司的情况为{[2,2],[3,3]}，这样获得的<br />
+总美味度为(-10)+15=5，花费的总钱数为(1*2^2+1*2)+(1*3^2+1*3)=18，两者相减为-13；<br />
+11.Kiana取2次寿司，第一次取第1,2个寿司，第二次取第3个寿司，即她取寿司的情况为{[1,2],[3,3]}，这样获得<br />
+的总美味度为5+(-10)+(-10)+15=0，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减为-20；<br />
+12.Kiana取2次寿司，第一次取第1个寿司，第二次取第2,3个寿司，即她取寿司的情况为{[1,1],[2,3]}，这样获得<br />
+的总美味度为5+(-10)+15+15=25，花费的总钱数为(1-22+2-2)+(1-32+1-3)=20，两者相减为5；<br />
+13.Kiana取2次寿司，第一次取第1,2个寿司，第二次取第2,3个寿司，即她取寿司的情况为{[1,2],[2,3]}，这样获<br />
+得的总美味度为5+(-10)+15+(-10)+15=15，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减为-5；<br />
+14.Kiana取3次寿司，第一次取第1个寿司，第二次取第2个寿司，第三次取第3个寿司，即她取寿司的情况为{[1,1]<br />
+,[2,2],[3,3]}，这样获得的总美味度为5+(-10)+15=10，花费的总钱数为(1*2^2+2*2)+(1*3^2+1*3)=20，两者相减<br />
+为-10。<br />
+所以Kiana会选择方案9，这时她获得的总美味度减去花费的总钱数的值最大为12。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>精神污染</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3772. 精神污染</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3772">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3772">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3772">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>兵库县位于日本列岛的中央位置，北临日本海，南面濑户内海直通太平洋，中央部位是森林和山地，与拥有关西机场的大阪府比邻而居，是关西地区面积最大的县，是集经济和文化于一体的一大地区，是日本西部门户，海陆空交通设施发达。濑户内海沿岸气候温暖，多晴天，有日本少见的贸易良港神户港所在的神户市和曾是豪族城邑&ldquo;城下町&rdquo;的姬路市等大城市，还有以疗养地而闻名的六甲山地等。</div>
+<div>兵库县官方也大力发展旅游，为了方便，他们在县内的N个旅游景点上建立了n-1条观光道，构成了一棵图论中的树。同时他们推出了M条观光线路，每条线路由两个节点x和y指定，经过的旅游景点就是树上x到y的唯一路径上的点。保证一条路径只出现一次。</div>
+<div>你和你的朋友打算前往兵库县旅游，但旅行社还没有告知你们最终选择的观光线路是哪一条（假设是线路A）。这时候你得到了一个消息：在兵库北有一群丧心病狂的香菜蜜，他们已经选定了一条观光线路（假设是线路B），对这条路线上的所有景点都释放了【精神污染】。这个计划还有可能影响其他的线路，比如有四个景点1-2-3-4，而【精神污染】的路径是1-4，那么1-3,2-4,1-2等路径也被视为被完全污染了。</div>
+<div>现在你想知道的是，假设随便选择两条不同的路径A和B，存在一条路径使得如果这条路径被污染，另一条路径也被污染的概率。换句话说，一条路径被另一条路径包含的概率。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数N,M</div>
+<div>接下来N-1行，每行两个数a,b，表示A和B之间有一条观光道。</div>
+<div>接下来M行，每行两个数x,y，表示一条旅游线路。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>所求的概率，以最简分数形式输出。</div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 3<br />
+1 2<br />
+2 3<br />
+3 4<br />
+2 5<br />
+3 5<br />
+2 5<br />
+1 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1/3<br />
+样例解释<br />
+可以选择的路径对有(1,2),(1,3),(2,3)，只有路径1完全覆盖路径2。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>100%的数据满足：N,M&lt;=100000</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

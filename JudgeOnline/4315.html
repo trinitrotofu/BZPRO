@@ -1,0 +1,24 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>queue</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4315. queue</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4315">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4315">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4315">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>自从小C接过宇宙大总统的职位后，为了巩固自己的统治，他决定给全宇宙的精英排个队，这样，下次聚集精英们的时候，不至于乱成一锅粥。</div>
+<div>当然，精英们可是非常挑剔的，它们对于排队可有很苛刻的要求。</div>
+<div>为了方便描述，n个精英，被编号1~n。排完队之后，每个精英要求，自己的后面（不必是严格后面）都必须有一个人的编号和自己的编号相差为1（+1或-1）；</div>
+<div>而且，有很多特别霸气的精英，比如Mars之类的人，他们认为自己只能站在队伍的某个位置，小C必须满足他们的需求。</div>
+<div>小C想知道，存在多少方案满足精英们如此苛刻的条件。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行： 两个正整数n， k，表示有n个精英，k个人强制要求自己的位置。</div>
+<div>第2~k+1行，两个整数a，b，表示编号为a的精英要求自己站在队伍的第b个位置；</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;一个整数，输出方案， 答案对10^9+7 取模</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 2<br />
+1 1<br />
+2 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>【样例解释】</div><br />
+<div>两种方案为：</div><br />
+<div>1 5 2 3 4</div><br />
+<div>1 5 2 4 3&nbsp;</div><br />
+<div>最后一个人由于后面没有人，所以不要求后面有人和他编号相差为1</div><br />
+<div>强行要求位置的人，他的后面也必须有人和他编号相差为1（除非他是最后一个）</div><br />
+<div>【数据约定】</div><br />
+<div>&nbsp;100% n &lt;= 100000， k&lt;=n;</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

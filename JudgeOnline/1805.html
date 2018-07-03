@@ -1,0 +1,39 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ioi2007]Sail 船帆
+</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1805. [Ioi2007]Sail 船帆
+</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1805">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1805">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1805">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">让我们来建造一艘新的海盗船。船上有 N个旗杆，每根旗杆被分成单位长度的小节。旗杆的长度等于它被分成的小节的数目。每根旗杆上会挂一些帆，每张帆正好占据旗杆上的一个小节。在一根旗杆上的帆可以任意排布在不同的小节中，但是每个小节上至多能挂一张帆。
+
+在风中，帆的不同排布方式会产生不同的推动力。靠近船头的帆比它后面的相同高度上的帆获得的推动力少，换句话说，靠近船头的帆的推动力由于受它后面相同高度的帆的影响而打了折扣。对于任意一张帆，它的推动力折扣等于在它后面并且和它在同一高度的帆的数目。
+
+所有帆的任意一种位置组合的推动力折扣总和等于在该位置下所有帆的推动力折扣的总和。
+  
+<img border="0" src="images/1805.jpg"> 
+前                                                                                               后
+这条船上有6个旗杆，从前（图上的左边）到后的高度分别是3，5，4，2，4和3。图中所示的帆的位置组合的总推动力折扣是10。上图给出了每张帆自己的推动力折扣。
+
+任务
+
+给定N个旗杆的高度和每个旗杆上挂的帆的数目，写一个程序求出所有位置组合中的可能达到的最小的总推动力折扣。
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行包含一个整数N（2 ≤ N ≤ 100 000），表示旗杆的数目。
+接下来的N行每行包含两个整数H和K（1 ≤ H ≤ 100 000, 1 ≤ K ≤ H），分别表示对应旗杆的高度及其上的帆的数目。旗杆按照从船头到船尾的顺序给出。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输出包含一个整数，表示可以达到的最小的总推动力折扣。
+注意：计算和输出结果时使用64位整数类型（在C/C++中用long long, 在Pascal中用int64）。
+
+评分
+
+在25分的测试数据中，帆的不同位置组合的总数目不超过1 000 000。
+
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+3 2<br />
+5 3<br />
+4 1<br />
+2 1<br />
+4 3<br />
+3 2<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10<br />
+<br />
+这个样例数据和上页中图示的样例相同。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

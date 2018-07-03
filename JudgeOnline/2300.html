@@ -1,0 +1,96 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[HAOI2011]防线修建</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2300. [HAOI2011]防线修建</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2300">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2300">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2300">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+<w:WordDocument>
+<w:View>Normal</w:View>
+<w:Zoom>0</w:Zoom>
+<w:PunctuationKerning />
+<w:DrawingGridVerticalSpacing>7.8 磅</w:DrawingGridVerticalSpacing>
+<w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+<w:DisplayVerticalDrawingGridEvery>2</w:DisplayVerticalDrawingGridEvery>
+<w:ValidateAgainstSchemas />
+<w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+<w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+<w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+<w:Compatibility>
+<w:SpaceForUL />
+<w:BalanceSingleByteDoubleByteWidth />
+<w:DoNotLeaveBackslashAlone />
+<w:ULTrailSpace />
+<w:DoNotExpandShiftReturn />
+<w:AdjustLineHeightInTable />
+<w:BreakWrappedTables />
+<w:SnapToGridInCell />
+<w:WrapTextWithPunct />
+<w:UseAsianBreakRules />
+<w:DontGrowAutofit />
+<w:UseFELayout />
+</w:Compatibility>
+<w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+</w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+</w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]--><!--[if gte mso 10]>
+<style>
+/* Style Definitions */
+table.MsoNormalTable
+{mso-style-name:普通表格;
+mso-tstyle-rowband-size:0;
+mso-tstyle-colband-size:0;
+mso-style-noshow:yes;
+mso-style-parent:"";
+mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+mso-para-margin:0cm;
+mso-para-margin-bottom:.0001pt;
+mso-pagination:widow-orphan;
+font-size:10.0pt;
+font-family:"Times New Roman";
+mso-ansi-language:#0400;
+mso-fareast-language:#0400;
+mso-bidi-language:#0400;}
+</style>
+<![endif]--></p>
+<div>近来A国和B国的矛盾激化，为了预防不测，A国准备修建一条长长的防线，当然修建防线的话，肯定要把需要保护的城市修在防线内部了。可是A国上层现在还犹豫不决，到底该把哪些城市作为保护对象呢？又由于A国的经费有限，所以希望你能帮忙完成如下的一个任务：</div>
+<div>1.给出你所有的A国城市坐标</div>
+<div>2.A国上层经过讨论，考虑到经济问题，决定取消对i城市的保护，也就是说i城市不需要在防线内了</div>
+<div>3.A国上层询问对于剩下要保护的城市，修建防线的总经费最少是多少</div>
+<div>你需要对每次询问作出回答。注意单位1长度的防线花费为1。</div>
+<div>A国的地形是这样的，形如下图，x轴是一条河流，相当于一条天然防线，不需要你再修建</div>
+<div>A国总是有两个城市在河边，一个点是(0,0)，一个点是(n,0)，其余所有点的横坐标均大于0小于n，纵坐标均大于0。A国有一个不在(0,0)和(n,0)的首都。(0,0),(n,0)和首都这三个城市是一定需要保护的。</div>
+<p class="MsoNormal"><span style="font-size: 12pt; font-family: 宋体;"><img height="255" width="307" src="upload/201105/image/2300_1.jpg" alt="" /></span></p>
+<p class="MsoNormal" style="text-align: left;">上图中，A,B,C,D,E点为A国城市，且目前都要保护，那么修建的防线就会是A-B-C-D，花费也就是线段AB的长度+线段BC的长度+线段CD的长度,如果，这个时候撤销B点的保护，那么防线变成下图</p>
+<p class="MsoNormal" style="text-indent: 24pt;"></p>
+<p class="MsoNormal" style="text-indent: 24pt;"><span style="font-size: 12pt; font-family: 宋体;"><img height="271" width="325" src="upload/201105/image/2300_2.jpg" alt="" /></span></p>
+<p align="center" class="MsoNormal" style="text-align: center; text-indent: 24pt;"><span lang="EN-US" style="font-size: 12pt;"><br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行，三个整数n,x,y分别表示河边城市和首都是(0,0)，(n,0)，(x,y)。</div>
+<div>第二行，一个整数m。</div>
+<div>接下来m行，每行两个整数a,b表示A国的一个非首都非河边城市的坐标为(a,b)。</div>
+<div>再接下来一个整数q，表示修改和询问总数。</div>
+<div>接下来q行每行要么形如1 i，要么形如2，分别表示撤销第i个城市的保护和询问。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: 12pt; font-family: 宋体;">对于每个询问输出</span><span lang="EN-US" style="font-size: 12pt;">1</span><span style="font-size: 12pt; font-family: 宋体;">行，一个实数</span><span lang="EN-US" style="font-size: 12pt;">v</span><span style="font-size: 12pt; font-family: 宋体;">，表示修建防线的花费，保留两位小数</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 2 1                                <br />
+2                                  <br />
+1 2                               <br />
+3 2                               <br />
+5                                 <br />
+2<br />
+1 1<br />
+2<br />
+1 2<br />
+2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6.47<br />
+5.84<br />
+4.47</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>m&lt;=100000,q&lt;=200000,n&gt;1</div><br />
+<div>所有点的坐标范围均在10000以内, 数据保证没有重点</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,26 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Random Sequence</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2489. Random Sequence</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2489">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2489">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2489">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class="panel_content"><span style="font-size: medium">There is a random sequence L whose element are all random numbers either -1 or 1 with the same possibility. Now we define MAVS, the abbreviate of Maximum Absolute Value Subsequence, to be any (if more than one) subsequences of L whose absolute value is maximum among all subsequences. Given the length of L, your task is to find the expectation of the absolute value of MAVS.</span></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">There is only one input file. The first line is the number of test cases T. T positive integers follow, each of which contains one positive number not greater than 1500 denoted the length of L.<br />
+</span></p>
+<div class="panel_bottom"><span style="font-size: medium">&nbsp;</span></div>
+<p><span style="font-size: medium">给你一个数字L,代表数字串长。这个数字串每个元素为1或-1.</span></p>
+<p><span style="font-size: medium">那么就有这个数列有2^L种可能。</span></p>
+<p><span style="font-size: medium">现对每个可能的数字串，求其连续子串和，并将和取绝对值，记下最大的那个值。</span></p>
+<p><span style="font-size: medium">再求出所有这些值的总和。</span></p>
+<p><span style="font-size: medium">输入总和/2^L</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">For each test case, output the expectation you are required to calculate. Answers are rounded to 6 numbers after the decimal point.(as shown in the sample output)<br />
+</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+1<br />
+5<br />
+10<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case 1: 1.000000<br />
+Case 2: 2.750000<br />
+Case 3: 4.167969<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>当输入2时，有</p><br />
+<p>1 1</p><br />
+<p>1 -1</p><br />
+<p>-1 1</p><br />
+<p>-1 -1</p><br />
+<p>这四种可能，其对应的值分别为(2+1+1+2)=6</p><br />
+<p>6/4=1.5</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

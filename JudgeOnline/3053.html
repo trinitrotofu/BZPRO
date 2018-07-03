@@ -1,0 +1,62 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>The Closest M Points</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3053. The Closest M Points</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3053">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3053">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3053">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">The course of Software Design and Development Practice is objectionable. ZLC is facing a serious problem .There are many points in K-dimensional space .Given a point. ZLC need to find out the closest m points. Euclidean distance is used as the distance metric between two points. The Euclidean distance between points p and q is the length of the line segment connecting them.In Cartesian coordinates, if p = (p1, p2,..., pn) and q = (q1, q2,..., qn) are two points in Euclidean n-space, then the distance from p to q, or from q to p is given by:<br />
+D(p,q)=D(q,p)=sqrt((q1-p1)^2+(q2-p2)^2+(q3-p3)^2&hellip;+(qn-pn)^2<br />
+Can you help him solve this problem?<br />
+</span></p>
+<p></p>
+<p><span style="font-size: medium">
+<p><br />
+软工学院的课程很讨厌！ZLC同志遇到了一个头疼的问题：在K维空间里面有许多的点，对于某些给定的点，ZLC需要找到和它最近的m个点。</p>
+<p>（这里的距离指的是欧几里得距离：D(p, q) = D(q, p) =&nbsp; sqrt((q1 - p1) ^ 2 + (q2 - p2) ^ 2 + (q3 - p3) ^ 2 + ... + (qn - pn) ^ 2)</p>
+<p>ZLC要去打Dota，所以就麻烦你帮忙解决一下了&hellip;&hellip;</p>
+<p>【Input】</p>
+<p>第一行，两个非负整数：点数n(1 &lt;= n &lt;= 50000)，和维度数k(1 &lt;= k &lt;= 5)。<br />
+接下来的n行，每行k个整数，代表一个点的坐标。<br />
+接下来一个正整数：给定的询问数量t(1 &lt;= t &lt;= 10000)<br />
+下面2*t行：<br />
+　　第一行，k个整数：给定点的坐标<br />
+　　第二行：查询最近的m个点(1 &lt;= m &lt;= 10)</p>
+<p>所有坐标的绝对值不超过10000。<br />
+有多组数据！</p>
+<p>【Output】</p>
+<p>对于每个询问，输出m+1行：<br />
+第一行：&quot;the closest m points are:&quot; m为查询中的m<br />
+接下来m行每行代表一个点，按照从近到远排序。</p>
+<p>保证方案唯一，下面这种情况不会出现：<br />
+2 2<br />
+1 1<br />
+3 3<br />
+1<br />
+2 2<br />
+1</p>
+</span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">In the first line of the text file .there are two non-negative integers n and K. They denote respectively: the number of points, 1 &lt;= n &lt;= 50000, and the number of Dimensions,1 &lt;= K &lt;= 5. In each of the following n lines there is written k integers, representing the coordinates of a point. This followed by a line with one positive integer t, representing the number of queries,1 &lt;= t &lt;=10000.each query contains two lines. The k integers in the first line represent the given point. In the second line, there is one integer m, the number of closest points you should find,1 &lt;= m &lt;=10. The absolute value of all the coordinates will not be more than 10000.<br />
+There are multiple test cases. Process to end of file.<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">For each query, output m+1 lines:<br />
+The first line saying :&rdquo;the closest m points are:&rdquo; where m is the number of the points.<br />
+The following m lines representing m points ,in accordance with the order from near to far<br />
+It is guaranteed that the answer can only be formed in one ways. The distances from the given point to all the nearest m+1 points are different. That means input like this:<br />
+2 2<br />
+1 1<br />
+3 3<br />
+1<br />
+2 2<br />
+1<br />
+will not exist.<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 2<br />
+1 1<br />
+1 3<br />
+3 4<br />
+2<br />
+2 3<br />
+2<br />
+2 3<br />
+1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>the closest 2 points are:<br />
+1 3<br />
+3 4<br />
+the closest 1 points are:<br />
+1 3<br />
+ </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

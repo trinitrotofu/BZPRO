@@ -1,0 +1,37 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Jsoi2013]哈利波特与死亡圣器</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5174. [Jsoi2013]哈利波特与死亡圣器</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5174">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5174">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5174">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>伏地魔的黑暗势力控制了魔法部与霍格沃茨魔法学校之后，哈利与罗恩、赫敏不得不逃亡在外，隐形遁迹。为了完</div>
+<div>成校长邓布利多的遗命，一直在暗中寻机销毁伏地魔魂器的哈利，意外地获悉如果他们能够拥有传说中的三件死亡</div>
+<div>圣器，伏地魔将必死无疑。在凤凰社成员的帮助下，哈利一行人重新掌控了霍格沃茨。然而此举激怒了伏地魔，他</div>
+<div>很快率领大批食死徒和黑暗生物向霍格沃茨进军。麦格教授紧急疏散了霍格沃茨的学生，并开始了守卫霍格沃茨的</div>
+<div>战斗。霍格沃茨魔法学校的主要建筑共有n处，我们编号为1到n，这些建筑间由魔法道路连接，整体呈树状分布，</div>
+<div>即任意两个建筑间有且仅有一条路径相连（路径可以是一条或多条道路组成）。霍格沃茨历经多年风雨，每个建筑</div>
+<div>自身有许多保护魔法，比如&ldquo;石墩触动咒&rdquo;、&ldquo;降敌陷阱咒&rdquo;、&ldquo;统统加护咒&rdquo;等，只需有人前往施用咒语即能保</div>
+<div>卫建筑。现在，伏地魔大军已经到达1号建筑&mdash;&mdash;学校大门，凤凰社成员也已经在大门迎战，并且已经启用了大门</div>
+<div>的保护魔法。然而伏地魔大军势力壮大，保护魔法只能延缓大军的进攻锋芒，他们仍能用一个小时攻克一个建筑，</div>
+<div>随后整个大军便随机前往与之相邻的另一个建筑（兵贵神速，大军移动过程不需要时间；兵法无常，他们有可能前</div>
+<div>往已经攻克的建筑）。目前除了1号建筑，其他建筑的保护魔法都尚未被启用，凤凰社决定派出一些成员去其他建</div>
+<div>筑施用咒语来启动保护魔法。每个凤凰社成员可以瞬间达到任意一个建筑，并用一个小时完成对该建筑保护魔法的</div>
+<div>启用，之后可以再前往其他的建筑。他们的任务是，保证不论伏地魔大军如何行动，大军所到建筑的保护魔法都已</div>
+<div>经启用。为了集中更多力量直接打击伏地魔大军，凤凰社希望派出施用咒语的成员数尽可能少。</div>
+<div>请你计算，至少需要派出多少位成员。</div>
+<div>注：</div>
+<div>（1）伏地魔大军到达1号建筑开始攻击的同时，凤凰社派出成员去其他建筑施咒。</div>
+<div>（2）当大军攻克某个建筑后，凤凰社成员可以在知道大军下一个小时去哪个建筑的情</div>
+<div>况下，再决定他们去哪些建筑施咒。这个过程也不需要时间。</div>
+<div>（3）已经启用过保护魔法的建筑无需再施咒，即便大军攻克该建筑以后某个时候又回</div>
+<div>到这个建筑，大军也会在这个建筑持续攻击一个小时后再离开。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行，包含1个整数，n，表示建筑的数量。</div>
+<div>接下来n-1行，每行两个整数u、v（1&le;u,v&le;n，u&ne;v），表示建筑u和建筑v之间有一条魔法道路。</div>
+<div>数据保证任意两个建筑连通。</div>
+<div>1&le;n&le;300000。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一个整数k，表示最少需要派出施用咒语的成员数。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7<br />
+1 2<br />
+1 3<br />
+2 5<br />
+2 6<br />
+7 2<br />
+4 1<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

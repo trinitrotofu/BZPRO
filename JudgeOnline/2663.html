@@ -1,0 +1,55 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Beijing wc2012]灵魂宝石 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2663. [Beijing wc2012]灵魂宝石 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2663">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2663">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2663">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">【问题描述】 <br />
+&ldquo;作为你们本体的灵魂，为了能够更好的运用魔法，被赋予了既小巧又安全<br />
+的外形，&bdquo;&bdquo;&rdquo; <br />
+&nbsp;<br />
+&nbsp; 我们知道，魔法少女的生命被存放于一个称为灵魂宝石（Soul Gem）的装置<br />
+内。而有时，当灵魂宝石与躯体的距离较远时，魔法少女就无法控制自己的躯体<br />
+了。 <br />
+&nbsp;&nbsp; <br />
+&nbsp; 在传说中，魔法少女 Abel仅通过推理就得到了这个现象的一般法则，被称为<br />
+Abel定理：&nbsp;&nbsp; <br />
+&nbsp; 存在宇宙常量 R（是一个非负实数，或正无穷） ，被称为灵魂宝石常量，量<br />
+纲为空间度量（即：长度） 。如果某个魔法少女的灵魂宝石与她的躯体的距离严<br />
+格超过 R，则她一定无法控制自己的躯体；如果这个距离严格小于 R，则她一定<br />
+可以控制自己的躯体。 （这里的距离指平面的 Euclid距离。） <br />
+&nbsp; 注意：该定理不能预言距离刚好为 R 的情形。可能存在魔法少女 A 和 B，她<br />
+们离自己的灵魂宝石的距离都恰好为 R，但是 A可以控制自己的躯体，而 B 不可<br />
+以。 <br />
+&nbsp;&nbsp; 现在这个世界上再也没有魔法少女了，但是我们却对这个宇宙常量感兴趣。<br />
+我们只能通过之前的世界遗留下来的数据来确定这个常量的范围了。 <br />
+&nbsp; 每一组数据包含以下信息： <br />
+&nbsp;&nbsp;&nbsp; &middot;一共有N 个魔法少女及她们的灵魂宝石，分别编号为 1~N。 <br />
+&nbsp;&nbsp;&nbsp; &middot;这 N个魔法少女所在的位置是（Xi, Yi）。 <br />
+&nbsp;&nbsp;&nbsp; &middot;这 N个灵魂宝石所在的位置是（xi, yi）。 <br />
+&nbsp;&nbsp;&nbsp; &middot;此时恰好有 K个魔法少女能够控制自己的躯体。 <br />
+&nbsp; 需要注意的是： <br />
+1. 我们认为这个世界是二维的 Euclid 空间。 <br />
+&nbsp;&nbsp;&nbsp; 2. 魔法少女与灵魂宝石之间的对应关系是未知的。 <br />
+&nbsp;&nbsp;&nbsp; 3. 我们不知道是具体是哪 K个魔法少女能够控制自己的躯体。 <br />
+&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp; 根据以上信息，你需要确定灵魂宝石常量 R可能的最小值 Rmin 和最大值<br />
+Rmax。 </span></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">第一行包两个整数：N、K。 <br />
+接下来 N行，每行包含两个整数：Xi , Yi ，由空格隔开。 <br />
+再接下来N 行，每行包含两个整数：xi , yi ，由空格隔开。&nbsp;<br />
+&nbsp;</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">输出两个量：Rmin、Rmax，中间用空格隔开。 <br />
+Rmin 一定是一个非负实数，四舍五入到小数点后两位。 <br />
+Rmax 可能是非负实数，或者是正无穷： <br />
+&nbsp; 如果是非负实数，四舍五入到小数点后两位； <br />
+&nbsp; 如果是正无穷，输出&ldquo;+INF&rdquo;（不包含引号）。 </span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 1 <br />
+1 0 <br />
+4 0 <br />
+0 0 <br />
+4 4 <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1.00 5.00 <br />
+<br />
+ </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p></p><br />
+<p>对于100%的数据： <br /><br />
+1 &le;&nbsp; N&nbsp; &le;&nbsp; 50， <br /><br />
+0 &le;&nbsp; K&nbsp; &le;&nbsp; N， <br /><br />
+-1000 &le;&nbsp; xi, yi , Xi , Yi&nbsp; &le;&nbsp; 1000。&nbsp;<br /><br />
+&nbsp;<br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

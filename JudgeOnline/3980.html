@@ -1,0 +1,43 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[WF2012]Minimum Cost Flow</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3980. [WF2012]Minimum Cost Flow</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3980">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3980">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3980">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>你已经被雇佣来 使用现有的旧管道组件以建设一个在旧厂房两点间运水的系统。旧管道系统由管道和管道接口器组成。原有管道在接口器处相交。有的旧管道已经被移除，只在接口器上留下了洞&mdash;&mdash;他们本来是连在洞上的。如果水流入某个接口器，它将流出整个洞并逐渐充满整个大楼&mdash;&mdash;这显然不能让人接受。</div>
+<div>你可以通过在一些开孔间加入新管道，或者塞子关闭其他开孔来挽回这种状况。当你用一条新的管道连接两个洞时（必须位于两个不同的节点上），这两个洞不再开放并且水可以流经个新的管道。加入一条新的管道的花费等同于两个节点中心的距离。购买塞子塞住一个洞的花费是0.5。你不需要考虑那些永远不会有水到达的节点上的洞。</div>
+<div>有两个结点是特殊的。一个叫做源，是水流入新系统的点。另一个叫做汇，是水需要到达的地方。在所有新的塞子和管道被加入系统后，水将被以一个足够达到指定高度的压力注入源点（当然是在没有渗漏的情况下）。你可以选择任意的压力。而且可以放心，在系统工作时压力不会改变。当然，压力应该足够达到源点和汇点。你的任务是找到让水从源流到汇的最小费用，同时保证水不会渗入大楼。</div>
+<div>下面的图中。黑点代表开着的洞，节点1是源点，节点7是汇点。黑点在圆上的位置没有意义，仅作说明用途）。</div>
+<div><img src="upload/201504/ffff.bmp" width="330" height="209" alt="" /></div>
+<div>水依照物理原理流过这个系统。如果压力足够让一个节点灌满水，那这些节点将始终充满了水。如果管道横向延伸或者从一个节点向下延伸，那么水也会从那些管道流过。水也会沿着管道向上，直到达到压力高度的限制。</div>
+<div>当然，如果水达到了一个接口器上的洞，它将会流出并充满整个大楼。</div>
+<div>在第一个样例中，你可以连接接口1和5</div>
+<div>当然，如果水流到一个节点中的开孔，那它将会流出洞并且充满整个大楼。</div>
+<div>在第一个样例中，你可以花费代价3连接节点1,5，塞上2的开孔。并且让水压恰好到达接口7。水将充满接口器1、2、5、6和7，不会流得更高了。一个不同的方案（花费更多）是塞住所有的开孔（花费5），并且让水流经所有的洞。通过连接1、6并塞住2、5的开孔不能解决问题，因此接口器6不可以连接管道。</div>
+<div>注：假设现有的管道和任何新的管道出了那些他们被连接的节点外，彼此不相交也没有其他接口。就是说，即使一条从A到B的直线经过了C，任何A到B的管道也不会碰到C。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>每个测试点的第一行包含两个正整数N和M。N (2 &le; N &le; 400)表示大楼中接口的数量，M(0 &le; M &le; 50 000)表示现有可用管道的数量。接下来的N行每行包含四个正整数xi,yi,zi和ki （&minus;10 000 &le; xi, yi, zi &le; 10 000，0 &le; ki &le; 400， i = 1, 2, ...,N）。第i行描述了结点i：(xi, yi, zi)是地i个结点在三维坐标系中的位置。Ki表示交界处洞的个数。接下来M行的每一行包含两个整数aj和bj（1 &le; aj &lt; bj &le; N）。表示第j条原有管道连接了aj和bj两个节点。每对点之间最多有一条管道。并且没有两个节点位于同一个坐标。源是节点1，汇是节点N。</div>
+<div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个测试点，打出测试点编号。之后，若它存在一些新的管道和塞子可以用来建设所需的系统，打印出连接源节点带汇节点的最小代价（精确到小数点后四位）。如果不可能连接源汇，则打印出单词impossible。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>7 6<br />
+2 0 1 1<br />
+0 0 0 2<br />
+1 0 4 3<br />
+3 0 4 3<br />
+5 0 1 1<br />
+3 0 2 0<br />
+5 0 3 0<br />
+1 2<br />
+1 3<br />
+3 4<br />
+4 7<br />
+5 7<br />
+6 7<br />
+4 1<br />
+2 0 0 0<br />
+3 0 1 0<br />
+4 1 0 1<br />
+5 1 1 1<br />
+1 2<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case 1: 4.0000<br />
+Case 2: impossible</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

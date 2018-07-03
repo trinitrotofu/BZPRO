@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Sdoi2013]直径</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3124. [Sdoi2013]直径</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3124">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3124">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3124">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">小Q最近学习了一些图论知识。根据课本，有如下定义。树：无回路且连通的无向图，每条边都有正整数的权值来表示其长度。如果一棵树有N个节点，可以证明其有且仅有N-1&nbsp;条边。 路径：一棵树上，任意两个节点之间最多有一条简单路径。我们用&nbsp;dis(a,b)<br />
+表示点a和点b的路径上各边长度之和。称dis(a,b)为a、b两个节点间的距离。&nbsp; <br />
+&nbsp;直径：一棵树上，最长的路径为树的直径。树的直径可能不是唯一的。 <br />
+现在小Q想知道，对于给定的一棵树，其直径的长度是多少，以及有多少条边满足所有的直径都经过该边。 <br />
+</span></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">第一行包含一个整数N，表示节点数。 <br />
+接下来N-1行，每行三个整数a, b, c&nbsp;，表示点&nbsp;a和点b之间有一条长度为c<br />
+的无向边。&nbsp;</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">&nbsp; <br />
+共两行。第一行一个整数，表示直径的长度。第二行一个整数，表示被所有<br />
+直径经过的边的数量。&nbsp;<br />
+</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata> <br />
+6 <br />
+3  1 1000<br />
+1  4 10<br />
+4  2 100<br />
+4  5 50<br />
+4  6 100<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1110 <br />
+2 <br />
+ <br />
+ <br />
+【样例说明】 <br />
+直径共有两条，3 到2的路径和3到6的路径。这两条直径都经过边(3, 1)和边(1, 4)。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><span style="font-size: medium">对于100%的测试数据：2&le;N&le;200000，所有点的编号都在1..N的范围内，<br /><br />
+&nbsp;<br /><br />
+边的权值&le;10^9。</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

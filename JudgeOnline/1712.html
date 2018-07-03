@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2007 China]Summing Sums 加密</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1712. [Usaco2007 China]Summing Sums 加密</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1712">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1712">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1712">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;那N只可爱的奶牛刚刚学习了有关密码的许多算法，终于，她们创造出了属于奶牛的加密方法．由于她们并不是经验十足，她们的加密方法非常简单：</span><span style="font-size: medium">第i只奶牛掌握着密码的第i个数字，起始的时候是Ci(0&le;Ci&lt;90000000).加密的时候，</span><span style="font-size: medium">第i只奶牛会计算其他所有奶牛的数字和，并将这个数字和除以98765431取余．在所有奶牛计算完毕之后，每一只奶牛会用自己算得的数字代替原有的数字．也就是说，</span></div>
+<div><span style="font-size: medium"><img height="103" width="173" alt="" src="upload/201401/22(10).jpg" /></span></div>
+<div><span style="font-size: medium">这样，她们就完成了一次加密．&nbsp;&nbsp;&nbsp;&nbsp;在十一月，奶牛们把这个加密法则告诉了驼鹿卡门，卡门惊呆了．之后，在一个浓雾弥漫的平安夜，卡门与奶牛们：&ldquo;你们的算法十分原始，很容易就被人破解．所以你们要重复这个加密过程T(1&le;T&le;1414213562)次，才能达到加密效果．&rdquo;&nbsp;&nbsp;&nbsp;&nbsp;这回轮到奶牛们惊呆了．很显然，奶牛们特别讨厌做同样的无聊的事情很多次．经过了漫长的争论，卡门和奶牛们终于找到的解决办法：你被刚来加密这些数字．</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;第1行输入N和T，之后N行每行一个整数表示初始的Ci．</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>&nbsp;</div>
+<div><span style="font-size: medium">&nbsp;&nbsp;&nbsp;&nbsp;共N行，每行一个整数，表示T次加密之后的Ci．</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3 4<br />
+1<br />
+0<br />
+4<br />
+<br />
+INPUT DETAILS:<br />
+<br />
+Three cows, with starting numbers 1, 0, and 4; four repetitions of the<br />
+encryption algorithm.<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>26<br />
+25<br />
+29<br />
+<br />
+OUTPUT DETAILS:<br />
+<br />
+The following is a table of the cows' numbers for each turn:<br />
+<br />
+          Cows' numbers<br />
+Turn    Cow1  Cow2  Cow3<br />
+ 0        1     0     4<br />
+ 1        4     5     1<br />
+ 2        6     5     9<br />
+ 3       14    15    11<br />
+ 4       26    25    29<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;<span style="font-family: arial, verdana, helvetica, sans-serif;">N&lt;=50000</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

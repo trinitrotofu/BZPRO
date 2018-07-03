@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[HEOI2015]小L的白日梦</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4030. [HEOI2015]小L的白日梦</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4030">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4030">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4030">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>&nbsp;在某一天，你有了一个女性朋友。</p>
+<div>你打算利用k天时间陪她，每天有很多种娱乐方式可供选择，你需要从中选择一种进行（一天只能进行一个项目），比如说一起去看电影、一起去主题公园，一起去逛街等等，一共n种项目。当然每个项目重复太多次你都会觉得无聊，因此第i个项目最多进行c[i]次。你虽然智商很高，但是情商堪忧，即使这些你准备的活动都是希望让她开心的，不过由于你笨拙的语言表达和过于理智的行动，可能使这些活动出现意外。经过你悉心的计算，你发现如果某一天进行了第i个项目，如果一切顺利的话她应该是很高兴的，但她会有a[i]的概率不高兴。如果她本来是很高兴的，但突然今天你让她不高兴了，她就会觉得很失落，并且对你的好感度大大下降。你希望尽可能避免这种情况发生，因此你要安排这k天之内每天进行的项目，最小化她感到失落的期望次数。</div>
+<div>你的女性朋友十分在意你，所以她的心情只会因为你发生改变。第一天之前，因为你没有邀请她进行任何活动，所以她是不高兴的。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;第一行有一个非负整数t，表示一共有t组数据。</p>
+<div>对于每组数据，第一行有两个非负整数n,k，分别表示你准备的项目个数和你用来陪她的天数。（n&lt;=10^5, k&lt;=10^9）</div>
+<div>接下来n行，每一行描述一个项目，形如&ldquo;x[i]/y[i] c[i]&rdquo;且三个数均为非负整数，表示进行完这个项目之后她有x[i]/y[i]的概率不高兴，并且这个项目只能进行不超过c[i]次。（x[i],y[i] &lt;= 104,c[i] &lt;= 10^9）</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>一共t行，对于每组数据输出使她感到失落的最小期望次数，四舍五入保留6位小数。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+1 2<br />
+0/1 3<br />
+1 2<br />
+1/1 3<br />
+1 2<br />
+1/2 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>0.000000<br />
+0.000000<br />
+0.250000<br />
+<br />
+【样例说明】<br />
+考虑第三组数据，因为只有一个项目所以只好每天都安排这个。<br />
+在第一天之前她总是不高兴的，一共有：<br />
+第一天不高兴，第二天也不高兴、<br />
+第一天高兴，第二天不高兴、<br />
+第一天不高兴，第二天高兴、<br />
+第一天不高兴，第二天也不高兴，<br />
+这四种情况，又因为每天的项目让她高兴或者是不高兴的概率都是0.5，因此这四种情况是等概率发生的。<br />
+只有在第二种情况下，她会感到失落一次。<br />
+因此答案是(1*1+0*3)/4=0.25.</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;对于100%的数据，n&lt;=105，k&lt;=109，数据组数不会太多，大概不超过10组，数据保证分数有意义并且&sum;c[i]&gt;=k。</p><br />
+<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

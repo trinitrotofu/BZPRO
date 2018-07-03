@@ -1,0 +1,24 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Zjoi2018]线图</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5211. [Zjoi2018]线图</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5211">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5211">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5211">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>九条可怜是一个热爱出题的女孩子。今天可怜想要出一道和图论相关的题。在一张无向图G上，我们可以对它进行</div>
+<div>一些非常有趣的变换，比如说对偶，又或者说取补。这样的操作往往可以赋予一些传统的问题新的活力。例如求补</div>
+<div>图的连通性、补图的最短路等等，都是非常有趣的问题。最近可怜知道一种新的变换：求原图的线图(linegraph)</div>
+<div>对于无向图G=&lt;V,E&gt;它的线图L(G)也是一个无向图：1:它的点集大小为|E|，每个点唯一对应着原图的一条边。2:两</div>
+<div>个点之间有边当且仅当这两个点对应的边在原图上有公共点（注意不会有自环）。下图是一个简单的例子，左图是</div>
+<div>原图，右图是它对应的线图。其中点1对应原图的边(1,2)，点2对应(1,4)，点3对应(1,3)，点4对应(3,4)</div>
+<div><img src="upload/201803/1(2).png" width="289" height="135" alt="" /></div>
+<div>经过一些初步的摸索，可怜发现线图的性质要比补图复杂很多，其中突出的一点就是补图的补图会变回原图，而L(</div>
+<div>L(G))在绝大部分情况下不等于G，甚至在大多数情况下它的点数和边数会以很快的速度增长。因此，可怜想要从最</div>
+<div>简单的入手，即计算L<sup>k</sup>(G)的点数（L<sup>k</sup>(G)表示对G求k次线图）。然而遗憾的是，即使是这个问题，对可怜来说还是</div>
+<div>太困难了，因此她进行了一定的弱化。她给出了一棵n个节点的树T，现在她想让你计算一下L<sup>k</sup>(T)的点数。</div>
+<div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行输入两个整数n,k，表示树的点数以及连续求线图的次数。</div>
+<div>接下来n?1行每行两个整数u,v表示树上的一条边。</div>
+<div>2 &le; n &le; 5000</div>
+<div>k&lt;=9</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出一行一个整数，表示答案对998244353取模后的值</p>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 3<br />
+1 2<br />
+2 3<br />
+2 5<br />
+3 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;<img src="upload/201803/2.jpg" width="613" height="251" alt="" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

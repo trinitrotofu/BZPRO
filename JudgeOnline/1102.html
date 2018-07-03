@@ -1,0 +1,28 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[POI2007]山峰和山谷Grz</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1102. [POI2007]山峰和山谷Grz</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1102">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1102">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1102">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>　　FGD小朋友特别喜欢爬山，在爬山的时候他就在研究山峰和山谷。为了能够让他对他的旅程有一个安排，他想<br />
+知道山峰和山谷的数量。给定一个地图，为FGD想要旅行的区域，地图被分为n*n的网格，每个格子(i,j) 的高度w(<br />
+i,j)是给定的。若两个格子有公共顶点，那么他们就是相邻的格子。（所以与(i,j)相邻的格子有(i?1, j?1),(i?1<br />
+,j),(i?1,j+1),(i,j?1),(i,j+1),(i+1,j?1),(i+1,j),(i+1,j+1)）。我们定义一个格子的集合S为山峰（山谷）当<br />
+且仅当：1.S的所有格子都有相同的高度。2.S的所有格子都联通3.对于s属于S，与s相邻的s&rsquo;不属于S。都有ws &gt; <br />
+ws&rsquo;（山峰），或者ws &lt; ws&rsquo;（山谷）。你的任务是，对于给定的地图，求出山峰和山谷的数量，如果所有格子<br />
+都有相同的高度，那么整个地图即是山峰，又是山谷。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　第一行包含一个正整数n，表示地图的大小（1&lt;=n&lt;=1000）。接下来一个n*n的矩阵，表示地图上每个格子的高<br />
+度。(0&lt;=w&lt;=1000000000)</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　应包含两个数，分别表示山峰和山谷的数量。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>输入样例1<br />
+5<br />
+8 8 8 7 7<br />
+7 7 8 8 7<br />
+7 7 7 7 7<br />
+7 8 8 7 8<br />
+7 8 8 8 8<br />
+输入样例2<br />
+5<br />
+5 7 8 3 1<br />
+5 5 7 6 6<br />
+6 6 6 2 8<br />
+5 7 2 5 8<br />
+7 1 0 1 7</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>输出样例1<br />
+2 1<br />
+输出样例2<br />
+3 3<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p><img border="0" alt="" src="images/1102.jpg" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

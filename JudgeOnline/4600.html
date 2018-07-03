@@ -1,0 +1,33 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Sdoi2016]硬币游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4600. [Sdoi2016]硬币游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4600">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4600">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4600">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Alice和Bob现在在玩的游戏，主角是依次编号为1到n的n枚硬币。每一枚硬币都有两面，我们分别称之为正面和反</div>
+<div>面。一开始的时候，有些硬币是正面向上的，有些是反面朝上的。Alice和Bob将轮流对这些硬币进行翻转操作，且</div>
+<div>Alice总是先手。具体来说每次玩家可以选择一枚编号为x，要求这枚硬币此刻是反面朝上的。对于编号x来说，我</div>
+<div>们总可以将x写成x=c*2^a*3^b，其中a和b是非负整数，c是与2,3都互质的非负整数，然后有两种选择第一种，选择</div>
+<div>整数p,q满足a&gt;=p*q,p&gt;=1且1&lt;=q&lt;=MAXQ,然后同时翻转所有编号为c*2^(a-p*j)*3^b的硬币，其中j=0,1,2,..,q。第</div>
+<div>二种，选择整数p,q满足b&gt;=p*q,p&gt;=1且1&lt;=q&lt;=MAXQ,然后同时翻转所有编号为c*2^a*3^(b-p*j)的硬币，其中j=0,1,</div>
+<div>2,..,q。可以发现这个游戏不能不先进行下去，当某位玩家无法继续操作上述操作时，便输掉了游戏。作为先手的</div>
+<div>Alice，总是希望可以在比赛开始之前就知道自己能否获胜。她知道自己和Bob都是充分聪明的，所以在游戏过程中</div>
+<div>两人都会最优化自己的策略并尽量保证自己处于不败的情形中</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="font-size: 11.8181819915771px;">本题有多组测试数据，第一行输入一个整数T，表示总的数据组数。之后给出T组数据</div>
+<div style="font-size: 11.8181819915771px;">每组数据第一行输入两个整数n,MAXQ</div>
+<div style="font-size: 11.8181819915771px;">第二行输入n个整数，第i个数表示第i个硬币的初始状态，0表示反面朝上，1表示正面朝上</div>
+<div style="font-size: 11.8181819915771px;">对于100%的数据1&lt;=n&lt;=30000,1&lt;=MAXQ&lt;=20,t&lt;=100。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="font-size: 11.8181819915771px;">输出共有t行。对于每一组数据来说，如果Alice先手必胜，则输出&quot;win&quot;（不包括引号），否则输出&quot;lose&quot;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>6<br />
+16 14<br />
+1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1<br />
+16 14<br />
+0 1 0 0 0 1 1 1 1 1 1 0 1 0 0 1<br />
+16 11<br />
+0 1 0 0 0 1 1 1 0 1 0 0 0 1 0 1<br />
+16 12<br />
+1 1 1 1 1 1 1 1 0 0 1 1 0 1 1 0<br />
+16 4<br />
+1 0 0 1 0 0 1 0 0 0 0 1 0 1 1 0<br />
+16 20<br />
+0 0 0 0 1 0 1 0 0 0 1 0 0 1 0 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>win<br />
+lose<br />
+win<br />
+lose<br />
+win<br />
+win<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

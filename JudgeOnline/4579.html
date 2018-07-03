@@ -1,0 +1,31 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2016 Open]Closing the Farm</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4579. [Usaco2016 Open]Closing the Farm</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4579">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4579">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4579">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Farmer John and his cows are planning to leave town for a long vacation, and so FJ wants to temporar</div>
+<div>ily close down his farm to save money in the meantime.The farm consists of NN barns connected with M</div>
+<div>M bidirectional paths between some pairs of barns (1&le;N,M&le;200,000). To shut the farm down, FJ plans</div>
+<div>&nbsp;to close one barn at a time. When a barn closes, all paths adjacent to that barn also close, and ca</div>
+<div>n no longer be used.FJ is interested in knowing at each point in time (initially, and after each clo</div>
+<div>sing) whether his farm is &quot;fully connected&quot; -- meaning that it is possible to travel from any open b</div>
+<div>arn to any other open barn along an appropriate series of paths. Since FJ's farm is initially in som</div>
+<div>ewhat in a state of disrepair, it may not even start out fully connected.</div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.549334526062px;">给你N点M边的无向图(1&lt;=N,M&lt;=200000)，一共删n次点，</span></div>
+<div><span style="font-family: Helvetica, 'Microsoft Yahei', verdana; font-size: 14px; line-height: 15.549334526062px;">每次询问删这个点之前是否完全联通</span></div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of input contains N and M. The next M lines each describe a path in terms of the pair</div>
+<div>&nbsp;of barns it connects (barns are conveniently numbered 1&hellip;N). The final N lines give a permutation o</div>
+<div>f 1&hellip;N describing the order in which the barns will be closed.</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The output consists of N lines, each containing &quot;YES&quot; or &quot;NO&quot;. The first line indicates whether the&nbsp;</div>
+<div>initial farm is fully connected, and line i+1 indicates whether the farm is fully connected after th</div>
+<div>e iith closing.</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>4 3<br />
+1 2<br />
+2 3<br />
+3 4<br />
+3<br />
+4<br />
+1<br />
+2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>YES<br />
+NO<br />
+YES<br />
+YES</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

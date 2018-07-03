@@ -1,0 +1,30 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>弱题</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2510. 弱题</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2510">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2510">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2510">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div style="text-indent: 21pt"><span style="font-size: medium">有<i>M</i>个球，一开始每个球均有一个初始标号，标号范围为1～<i>N</i>且为整数，标号为<i>i</i>的球有<i>a<sub>i</sub></i>个，并<b>保证</b><b>&Sigma;</b><b><i>a<sub>i</sub></i></b><b> = <i>M</i></b>。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">每次操作<b><u>等概率</u></b>取出一个球（即取出每个球的概率均为1/<i>M</i>），若这个球标号为<i>k</i>（<i>k</i> &lt; <i>N</i>），则将它重新标号为<i>k</i> + 1；若这个球标号为<i>N</i>，则将其重标号为1。<b>（取出球后并不将其丢弃）</b></span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">现在你需要求出，经过<i>K</i>次这样的操作后，每个标号的球的期望个数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">第1行包含三个<b><u>正整数</u></b><i>N</i>，<i>M</i>，<i>K</i>，表示了标号与球的个数以及操作次数。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">第2行包含<i>N</i>个<b><u>非负整数</u></b><i>a<sub>i</sub></i>，表示初始标号为<i>i</i>的球有<i>a<sub>i</sub></i>个。</span></div>
+<div style="text-indent: 21pt"><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="text-indent: 21pt"><span style="font-size: medium">应包含<i>N</i>行，第<i>i</i>行为标号为<i>i</i>的球的期望个数，四舍五入保留3位小数。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div style="text-indent: 21pt"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 3 2<br />
+3 0<br />
+ <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1.667<br />
+1.333<br />
+ <br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>【样例说明】<br /><br />
+第1次操作后，由于标号为2球个数为0，所以必然是一个标号为1的球变为标号为2的球。所以有2个标号为1的球，有1个标号为2的球。<br /><br />
+第2次操作后，有1/3的概率标号为2的球变为标号为1的球（此时标号为1的球有3个），有2/3的概率标号为1的球变为标号为2的球（此时标号为1的球有1个），所以标号为1的球的期望个数为1/3*3+2/3*1 = 5/3。同理可求出标号为2的球期望个数为4/3。<br /><br />
+&nbsp;<br /><br />
+【数据规模与约定】<br /><br />
+对于10%的数据，N &le; 5, M &le; 5, K &le; 10；<br /><br />
+对于20%的数据，N &le; 20, M &le; 50, K &le; 20；<br /><br />
+对于30%的数据，N &le; 100, M &le; 100, K &le; 100；<br /><br />
+对于40%的数据，M &le; 1000, K &le; 1000；<br /><br />
+对于100%的数据，N &le; 1000, M &le; 100,000,000, K &le; 2,147,483,647。</p><br />
+<p><br /><br />
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

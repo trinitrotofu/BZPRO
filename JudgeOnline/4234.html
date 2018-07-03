@@ -1,0 +1,47 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>带Link、Cut树上路径k小值</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4234. 带Link、Cut树上路径k小值</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：130 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4234">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4234">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4234">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>FUS公司是一家大型网络公司，总共拥有n台服务器。每一台服务器都有一个limit值，表示这台服务器的最大连接限制。在这n台服务器中，只有n-1条光纤线路连接，保证任意两台服务器可以互相通信。随着公司的发展、用户的增加，服务器的负担越来越重，一些服务器无法胜任任务，一些光纤也趋于老化。因此FUS常常对服务器进行一些调整：</div>
+<div>更新操作：选中两个服务器x、y，用一条新的光纤连接它们，形成一个环。这时环上&ldquo;加入时间&rdquo;最早的光纤会被断开废弃。</div>
+<div>修改操作：修改一个服务器的limit值，可以增大或减小，以胜任业务。</div>
+<div>在用户访问时，FUS会智能选择服务器的处理。如果用户访问的内容在x到y服务器的路径上，FUS会自动分配一个k值，令x到y路径上limit值第k小的服务器服务用户。</div>
+<div>FUS希望你能帮他实现这些功能。</div>
+<div>（简化版：动态维护关于加入时间的最大生成树，带点权修改，多次询问树上给定两点间路径k小值）</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第1行2个整数，n、m，表示服务器的数量和边的数量。</div>
+<div>第2行n个整数，limit[1]到limit[n]，0&lt;=limit[i]&lt;=10^6，表示n个服务器的初始连接限制。</div>
+<div>接下来n-1行，表示初始的n-1条光纤。这些光纤的输入顺序就是它们的加入时间顺序。</div>
+<div>接下来m行，每行3个整数k、x、y，表示一个操作，总共有3种：</div>
+<div>（1）k=-1，1&lt;=x,y&lt;=n，x不等于y，表示更新操作，连接x、y光纤，并断开环上最早加入的光纤；</div>
+<div>（2）k=0，1&lt;=x&lt;=n，0&lt;=y&lt;=10^6，表示修改操作，将x服务器的limit值修改为y；</div>
+<div>（3）1&lt;=k&lt;=n，1&lt;=x,y&lt;=n，x不等于y，表示一个用户访问的内容在x到y服务器的路径上，要求取limit值第k小的服务器服务用户。</div>
+<div>对于第3种操作，保证k不超过x到y路径上的服务器数，也就是保证存在limit值第k小的服务器。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每一个第3种操作，输出一个数，表示x到y路径上limit值第k小的服务器的limit值。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10 4<br />
+1 2 3 4 5 6 7 8 9 10<br />
+1 2<br />
+2 3<br />
+2 4<br />
+2 5<br />
+3 6<br />
+3 7<br />
+1 8<br />
+8 9<br />
+9 10<br />
+-1 1 10<br />
+0 2 100002<br />
+2 2 8<br />
+3 6 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>8<br />
+6</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><div>样例解释：</div><br />
+<div>第1个操作，更新操作，用光纤连接了1、10服务器，断开了1、8服务器之间的光纤。</div><br />
+<div>第2个操作，修改操作，将2的limit值从2修改成了100002。</div><br />
+<div>第3个操作，2到8之间的路径为2-1-10-9-8，limit值分别为100002、1、10、9、8，因此第2小的limit值为8。</div><br />
+<div>第4个操作，6到5之间的路径为6-3-2-5，limit值分别为6、3、100002、5，因此第3小的limit值为6。</div><br />
+<div>数据范围：</div><br />
+<div>本题有4种类型的数据。</div><br />
+<div>类型一（10%）：n=m=1000</div><br />
+<div>类型二（20%）：n=m=50000，0&lt;=k&lt;=n（即不存在更新操作）</div><br />
+<div>类型三（30%）：n=m=50000，保证询问的路径长度之和小于10^8。</div><br />
+<div>类型四（40%）：n=m=100000</div><br />
+<div>对于100%的数据，满足2&lt;=n,m&lt;=100000、每时每刻的limit值&lt;=10^6。</div><br />
+<div></div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,45 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Theresa与数据结构</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3290. Theresa与数据结构</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3290">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3290">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3290">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>【题目背景】</div>
+<div>Theresa是个爱思考的女孩&hellip;&hellip;</div>
+<div>【问题描述】</div>
+<div>这是个复杂的世界。人类社会，自然界，还有地球之外的银河&hellip;&hellip;</div>
+<div>每一天日出日落，人来人往，步履匆匆。究竟是为什么呢？那支配着一切的至高无上的法则又是否存在呢？Theres</div>
+<div>a知道，这个问题并不是一朝一夕就可以解答的，只有在仔细、深入的观察和思考以后，才有可能将所有支离破碎</div>
+<div>的线索联系起来，从而隐约窥见真实的答案。于是，Theresa经常思考生活中遇到的大大小小的问题。为什么港台</div>
+<div>出版的书籍里印刷的汉字她一个也不认识呢？为什么隔夜的白开水中富含一氧化二氢呢？为什么每年都有一段时间</div>
+<div>Gmail邮箱上不去呢？&hellip;&hellip;为了更加系统、科学地分析这些问题，Theresa决定向你求助。长话短说，Theresa想请</div>
+<div>你帮助她实现一个数据结构。这个数据结构的功能是在空间直角坐标系中维护一个点的集合，并支持以下三类操作</div>
+<div>：</div>
+<div>1.ADD x y z &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;加入一个新的点，点的坐标为(x, y, z)。</div>
+<div>2.QUERY x y z r &nbsp; &nbsp; &nbsp;查询在正方体(x, y, z) - (x+r, y+r, z+r)内部的点的数目。</div>
+<div>3.CANCEL &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 撤销最近的一次ADD操作。</div>
+<div>其中x,y,z,r均为给出的整数。QUERY操作中，(x,y,z)为正方体的一个顶点的坐标，r为正方体的边长。在正方体边</div>
+<div>界上的点也算在正方体内部。这个问题可能过于困难，所以Theresa并不强迫你实现一个高效的数据结构。然而，</div>
+<div>你必须对每一次QUERY操作给出正确的答案。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行包含一个整数N，表示最初的点集有N个点。</div>
+<div>接下来N行，每行包含三个整数xi、yi、zi，依次表示每个点的坐标。</div>
+<div>第N+2行包含一个整数Q，表示将有Q次操作。</div>
+<div>接下来Q行，每行表示一次操作，格式如题目描述。</div>
+<div>1 &le; N + Q &le; 100 000， 0 &le; x, y, z, r &le; 10^7。</div>
+<div>r 为正整数。所有的CANCEL操作均为有效操作。不同的点的坐标可能重合。</div>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出若干行，每行一个整数，依次表示每次查询操作的答案。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1 2 3<br />
+1 1 3<br />
+7<br />
+ADD 0 4 3<br />
+QUERY 0 0 0 4<br />
+ADD 1 1 5<br />
+QUERY 1 1 2 3<br />
+QUERY 0 2 2 1<br />
+CANCEL<br />
+QUERY 1 1 2 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>3<br />
+3<br />
+1<br />
+2<br />
+样例说明<br />
+第1次查询正方体(0,0,0)-(4,4,4)，内部包含点(1,2,3)，(1,1,3)，(0,4,3)。<br />
+第2次查询正方体(1,1,2)-(4,4,5)，内部包含点(1,2,3)，(1,1,3)，(1,1,5)。<br />
+第3次查询正方体(0,2,2)-(1,3,3)，内部包含点(1,2,3)。<br />
+第4次查询正方体(1,1,2)-(4,4,5)，内部包含点(1,2,3)，(1,1,3)。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

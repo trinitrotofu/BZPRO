@@ -1,0 +1,27 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Thu Summer Camp2016]成绩单</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4897. [Thu Summer Camp2016]成绩单</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4897">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4897">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4897">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>期末考试结束了，班主任L老师要将成绩单分发到每位同学手中。L老师共有n份成绩单，按照编号从1到n的顺序叠</div>
+<div>放在桌子上，其中编号为i的成绩单分数为w_i。成绩单是按照批次发放的。发放成绩单时，L老师会从当前的一叠</div>
+<div>成绩单中抽取连续的一段，让这些同学来领取自己的成绩单。当这批同学领取完毕后，L老师再从剩余的成绩单中</div>
+<div>抽取连续的一段，供下一批同学领取。经过若干批次的领取后，成绩单将被全部发放到同学手中。然而，分发成绩</div>
+<div>单是一件令人头痛的事情，一方面要照顾同学们的心理情绪，不能让分数相差太远的同学在同一批领取成绩单；另</div>
+<div>一方面要考虑时间成本，尽量减少领取成绩单的批次数。对于一个分发成绩单的方案，我们定义其代价为：</div>
+<div><img src="upload/201705/vv1(1).jpg" width="388" height="97" alt="" /></div>
+<div>其中，k是方案中分发成绩单的批次数，对于第i批分发的成绩单，〖max〗_i是最高分数，〖min〗_i是最低分数。</div>
+<div>a,b是给定的评估参数。现在，请你帮助L老师找到代价最小的分发成绩单的方案，并将这个最小的代价告诉L老师</div>
+<div>。当然，分发成绩单的批次数k是由你决定的。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个正整数n，表示成绩单的数量。</div>
+<div>第二行包含两个非负整数a,b，表示给定的评估参数。</div>
+<div>第三行包含n个正整数w_i，表示第i张成绩单上的分数。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>仅一个正整数，表示最小的代价是多少。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>10<br />
+3 1<br />
+7 10 9 10 6 7 10 7 1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>15<br />
+【样例数据说明】<br />
+第1批：第2至4份成绩单，落差值为1，剩余成绩单为76710712；<br />
+第2批：第4份成绩单，落差值为0，剩余成绩单为767712；<br />
+第3批：第1至4份成绩单，落差值为1，剩余成绩单为12；<br />
+第4批：剩余的2份成绩单，落差值为1。<br />
+总代价为4×3+(1^2+0^2+1^2+1^2)×1=15。<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;n&lt;=50, a&lt;=100, b&lt;=10, w_i&lt;=1000</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

@@ -1,0 +1,48 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Wf2017]Get a Clue!</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4949. [Wf2017]Get a Clue!</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：15 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4949">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4949">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4949">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>起源于19世纪40年代的英国的游戏Cluedo是世界上最流行的图版游戏之一。游戏的目标是找出谋杀 Boddy 先生的</div>
+<div>凶手,凶手使用的凶器,以及行凶的地点。游戏使用一系列卡片表示六个角色 (标号A, B, &middot; &middot; &middot; , F) 、六种武</div>
+<div>器 (标号 G, H, &middot; &middot; &middot; , L) 和九个房间 (标号 M, N, &middot; &middot; &middot; , U) 。在游戏的开始,角色、武器和房间分</div>
+<div>别会有一张卡片在玩家不知道的情况下被随机移除,它们分别表示凶手、凶器和作案地点。剩下的18张卡片会重新</div>
+<div>排列并分发给玩家,第一张会给玩家1,接下来会给他右边的玩家2,依次类推。一些玩家可能比其他玩家多拿一张牌</div>
+<div>。由于这道题的原因,玩家的数量为四个,这意味着玩家4 的右边是玩家1。游戏剩下的部分便是寻找线索。玩家轮</div>
+<div>流决策,从玩家1开始,然后依次是其右边的玩家。每轮决策需要提出一个suggestion(即提议,包括指定嫌疑人、凶</div>
+<div>器和作案地点) 并轮询其他玩家是否有证据能反对这个提议。例如,你可以对另一个玩家说: &quot;我认为凶手是角色A,</div>
+<div>凶器是L,作案房间是T。&quot;如果其他玩家恰好有其中一张卡片,这个玩家必须向你 (且只有你) 展示这张卡片。如果</div>
+<div>他有多张这样的卡片,他可以任选一张向你展示。当你提出提议时,你需要先问你右手边的玩家是否可以反驳你。如</div>
+<div>果他没有反驳,你可以继续问这个人右手边的玩家,直到有人提出反驳的证据,或是所有人都无法反驳你的提议。许</div>
+<div>多时候你可以从其他人的提议过程中获取信息。例如上面的例子,你是拥有卡片A和T的第三方玩家。如果有人向提</div>
+<div>议者展示了反驳的证据,那么你可以知道那张卡片一定是武器L。在游戏过程中,保持对提议与反驳过程的追踪是很</div>
+<div>重要的游戏策略。为了赢得游戏,你需要进行accusation(即指控),做出你对凶手、凶器和作案地点的最终猜测。在</div>
+<div>你的指控开始后,你可以检查最开始被移除的三张卡片--如果它们与你的指控相符,你就赢得胜利啦!无需多说,你肯</div>
+<div>定希望在提出指控前有绝对的把握。所以有了这道题。你是玩家1。给定你手上的卡片集合,以及一些提议与反驳的</div>
+<div>记录,你需要确定你离能够做出指控还有多远。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个整数n(1 &le; n &le; 50) ,表示游戏中已经完成的提议数量。</div>
+<div>第二行包含你手上五张卡片的信息,它们是'A' 到'U'之间的大写字母。</div>
+<div>接下来n行,每行给出一条提议的信息。</div>
+<div>每行以三张卡片开始,依次表示提议的角色、武器和房间</div>
+<div>接下来给出剩下三个玩家的响应,从提议者右边的玩家开始。</div>
+<div>如果一个玩家没有证据反驳,则响应信息是一个'-' ,否则响应信息是一个证据字符。</div>
+<div>如果证据对你是可见的 (你是提议者或反驳者) ,则证据字符是对应的卡片,否则证据字符是'*' 。</div>
+<div>注意只有最后一条响应信息可以是证据字符。</div>
+<div>所有字符之间用一个空格隔开。保证输入的提议和响应序列是合法的。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出三个字符表示能识别出的凶手、凶器和作案地点。</div>
+<div>如果凶手可以被识别,输出相应的卡片字符,否则输出'?' 。凶器和作案地点同理。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>样例1<br />
+1<br />
+B I P C F<br />
+A G M - - -<br />
+样例2<br />
+2<br />
+A B C D H<br />
+F G M M<br />
+F H M - *<br />
+样例3<br />
+3<br />
+A C M S D<br />
+B G S - G<br />
+A H S - - S<br />
+C J S *</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>样例1<br />
+AGM<br />
+样例2<br />
+E??<br />
+样例3<br />
+???</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

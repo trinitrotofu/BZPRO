@@ -1,0 +1,34 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Wf2017]Airport Construction</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4948. [Wf2017]Airport Construction</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：20 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4948">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4948">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4948">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>位于热带的 Piconesia 岛国以其秀丽的沙滩、繁茂的植被、可可与咖啡原料的产出以及全年宜人的天气而闻名海</div>
+<div>外。天堂般美丽的这里将纳入未来举办 ACM-ICPC 世界总决赛的地点考虑名单中(至少也会是执行委员会度假地点</div>
+<div>的选择之一) 。但是还有一个小问题:这个岛真的很难到达。就目前而言,最快的方式是从最近的机场出发,并借助</div>
+<div>渔船、油轮、皮划艇和潜艇这些工具,花费三天时间才能到达小岛。为了让大家更轻松地参加 ICPC 世界总决赛,也</div>
+<div>为了推动小岛的旅游业发展,Piconesia 正在计划修建它的第一个机场。考虑到越长的起降跑道越有助于对大型飞</div>
+<div>机的支持, Piconesia 决定在其岛上修建一条最长的起降跑道带。不幸地是,他们无法确定这条跑道应该设置在哪</div>
+<div>里。也许你可以帮个忙?对于本题,我们将 Piconesia 的边界抽象成一个多边形的模型。根据这个多边形,你需要计</div>
+<div>算出最长的跑道长度(即最长的线段)使得跑道可以完全在小岛上修建。图 1 对应于第一个输入样例。</div>
+<div><img src="upload/201708/11.png" width="322" height="310" alt="" /></div>
+<div></div>
+<div>图 1. 小岛的多边形模型。最长的跑道已用粗线标出。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含一个整数 n (3 &le; n &le; 200) ,表示多边形的点数。</div>
+<div>接下来 n 行,每行包含两个整数 x 和 y (|x|, |y| &le; 10^6 ) ,表示多边形上的顶点 (x, y)&nbsp;</div>
+<div>顶点按照逆时针顺序给出。</div>
+<div>给出的多边形是简单多边形,即它的顶点互不相同,并且除了相邻的两条边在公共点相交之外</div>
+<div>它的任意两条边都不会相交。此外,相邻的两条边也不会共线。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;输出能放进给定多边形内部的最长线段长度,其绝对误差或相对误差不能超过 10^-6 。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>样例1<br />
+7<br />
+0 20<br />
+40 0<br />
+40 20<br />
+70 50<br />
+50 70<br />
+30 50<br />
+0 50<br />
+样例2<br />
+3<br />
+0 2017<br />
+-2017 -2017<br />
+2017 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>样例1<br />
+76.157731059<br />
+样例2<br />
+4510.149110617</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

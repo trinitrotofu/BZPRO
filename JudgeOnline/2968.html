@@ -1,0 +1,53 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>成长计划</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2968. 成长计划</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2968">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2968">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2968">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium">你需要为你的宠物制定一个成长计划，使得宠物得到良好的发展。</span></div>
+<div><span style="font-size: medium">宠物有三项属性：体力<i>H</i>，逻辑<i>P</i>，感受<i>F</i>。</span></div>
+<div><span style="font-size: medium">这三项分别决定了宠物的：</span></div>
+<div><span style="font-size: medium">健康与强壮程度，逻辑判断与理科思维能力，文采与艺术素养。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">初始时3项属性均为0。(中途可为负数)</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">在接下来的<i>M</i>天里，第<i>i</i>天有温度<i>T</i>[<i>i</i>]，湿度<i>W</i>[<i>i</i>]。</span></div>
+<div><span style="font-size: medium">每天你可以选择让宠物：（以下除法均为整数除法）</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">1.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>在家玩</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">H&rsquo; = H*4/5 + 3 + F/6 + P/6</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">P&rsquo; = P - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 39pt"><span style="font-size: medium">F&rsquo; = F - 1</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">2.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>体育课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H + T[i] &ndash; W[i]</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P &ndash; T[i]/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F + W[i]/6</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">3.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>科学课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H &ndash; |W[i]| - F/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P + 3 + T[i]/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F &ndash; 1 + W[i]/9</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: -18pt"><span style="font-size: medium">4.<span style="font: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>艺术课</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">H&rsquo; = H &ndash; |T[i]| - P/4</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">P&rsquo; = P &ndash; 1 + T[i]/6</span></div>
+<div style="margin: 0cm 0cm 0pt 42pt; text-indent: 21pt"><span style="font-size: medium">F&rsquo; = F + 2 + W[i]/3</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div>
+<div><span style="font-size: medium">每天活动结束后，(<i>H</i>&rsquo;, <i>P</i>&rsquo;, <i>F</i>&rsquo;) 将会成为宠物的状态。</span></div>
+<div><span style="font-size: medium">宠物的培养是需要侧重点的。</span></div>
+<div><span style="font-size: medium">一个培养目标可以用三元组(<i>x</i>,<i>y</i>,<i>z</i>)来表示，其中<i>x</i>,<i>y</i>,<i>z</i>均为非负整数。</span></div>
+<div><span style="font-size: medium">即要求<i>H</i>*<i>x</i>+<i>P</i>*<i>y</i>+<i>F</i>*<i>z</i>最大。</span></div>
+<div><span style="font-size: medium">&nbsp;</span></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div><span style="font-size: medium">第一行输入天数<i>M</i>，询问数<i>Q</i></span></div>
+<div><span style="font-size: medium">接下来一行为<i>T</i>[1..<i>M</i>]</span></div>
+<div><span style="font-size: medium">接下来一行为<i>W</i>[1..<i>M</i>]</span></div>
+<div><span style="font-size: medium">接下来<i>Q</i>行，每行是三个非负整数<i>x y z</i>表示一次询问</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="margin: 13pt 0cm">&nbsp;</div>
+<div><span style="font-size: medium">对于<i>Q</i>次询问，每次输出一行，包括一个整数：</span></div>
+<div><span style="font-size: medium">即在最优成长计划下<i>H</i>*<i>x</i>+<i>P</i>*<i>y</i>+<i>F</i>*<i>z</i>的最大值。</span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>5 3<br />
+10 10 -10 -10 0<br />
+10 -10 10 -10 0<br />
+1 0 0<br />
+0 1 0<br />
+0 0 1<br />
+ <br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>22<br />
+17<br />
+10<br />
+【样例说明】<br />
+对于第一个询问：在家玩,体育课,在家玩,在家玩,在家玩<br />
+ <br />
+【范围】<br />
+100% 1 ≤ M ≤ 50; Q ≤ 600;     T[i],W[i],x,y,z的绝对值 ≤ 20</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;题解:<a href="https://www.lydsy.com/JudgeOnline/upload/201604/sol(1).txt">JudgeOnline/upload/201604/sol(1).txt</a></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

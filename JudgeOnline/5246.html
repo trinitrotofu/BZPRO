@@ -1,0 +1,55 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[WF2012]Keys</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5246. [WF2012]Keys</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5246">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5246">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5246">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>Adam带了一堆扣在钥匙环上的钥匙，有些钥匙环可能会和其它钥匙环串在一起。钥匙可以从钥匙环上取下，或者挂</div>
+<div>到钥匙环上。同理，串在一起的钥匙环可以人为地拆分开，不在一起的钥匙环也可以人为地串在一起。Adam想将其</div>
+<div>中的一些钥匙交给Brenda。因为摆弄钥匙和钥匙环是很麻烦的事情，所以Adam想找到最佳的方案，使得摆弄钥匙和</div>
+<div>钥匙环的次数最小。每次将某个钥匙从钥匙环上取下，每次将某个钥匙挂到某个钥匙环上，都算一次摆弄钥匙。每</div>
+<div>次将两个钥匙环串在一起，每次将两个串在一起的钥匙环拆分开，都算一次摆弄钥匙环。显然，摆弄钥匙比摆弄钥</div>
+<div>匙环要麻烦得多，所以Adam希望首先最小化摆弄钥匙的次数，在这个基础上再去最小化摆弄钥匙环的次数。你需要</div>
+<div>帮助他找到最佳的方案。当所有操作完成之后，Adam和Brenda必须一人拿走恰好一组串在一起的钥匙环。当然，如</div>
+<div>果某个人并没有想拿的钥匙的话，他会什么也不拿走。每把钥匙必须恰好挂在一个钥匙环上，钥匙环可以不挂任何</div>
+<div>钥匙，这些钥匙环将被遗弃。</div>
+<div><img src="upload/201804/pic.png" width="604" height="212" alt="" /></div>
+<div>如上图，一共有4把钥匙、3个钥匙环，其中Adam希望给Brenda两把钥匙(N和R)，自己拿走剩下两把(A和B)。从左图</div>
+<div>摆弄两次钥匙和一次钥匙环就得到了右图。</div>
+</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>每组数据包含若干行，每行一个长度为2的字母构成的字符串。</div>
+<div>小写字母a到z表示钥匙环，而大写字母A到Z表示钥匙。</div>
+<div>每一行要么是两个小写字母，要么是一个小写字母和一个大写字母，表示这两个事物连接在一起。</div>
+<div>每组数据最后会有一个0表示结束。</div>
+<div>A到M表示Adam希望拿走的钥匙，N到Z表示Brenda希望拿走的钥匙。</div>
+<div>输入保证不会重复描述同一个连接关系，保证输入中出现的每个钥匙恰好属于一个环，环与环之间的连接不存在环路。</div>
+<div>你不需要考虑输入中未出现的那些字母。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据，输出一行</div>
+<div>包含数据编号，之后两个数，分别表示摆弄钥匙次数的最小值以及在这个基础上摆弄钥匙环次数的最小值。</div>
+<div>若无解，请输出impossible。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>ab<br />
+bc<br />
+aA<br />
+aN<br />
+Rb<br />
+cB<br />
+0<br />
+aA<br />
+bB<br />
+Cc<br />
+0<br />
+aA<br />
+aZ<br />
+0<br />
+aA<br />
+bB<br />
+cC<br />
+xX<br />
+yY<br />
+ax<br />
+xb<br />
+by<br />
+yc<br />
+0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>Case 1: 2 1<br />
+Case 2: 0 2<br />
+Case 3: impossible<br />
+Case 4: 0 7<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

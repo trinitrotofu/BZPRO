@@ -1,0 +1,37 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>删边游戏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2317. 删边游戏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2317">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2317">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2317">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">一个无向图，其中某些点是重要的。两人在该图上进行游戏，轮流操作。每次操作是指将某条边删去，该边必须与某个重要点连通，谁无法操作则输掉了游戏。</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-align: left"><span style="font-weight: bold; font-size: 12pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">Your&nbsp;Task</span><span style="font-weight: bold; font-size: 12pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">判断先手是否有必胜策略。</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<!--EndFragment--></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">第一行T表示数据组数</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">对于每组数据，第一行n&nbsp;m分别表示点数、边数，点从1到n编号</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">第二行p表示重要点的个数</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">第三行p个数表示重要点的编号</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">接下来m行每行三个数i&nbsp;j&nbsp;k表示点i与点j之间有k条边</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; layout-grid-mode: char; text-indent: 21pt; text-align: left"><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">对于每组数据，在一行中输出答案，若先手必胜输出1否则输出0</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'">&nbsp;</span><span style="font-size: 10.5pt; color: rgb(0,0,0); font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p>
+<p class="p0" style="margin-top: 0pt; margin-bottom: 0pt; text-indent: 21pt"><span style="font-size: 10pt; font-family: '宋体'; mso-spacerun: 'yes'"><o:p></o:p></span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+<br />
+3 2<br />
+<br />
+1<br />
+<br />
+1<br />
+<br />
+1 2 1<br />
+<br />
+2 3 1<br />
+<br />
+2 1<br />
+<br />
+1<br />
+<br />
+1<br />
+<br />
+1 2 2<br />
+<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+<br />
+0<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

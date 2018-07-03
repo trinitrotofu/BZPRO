@@ -1,0 +1,44 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Cerc2014] Wheels</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4050. [Cerc2014] Wheels</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4050">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4050">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4050">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>A very important and complicated machine consists of n wheels, numbered l, 2, . . . , n. They&nbsp;</div>
+<div>are actually cogwheels, but the cogs are so small that we can model them as circles on the plane.&nbsp;</div>
+<div>Every wheel can spin around its center.&nbsp;</div>
+<div>Two wheels cannot overlap (they do not have common interior points), but they can touch.&nbsp;</div>
+<div>If two wheels touch each other and one of them rotates, the other one spins as well, as their&nbsp;</div>
+<div>micro-cogs are locked together.&nbsp;</div>
+<div>A force is put to wheel I (and to no other wheel), making it rotate at the rate of exactly&nbsp;</div>
+<div>one turn per minute, clockwise. Compute the rates of other wheels7 movement. You mav assume&nbsp;</div>
+<div>that the machine is not jammed (the movement is physically possible).&nbsp;</div>
+<div>
+<div>给出平面上的n个齿轮，忽略齿的大小。它们不能有交集，但可以相切。当用T=1的速度推动1号齿轮时（相切的转动，可以传动），求每个齿轮的转速。你可以假定机器不会卡死。&nbsp;</div>
+<div>n&lt;=1000&nbsp;</div>
+<div>其余数字&lt;=10000&nbsp;</div>
+<div></div>
+</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>The first line of input contains the number of test cases T. The descriptions of the test cases&nbsp;</div>
+<div>follow:&nbsp;</div>
+<div>Each test case consists of one line containing the number of wheels n (1《 n&le; 1000) . Each&nbsp;</div>
+<div>of the following lines contain three integers x, y and r (-10 000 &lt; x, y &lt; 10 000; I&le; r&le; 10 000)&nbsp;</div>
+<div>where (x, y) denote the Cartesian coordinates of the wheel's center and r is its radius.&nbsp;</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>For each test case, output n lines, each describing the movement of one wheel, in the same&nbsp;</div>
+<div>
+<div>order as in the input. For every wheel, output either p/q clockwise or p/q counterclockwise,&nbsp;</div>
+<div>where the irreducible fraction p/q is the number of wheel turns per minute. If q is l, output just&nbsp;</div>
+<div>p as an integer. If a wheel is standing still, output not moving.&nbsp;</div>
+<div></div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+5<br />
+0 0 6<br />
+6 8 4<br />
+-9 0 3<br />
+6 16 4<br />
+0- 11 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1 clockwise<br />
+3/2 counterclockwise<br />
+2 counterclockwise<br />
+3/2 clockwise<br />
+not moving<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

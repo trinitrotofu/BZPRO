@@ -1,0 +1,56 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Gty的妹子树</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3720. Gty的妹子树</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3720">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3720">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3720">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>我曾在弦歌之中听过你，<br />
+<br />
+檀板声碎，半出折子戏。<br />
+<br />
+舞榭歌台被风吹去，<br />
+<br />
+岁月深处尚有余音一缕&hellip;&hellip;<br />
+<br />
+<br />
+Gty神(xian)犇(chong)从来不缺妹子&hellip;&hellip;<br />
+<br />
+他来到了一棵妹子树下，发现每个妹子有一个美丽度&hellip;&hellip;<br />
+<br />
+由于Gty很哲♂学，他只对美丽度大于某个值的妹子感兴趣。<br />
+<br />
+他想知道某个子树中美丽度大于k的妹子个数。<br />
+<br />
+某个妹子的美丽度可能发生变化&hellip;&hellip;<br />
+<br />
+树上可能会出现一只新的妹子&hellip;&hellip;<br />
+<br />
+<br />
+维护一棵初始有n个节点的有根树(根节点为1)，树上节点编号为1-n，每个点有一个权值wi。<br />
+<br />
+支持以下操作：<br />
+<br />
+0 u x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 询问以u为根的子树中，严格大于x的值的个数。(u^=lastans,x^=lastans)<br />
+<br />
+1 u x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 把u节点的权值改成x。(u^=lastans,x^=lastans)<br />
+<br />
+2 u x&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 添加一个编号为&quot;当前树中节点数+1&quot;的节点，其父节点为u，其权值为x。(u^=lastans,x^=lastans)<br />
+<br />
+最开始时lastans=0。</p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入第一行包括一个正整数n(1&lt;=n&lt;=30000)，代表树上的初始节点数。<br />
+<br />
+接下来n-1行，每行2个整数u,v，为树上的一条无向边。<br />
+<br />
+任何时刻，树上的任何权值大于等于0，且两两不同。<br />
+<br />
+接下来1行，包括n个整数wi，表示初始时每个节点的权值。<br />
+<br />
+接下来1行，包括1个整数m(1&lt;=m&lt;=30000)，表示操作总数。<br />
+<br />
+接下来m行，每行包括三个整数 op,u,v：<br />
+<br />
+op,u,v的含义见题目描述。<br />
+<br />
+保证题目涉及的所有数在int内。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对每个op=0，输出一行，包括一个整数，意义见题目描述。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+1 2<br />
+10 20<br />
+1<br />
+0 1 5<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p><p>&nbsp;2017.9.28新加数据一组by&nbsp;GXZlegend,未重测</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

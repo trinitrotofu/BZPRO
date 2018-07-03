@@ -1,0 +1,41 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Baltic2002]Moving Robots</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1387. [Baltic2002]Moving Robots</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：2 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1387">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1387">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1387">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">在二维网格平面上有许多机器人在移动。每个机器人的状态由它所在的位置和面向的方位确定。每个机器人按照各自固定的指令执行移动。位置由一对整数(x, y)表示。机器人的方向有4个，用角度表示，分别是0，90，180，270。命令有两种，转身和移动。转身命令有一个参数D，是90，180或270，机器人当前的方向改变D个度数，C度将变为(C&nbsp;+&nbsp;D)&nbsp;mod&nbsp;360。移动指令没有参数，机器人将按它的方向前进一个单位。0方向的移动，位置改变（1，0），方向90改变（0，1），方向180改变（-1，0），方向270改变（0，-1）。
+一个机器人依次完成它自己的指令序列。序列执行完后机器人将停在最终的位置上。
+两个机器人之间的行动不互相影响，同一个位置可以有多个机器人。
+在机器人开始移动前，可以去掉一些指令，所以控制中心可以改变机器人的行动路线和最终位置。控制中心希望使所有的机器人最后到达同一个位置以进行检查。同时希望能够在去掉最少的指令情况下完成这个目标。
+任务：
+共有R(2&nbsp;<=&nbsp;R&nbsp;<=&nbsp;10)个机器人。每个机器人有它的初始位置，初始方向和命令序列。命令序列长度不超过50。计算需要去掉的最少的命令数
+</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>Input data should be read from the file robots.in. The first line of the file contains 
+integer R (2 ≤ R ≤ 10) – the number of robots. Then R sections of lines follow. Each 
+section describes one robot. The first line of the section contains four integers, 
+separated by single spaces: x, y – initial robot position (x, y), initial robot direction C 
+(C = 0, 90, 180, or 270) and  the  length of  robot’s command  sequence n  (1 ≤ n ≤ 50). 
+Then the section contains n lines describing the sequence of commands, one 
+command per line. The line of the step command contains single character S in the 
+first position and the line of the turn command contains character  T in the first 
+position that is followed by turn parameter – integer D (D = 90, 180 or 270) and is 
+separated by a single space</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>需要去掉的最少的命令数
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 <br />
+2 0 270 5 <br />
+S <br />
+T 180 <br />
+S <br />
+S <br />
+S <br />
+1 -1 0 8 <br />
+S <br />
+S <br />
+T 90 <br />
+S <br />
+T 270 <br />
+S <br />
+T 90 <br />
+S </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p>There are 2 moving robots. The first robot has initial position (2, 0), direction 270 and a <br />
+sequence of 5 commands. The second one has initial position (1, -1), direction 0 and a <br />
+sequence of 8 commands. The minimum total number of commands to be removed that <br />
+makes robots share final position is 2: for example, remove the 3-rd command of the <br />
+first robot and the 5-th command of the second robot. The common final position in <br />
+that case is (2, 1). </p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>

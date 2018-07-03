@@ -1,0 +1,119 @@
+<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Pku3529 Matrix Analysis</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2684. Pku3529 Matrix Analysis</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：3 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2684">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2684">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2684">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><b><span style="font-size: 12pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span style="font-size: 12pt">给定一个</span><span style="font-size: 12pt">M*N</span><span style="font-size: 12pt">的系数矩阵</span><span style="font-size: 12pt">A</span><span style="font-size: 12pt">和一个</span><span style="font-size: 12pt">M*N</span><span style="font-size: 12pt">的初始矩阵</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">，我们定义矩阵序列</span><span style="font-size: 12pt">SB={B<sub>k</sub>}</span><span style="font-size: 12pt">，满足序列第一项</span><span style="font-size: 12pt">B<sub>1</sub></span><span style="font-size: 12pt">等于</span><span style="font-size: 12pt">B</span><span style="font-size: 12pt">，对于其他项则满足下式：</span></div>
+<div></div>
+<div><span style="font-size: 12pt"><img height="92" width="328" alt="" src="upload/201204/111.jpg" /></span></div>
+<div></div>
+<div></div>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">其中上式</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">b</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">的右上角的数表示上标，即其在矩阵序列中的位置。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-tab-count: 1"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">你需要回答</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">Q</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">次询问，每次询问矩阵序列中第</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">k</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">项的第</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">i</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">行第</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">j</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">列的数</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">mod 1000000007</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">。</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><span lang="EN-US" style="font-size: 12pt"><span style="mso-tab-count: 1"><font face="Times New Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></span></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">提示，</span><span lang="EN-US" style="font-size: 12pt"><font face="Times New Roman">1000000007</font></span><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">是一个质数</span><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><b style="mso-bidi-font-weight: normal"><span style="font-size: 12pt; font-family: 宋体; mso-ascii-font-family: 'Times New Roman'; mso-hansi-font-family: 'Times New Roman'">数据范围：</span></b><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt"><o:p></o:p></span></b></p>
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt"><font face="Times New Roman"><b style="mso-bidi-font-weight: normal"><span lang="EN-US" style="font-size: 12pt"><span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span lang="EN-US" style="font-size: 12pt">M,N&lt;=20,Q&lt;=1000<o:p></o:p></span></font></p>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="ptx" lang="en-US">
+<p>The input consists of a single test case and is given in the following format:</p>
+<div style="padding-left: 2em">
+<table>
+    <tbody>
+        <tr>
+            <td><i>m</i></td>
+            <td><i>n</i></td>
+            <td><i>t</i></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><i>a</i><sub>11</sub></td>
+            <td><i>a</i><sub>12</sub></td>
+            <td align="center">⋯</td>
+            <td><i>a</i><sub>1<i>n</i></sub></td>
+        </tr>
+        <tr>
+            <td><i>a</i><sub>21</sub></td>
+            <td><i>a</i><sub>22</sub></td>
+            <td align="center">⋯</td>
+            <td><i>a</i><sub>2<i>n</i></sub></td>
+        </tr>
+        <tr>
+            <td align="center">⋮</td>
+            <td align="center">⋮</td>
+            <td align="center">⋱</td>
+            <td align="center">⋮</td>
+        </tr>
+        <tr>
+            <td><i>a<sub>m</sub></i><sub>1</sub></td>
+            <td><i>a<sub>m</sub></i><sub>2</sub></td>
+            <td align="center">⋯</td>
+            <td><i>a<sub>mn</sub></i></td>
+        </tr>
+        <tr>
+            <td><i>b</i><sub>11</sub></td>
+            <td><i>b</i><sub>12</sub></td>
+            <td align="center">⋯</td>
+            <td><i>b</i><sub>1<i>n</i></sub></td>
+        </tr>
+        <tr>
+            <td><i>b</i><sub>21</sub></td>
+            <td><i>b</i><sub>22</sub></td>
+            <td align="center">⋯</td>
+            <td><i>b</i><sub>2<i>n</i></sub></td>
+        </tr>
+        <tr>
+            <td align="center">⋮</td>
+            <td align="center">⋮</td>
+            <td align="center">⋱</td>
+            <td align="center">⋮</td>
+        </tr>
+        <tr>
+            <td><i>b<sub>m</sub></i><sub>1</sub></td>
+            <td><i>b<sub>m</sub></i><sub>2</sub></td>
+            <td align="center">⋯</td>
+            <td><i>b<sub>mn</sub></i></td>
+        </tr>
+        <tr>
+            <td><i>i</i><sub>1</sub></td>
+            <td><i>j</i><sub>1</sub></td>
+            <td><i>k</i><sub>1</sub></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><i>i</i><sub>2</sub></td>
+            <td><i>j</i><sub>2</sub></td>
+            <td><i>k</i><sub>2</sub></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>⋮</td>
+            <td>⋮</td>
+            <td>⋮</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><i>i<sub>t</sub></i></td>
+            <td><i>j<sub>t</sub></i></td>
+            <td><i>k<sub>t</sub></i></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<p>Bounds on the values are: 1 &le; <i>m</i>, <i>n</i> &le; 20; 1 &le; <i>t</i> &le; 1000; 0 &le; <i>a<sub>ij</sub></i>, <i>b<sub>ij</sub></i> &le; 10; 1 &le; <i>i<sub>t</sub></i> &le; <i>m</i>; 1 &le; <i>j<sub>t</sub></i> &le; <i>n</i>; 1 &le; <i>k<sub>t</sub></i> &le; 10<sup>9</sup>.</p>
+</div>
+<div class="ptx" lang="en-US"></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div class="ptx" lang="en-US">
+<p>For each <i>t</i>, output <i>b<sub>i<sub>t</sub>j<sub>t</sub></sub><sup style="margin-left: -2ex">k<sub>t</sub></sup></i> mod 1,000,000,007.</p>
+</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>2 2 5<br />
+1 2<br />
+2 1<br />
+1 1<br />
+1 1<br />
+1 1 2<br />
+1 2 2<br />
+2 1 2<br />
+2 2 2<br />
+1 1 3<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div class=content><span class=sampledata>1<br />
+2<br />
+2<br />
+9<br />
+1<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
