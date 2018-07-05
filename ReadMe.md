@@ -16,6 +16,8 @@
 
 下载本仓库后浏览器打开`index.html`
 
+或者直接通过GitPage访问：[https://konnyakuxzy.github.io/BZPRO](https://konnyakuxzy.github.io/BZPRO)
+
 ### 爬虫
 
 打开`Clawer`文件夹。
