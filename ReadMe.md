@@ -6,15 +6,23 @@
 
 包含了**所有题面**，以及**权限题**。~~甚至还包含了爬虫~~
 
+还有**所有的题目图片**，以及**几乎所有的pdf/rar/doc/txt**都包含在内并且转换成了相对连接。（也就是说你能到处复制它而不会出现题目显示不出来的问题）
+
+（为什么说是几乎所有的呢？因为有的pdf是放在[https://begin.lydsy.com/JudgeOnline/](https://begin.lydsy.com/JudgeOnline/)上的，而我暂时还不知道怎么爬，所以并未爬取。如果有大佬知道欢迎在issue里告诉我这个辣鸡或者直接提交pr也行）
+
 因为RuanXZ大佬把他的爬虫搞丢了所以我就重新写了一个
 
 因为没有CSS/HTML基础所以很垃圾的还请大家见谅。
+
+（而且我真的不会用github）
 
 ## How to use it
 
 ### 离线题库
 
 下载本仓库后浏览器打开`index.html`
+
+或者直接通过GitPage访问：[https://konnyakuxzy.github.io/BZPRO](https://konnyakuxzy.github.io/BZPRO)
 
 ### 爬虫
 
@@ -46,7 +54,7 @@
 
 `./Get_Bzoj.sh`
 
-大概等个10几20分钟的样子。。。爬虫会把题目下载到`www.lydsy.com`文件夹内。
+大概等个四十分钟的样子（网速不同可能有所差异）。。。爬虫会把题目下载到`www.lydsy.com`文件夹内。
 
 最后生成题库首页和题目页面：
 
@@ -62,12 +70,18 @@
 
 如果还有问题可以提交issue。
 
-##  最后
+## Thx
 
-至于为什么爬虫要延迟0.1秒再爬下一道题，是因为BZOJ添加了检查机制，访问速度太快会导致被拒绝访问导致很多题目下载不下来。
+感谢对此项目提供了很大帮助的大佬：
+
+[Xeonacid](https://github.com/Xeonacid)
+
+##  At Last
+
+至于为什么爬虫要延迟0.3秒再爬下一道题，是因为BZOJ添加了检查机制，访问速度太快会导致被拒绝访问导致很多题目下载不下来。
 
 还有代码很可能有问题，因为作者是个制杖。
 
 Powered by [XZYQvQ](http://www.k-xzy.xyz).
 
-The UI is powered by [Semantic UI](https://semantic-ui.com/).
+The UI is based on [syzoj](https://github.com/syzoj/syzoj/blob/master/LICENSE), using AGPL License.
