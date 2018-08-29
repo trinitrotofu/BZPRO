@@ -1,7 +1,7 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[POI2006]Lis-The Postman</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1515. [POI2006]Lis-The Postman</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1515">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1515">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1515">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>每天早上邮递员都要走过每条街道来递送邮件. 所有的道路都是单向的. 两个岔路口间最多有两条边并且方向不同. 岔路口从1 到 编号. 邮递员从Byteotian邮政总部出发并且最终回到总部, 他可以自由选择自己喜欢的线路.最近他的上司给了他新的任务. 他被分派了一些路径的片段- 即一些需要依次经过的岔路口序列. 邮递员要选择一条路径使得:&nbsp;</div>
-<div>&middot;<span class="Apple-tab-span" style="white-space:pre"></span>经过每条街道一次,&nbsp;</div>
-<div>&middot;<span class="Apple-tab-span" style="white-space:pre"></span>包含所有给定的路径片段,&nbsp;</div>
-<div>&middot;<span class="Apple-tab-span" style="white-space:pre"></span>从第一个路口出发并回到第一个路口.&nbsp;</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[POI2006]Lis-The Postman</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1515. [POI2006]Lis-The Postman</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：259 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1515">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1515">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1515">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>每天早上邮递员都要走过每条街道来递送邮件. 所有的道路都是单向的. 两个岔路口间最多有两条边并且方向不同. 岔路口从1 到 编号. 邮递员从Byteotian邮政总部出发并且最终回到总部, 他可以自由选择自己喜欢的线路.最近他的上司给了他新的任务. 他被分派了一些路径的片段- 即一些需要依次经过的岔路口序列. 邮递员要选择一条路径使得:&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>经过每条街道一次,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>包含所有给定的路径片段,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space:pre">	</span>从第一个路口出发并回到第一个路口.&nbsp;</div>
 <div>很不幸,很可能这样的路径不一定存在. 请你帮邮递员找出一条可行的路径.</div>
 <div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个整数N和M,2&lt;=N&lt;=50000,1&lt;=M&lt;=200000 表示岔路口数目以及街道的数目. 接下来M行每行两个数字a, b,</div>
 <div>1&lt;=a,b&lt;=N,a&lt;&gt;b,, 表示一条单向道路. 每一队 a,b在数据中最多出现一次. 接下来一行一个整数t,0&lt;=t&lt;=10000&nbsp;</div>
@@ -9,10 +9,10 @@
 <div>&nbsp;v1,v2&hellip;vk表示需要经过的路口总数以及这些路口的编号. 所有路径片段的总长不超过1000000.</div>
 <div></div>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行输出:&nbsp;</div>
-<div>&middot;<span class="Apple-tab-span" style="white-space: pre;"></span>TAK - 如果存在一条满足条件的路径,&nbsp;</div>
-<div>&middot;<span class="Apple-tab-span" style="white-space: pre;"></span>NIE &ndash; 如果路径不存在.</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space: pre;">	</span>TAK - 如果存在一条满足条件的路径,&nbsp;</div>
+<div>&middot;<span class="Apple-tab-span" style="white-space: pre;">	</span>NIE &ndash; 如果路径不存在.</div>
 <div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>6 10<br />
+			<div class=content><span class=sampledata>6 10<br />
 1 5<br />
 1 3<br />
 4 1<br />
@@ -29,6 +29,6 @@
 4 4 3 6 4<br />
 3 5 6 2<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>TAK<br />
+			<div class=content><span class=sampledata>TAK<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p><img border="0" src="images/1515.jpg" alt="" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p><p><img border="0" src="images/1515.jpg" alt="" /></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

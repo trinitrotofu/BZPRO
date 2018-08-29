@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2008]糖果雨</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1062. [NOI2008]糖果雨</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1062">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1062">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1062">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>　　有一个美丽的童话：在天空的尽头有一个&quot; 糖果国&quot; ，这里大到摩天大厦，小到小花小草都是用糖果建造而成<br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2008]糖果雨</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1062. [NOI2008]糖果雨</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1062">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1062">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1062">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>　　有一个美丽的童话：在天空的尽头有一个&quot; 糖果国&quot; ，这里大到摩天大厦，小到小花小草都是用糖果建造而成<br />
 的。更加神奇的是，天空中飘满了五颜六色的糖果云，很快糖果雨密密麻麻从天而落，红色的是草莓糖，黄色的是<br />
 柠檬糖，绿色的是薄荷糖，黑色的是巧克力糖&hellip;&hellip;这时糖果国的小朋友们便会拿出大大小小的口袋来接天空中落下<br />
 的糖果，拿回去与朋友们一起分享。对糖果情有独钟的小Z憧憬着能够来到这样一个童话的国度。所谓日有所思，<br />
@@ -20,7 +20,7 @@
 <div>插入事件，询问事件以及删除事件。输入格式如下：</div>
 <div><img src="upload/201604/fff.png" width="501" height="361" alt="" /></div>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>　　对于每一个询问事件，输出相应的一行，为该次询问的答案，即口袋可以接到多少种不同的糖果</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>10 10<br />
+			<div class=content><span class=sampledata>10 10<br />
 1 0 10 1 3 -1<br />
 2 1 0 0<br />
 2 11 0 10<br />
@@ -31,7 +31,7 @@
 3 100 13<br />
 3 1999999999 10<br />
 1 2000000000 10 0 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>1<br />
+			<div class=content><span class=sampledata>1<br />
 1<br />
 0<br />
 2<br />
@@ -45,5 +45,5 @@
  的一种糖果（云朵的位置为[8,10]），而不可以接到颜色为 13 的糖果（云朵的位置为[6,9]）。时刻100, 颜色<br />
 为 13 的云朵从天空中消失。时刻1999999999，颜色为 10 的云朵从天空中消失。时刻2000000000，天空中又出现<br />
 一片颜色为 10 的云朵，初始位置为 [0,1] ，方向向右</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>对于所有的数据，N&lt;=200000,Pi&lt;=Len,0&lt;=Ti&lt;=2000000000，1&lt;=Ci&lt;=1000000 。数据保证 {Ti} 为非递减序列</div><br />
-<div>即 T1&lt;=T2&lt;=&hellip;&lt;=Tn -1&lt;=Tn 。对于所有的插入事件，令 Pi=Ri-Li，即 Pi 表示每片云朵的长度</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p><div>对于所有的数据，N&lt;=200000,Pi&lt;=Len,0&lt;=Ti&lt;=2000000000，1&lt;=Ci&lt;=1000000 。数据保证 {Ti} 为非递减序列</div><br />
+<div>即 T1&lt;=T2&lt;=&hellip;&lt;=Tn -1&lt;=Tn 。对于所有的插入事件，令 Pi=Ri-Li，即 Pi 表示每片云朵的长度</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

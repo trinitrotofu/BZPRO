@@ -1,8 +1,8 @@
 #!/bin/bash
 
-bgn=1000
+read bgn <./bgn.txt
+read top <./top.txt
 pid=$bgn
-top=5411
 path="./www.lydsy.com"
 
 echo "Backing up original file..."

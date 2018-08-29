@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Zjoi2015]醉熏熏的幻想乡</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4091. [Zjoi2015]醉熏熏的幻想乡</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4091">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4091">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4091">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>傲娇少女幽香是一个很萌很萌的妹子，这些天幻想乡的大家都不知道为何还是拼命喝酒。很快酒就供不应求了，为了满足大家的需求，幽香决定在森林里酿酒。<br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Zjoi2015]醉熏熏的幻想乡</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4091. [Zjoi2015]醉熏熏的幻想乡</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4091">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4091">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4091">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p>傲娇少女幽香是一个很萌很萌的妹子，这些天幻想乡的大家都不知道为何还是拼命喝酒。很快酒就供不应求了，为了满足大家的需求，幽香决定在森林里酿酒。<br />
 经过调查，幽香发现森林里面有一些地方非常适合酿酒，有一些地方则非常适合存酒。<br />
 幽香把这些适合酿酒的地方成为酿酒点，不妨认为有n个酿酒点，从1到n标号。<br />
 同时也有m个适合存酒的地方，幽香将它们成为存酒点，从1到m标号。<br />
@@ -10,7 +10,7 @@
 接下来一行m个整数，一次为每个存酒点的d_i值。<br />
 接下来n行，每行m个数，其中第i行第j个表示酿酒点i到存酒点j有没有通道（1表示有，0表示没有）。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出第一行表示幽香最多能存多少升酒（注意着肯定是个整数，直接输出即可）。<br />
 输出一行表示最小花费魔力，注意这肯定是一个有理数，化简后按照a/b的形式输出（0输出0/1）。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>10 10<br />
+			<div class=content><span class=sampledata>10 10<br />
 0 2 3<br />
 2 3 2<br />
 3 1 3<br />
@@ -32,7 +32,7 @@
 0 0 0 0 0 0 0 0 0 0<br />
 0 0 1 0 0 0 1 0 0 0<br />
 0 0 0 0 0 1 0 0 1 0</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>8<br />
+			<div class=content><span class=sampledata>8<br />
 42/1<br />
 Hint<br />
 对于30%的数据：所有a_i=0。<br />
@@ -40,4 +40,4 @@ Hint<br />
 对于100%的数据：1<=n<=100,1<=m<=100。<br />
 对于所有数据，0<=a_i,b_i,c_i,d_i<=3且都是整数。同时对于每个i，a_i+b_i>0通道的数量不超过1000条。<br />
 非常神奇的是，对于所有数据存在一个正整数X<=10^7，使得存在一个最优解，使得所有路径上运送的酒的体积都是1/X的倍数。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

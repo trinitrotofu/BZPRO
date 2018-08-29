@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>花神的嘲讽计划Ⅰ</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3207. 花神的嘲讽计划Ⅰ</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3207">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3207">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3207">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div style="margin: 7.5pt 0cm; line-height: 15pt">
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>花神的嘲讽计划Ⅰ</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3207. 花神的嘲讽计划Ⅰ</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3207">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3207">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3207">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div style="margin: 7.5pt 0cm; line-height: 15pt">
 <div>背景</div>
 <div>花神是神，一大癖好就是嘲讽大J，举例如下：</div>
 <div>&ldquo;哎你傻不傻的！【hqz：大笨J】&rdquo;</div>
@@ -29,7 +29,7 @@
 <div>第2行N个数，意义如上；</div>
 <div>第3行到第3+M-1行，每行K+2个数，前两个数为x,y,然后K个数，意义如上；</div>
 </div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div style="margin: 7.5pt 0cm; line-height: 15pt"><span style="font-size: medium"><span style="color: #333333">对于每一个嘲讽做出一个回答会尴尬输出&lsquo;Yes&rsquo;，否则输出&lsquo;No&rsquo;</span></span></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>8 5 3<br />
+			<div class=content><span class=sampledata>8 5 3<br />
 1 2 3 4 5 6 7 8<br />
 2 5 2 3 4<br />
 1 8 3 2 1<br />
@@ -37,16 +37,16 @@
 2 5 1 2 3<br />
 1 7 3 4 5<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>No<br />
+			<div class=content><span class=sampledata>No<br />
 Yes<br />
 Yes<br />
 Yes<br />
 No<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>题中所有数据不超过2*10^9;保证方案序列的每个数字&lt;=N</div><br />
+			<div class=content><p><div>题中所有数据不超过2*10^9;保证方案序列的每个数字&lt;=N</div><br />
 <div>2~5中有2 3 4的方案，输出No，表示DJ不会尴尬</div><br />
 <div>1~8中没有3 2 1的方案，输出Yes，表示DJ会尴尬</div><br />
 <div>5~7中没有4 5 6的方案，输出Yes，表示DJ会尴尬</div><br />
 <div>2~5中没有1 2 3的方案，输出Yes，表示DJ会尴尬</div><br />
 <div>1~7中有3 4 5的方案，输出No，表示DJ不会尴尬</div><br />
-<div>//2018.7.6新加数据一组.未重测.</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<div>//2018.7.6新加数据一组.未重测.</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

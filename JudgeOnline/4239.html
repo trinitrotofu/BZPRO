@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>巴士走读</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4239. 巴士走读</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4239">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4239">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4239">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>大学生的JOI君每天乘坐巴士走读。</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>巴士走读</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4239. 巴士走读</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4239">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4239">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4239">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>大学生的JOI君每天乘坐巴士走读。</div>
 <div>JOI君的家和学校都在IOI市内。IOI市内共有N个巴士停靠点，编号为1~N，离JOI家最近的停靠点为1号停靠点，离大学最近的停靠点为N号停靠点。</div>
 <div>IOI市内共有M辆巴士，每辆巴士一天只跑一次，从某一时刻某一停靠点出发，在某一时刻到达另一个站点。运行途中不可以下车。</div>
 <div>JOI君每天要乘坐一次以上的巴士到达学校。我们可以无视JOI君换车的时间，换言之，为了换乘某个时刻从某个停靠点出发的巴士，只需要在该巴士的出发时间或之前到达停靠点就可以了。此外，多次在某个停靠点换乘也是可以的。</div>
@@ -11,7 +11,7 @@
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出Q行，第i行(1&lt;=i&lt;=Q)一个整数，表示JOI君第i天最迟到达1号站点的时刻。</div>
 <div>如果无法在时限内到达，输出-1。</div>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>5 6<br />
+			<div class=content><span class=sampledata>5 6<br />
 1 2 10 25<br />
 1 2 12 30<br />
 2 5 26 50<br />
@@ -23,13 +23,13 @@
 30<br />
 60<br />
 100</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>-1<br />
+			<div class=content><span class=sampledata>-1<br />
 5<br />
 10<br />
 30</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>2&lt;=N&lt;=100000</div><br />
+			<div class=content><p><div>2&lt;=N&lt;=100000</div><br />
 <div>1&lt;=M&lt;=300000</div><br />
 <div>0&lt;=Xi&lt;Yi&lt;86400000(=24*60*60*1000)(1&lt;=i&lt;=M)</div><br />
 <div>1&lt;=Q&lt;=100000</div><br />
 <div>0&lt;=Li&lt;86400000(1&lt;=i&lt;=Q)</div><br />
-<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

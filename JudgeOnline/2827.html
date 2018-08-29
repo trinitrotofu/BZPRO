@@ -1,11 +1,11 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>千山鸟飞绝 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2827. 千山鸟飞绝 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2827">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2827">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2827">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium; "><br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>千山鸟飞绝 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2827. 千山鸟飞绝 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2827">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2827">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2827">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div><span style="font-size: medium; "><br />
 </span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>话说有一天doyouloveme和vfleaking到山里玩。谁知doyouloveme刚刚进山，所有的鸟儿竟被他的神犇气场给惊得全部飞走了。vfleaking顿时膜拜不已。</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>这时鸟王用鸟语说道：&ldquo;!@#$%&hellip;&hellip;?&rdquo;安抚了一下众鸟的情绪。鸟王生性好斗，作出了一个决定&mdash;&mdash;要排鸟布阵把刚才吓到它们的人类赶出山去。</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>每只鸟都有一个编号，都有一个威武值。每秒钟鸟王都会发一个命令，编号为v的鸟飞到(x,y)去（坐标系原点是山顶，坐标单位为鸟爪）。鸟飞得很快，一秒之内就飞到了，可以看作是瞬间移动。如果编号为v的鸟和编号为u的鸟某一时刻处在同一位置，它们就会互相鼓励，增加各自的士气值和团结值。一只鸟的士气值等于此刻与它处在同一位置的鸟中的威武值的最大值，团结值等于此刻与它处在同一位置的鸟的只数。如果每一时刻都没有鸟与它处在同一位置，则士气值和团结值都为0。要注意自己不能鼓励自己，计算士气值和团结值时不能算上自己。</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>t秒钟后，doyouloveme目测出了现在每只鸟的战斗力，于是感叹了一句：&ldquo;不妙，我们得走了。&rdquo;</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>正所谓团结的鸟儿一个顶俩，所以doyouloveme这样描述战斗力：一只鸟战斗力值等于它在0到t秒中士气值的最大值与团结值的最大值的乘积。注意不是乘积的最大值，而是最大值的乘积。</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>vfleaking很想知道现在每只鸟的战斗力，但是他当然不会啦，于是他把这个任务交给了你来完成。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>话说有一天doyouloveme和vfleaking到山里玩。谁知doyouloveme刚刚进山，所有的鸟儿竟被他的神犇气场给惊得全部飞走了。vfleaking顿时膜拜不已。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>这时鸟王用鸟语说道：&ldquo;!@#$%&hellip;&hellip;?&rdquo;安抚了一下众鸟的情绪。鸟王生性好斗，作出了一个决定&mdash;&mdash;要排鸟布阵把刚才吓到它们的人类赶出山去。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>每只鸟都有一个编号，都有一个威武值。每秒钟鸟王都会发一个命令，编号为v的鸟飞到(x,y)去（坐标系原点是山顶，坐标单位为鸟爪）。鸟飞得很快，一秒之内就飞到了，可以看作是瞬间移动。如果编号为v的鸟和编号为u的鸟某一时刻处在同一位置，它们就会互相鼓励，增加各自的士气值和团结值。一只鸟的士气值等于此刻与它处在同一位置的鸟中的威武值的最大值，团结值等于此刻与它处在同一位置的鸟的只数。如果每一时刻都没有鸟与它处在同一位置，则士气值和团结值都为0。要注意自己不能鼓励自己，计算士气值和团结值时不能算上自己。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>t秒钟后，doyouloveme目测出了现在每只鸟的战斗力，于是感叹了一句：&ldquo;不妙，我们得走了。&rdquo;</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>正所谓团结的鸟儿一个顶俩，所以doyouloveme这样描述战斗力：一只鸟战斗力值等于它在0到t秒中士气值的最大值与团结值的最大值的乘积。注意不是乘积的最大值，而是最大值的乘积。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>vfleaking很想知道现在每只鸟的战斗力，但是他当然不会啦，于是他把这个任务交给了你来完成。</span></div>
 <div><span style="font-size: medium; "><br />
 </span></div>
 <div><font size="3"><br />
@@ -13,20 +13,20 @@
 <p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p></p>
 <div></div>
 <div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>第一行一个数n，代表鸟的只数。（鸟王那家伙你可以完全忽视掉）</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>接下来n行，每行三个整数w,x,y描述每只鸟的威武值和初始坐标。第i+1行描述编号为i的鸟。</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>接下来一行有一个数t，代表经过时间ts。</span></div>
-<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; "></span>接下来t行，每行三个整数v,x,y描述鸟王每秒的命令。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>第一行一个数n，代表鸟的只数。（鸟王那家伙你可以完全忽视掉）</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>接下来n行，每行三个整数w,x,y描述每只鸟的威武值和初始坐标。第i+1行描述编号为i的鸟。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>接下来一行有一个数t，代表经过时间ts。</span></div>
+<div><span style="font-size: medium; "><span class="Apple-tab-span" style="white-space: pre; ">	</span>接下来t行，每行三个整数v,x,y描述鸟王每秒的命令。</span></div>
 <div></div>
 </div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
-<div><span class="Apple-tab-span" style="font-size: medium; white-space: pre; "></span><span style="font-size: medium; ">一共n行，每行一个数，代表每只鸟的战斗力。</span></div>
+<div><span class="Apple-tab-span" style="font-size: medium; white-space: pre; ">	</span><span style="font-size: medium; ">一共n行，每行一个数，代表每只鸟的战斗力。</span></div>
 <div><span style="font-size: medium; "><br />
 </span></div>
 <div><font size="3"><br />
 </font></div>
 </div>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>5<br />
+			<div class=content><span class=sampledata>5<br />
 1 1 1<br />
 3 1 2<br />
 4 4 4<br />
@@ -39,13 +39,13 @@
 3 0 1<br />
 5 0 1<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>3<br />
+			<div class=content><span class=sampledata>3<br />
 4<br />
 6<br />
 8<br />
 8<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>对于样例的解释：</div><br />
+			<div class=content><p><div>对于样例的解释：</div><br />
 <div>首先5只鸟的位置为(1,1),(1,2),(4,4),(0,1),(2,3)，士气和团结值都是0。</div><br />
 <div>鸟1飞到了(1,2)，于是鸟1和鸟2互相鼓励，鸟1士气变为3，鸟2士气变为1。鸟1鸟2的团结值变为1。</div><br />
 <div>然后鸟2飞到(4,4)，与鸟3互相鼓励，鸟2士气变为4，鸟3士气变为3。鸟2与鸟3的团结值变为1。</div><br />
@@ -61,4 +61,4 @@
 <div>1&le;n&le;30000 &nbsp; 0&le;t&le;300000 &nbsp; 坐标范围为整数，且不超过INT_MIN~INT_MAX</div><br />
 <div>威武值为不超过INT_MAX的非负整数。</div><br />
 <div></div><br />
-<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

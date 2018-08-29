@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>小强的逃跑</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2840. 小强的逃跑</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2840">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2840">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2840">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>小强的逃跑</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#2840. 小强的逃跑</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=2840">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=2840">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=2840">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
 <div>小强建立了一个洞穴，洞穴由N个点、M条有向边组成，可能有自环、重边。每个边有一个体力消耗值。当小强感觉</div>
 <div>到危险的时候，它会进行低智商的逃跑行为，具体说，是从一个点开始跑，每一步：它有P的概率从这个点钻出洞</div>
 <div>穴终止逃跑；1-P的概率沿着从当前点连出的体力消耗值最小的边移动到另一个点（此时，如果有多个连出的边的</div>
@@ -12,7 +12,7 @@
 <div>表示操作的个数。接下来Q行，每行一个操作，是下面的格式之一：0 x y 表示把输入文件中输入的第x条边的权值</div>
 <div>变成y1 x 表示查询当前状态下，从点x开始逃跑，小强消耗的体力的期望是多少。</div>
 </div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于输入的每个询问操作，输出一行一个数表示小强从某个点开始逃跑的体力消耗的期望。四舍五入到整数。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>3 3 0.1<br />
+			<div class=content><span class=sampledata>3 3 0.1<br />
 1 2 1<br />
 1 3 1<br />
 3 1 1<br />
@@ -22,11 +22,11 @@
 1 1<br />
 1 2<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>5<br />
+			<div class=content><span class=sampledata>5<br />
 9<br />
 8<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>【样例解释】</div><br />
+			<div class=content><p><div>【样例解释】</div><br />
 <div>这张图开始的时候有3个点，3条边。</div><br />
 <div>在开始状态下：</div><br />
 <div>如果小强在点1，它会以0.9的概率跑向点2（消耗体力值1），0.1的概率停止；</div><br />
@@ -45,4 +45,4 @@
 <div>【数据说明】</div><br />
 <div>&nbsp;对于100%的数据，N&lt;=50000，Q&lt;=100000，1&lt;=M&lt;=1000000，每条边的体</div><br />
 <div>力消耗值为介于1到1000的一个正整数。</div><br />
-<div>数据及题解：<a href="upload/2840.rar">www.lydsy.com/JudgeOnline/upload/2840.rar</a></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<div>数据及题解：<a href="upload/2840.rar">www.lydsy.com/JudgeOnline/upload/2840.rar</a></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

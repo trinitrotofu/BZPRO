@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Karin的弹幕</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3922. Karin的弹幕</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3922">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3922">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3922">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Karin在战斗之余的闲暇时光里喜欢上B站看鬼畜视频，尤其喜欢发弹幕。她这天对一个视频的弹幕产生了兴趣，她记录了每个时间点的弹幕数量，并且可能对一段呈等差数列的时间的弹幕数量求最大值；她还可能修改某个时间点的弹幕数量。</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Karin的弹幕</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3922. Karin的弹幕</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3922">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3922">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3922">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Karin在战斗之余的闲暇时光里喜欢上B站看鬼畜视频，尤其喜欢发弹幕。她这天对一个视频的弹幕产生了兴趣，她记录了每个时间点的弹幕数量，并且可能对一段呈等差数列的时间的弹幕数量求最大值；她还可能修改某个时间点的弹幕数量。</div>
 <div>为了不在Yuuna面前暴露出她弱爆了的数学能力，保持她傲娇的属性，你需要帮助她。</div>
 <div>精简题意：给定一个序列，支持以下操作：①对一段下标是等差数列的子序列进行求最大值操作(参见输入格式)；②单点修改。</div>
 <p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行是一个整数n，</div>
@@ -12,7 +12,7 @@
 <div>对每个op=1，单独输出一行，代表该等差子序列的最大值。</div>
 </div>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>【输入样例1】<br />
+			<div class=content><span class=sampledata>【输入样例1】<br />
 10<br />
 1 6 1 4 9 4 8 2 8 5<br />
 10<br />
@@ -41,7 +41,7 @@
 1 2 4<br />
 0 10 -5<br />
 1 1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>【输出样例1】<br />
+			<div class=content><span class=sampledata>【输出样例1】<br />
 8<br />
 8<br />
 4<br />
@@ -56,7 +56,7 @@
 -7<br />
 -6<br />
 18</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>【数据范围】</div><br />
+			<div class=content><p><div>【数据范围】</div><br />
 <div>1&lt;=n&lt;=70000，</div><br />
 <div>1&lt;=m&lt;=70000，</div><br />
 <div>保证任何时刻abs(a[i])(1&lt;=i&lt;=n)&lt;=2147483647，</div><br />
@@ -68,4 +68,4 @@
 <div>保证涉及的所有数在C++的int内。</div><br />
 <div>2015.4.2新加四组数据</div><br />
 <div></div><br />
-<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2007]项链工厂</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1493. [NOI2007]项链工厂</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1493">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1493">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1493">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>T公司是一家专门生产彩色珠子项链的公司，其生产的项链设计新颖、款式多样、价格适中，广受青年人的喜爱。</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2007]项链工厂</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1493. [NOI2007]项链工厂</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1493">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1493">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1493">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>T公司是一家专门生产彩色珠子项链的公司，其生产的项链设计新颖、款式多样、价格适中，广受青年人的喜爱。</div>
 <div>最近T公司打算推出一款项链自助生产系统，使用该系统顾客可以自行设计心目中的美丽项链。该项链自助生产系</div>
 <div>统包括硬件系统与软件系统，软件系统与用户进行交互并控制硬件系统，硬件系统接受软件系统的命令生产指定的</div>
 <div>项链。该系统的硬件系统已经完成，而软件系统尚未开发，T公司的人找到了正在参加全国信息学竞赛的你，你能</div>
@@ -10,16 +10,16 @@
 <div>第二行包含 N 个整数，x1，x2，&hellip;，xn ，表示从位置 1 到位置 N 的珠子的颜色，1&le;xi&le;c 。</div>
 <div>第三行包含一个整数 Q ，表示命令数目。接下来的 Q 行每行一条命令，如上文所述。N&le;500000 ，Q&le;500000，c&le;1000&nbsp;</div>
 <div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>对于每一个 C 和 CS 命令，应输出一个整数代表相应的答案。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>5 3<br />
+			<div class=content><span class=sampledata>5 3<br />
 1 2 3 2 1<br />
 4<br />
 C<br />
 R 2<br />
 P 5 5 2<br />
 CS 4 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>4<br />
+			<div class=content><span class=sampledata>4<br />
 1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>注意旋转命令旋转&ldquo;珠子&rdquo;但不改变&ldquo;位置&rdquo;的编号，而反转命令始终以位置 1 为对称轴。例如当 N=10 时，项</div><br />
+			<div class=content><p><div>注意旋转命令旋转&ldquo;珠子&rdquo;但不改变&ldquo;位置&rdquo;的编号，而反转命令始终以位置 1 为对称轴。例如当 N=10 时，项</div><br />
 <div>链上的位置编号如图1：</div><br />
 <div><img src="upload/201604/cc.png" width="366" height="214" alt="" /></div><br />
 <div><br />
@@ -29,4 +29,4 @@ CS 4 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existi
 <div>等于 N 时，我们仍然将查询部分作为&ldquo;线段&rdquo;理解。例如在图4所示的情况中，执行&ldquo;CS 1 10&rdquo;命令，查询从位</div><br />
 <div>置 1 开始到位置 10 结束的这个长度为 10 的线段中有多少个&ldquo;部分&rdquo;，于是得到返回值 3 。与之形成对照的是</div><br />
 <div>，若执行&ldquo;C&rdquo;命令，返回值则为 2</div><br />
-</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+</div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

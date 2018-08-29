@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Escape</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3646. Escape</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3646">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3646">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3646">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">背景<br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Escape</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3646. Escape</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3646">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3646">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3646">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">背景<br />
 黑暗魔君复活，魔戒重现，这一切的一切都意味这黑暗即将重新笼罩中土大陆，为了避免人类被邪恶的黑魔法生物奴隶直至灭绝的命运，甘道夫带领的魔戒远征队背负着第三纪元以来最沉重的使命，出发末日火山前往销毁黑暗魔君的戒指之王，然而，他们意外掉进了精灵的陷阱，企图逃出的时候却发现要离开此地要回答一系列鬼畜至极的问题&hellip;&hellip;<br />
 描述<br />
 石壁上用精灵最古老的语言刻着几行大字（这怎么难得倒语言专家甘道夫呢~）：愚蠢的生物们，竟敢轻易扰乱高贵的西方精灵居住过的圣地，你们就要为此付出代价！看着古老的圣言，按下石壁上的开关，我们会告诉你们一段最优美的文字组成的语言，然后我们会对你们以提问的形式进行考验，每个提问我们会给你一段用同种文字组成的话语，然后你必须回答我们给出的语言会引发我们最初给出那段语言里面多少个不同的连续片段（相当于字符串中的子串）的共鸣！当然，这是不会这么简单的，我们还有有时候在该最初给出的语言前面添加一个字母，然后这个修改操作对于之后的所有修改操作和提问有效。（吐槽：精灵的语言实在是太优雅了，计算姬根本就表达不出来，所以只能用&rsquo;a&rsquo;&hellip;&rsquo;z&rsquo;勉强代替了，嗯）（对于语言共鸣现象，我们假如把语言表示成两个串s0,s1，假如s0是s1的一个前缀，那么s0可以引发s1的共鸣，注意，这里共鸣是单向的，即s0可以引发s1的共鸣，但是s1可能无法引发s0的共鸣）正当已经放弃治疗的甘道夫正准备按下开关的时候，突然在开关下面看到了一行用火星文写的小字：<br />
@@ -11,16 +11,16 @@
 如果是修改操作：接下来给出一个字符ci，对于如题面解密之后得到的字符ci&rsquo;，将其加在字符串s的头部。<br />
 </font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font size="4">对于每个提问，输出相应的答案。<br />
 </font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>ababc<br />
+			<div class=content><span class=sampledata>ababc<br />
 0 3<br />
 0 ab<br />
 1 a<br />
 0 a<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>5<br />
+			<div class=content><span class=sampledata>5<br />
 11<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p><span style="font-size: medium">样例解释<br /><br />
+			<div class=content><p><p><span style="font-size: medium">样例解释<br /><br />
 第一个操作，查询&rdquo;ababc&rdquo;中以&rdquo;ab&rdquo;为前缀的不同的子串的个数，总共有:&rdquo;ab&rdquo;、&ldquo;aba&rdquo;、&rdquo;abc&rdquo;、&rdquo;abab&rdquo;、&rdquo;ababc&rdquo;5个；<br /><br />
 第二个操作，在字符串&rdquo;ababc&rdquo;前面添加一个字符&rsquo;a&rsquo;,变成&rdquo;aababc&rdquo;;<br /><br />
 第三个操作，查询&rdquo;aababc&rdquo;中以&rdquo;a&rdquo;为前缀的不同子串的个数，总共有:&rdquo;a&rdquo;、&rdquo;aa&rdquo;、&ldquo;ab&rdquo;、&rdquo;aab&rdquo;、&rdquo;aba&rdquo;、&rdquo;abc&rdquo;、<br /><br />
@@ -30,4 +30,4 @@
 对于另外40%的数据，保证0&lt;m,len(s)&lt;=50000,0&lt;&lt;=500000,key=0<br /><br />
 对于另外50%的数据，保证0&lt;m,len(s)&lt;=50000,0&lt;&lt;=500000,key&gt;0<br /><br />
 对于100%的数据，key&lt;=10。<br /><br />
-</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

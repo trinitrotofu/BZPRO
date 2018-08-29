@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2003]Editor</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1507. [NOI2003]Editor</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1507">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1507">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1507">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>很久很久以前，DOS3.x的程序员们开始对 EDLINEDLIN 感到厌倦。</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[NOI2003]Editor</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1507. [NOI2003]Editor</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：5 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1507">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1507">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1507">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>很久很久以前，DOS3.x的程序员们开始对 EDLINEDLIN 感到厌倦。</div>
 <div>于是，人们开始纷纷改用自己写的文本编辑器??</div>
 <div>多年之后，出于偶然的机会，小明找到了当时的一个编辑软件。进行了一些简单的测试后，</div>
 <div>小明惊奇地发现：那个软件每秒能够进行上万次编辑操作（当然，你不能手工进行这样的测试） ！</div>
@@ -8,13 +8,13 @@
 <div>光标：在一段文本中用于指示位置的标记，可以位于文本首部，文本尾部或文本的某两个字符之间。</div>
 <div>文本编辑器：由一段文本和该文本中的一个光标组成的，支持如下操作的数据结构。</div>
 <div>如果这段文本为空，我们就说这个文本编辑器是空的。</div>
-<div>操作名称<span class="Apple-tab-span" style="white-space:pre"></span>输入文件中的格式 &nbsp; &nbsp; 功能</div>
-<div>MOVE(k)<span class="Apple-tab-span" style="white-space:pre"></span> &nbsp; &nbsp; &nbsp; &nbsp;Move k &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;将光标移动到第 k个字符之后，如果 k=0，将光标移到文本开头</div>
-<div>INSERT(n,s)<span class="Apple-tab-span" style="white-space:pre"></span>Insert n s &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;在光标处插入长度为n的字符串s，光标位置不变n&ge;1</div>
-<div>DELETE(n)<span class="Apple-tab-span" style="white-space:pre"></span>Delete n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 删除光标后的n个字符，光标位置不变，n &ge; 1</div>
-<div>GET(n)<span class="Apple-tab-span" style="white-space:pre"></span> &nbsp; &nbsp; &nbsp; &nbsp;Get n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;输出光标后的n个字符，光标位置不变，n &ge; 1</div>
-<div>PREV()<span class="Apple-tab-span" style="white-space:pre"></span> &nbsp; &nbsp; &nbsp; &nbsp;Prev<span class="Apple-tab-span" style="white-space:pre"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 光标前移一个字符</div>
-<div>NEXT()<span class="Apple-tab-span" style="white-space:pre"></span> &nbsp; &nbsp; &nbsp; &nbsp;Next<span class="Apple-tab-span" style="white-space:pre"></span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 光标后移一个字符</div>
+<div>操作名称<span class="Apple-tab-span" style="white-space:pre">	</span>输入文件中的格式 &nbsp; &nbsp; 功能</div>
+<div>MOVE(k)<span class="Apple-tab-span" style="white-space:pre">	</span> &nbsp; &nbsp; &nbsp; &nbsp;Move k &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;将光标移动到第 k个字符之后，如果 k=0，将光标移到文本开头</div>
+<div>INSERT(n,s)<span class="Apple-tab-span" style="white-space:pre">	</span>Insert n s &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;在光标处插入长度为n的字符串s，光标位置不变n&ge;1</div>
+<div>DELETE(n)<span class="Apple-tab-span" style="white-space:pre">	</span>Delete n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 删除光标后的n个字符，光标位置不变，n &ge; 1</div>
+<div>GET(n)<span class="Apple-tab-span" style="white-space:pre">	</span> &nbsp; &nbsp; &nbsp; &nbsp;Get n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;输出光标后的n个字符，光标位置不变，n &ge; 1</div>
+<div>PREV()<span class="Apple-tab-span" style="white-space:pre">	</span> &nbsp; &nbsp; &nbsp; &nbsp;Prev<span class="Apple-tab-span" style="white-space:pre">	</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 光标前移一个字符</div>
+<div>NEXT()<span class="Apple-tab-span" style="white-space:pre">	</span> &nbsp; &nbsp; &nbsp; &nbsp;Next<span class="Apple-tab-span" style="white-space:pre">	</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 光标后移一个字符</div>
 <div>你的任务是：</div>
 <div>建立一个空的文本编辑器。</div>
 <div>从输入文件中读入一些操作并执行。</div>
@@ -25,14 +25,14 @@
 <div>这里我们有如下假定：&nbsp;</div>
 <div>MOVE操作不超过50000个</div>
 <div>INSERT和DELETE操作的总个数不超过4000</div>
-<div>PREV和NEXT操作的总个数不超过200000。 <span class="Apple-tab-span" style="white-space:pre"></span></div>
+<div>PREV和NEXT操作的总个数不超过200000。 <span class="Apple-tab-span" style="white-space:pre">	</span></div>
 <div>所有INSERT插入的字符数之和不超过2M（1M=1024*1024）</div>
-<div>正确的输出文件长度不超过3M字节。 <span class="Apple-tab-span" style="white-space:pre"></span></div>
+<div>正确的输出文件长度不超过3M字节。 <span class="Apple-tab-span" style="white-space:pre">	</span></div>
 <div>DELETE操作和GET操作执行时光标后必然有足够的字符。</div>
-<div>MOVE、PREV、NEXT操作必然不会试图把光标移动到非法位置。 <span class="Apple-tab-span" style="white-space:pre"></span></div>
+<div>MOVE、PREV、NEXT操作必然不会试图把光标移动到非法位置。 <span class="Apple-tab-span" style="white-space:pre">	</span></div>
 <div>输入文件没有错误。&nbsp;</div>
 <div>对C++选手的提示：经测试，最大的测试数据使用fstream进行输入有可能会比使用stdio慢约1秒。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>每行依次对应输入文件中每条GET指令的输出。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>15<br />
+			<div class=content><span class=sampledata>15<br />
 Insert 26<br />
 abcdefghijklmnop<br />
 qrstuv wxy<br />
@@ -55,7 +55,7 @@ Insert 1<br />
 Move 0<br />
 Get 22<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>.\/.<br />
+			<div class=content><span class=sampledata>.\/.<br />
 abcde^_^f.\/.ghijklmno<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

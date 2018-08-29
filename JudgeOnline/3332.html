@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>旧试题</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3332. 旧试题</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3332">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3332">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3332">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">圣诞节将至。一年一度的难题又摆在wyx面前&mdash;&mdash;如何给妹纸送礼物。<br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>旧试题</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3332. 旧试题</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3332">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3332">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3332">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium">圣诞节将至。一年一度的难题又摆在wyx面前&mdash;&mdash;如何给妹纸送礼物。<br />
 wyx的后宫有n人，这n人之间有着复杂的关系网，相互认识的人有m对。wyx想要量化后宫之间的亲密度，于是准备给每对认识关系估一个亲密度。亲密度是个正整数，值越大说明越亲密。当然有可能有些后宫之间不直接认识，为此wyx定义了一个值f(i,j)，代表从第i个后宫开始不断经过认识的人到j，经过的亲密度最小的一对关系的最大值。不过也有可能有些后宫的朋友圈互相独立，怎么也没法通过认识的人互相到达，那么f(i,j)就为-1。<br />
 举个例子，wyx的后宫有4人，编号为1~4。后宫1和2之间的亲密度为3，后宫2和3之间的亲密度为4，后宫1和3之间的亲密度为2，后宫4由于不明原因被孤立了。那么f(1,2)=f(1,3)=3，f(2,3)=4，f(1,4)=f(2,4)=f(3,4)=-1。<br />
 wyx认为了解后宫之间的亲密程度对于他选择礼物有着很重大的意义，于是他找了几个路人，测出了所有后宫之间的f(i,j)值。不过wyx怀疑路人在坑爹，他想知道，是否能找到一组后宫之间的亲密度方案满足路人测出的f(i,j)值？由于他还要去把妹，这个问题就交给你了。</span></p>
@@ -7,7 +7,7 @@ wyx认为了解后宫之间的亲密程度对于他选择礼物有着很重大�
 <p><span style="font-size: medium">接下来T组数据，每组数据第一行两个正整数n、m，代表点数和边数。</span></p>
 <p><span style="font-size: medium">接下来m行，每行两个正整数代表一条边。<br />
 接下来n行每行n个整数，代表所有的f(i,j)值。</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">对于每组数据，输出 &quot;Yes&quot; 或者 &quot;No&quot;。（详细参看样例输出）</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata><br />
+			<div class=content><span class=sampledata><br />
 <br />
 <br />
 3<br />
@@ -41,7 +41,7 @@ wyx认为了解后宫之间的亲密程度对于他选择礼物有着很重大�
  <br />
 <br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata><br />
+			<div class=content><span class=sampledata><br />
 Case #1: No<br />
 <br />
 Case #2: Yes<br />
@@ -49,11 +49,11 @@ Case #2: Yes<br />
 Case #3: Yes<br />
 <br />
  </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p></p><br />
+			<div class=content><p><p></p><br />
 <p>数据范围</p><br />
 <p>T &le; 30</p><br />
 <p>n &le; 1000</p><br />
 <p>m &le; 300000</p><br />
 <p>f(i,j)=-1 或者 1 &le; f(i,j) &le; 32767</p><br />
 <p>注意输入量奇大无比！<br /><br />
-</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Router</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3818. Router</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：200 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3818">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3818">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3818">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在进行 Web 后端开发时，很重要的一个组件是 router。通常来说，后端的代码由许多 action 组成，router 的作用就是将发来的请求按照 URL 对应到相应的 action 上。</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>Router</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3818. Router</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：200 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3818">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3818">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3818">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>在进行 Web 后端开发时，很重要的一个组件是 router。通常来说，后端的代码由许多 action 组成，router 的作用就是将发来的请求按照 URL 对应到相应的 action 上。</div>
 <div>请求到达后端 Web 服务器时，已经不需要考虑域名和端口了，因此一个请求有如下形式：</div>
 <div>&ldquo;/{something_1}/{something_2}/.../{something_k}&rdquo; 或 &ldquo;/{something_1}/{something_2}/.../{something_k}?{parameter_list}&rdquo;</div>
 <div>其中 parameter_list 的组成为：&ldquo;{name_1}={value_1}&amp;{name_2}={value_2}&amp;...&amp;{name_n}={value_n}&rdquo;。（第一种情况中的 parameter_list 为空）</div>
@@ -32,7 +32,7 @@
 <div>更多具体的例子请参考样例。数据能够保证一个请求不会被多个 path 匹配。</div>
 <div></div>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>3<br />
+			<div class=content><span class=sampledata>3<br />
 3<br />
 /user/:id/show<br />
 userShow<br />
@@ -64,7 +64,7 @@ handle ([a-z]|[A-Z])([a-z]|[A-Z]|[0-9]){4,10}<br />
 /user/wjmzbmr/show?like=true<br />
 /user/0xxx/show<br />
 /user/WJMZBMR/show?love=true</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>Case #1:<br />
+			<div class=content><span class=sampledata>Case #1:<br />
 Request matches action "messageList" with parameters {}<br />
 Request matches action "userShow" with parameters {"avatar":"true","id":"123"}<br />
 Request matches action "messageShow" with parameters {"id":"5312","page":"1"}<br />
@@ -77,5 +77,5 @@ Request matches action "userShow" with parameters {"handle":"wjmzbmr","like":"tr
 Request matches action "userShow" with parameters {"handle":"WJMZBMR","love":"true"}<br />
 <br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><div>对于 100% 的数据，N,M&le;20000，T&le;5，输入文件大小不超过 10MB。不同名称的正则表达式最多有 50 个。</div><br />
-<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p><div>对于 100% 的数据，N,M&le;20000，T&le;5，输入文件大小不超过 10MB。不同名称的正则表达式最多有 50 个。</div><br />
+<p></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

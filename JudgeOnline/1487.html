@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[HNOI2009]无归岛</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1487. [HNOI2009]无归岛</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1487">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1487">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1487">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium"><br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[HNOI2009]无归岛</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1487. [HNOI2009]无归岛</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：1 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1487">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1487">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1487">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p><span style="font-size: medium"><br />
 Neverland是个神奇的地方，它由一些岛屿环形排列组成，每个岛上都生活着之中与众不同的物种。但是这些物种都有一个共同的生活习性：对于同一个岛上的任意两个生物，他们有且仅有一个公共朋友，即对同一岛上的任意两个生物a和b有且仅有一个生物c既是a的朋友也是b的朋友，当然某些岛上也可能会只有一个生物孤单地生活着。这一习性有一个明显的好处，当两个生物发生矛盾的时候，他们可以请那个唯一的公共朋友来裁决谁对谁错。</span></p>
 <p><span style="font-size: medium">另外，岛与岛之间也有交流，具体来说，每个岛都会挑选出一个最聪明的生物做代表，然后这个生物与他相邻的两个岛的代表成为朋友。</span></p>
 <p><span style="font-size: medium">不行的是，A世界准备入侵Neverland，作为Neverland的守护者，Lostmonkey想知道在一种比较坏的情况下Never的战斗力。因为和朋友并肩作战，能力会得到提升，所以Lostmonkey想知道在不选出一对朋友的情况下Neverland的最大战斗力。即选出一些生物，且没有一对生物是朋友，并且要求它们的战斗力之和最大。</span></p>
@@ -6,7 +6,7 @@ Neverland是个神奇的地方，它由一些岛屿环形排列组成，每个�
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;</p>
 <p><span style="font-size: medium">仅包含一个整数，表示满足条件的最大战斗力。</span></p>
 <p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata><br />
+			<div class=content><span class=sampledata><br />
 <br />
 6 7<br />
 1 2<br />
@@ -19,11 +19,11 @@ Neverland是个神奇的地方，它由一些岛屿环形排列组成，每个�
 20 10 30 15 20 10<br />
 <br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata><br />
+			<div class=content><span class=sampledata><br />
 50<br />
 <br />
 【样例说明】<br />
 <br />
 有四个岛，生物1在1号岛，生物2在2号岛，生物3、5、6在3号岛，生物4在4号岛。<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p>NeverLand这个单词在&ldquo;小飞侠彼得潘&rdquo;中译为梦幻岛，在这却成为无归岛，真是汗啊.</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p><p>NeverLand这个单词在&ldquo;小飞侠彼得潘&rdquo;中译为梦幻岛，在这却成为无归岛，真是汗啊.</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

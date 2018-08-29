@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2017]摧毁“树状图”</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4871. [Shoi2017]摧毁“树状图”</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：25 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4871">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4871">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4871">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>自从上次神刀手帮助蚯蚓国增添了上千万人口（蚯口？），蚯蚓国发展得越来越繁荣了！最近，他们在地下发现了</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Shoi2017]摧毁“树状图”</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4871. [Shoi2017]摧毁“树状图”</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：25 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4871">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4871">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4871">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>自从上次神刀手帮助蚯蚓国增添了上千万人口（蚯口？），蚯蚓国发展得越来越繁荣了！最近，他们在地下发现了</div>
 <div>一些神奇的纸张，经过仔细研究，居然是D国X市的超级计算机设计图纸！这台计算机叫做&lsquo;树状图&rsquo;，由n个计算</div>
 <div>节点与n1条可以双向通信的网线连接而成，所有计算节点用不超过n的正整数编号。顾名思义，这形成了一棵树的</div>
 <div>结构。蚯蚓国王已在图纸上掌握了这棵树的完整信息，包括n的值与n1条网线的连接信息。于是蚯蚓国王决定，派</div>
@@ -35,7 +35,7 @@
 <div>数据文件可能较大，请避免使用过慢的输入输出方法。</div>
 <div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每个数据，输出一行，表示在给定条件下，剩下连通块的最大个数。</div>
 <div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>1 0<br />
+			<div class=content><span class=sampledata>1 0<br />
 13<br />
 1 2<br />
 2 3<br />
@@ -50,7 +50,7 @@
 10 12<br />
 12 13<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>8<br />
+			<div class=content><span class=sampledata>8<br />
 这个输入文件只有一个输入数据。一种最优的方案如下：<br />
  小 P 从节点 2 开始入侵，节点 2 被小 P 标记。<br />
  小 P 从节点 2 入侵到节点 4，节点 4 和经过的网线被小 P 标记。<br />
@@ -60,4 +60,4 @@
  删除任意一端在上一步被删除的网线。<br />
 此时还剩下 8 个连通块。其中节点 1,3,5,6,8,9,11 各自形成一个连通块，节点 12,13<br />
 形成了一个连通块。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p>&nbsp;2017.4.28新加数据一组By&nbsp;150137</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p><p>&nbsp;2017.4.28新加数据一组By&nbsp;150137</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

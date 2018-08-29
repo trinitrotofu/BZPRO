@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2015]shallot</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4056. [Ctsc2015]shallot</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4056">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4056">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4056">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小葱和小绪是一对好朋友，自从小葱11连出了1UR2SR之后，小绪就觉得小葱的人品特别好，</div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Ctsc2015]shallot</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#4056. [Ctsc2015]shallot</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：50 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=4056">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=4056">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=4056">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小葱和小绪是一对好朋友，自从小葱11连出了1UR2SR之后，小绪就觉得小葱的人品特别好，</div>
 <div>于是小绪给小葱出了一道题来测试小葱的人品。 小绪首先在平面上画了N个点，分别是P1,P2,...,PN。</div>
 <div>小绪把这N个点顺次相连，即连接(P1,P2),(P2,P3),...,(PN-1,PN)，得到N-1条线段。&nbsp;</div>
 <div>之后小绪每次在平面上画出一条直线，然后问小葱这条直线与多少条线段相交。特别的，在线段端点处相交算作相交，</div>
@@ -20,16 +20,16 @@
 <div>小绪给出一条经过(X0,Y0)，方向为(X,Y)的直线，小葱要回答出它会和多少条直线相交。&nbsp;</div>
 <div>如果这个字母是'Z'，代表本次操作为一次插入操作。接下来会有四个数T,i,X,Y，代表小绪在历史版本T的基础上，</div>
 <div>在Pi后面插入了一个坐标为(X,Y)的点。特别地，如果i=0，表示该点在P1之前。&nbsp;</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>要求对每一次询问操作，输出一行一个整数代表小葱应该回答的正确答案。&nbsp;</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>2 3 0<br />
+			<div class=content><span class=sampledata>2 3 0<br />
 0 0<br />
 1 1<br />
 H 0 1 0 -1 1<br />
 H 1 0 1 1 1<br />
 H 2 -1 -1 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>1<br />
+			<div class=content><span class=sampledata>1<br />
 0<br />
 1</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p>&nbsp;样例解释1：&nbsp;</p><br />
+			<div class=content><p><p>&nbsp;样例解释1：&nbsp;</p><br />
 <div>对于第三次村问，直线完全覆盖了线段，小绪会认为这也算相交。&nbsp;</div><br />
 <div></div><br />
 <div>数据规模和约定：&nbsp;</div><br />
@@ -41,4 +41,4 @@ H 2 -1 -1 1 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui
 <div>4.对于15%的数据，对于询问操作，保证Y=0（加密过的数据指解密后的Y），即给出的直线平行于x轴。&nbsp;</div><br />
 <div>以上数据还保证1&lt;=N,M&lt;=5*104。&nbsp;</div><br />
 <div>对于100%的数据，保证1&lt;=N,M&lt;=105，所有的坐标范围在[-108,108]内，且每组数据中所有询问的答案总和不超过106，插入操作的次数不会超过5*104。注意这些线段可能会互相相交。</div><br />
-<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<div></div></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

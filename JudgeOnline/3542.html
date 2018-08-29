@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>DZY Loves March</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3542. DZY Loves March</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3542">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3542">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3542">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>DZY Loves March</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3542. DZY Loves March</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3542">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3542">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3542">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
 <div><span style="font-size: medium">在一片m*m的地上．驻扎着n个军队,编号依次为1~n,第i个军队的位置可用二元组(xi,yi)表示，可能有多个军队驻扎在同一个位置。</span></div>
 <div><span style="font-size: medium">接下来有t个时刻，每个时刻会发生下列两种事件之一：</span></div>
 <div><span style="font-size: medium">(1)第x个军队向一个方向（向上(U)向下(D)向左(L)向右(R)）移动了d个单位：</span></div>
@@ -13,7 +13,7 @@
 &nbsp; (2)Q x L R，代表第二种事件。<br />
 &nbsp; 为了体现在线询问,每次你读进x'后，真正的x=x' xor lastans,其中lastans是上一次答案对10^9+7取模后的结果，一开始lastans=0</font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium"><br />
 对于每一个Q事件，输出一个答案，对10^9+7取模</span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>【样例输入】<br />
+			<div class=content><span class=sampledata>【样例输入】<br />
 5 3<br />
 1 2<br />
 2 2<br />
@@ -29,7 +29,7 @@ Q 7 1 5<br />
 L 5 1<br />
 Q 4 1 5<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>4<br />
+			<div class=content><span class=sampledata>4<br />
 2<br />
 3<br />
 6<br />
@@ -44,9 +44,9 @@ Q 4 1 5<br />
 L 3 1<br />
 Q 2 1 5<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p><img alt="" width="637" height="168" src="upload/201404/aa(1).jpg" /></p><br />
+			<div class=content><p><p><img alt="" width="637" height="168" src="upload/201404/aa(1).jpg" /></p><br />
 <p><span style="font-size: medium">样例还看不懂就看下图</span></p><br />
 <p><span style="font-size: medium"><br /><br />
 </span><span style="font-size: medium">【数据范围】<br /><br />
 n&le;100000，m&le;10^18。保证军队在移动过程中不会超出边界。<br /><br />
-每个军队集结后会回到原来的驻地</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+每个军队集结后会回到原来的驻地</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

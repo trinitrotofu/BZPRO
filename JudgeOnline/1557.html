@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>GC转移</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1557. GC转移</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1557">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1557">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1557">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">撞啊撞，撞啊撞，DP终于在规定时间内撞完了所有的石头。轰的一声，一扇厚重的石门上升了，露出一个门，大家激动地冲了进去，却发现是另外一个巨大的迷宫。。。。。。
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>GC转移</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1557. GC转移</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1557">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1557">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1557">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">撞啊撞，撞啊撞，DP终于在规定时间内撞完了所有的石头。轰的一声，一扇厚重的石门上升了，露出一个门，大家激动地冲了进去，却发现是另外一个巨大的迷宫。。。。。。
 又经过N轮天翻地覆的巨响之后，DP终究还是把头转昏了，幸好的是他撞完了最后一个迷宫。在DP昏厥之际，也正是谜题解开之际。就在最后的一个小石洞里面，记录了这里N光年前的历史。原来在那个时候，也发生了一次巨大的变动，当时的KD同样是为了维护世界的和平而战死沙场。后来它的朋友们十分的悼念它，所以其中一部分便开始进行对自然法术的研究，经过了漫长的岁月之后，复活圣地终于问世，可惜的是KD的残骸早就不知道丢哪去了。
 因为自然的力量过于强大，所以研究者不得不将它封印在地底，经历天地轮回之后，希望它在需要被用到的时候再次被召唤出来，避免悲剧的再次发生。
 当知道有复活圣地这种东西存在的时候，大伙都伴随着惊讶和兴奋，立即将KD和其他阵亡战士的GC抬出地面，此时地面早已发生了翻天覆地的变化，战争过后破烂的土地已不复存在，只能看见由光构成的网格状平台覆盖着地面，圣地中心清晰可见。但是自然的力量实在过于强大，导致根本无法靠生物做功而将盒子送至中心，爱因斯坦理论空前乏力，牛顿力学受到极大的挑战。难道只能依靠说明中介绍的控制地来操纵自然力量转移盒子了么，但是它是什么，它在哪，大伙一脸茫然。
@@ -11,19 +11,19 @@
 </div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>对于每组输入数据输出一个整数ANS，表示至少要念ANS个咒语才能完成任务。
 如果无法完成任务，请输出“Poor F！”
 </div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>3<br />
+			<div class=content><span class=sampledata>3<br />
 12 20 5<br />
 14 22 5<br />
 0 1 2<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>4<br />
+			<div class=content><span class=sampledata>4<br />
 5<br />
 Poor F！<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p>对于10%的数据，X、Y、L的绝对值<=10^2，T<=5；<br />
+			<div class=content><p>对于10%的数据，X、Y、L的绝对值<=10^2，T<=5；<br />
     对于40%的数据，X、Y、L的绝对值<=10^16，T<=100；<br />
     对于100%的数据，X、Y、L的绝对值<=10^500，T<=1000；<br />
 注意事项：<br />
 每个数都没有前导0。<br />
 <br />
-</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

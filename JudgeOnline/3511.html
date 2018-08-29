@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>土地划分</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3511. 土地划分</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3511">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3511">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3511">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p style="text-align: left"><span style="font-size: medium"><font face="Times New Roman">Y国有N座城市，并且有M条双向公路将这些城市连接起来，并且任意两个城市至少有一条路径可以互达。 <br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>土地划分</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#3511. 土地划分</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=3511">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=3511">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=3511">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><p style="text-align: left"><span style="font-size: medium"><font face="Times New Roman">Y国有N座城市，并且有M条双向公路将这些城市连接起来，并且任意两个城市至少有一条路径可以互达。 <br />
 Y国的国王去世之后，他的两个儿子A和B都想成为新的国王，但他们都想让这个国家更加安定，不会用武力解决问题。 <br />
 于是他们想将这个国家分成两个小国家A国和B国。现在，A拥有1号城市，B拥有N号城市，其他的城市还尚未确定归属哪边（划分之后的国家内部城市可以不连通）。 <br />
 由于大家都想让国家变得更好，而某些城市的人民愿意国王的A儿子作为他们的领袖，而某些城市更看好B，而为了交通的便捷，如果划分后的公路连接两个同一个国家的城市，那么更利于城市之间的交流。于是大臣们设计了一种对土地划分的评分机制，具体如下： <br />
@@ -12,23 +12,23 @@ Y国的国王去世之后，他的两个儿子A和B都想成为新的国王，�
 接下来M行，每行五个非负整数描述一条公路：X Y EA[i] EB[i] EC[i]，含义如问题描述所示。 <br />
 </font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><font face="Times New Roman" size="4">输出有且仅有一个整数，表示最高评分。 <br />
 </font></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>3 3 <br />
+			<div class=content><span class=sampledata>3 3 <br />
 8 <br />
 9 <br />
 1 2 2 6 2 <br />
 2 3 8 5 7 <br />
 1 3 9 4 1 <br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>11 <br />
+			<div class=content><span class=sampledata>11 <br />
 【样例说明】 <br />
 A国仅有1号点，B国有2号和3号点。 <br />
 评分=VB[2]+EB[2]-EC[1]-EC[3]=9+5-2-1=11。 <br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p><p><span style="font-size: medium">【数据说明】 <br /><br />
+			<div class=content><p><p><span style="font-size: medium">【数据说明】 <br /><br />
 数据点 N M 备注 <br /><br />
 1-2 &lt;=20 &lt;=200 无 <br /><br />
 3-4 &lt;=5000 &lt;=10000 VA、VB、EA、EB均为0 <br /><br />
 5-6 &lt;=5000 &lt;=10000 EC均为0 <br /><br />
 7-10 &lt;=10000 &lt;=40000 无 <br /><br />
 </span></p><br />
-<p>保证运算过程中及最终结果不超过32位带符号整数类型的表示范围</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+<p>保证运算过程中及最终结果不超过32位带符号整数类型的表示范围</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

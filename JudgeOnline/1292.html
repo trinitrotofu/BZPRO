@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CTSC2009]魔幻花园</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1292. [CTSC2009]魔幻花园</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1292">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1292">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1292">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">魔法师栋栋有一个美丽的魔幻花园，在花园里，栋栋种满各式各样的魔幻植物，花园里一年四季都开满着姹紫嫣红的鲜花。栋栋的朋友们都特别喜欢来花园里玩。
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[CTSC2009]魔幻花园</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1292. [CTSC2009]魔幻花园</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1292">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1292">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1292">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">魔法师栋栋有一个美丽的魔幻花园，在花园里，栋栋种满各式各样的魔幻植物，花园里一年四季都开满着姹紫嫣红的鲜花。栋栋的朋友们都特别喜欢来花园里玩。
 花园的浇灌系统是由栋栋特别设计的，栋栋用魔法在花园上空变出了n个喷头，这些喷头都连接着附近的圣水河。浇灌的时候，所有的喷头一起喷出一道道水流，水流在空中划出一道道美丽的弧线，最终正好浇灌到n棵最缺水的魔幻植物上。
 栋栋把每个喷头都设在同一水平高度h。所有的喷头都是水平放置的，当水流从喷头喷出时，只有水平的速度(每个喷头的水平速度不一定相同)。魔幻花园里没有风，空气阻力可以忽略。所以在重力的影响下(魔幻花园的重力加速度为g)，水流的轨迹是一条完美的抛物线。空间上的任意点都最多被三个喷头喷到，两条水流相交不会影响各自的轨迹。
 近些年来魔幻花园附件新建了许多工厂，圣水河受到了污染，栋栋不想受污染的水影响到他的花园，所以他要使用魔法先净化一下浇灌的水。栋栋的魔法只能净化从喷头喷出来的水，他可以施魔法在空中的一个水平面形成一个凸多边形的滤水层，所有通过滤水层的水都会被净化，施这个魔法需要的能量和滤水层的面积成正比，每平方米滤水层需要1单位的魔法能量。栋栋想净化所有的水，他最少需要多少能量呢？
@@ -6,7 +6,7 @@
 接下来n行，每行四个整数xi, yi, xi’, yi’，整数间使用一个空格分隔。表示第i个喷头的坐标是(xi, yi, h)，它喷出的水正好浇灌到了(xi’, yi’, 0)位置的魔幻植物上。
 </div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>仅有一个实数，表示栋栋最少需要的能量，精确到小数点后4位。
 </div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>【样例输入1】<br />
+			<div class=content><span class=sampledata>【样例输入1】<br />
 36 2<br />
 3<br />
 99 100 105 100<br />
@@ -19,7 +19,7 @@
 1 0 100 0<br />
 0 50 0 1<br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>【样例输出1】<br />
+			<div class=content><span class=sampledata>【样例输出1】<br />
 0.000<br />
 【样例说明1】<br />
 在高度为35的地方施魔法，此时所有的水流正好汇合到(100, 100, 35)这点，所以需要的能量为0。<br />
@@ -28,7 +28,7 @@
 【样例说明2】<br />
 在高度为10的地方（即喷头处）施魔法，魔法形成一个直角三角形，三个点的坐标分别为：(0,0,10), (1,0,10), (0,50,10)，面积为25.000，所以需要的魔法能量也为25.000。<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p>【数据规模】<br />
+			<div class=content><p>【数据规模】<br />
 对于20%的数据，1≤ n ≤10<br />
 对于50%的数据，1≤ n ≤50<br />
 对于100%的数据，1≤n ≤100<br />
@@ -43,4 +43,4 @@ t时刻的水平分速度：v平(t) = v0<br />
 t时刻的竖直分速度：v竖(t) = gt<br />
 t时刻的速度： <br />
 <br />
-</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

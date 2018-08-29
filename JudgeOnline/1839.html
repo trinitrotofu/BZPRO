@@ -1,4 +1,4 @@
-<html><head><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>战争与和平
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>战争与和平
 </title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1839. 战争与和平
 </h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1839">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1839">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1839">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">很久很久以前，在那遥远的东方（其实好像一点都不远……），有两个伟大的帝王，他们分别是MJW和CRX。在华夏大地上，他们为了证明自己是最伟大的帝王、自己才是这片土地的主宰，进行了无数次伟大的战役。战争满足了两位帝王的野心，也给这片大地带来了无穷的灾难。MJW在这些战役中经常失败，渐渐地他也失去与之争霸的信心。在很多次战役后，他开始渴望和平，渴望宁静。但是他知道CRX是不会这么轻易罢休的，所以他决定修建万里长城来阻止战争的发生。华夏大地是由很多个洲组成的，从平面地图上看，每个州都是一个简单多边形。越过一个州的边界，要么进入别的州，要么就走出了华夏大地。而两个州的边界要么完全相同、要么没公共部分、要么只在端点处有公共部分。不会有一个州包含其它的州。MJW和CRX各有一个首都，他们的首都会唯一的属于一个州而不会在边界上。现在MJW就是要修建围墙将两人首都完全隔离，即围墙要么将MJW的首都包围起来，要么将CRX的首都包围起来。但是围墙是不能乱修的，如果将围墙修在一个州的内部，是会引起人民的公愤的。所以，MJW只能选择在边界上修建围墙。而且如果要在一条边界上修建，就必须完全修建，不能只修建一部分（好像修建一部分等于没修，我废话了……）。在每条边界上修建围墙都要一定的花费，不同的修建方案其代价也是不同的。所以MJW需要知道完成这项工程的最小代价是多少。不用说，你逃不掉了，这个任务还得交给你。
 </div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>输入文件的第一行包含一个整数m，表示不同的边界数目。
@@ -6,7 +6,7 @@
 接下来一行包含4个整数mx,my,cx,cy，表示MJW的首都位于(mx,my)，CRX的首都位于(cx,cy)。
 </div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>    输出一行仅包含一个整数，表示最小的代价。
 </div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>13<br />
+			<div class=content><span class=sampledata>13<br />
 0 6 3 6 9 0 0 4 2 8<br />
 4 4 6 6 7 2 4 3 6 1<br />
 3 6 6 6 1 6 4 6 6 1<br />
@@ -18,8 +18,8 @@
 2 5<br />
 <br />
 </span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-<div class=content><span class=sampledata>6<br />
+			<div class=content><span class=sampledata>6<br />
 <br />
 对于100%的数据    m < = 3000  所有坐标的绝对值不超过10000<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span></div></div></body></html>
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>
