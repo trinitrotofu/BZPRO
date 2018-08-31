@@ -24,6 +24,8 @@
 
 或者直接通过GitPage访问：[https://konnyakuxzy.github.io/BZPRO](https://konnyakuxzy.github.io/BZPRO)
 
+如果Github速度太慢您可以通过XZY的服务器访问：[https://www.k-xzy.xyz/BZPRO](https://www.k-xzy.xyz/BZPRO)
+
 ### 爬虫
 
 打开`Clawer`文件夹。
@@ -42,7 +44,7 @@
 
 会要求输入BZOJ账号密码，如果需要爬取权限题的话请输入权限号。
 
-会生成一个`cookies.txt`，内容就是cookie内容~~，是有有效期的，有多久我不知道。~~
+会生成一个`cookies.txt`，内容就是cookie内容，是有有效期的，有多久我不知道。
 
 接着设置一下爬取的题目范围：
 
