@@ -92,4 +92,4 @@
 
 Powered by [XZYQvQ](http://www.k-xzy.xyz).
 
-The UI is based on [syzoj](https://github.com/syzoj/syzoj/blob/master/LICENSE), using AGPL License.
+The UI is based on [syzoj](https://github.com/syzoj/syzoj/blob/master/LICENSE), using GPL License.
