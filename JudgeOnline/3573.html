@@ -26,12 +26,12 @@
 <div>(4)运向某一个城市的若干个来源的米特数量必须完全相同，不然，这些来源不同的米特按不同比例混合之后可能</div>
 <div>发生危险。</div>
 <div>现在D星人已经建立好高速通道，每个城市也有了一定储存容量的米特储存器。为了满足上面的限制条件，可能需</div>
-<div>要重建一些城市中的米特储存器。你可以，也只能，将某一座城市（包括首都）中屎来存在的米特储存器摧毁，再</div>
+<div>要重建一些城市中的米特储存器。你可以，也只能，将某一座城市（包括首都）中原来存在的米特储存器摧毁，再</div>
 <div>新建一座任意容量的新的米特储存器，其容量可以是小数（在输入数据中，储存器原始容量是正整数，但重建后可</div>
-<div>以是小数），不能是负数或零，使得需要被重建的米特储存器的数目尽量少。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行是一个正整数N，表示城市的数目。接下来N行，每行一个正整数，其中的第i行表示第i个城市原来存在的米</div>
-<div>特储存器的容量。再接下来是N-I行，每行两个正整数a，b表示城市b到城市a有一条高速通道(a&ne;b)。</div>
-<div>N&lt;500000，A[j]&lt;10^8</div>
-<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出文件仅包含一行，一个整数，表示最少的被重建（即修改储存器容量）的米特储存器的数目。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+<div>以是小数），不能是负数或零，使得需要被重建的米特储存器的数目尽量少。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行是一个正整数N，表示城市的数目。</div>
+<div>接下来N行，每行一个正整数，其中的第i行表示第i个城市原来存在的米特储存器的容量。</div>
+<div>再接下来是N-I行，每行两个正整数a，b表示城市b到城市a有一条高速通道(a&ne;b)。</div>
+<div>N&lt;500000，A[j]&lt;10^8</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输出文件仅包含一行，一个整数，表示最少的被重建（即修改储存器容量）的米特储存器的数目。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
 			<div class=content><span class=sampledata>5<br />
 5<br />
 4<br />
@@ -42,7 +42,8 @@
 1 3<br />
 2 4<br />
 2 5</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-			<div class=content><span class=sampledata>3</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-			<div class=content><p><p><span style="font-size: medium">【样例解释】<br /><br />
-&nbsp; 一个最优解是将A[1]改成8，A[3]改成4，A[5]改成2。这样，2和3运给1的量相等，4和5运给2的量相等，且每天晚上六点的时候，1，2满，3，4，5空，满足所有限制条件。</span><span style="font-size: medium"><br /><br />
-</span></p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>
+			<div class=content><span class=sampledata>3<br />
+【样例解释】<br />
+一个最优解是将A[1]改成8，A[3]改成4，A[5]改成2。<br />
+这样，2和3运给1的量相等，4和5运给2的量相等，且每天晚上六点的时候，1，2满，3，4，5空，满足所有限制条件。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>
