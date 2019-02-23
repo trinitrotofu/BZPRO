@@ -1,32 +1,30 @@
-<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Baltic2009]subway</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1763. [Baltic2009]subway</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：4 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1763">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1763">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1763">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">Stockholm城市的地铁是由一些地铁网组成的。在这个题目当中我们会特殊考虑到一条线路，当出现“信号错误”时，问题就经常发生在这条线路。
-一条地铁线路能被看做两条平行并且由结束点连接的轨道。在上层的轨道当中，火车将会从右往左行驶，下层轨道当中，火车将会从左往右行驶。当一辆火车到达了一条轨道的终点，它就改变轨道并且向相反的方向行驶。这个变轨是即刻的并且不需要时间，
-在正常的交通当中，行驶的火车是持续不断的并且火车按照一个持续的速度行驶（火车通过1单位的长度所需时间为1）。火车被均匀地分配；也就是说，在轨道的任何一个位置，火车将会有周期性地通过。我们可以假设火车进站和乘客上下车的时间是可以忽略的。
-现在，因为“信号错误”，火车已经随机地分配在线路上。作为交通经理，你的任务就是尽可能地保证火车重新被均匀地分配到线路上。现给出火车的位置，你需要编写一个程序，计算最少花费多少时间能达到目标。你能够命令火车在任何地方即时停止，或者改变方向。如果一辆火车改变了方向，它将会从自己原本的轨道移动到另一个轨道。
- <img border="0" src="images/1763.jpg"> 
-Figure 1：两条轨道长度均为100。在上面的例子当中，火车处于的位置为5,35,46,75和85。一个能使火车重新均匀地在轨道上行驶的方法就是，位置46的火车向左行驶1单位，然后改变方向。这样就花了一个单位时间。然而，这并不是最佳的方法；具体请看下面的样例1。
-
-</div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>第一行包含两个由空格分开的数字，轨道长度m和火车的数目n。
-接下来的n行描述了火车的所有初始位置。每一行会被给出一个数字Xi和方向（L表示左，R表示右），它们由空格分开。
-</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content>你的程序需要输出使火车重新均匀地行驶所能够花费的最小时间。输出单独占一行。输出数据保证不大于10-6。
-</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-			<div class=content><span class=sampledata>样例 1<br />
-<br />
-Input          <br />
-100 5         <br />
-3 R<br />
-35 L<br />
-46 L<br />
-75 L<br />
-85 R<br />
-<br />
-</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-			<div class=content><span class=sampledata>0.5<br />
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Baltic2009]subway</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1763. [Baltic2009]subway</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：64 MiB</span> <span class="ui label">时间限制：4 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1763">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1763">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1763">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Stockholm城市的地铁是由一些地铁网组成的。在这个题目当中我们会特殊考虑到一条线路，当出现&ldquo;信号错误&rdquo;</div>
+<div>时，问题就经常发生在这条线路。 一条地铁线路能被看做两条平行并且由结束点连接的轨道。在上层的轨道当中</div>
+<div>，火车将会从右往左行驶，下层轨道当中，火车将会从左往右行驶。当一辆火车到达了一条轨道的终点，它就改变</div>
+<div>轨道并且向相反的方向行驶。这个变轨是即刻的并且不需要时间， 在正常的交通当中，行驶的火车是持续不断的</div>
+<div>并且火车按照一个持续的速度行驶（火车通过1单位的长度所需时间为1）。火车被均匀地分配；也就是说，在轨道</div>
+<div>的任何一个位置，火车将会有周期性地通过。我们可以假设火车进站和乘客上下车的时间是可以忽略的。 现在，</div>
+<div>因为&ldquo;信号错误&rdquo;，火车已经随机地分配在线路上。作为交通经理，你的任务就是尽可能地保证火车重新被均匀地</div>
+<div>分配到线路上。现给出火车的位置，你需要编写一个程序，计算最少花费多少时间能达到目标。你能够命令火车在</div>
+<div>任何地方即时停止，或者改变方向。如果一辆火车改变了方向，它将会从自己原本的轨道移动到另一个轨道。</div>
+<p><img border="0" src="images/1763.jpg" alt="" />  Figure 1：</p>
+<div>两条轨道长度均为100。在上面的例子当中，火车处于的位置为5,35,46,75和85。一个能使火车重新均匀地在轨道</div>
+<div>上行驶的方法就是，位置46的火车向左行驶1单位，然后改变方向。这样就花了一个单位时间。然而，这并不是最</div>
+<div>佳的方法；具体请看下面的样例1。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个由空格分开的数字，轨道长度m和火车的数目n。&nbsp;</div>
+<div>接下来的n行描述了火车的所有初始位置。</div>
+<div>每一行会被给出一个数字Xi和方向（L表示左，R表示右），它们由空格分开。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输出使火车重新均匀地行驶所能够花费的最小时间。</div>
+<div>输出单独占一行。</div>
+<div>输出需要保留小数点后恰好六位,输出数据保证不大于10^-6。</div>
+<div>100&le;m&le;100,000,000 1&le;n&le;100,000 0&le;Xi&le;m&nbsp;</div>
+</div>
+<div></div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>100 5<br />
+55 L<br />
+37 L<br />
+47 L<br />
+89 L<br />
+41 R</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>19.000000<br />
 </span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-			<div class=content><p>100≤m≤100,000,000<br />
-1≤n≤100,000<br />
-0≤Xi≤m<br />
-<br />
-数据分级<br />
-<br />
-保证50%的数据当中，n≤200<br />
-</p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

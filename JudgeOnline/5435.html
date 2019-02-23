@@ -1,11 +1,25 @@
-<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>取石子</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5435. 取石子</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5435">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5435">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5435">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>有n堆石子，第i堆有xi个。</div>
-<div>Alice和Bob轮流取石子（先后手未定），Alice每次从一堆中取走a个，Bob每次从一堆中取走b个，无法操作者输。</div>
-<div>不难发现只会有四种情况：Alice必胜；Bob必胜；先手必胜；后手必胜。</div>
-<div>你需要选定若干堆石子（共有2^n种方案），Alice和Bob只能在你选出的堆中取，问以上四种情况对应的方案数。</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;第一行三个整数n,a,b，第二行n个整数x1~xn。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>&nbsp;一行四个整数，分别表示Alice必胜、Bob必胜、先手必胜和后手必胜的方案数，对10^9+7取模。</p>
-<div>1&lt;=n&lt;=100000，1&lt;=a,b,xi&lt;=10^9。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-			<div class=content><span class=sampledata>2 2 3<br />
-2 3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
-			<div class=content><span class=sampledata>2 0 1 1<br />
-【样例解释】<br />
-选定空集时后手必胜，选定{2}时Alice必胜，选定{3}时先手必胜，选定{2,3}时Alice必胜。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
-			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>取石子</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5435. 取石子</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5435">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5435">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5435">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>
+<div>有 n 堆石子排成一行，第 i 堆石子的个数为 xi。</div>
+<div>Alice 和 Bob 轮流取石子，每人每次从两端的石子中选择一堆取走，Alice 先手。</div>
+<div>我们知道在传统的取石子游戏中，sg 函数的值为每堆石子个数的异或和。</div>
+<div>Alice 和 Bob 都希望自己取到的石子的异或和比对方大。你需要求出谁能获胜。</div>
+<div>有多组数据。</div>
+<div></div>
+</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个正整数 t 表示数据组数。每组数据第一行一个正整数 n。第二行 n 个整数 x1~xn。</div>
+<div>【数据范围】</div>
+<div>Subtask 1 (5pts)：n&lt;=15。</div>
+<div>Subtask 2 (11pts)：n&lt;=100，xi&lt;=50。</div>
+<div>Subtask 3 (17pts)：n&lt;=500。</div>
+<div>Subtask 4 (67pts)：无特殊限制。</div>
+<div>对于全部数据，1&lt;=t&lt;=100，1&lt;=n&lt;=10000，1&lt;=xi&lt;=10^9。</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>每组数据一行一个字符串表示答案，平局输出 Draw。</p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>3<br />
+2<br />
+3 3<br />
+2<br />
+3 5<br />
+3<br />
+4 4 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>Draw<br />
+Alice<br />
+Bob</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

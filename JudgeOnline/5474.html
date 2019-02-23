@@ -1,0 +1,19 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>线性递推数列</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5474. 线性递推数列</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：30 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5474">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5474">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5474">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>输入5个整数a,b,n,k,p。</div>
+<div>定义</div>
+<div>g(0)=a,g(1)=b,g(i)=3g(i&minus;1)&minus;g(i&minus;2)(i&ge;2)</div>
+<div>换句话说g(n)相当于以a,b为初始值的一个线性递推数列。</div>
+<div>f(n,0)=n,f(n,k)=f(g(n),k&minus;1)(k&ge;1)</div>
+<div>换句话说f(n,k)相当于把k个g函数嵌套使用 。</div>
+<div>请输出f(n,k)modp的结果。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>第一行一个整数t表示数据组数。</div>
+<div>接下来t组数据，每组数据为一行五个整数a,b,n,k,p，含义见题。</div>
+<div>0&le;a,b&lt;p，1&le;t&le;1000,1&le;n,p&le;10^9,1&le;k&le;100。</div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据，输出一个整数表示答案。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>1<br />
+0 1 2 2 1000<br />
+</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>8</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

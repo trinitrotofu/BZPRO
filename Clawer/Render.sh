@@ -1,7 +1,7 @@
 #!/bin/bash
 
-read bgn <./bgn.txt
-read top <./top.txt
+read bgn <./begin.txt
+read end <./end.txt
 pid=$bgn
 path="./www.lydsy.com"
 
@@ -25,7 +25,7 @@ done <./index_head.html
 
 g++ -o ./Get_Title ./Get_Title.cpp -O2
 
-while [ $pid -le $top ]; do
+while [ $pid -le $end ]; do
 	echo "Adding #"$pid"..."
 	./Get_Title $pid >./tmp.txt
 	read str <./tmp.txt
@@ -48,7 +48,7 @@ g++ -o ./Render_Pro ./Render_Pro.cpp -O2
 
 pid=$bgn
 
-while [ $pid -le $top ]; do
+while [ $pid -le $end ]; do
 	echo "Rendering #"$pid"..."
 	./Render_Pro <$path/JudgeOnline/$pid.html >./tmp.html
 	rm $path/JudgeOnline/$pid.html
@@ -58,5 +58,9 @@ done
 
 rm ./Render_Pro
 
+echo "Replacing special problems..."
+
+cp ./special/* $path/JudgeOnline
+
 echo "done."
-echo "Rendering success!"
+echo "Rendering completed!"

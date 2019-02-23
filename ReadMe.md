@@ -1,9 +1,3 @@
-# 泥萌倒是也Star一下啊！！！
-
-~~不要只是fork啊。。。~~
-
-~~虽然我也不知道Star有什么用，大概可以让更多人知道这个东西？（逃~~
-
 # BZPRO
 
 ## What's this
@@ -28,9 +22,7 @@
 
 下载本仓库后浏览器打开`index.html`
 
-或者直接通过GitPage访问：[https://konnyakuxzy.github.io/BZPRO](https://konnyakuxzy.github.io/BZPRO)
-
-如果Github速度太慢您可以通过XZY的服务器访问：[https://www.k-xzy.xyz/BZPRO](https://www.k-xzy.xyz/BZPRO)
+或者直接通过GitPage访问：[https://remmina.github.io/BZPRO/](https://remmina.github.io/BZPRO/)
 
 ### 爬虫
 
@@ -54,7 +46,7 @@
 
 接着设置一下爬取的题目范围：
 
-编辑`bgn.txt`，将里面的数字设置为“需要爬取的最小题目编号”，再编辑`top.txt`，将里面的数字设置为“需要爬取的最大题目编号”，爬虫将会爬取编号在区间`[bgn, top]`内的题目。
+编辑`begin.txt`，将里面的数字设置为“需要爬取的最小题目编号”，再编辑`end.txt`，将里面的数字设置为“需要爬取的最大题目编号”，爬虫将会爬取编号在区间`[begin, end]`内的题目。
 
 然后下载原始题目文件：
 
@@ -82,7 +74,7 @@
 
 [Xeonacid](https://github.com/Xeonacid)
 
-（本来在contributor里可以看到这位大佬的，结果因为XZY不会用Github导致好像。。。覆盖了。。。就。。。没了QwQ）
+（本来在contributor里可以看到这位大佬的，结果因为Remmina不会用Github导致好像。。。覆盖了。。。就。。。没了QwQ）
 
 ##  At Last
 
@@ -90,6 +82,6 @@
 
 还有代码很可能有问题，因为作者是个制杖。
 
-Powered by [XZYQvQ](http://www.k-xzy.xyz).
+Powered by Remmina.
 
 The UI is based on [syzoj](https://github.com/syzoj/syzoj/blob/master/LICENSE), using GPL License.

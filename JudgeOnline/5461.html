@@ -1,0 +1,19 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[PKUWC2018]Minimax</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5461. [PKUWC2018]Minimax</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5461">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5461">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5461">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>小 C 有一棵 n 个结点的有根树，根是 1 号结点，且每个结点最多有两个子结点。</div>
+<div>定义结点 x 的权值为：</div>
+<div>1.若 x 没有子结点，那么它的权值会在输入里给出，保证这类点中每个结点的权值互不相同。</div>
+<div>2.若 x 有子结点，那么它的权值有 px的概率是它的子结点的权值的最大值，有 1?px的概率是它的子结点的权值的最小值。</div>
+<div>现在小 C 想知道，假设 1 号结点的权值有 m 种可能性，权值第 i 小的可能性的权值是 Vi，它的概率为 Di，求：</div>
+<div>&nbsp;<img src="upload/201811/111.png" width="376" height="105" alt="" /></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入</div>
+<div>第一行一个正整数 n；</div>
+<div>第二行 n 个整数，第 i个整数表示第 i 个结点的父亲的编号，其中第 1 个结点的父亲为 0；</div>
+<div>第三行 n 个整数，若第 i 个结点没有子结点，则第 i 个数为它的权值，否则第 i 个数为 pi&times;10000，保证 pi&times;10000是个正整数。</div>
+<div>0&lt;pi&lt;1,1&lt;=N&lt;=3*10^5,1&lt;wi&lt;=10^9</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出答案</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>3<br />
+0 1 1<br />
+5000 1 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>748683266<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

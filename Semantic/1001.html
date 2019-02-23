@@ -1,0 +1,27 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[BeiJing2006]狼抓兔子</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"> BZPRO</a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#1001. [BeiJing2006]狼抓兔子</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：162 MiB</span> <span class="ui label">时间限制：15 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=1001">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=1001">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=1001">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>现在小朋友们最喜欢的&quot;喜羊羊与灰太狼&quot;,话说灰太狼抓羊不到，但抓兔子还是比较在行的，</div>
+<div>而且现在的兔子还比较笨，它们只有两个窝，现在你做为狼王，面对下面这样一个网格的地形：</div>
+<p><span style="font-size: medium">&nbsp;<img border="0" alt="" src="images/1001.jpg" /> </span></p>
+<div>左上角点为(1,1),右下角点为(N,M)(上图中N=4,M=5).有以下三种类型的道路&nbsp;</div>
+<div>1:(x,y)&lt;==&gt;(x+1,y)&nbsp;</div>
+<div>2:(x,y)&lt;==&gt;(x,y+1)&nbsp;</div>
+<div>3:(x,y)&lt;==&gt;(x+1,y+1)&nbsp;</div>
+<div>道路上的权值表示这条路上最多能够通过的兔子数，道路是无向的. 左上角和右下角为兔子的两个窝，</div>
+<div>开始时所有的兔子都聚集在左上角(1,1)的窝里，现在它们要跑到右下解(N,M)的窝中去，狼王开始伏击</div>
+<div>这些兔子.当然为了保险起见，如果一条道路上最多通过的兔子数为K，狼王需要安排同样数量的K只狼，</div>
+<div>才能完全封锁这条道路，你需要帮助狼王安排一个伏击方案，使得在将兔子一网打尽的前提下，参与的</div>
+<div>狼的数量要最小。因为狼还要去找喜羊羊麻烦.</div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行为N,M.表示网格的大小，N,M均小于等于1000.</div>
+<div>接下来分三部分</div>
+<div>第一部分共N行，每行M-1个数，表示横向道路的权值.&nbsp;</div>
+<div>第二部分共N-1行，每行M个数，表示纵向道路的权值.&nbsp;</div>
+<div>第三部分共N-1行，每行M-1个数，表示斜向道路的权值.&nbsp;</div>
+<div>输入文件保证不超过10M</div></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p><span style="font-size: medium">输出一个整数，表示参与伏击的狼的最小数量. </span></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>3 4<br />
+5 6 4<br />
+4 3 1<br />
+7 5 3<br />
+5 6 7 8<br />
+8 7 6 5<br />
+5 5 5<br />
+6 6 6</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>14</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p><p>&nbsp;2015.4.16新加数据一组，可能会卡掉从前可以过的程序。</p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by <a href="http://www.k-xzy.xyz">XZYQvQ</a>.</span><br/><a href="https://github.com/konnyakuxzy/BZPRO">Github Repository</a></div></div></body></html>

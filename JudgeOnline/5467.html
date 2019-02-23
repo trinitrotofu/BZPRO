@@ -1,0 +1,30 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[PKUWC2018]Slay the Spire</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5467. [PKUWC2018]Slay the Spire</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5467">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5467">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5467">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>九条可怜在玩一个很好玩的策略游戏：Slay the Spire，一开始九条可怜的卡组里有2n张牌，每张牌上都写着一个</div>
+<div>数字wi，一共有两种类型的牌，每种类型各n张：1.攻击牌：打出后对对方造成等于牌上的数字的伤害。2.强化牌</div>
+<div>：打出后，假设该强化牌上的数字为x，则其他剩下的攻击牌的数字都会乘上x。保证强化牌上的数字都大于1。现</div>
+<div>在九条可怜会等概率随机从卡组中抽出m张牌，由于费用限制，九条可怜最多打出k张牌，假设九条可怜永远都会采</div>
+<div>取能造成最多伤害的策略，求她期望造成多少伤害。</div>
+<div>假设答案为y，你只需要输出</div>
+<div>（2n）!*y / (m!*(2n-m)!) Mod 998244353</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行一个正整数T表示数据组数</div>
+<div>接下来对于每组数据：</div>
+<div>第一行三个正整数n,m,k</div>
+<div>第二行n个正整数wi，表示每张强化牌上的数值。</div>
+<div>第三行n个正整数wi，表示每张攻击牌上的数值。</div>
+<div>1&lt;=k&lt;=m&lt;=2n&lt;=3e3</div>
+<div>1&lt;=wi&lt;=1e8</div>
+<div>&Sigma;2n &lt;= 3e4</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出T行，每行一个非负整数表示每组数据的答案。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>2<br />
+2 3 2<br />
+2 3<br />
+1 2<br />
+10 16 14<br />
+2 3 4 5 6 7 8 9 10 11<br />
+1 2 3 4 5 6 7 8 9 10</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>19<br />
+253973805</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

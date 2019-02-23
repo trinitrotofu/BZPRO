@@ -1,0 +1,22 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>tree</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5482. tree</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：512 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5482">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5482">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5482">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>现在有一棵n个结点的树，对于点i(i&gt;1)，它的父亲结点编号为trunc(i/2)。</div>
+<div>现在有m只鸟，每只鸟有初始位置pi。树上每个结点有最大容纳量ci，表</div>
+<div>示这个结点最多能容纳的鸟的数量。定义移动一只鸟的代价为树上的距离。</div>
+<div>现在询问，对于k从1&sim;m，将前k只鸟移动位置使得满足每个结点上的</div>
+<div>鸟的个数不大于最大容纳量的最小代价。</div>
+<div></div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行两个用空格隔开的整数n,m。n, m &le; 3 &times; 10^5</div>
+<div>第二行n个整数表示c1,c2,&middot;&middot;&middot;,cn。</div>
+<div>第三行m个整数表示p1,p2,&middot;&middot;&middot;,pm。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行，表示对于每个k的最小代价。</div>
+<div></div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>5 4 <br />
+0 0 4 1 1<br />
+2 4 5 2</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>1 1 2 4<br />
+第一只鸟在 2 上，只需移到 4 或 5 即可，代价为 1。<br />
+第一、二只鸟在 2,4 上，第一只鸟移到 5，第二只鸟不动，代价为 1。<br />
+第一、二、三只鸟在 2, 4, 5 上，第一只鸟移到 3，第二、三只鸟不动，代价为 2。<br />
+第一、二、三、四只鸟在 2, 4, 5, 2 上，第一、四只鸟移到 3，第二、三只鸟不动，代价为 4。</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

@@ -1,0 +1,46 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[FJOI2018]所罗门王的宝藏</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5470. [FJOI2018]所罗门王的宝藏</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：2 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5470">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5470">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5470">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>据古代传说记载，所罗门王既是智慧的代表，又是财富的象征。他建立了强大而富有的国家，聚集了大批的黄金象</div>
+<div>牙和钻石，并把这些价值连城的珍宝藏在一个神秘的地方，这就是世人瞩目的&quot;所罗门王的宝藏&quot;。多少个世纪以来</div>
+<div>，人们一直在寻找这批早已失落的古代文明宝藏，寻找盛产黄金和钻石的宝地。曾经追寻所罗门王宝藏的冒险者们</div>
+<div>都一去不回，至今没人解开这个谜题。亨利男爵在一次幸运的旅途中意外地得到了三百年前一位葡萄牙贵族留下的</div>
+<div>写在羊皮卷上的所罗门王的藏宝图和一本寻宝秘籍。在这张藏宝图的诱惑下，亨利男爵邀请约翰上校和勇敢的猎象</div>
+<div>人夸特曼开始了寻找埋葬在黑暗地底的所罗门王宝藏的艰险历程。他们横穿渺无边际的沙漠和浓荫蔽日的原始森林</div>
+<div>，越过汹涌澎湃的激流险滩，翻越高耸入云的峻岭雪山，饱尝沙漠的酷热和冰雪严寒，在藏宝图的指引下来到非洲</div>
+<div>一个原始的神秘国度库库安纳。这里有残酷的人殉制度，有一个拥有一千个妻室的独眼暴君特瓦拉，有像兀鹫一般</div>
+<div>丑恶诡诈老而不死的女巫加古尔，还有美丽聪慧的绝代佳人弗拉塔。在这片陌生而又险象环生的土地上三位寻宝英</div>
+<div>雄历尽艰辛，终于在绝代佳人弗拉塔的帮助下在海底深处找到了珍藏这批价值连城宝藏的巨大的藏宝洞。然而在女</div>
+<div>巫加古尔的精心策划下，一场灭顶之灾正在悄悄逼近。藏宝洞的洞门十分坚固且洞门紧闭，如果不知道开启洞门的</div>
+<div>秘密是无法打开藏宝洞的洞门。在藏宝洞的洞门一侧有一个奇怪的矩形密码阵列。根据寻宝秘籍的记载，在密码阵</div>
+<div>列每行的左侧和每列的顶端都有一颗红宝石按钮。每个按钮都可以向左或向右转动。每向左转动一次按钮，相应的</div>
+<div>行或列中数字都增 111。每向右转动一次按钮，相应的行或列中数字都减 111。在矩形密码阵列的若干特定位置镶</div>
+<div>嵌着绿宝石。只有当所有绿宝石位置的数字与藏宝图记载的密码完全相同，紧闭的洞门就会自动缓缓打开。女巫加</div>
+<div>古尔早已得知开门的秘密。为了阻止寻宝者打开洞门，女巫加古尔为开门的密码阵列设置了全0的初始状态。试图</div>
+<div>打开洞门的寻宝者如果不能迅速转动按钮使所有绿宝石位置的数字与藏宝图记载的密码完全相同，就会自动启动藏</div>
+<div>宝洞玄妙的暗器机关，使寻宝者遭到灭顶攻击而死于非命。</div>
+<div>您能帮助三位寻宝英雄顺利打开藏宝洞的洞门吗？</div>
+<div>编程任务：对于给定的密码阵列，找到获得正确密码的红宝石按钮的转动序列。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第一行中有一个正整数 T (T &lt;= 5) 表示有 T 组数据。</div>
+<div>每组数据的第一行有 3 个正整数 n,m 和 k，表示洞门密码阵列共有 n 行和 m 列，0&lt;n,m,k &lt;= 1000。</div>
+<div>各行从上到下依次编号为 1,2,...,n；各列从左到右依次编号为 1,2,...,m 。</div>
+<div>接下来的 k 行中每行有三个整数 x,y,c，</div>
+<div>分别表示第 k 个绿宝石在密码阵列中的位置和密码，x 为行号 y 为列号，c 为该位置处的密码。</div>
+<div>1&lt;=n,m,k&lt;=1000</div>
+<div>k&lt;=n*m</div>
+<div>|c| &lt;= 1e6</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>对于每组数据，用一行输出 Yes 或者 No。</div>
+<div>输出 Yes 表示存在获得正确密码的红宝石按钮的转动序列。</div>
+<div>输出 No 则表示无法找到获得正确密码的红宝石按钮的转动序列。</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>2<br />
+2 2 4<br />
+1 1 0<br />
+1 2 0<br />
+2 1 2<br />
+2 2 2<br />
+2 2 4<br />
+1 1 0<br />
+1 2 0<br />
+2 1 2<br />
+2 2 1</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>Yes<br />
+No</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

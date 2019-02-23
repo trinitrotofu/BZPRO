@@ -1,7 +1,9 @@
-echo "请输入bzoj用户名："
+echo "Get cookies of BZOJ"
+
+echo "User name:"
 read user_id
 
-echo "请输入bzoj密码："
+echo "Password:"
 stty -echo
 read password
 stty echo
@@ -10,4 +12,4 @@ wget --post-data="user_id=$user_id&password=$password" --save-cookies="./cookies
 
 rm ./login.php
 
-echo "Cookie Get Success!"
+echo "Cookie download completed!"

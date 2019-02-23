@@ -1,0 +1,21 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2018 Dec]Balance Beam</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5483. [Usaco2018 Dec]Balance Beam</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5483">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5483">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5483">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>Bessie为了存钱给她的牛棚新建一间隔间，开始在当地的马戏团里表演，通过在平衡木上小心地来回走动来展示她</div>
+<div>卓越的平衡能力。Bessie能够通过表演赚到的钱取决于她最终成功跳下平衡木的位置。平衡木上从左向右的位置记</div>
+<div>为0,1,&hellip;,N+1。如果Bessie到达了位置0或是N+1，她就会从平衡木的一端掉下去，遗憾地得不到报酬。如果Bessie</div>
+<div>处在一个给定的位置k，她可以进行下面两项中的任意一项：</div>
+<div>1. 投掷一枚硬币。如果背面朝上，她前往位置k-1，如果正面朝上，她前往位置k+1（也就是说，每种可能性1/2的概率）。</div>
+<div>2. 跳下平衡木，获得f(k)的报酬（1&le;f(k)&le;10^9）。</div>
+<div>Bessie意识到她并不能保证结果能够得到某一特定数量的报酬，这是由于她的移动是由随机的掷硬币结果控制。然</div>
+<div>而，基于她的起始位置，她想要求出当她进行一系列最优的决定之后，她能够得到的期望报酬（&ldquo;最优&rdquo;指的是这</div>
+<div>些决定能够带来最高可能的期望报酬）。例如，如果她的策略能够使她以1/2的概率获得10的报酬，1/4的概率获得</div>
+<div>8的报酬，1/4的概率获得0的报酬，那么她的期望报酬为加权平均值10(1/2)+8(1/4)+0(1/4)=7</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><p>输入的第一行包含N（2&le;N&le;10^5）。以下N行包含f(1)&hellip;f(N)</p>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>
+<div>输出N行。第i行输出105乘以Bessie从位置i开始使用最优策略能够获得的报酬的期望值，向下取整。</div>
+</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>2<br />
+1<br />
+3</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>150000<br />
+300000</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

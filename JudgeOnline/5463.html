@@ -1,0 +1,23 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[APIO2018] 铁人两项</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5463. [APIO2018] 铁人两项</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：128 MiB</span> <span class="ui label">时间限制：40 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5463">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5463">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5463">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>比特镇的路网由 m 条双向道路连接的 n 个交叉路口组成。</div>
+<div></div>
+<div>最近，比特镇获得了一场铁人两项锦标赛的主办权。这场比赛共有两段赛程：选手先完成一段长跑赛程，然后骑自行车完成第二段赛程。</div>
+<div></div>
+<div>比赛的路线要按照如下方法规划：</div>
+<div></div>
+<div>1、先选择三个两两互不相同的路口 s， c 和 f ，分别作为比赛的起点、切换点（运动员在长跑到达这个点后，骑自行车前往终点）、终点。</div>
+<div></div>
+<div>2、选择一条从 s 出发，经过 c 最终到达 f 的路径。考虑到安全因素，选择的路径经过同一个点至多一次。</div>
+<div></div>
+<div>在规划路径之前，镇长想请你帮忙计算，总共有多少种不同的选取 s， c 和 f 的方案，使得在第 2 步中至少能设计出一条满足要求的路径。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>第一行包含两个整数 n 和 m ，分别表示交叉路口和双向道路的数量。</div>
+<div>接下来 m 行，每行两个整数 v_i， u_i 。表示存在一条双向道路连接交叉路口 v_i， u_i (1 &lt;= v_i, u_i &lt;= n, v_i != u_i)。</div>
+<div>保证任意两个交叉路口之间，至多被一条双向道路直接连接。</div>
+<div>n&lt;=1e5, m&lt;=2e5</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出一行，包含一个整数，表示能满足要求的不同的选取s,c和f的方案数</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>4 3<br />
+1 2<br />
+2 3<br />
+3 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>8</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>

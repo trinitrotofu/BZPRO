@@ -1,0 +1,25 @@
+<html><head><meta charset="utf-8"/><link rel="icon" href="../image/logo32x32.png" sizes="32x32" /><link rel="icon" href="../image/logo192x192.png" sizes="192x192" /><link rel="stylesheet" type="text/css" href="../Semantic/semantic.min.css"><script src="../Semantic/jquery.min.js" type="text/javascript"></script><script src="../Semantic/semantic.min.js" type="text/javascript"></script><title>[Usaco2018 Dec]The Cow Gathering</title></head><body><div class="ui three item menu"><a class="header item" href="../index.html"><img src="../image/logo.png"><span style="font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; font-size: 1.3em; font-weight: 300; ">BZPRO</span></a></div><div class="ui main container"><div class="ui center aligned grid"><div class="row"><h1 class="ui header">#5485. [Usaco2018 Dec]The Cow Gathering</h1></div><div class="row" style="margin-top: -15px"><span class="ui label">内存限制：256 MiB</span> <span class="ui label">时间限制：10 Sec</span></div></div><div class="ui grid"><div class="row"><div class="column"><div class="ui buttons"><a class="small ui primary button" href="https://www.lydsy.com/JudgeOnline/submitpage.php?id=5485">提交</a> <a class="small ui positive button" href="https://www.lydsy.com/JudgeOnline/problemstatus.php?id=5485">提交记录</a> <a class="small ui yellow button" href="https://www.lydsy.com/JudgeOnline/wttl/wttl.php?pid=5485">讨论</a></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">题目描述</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div>奶牛们从世界各地聚集起来参加一场大型聚会。总共有N头奶牛，N?1对奶牛互为朋友。每头奶牛都可以通过一些朋</div>
+<div>友关系认识其他每头奶牛。她们玩得很开心，但是现在到了她们应当离开的时间了，她们会一个接一个地离开。她</div>
+<div>们想要以某种顺序离开，使得只要至少还有两头奶牛尚未离开，所有尚未离开的奶牛都还有没有离开的朋友。此外</div>
+<div>，由于行李寄存的因素，有M对奶牛(ai,bi)必须满足奶牛ai要比奶牛bi先离开。注意奶牛ai和奶牛bi可能是朋友，</div>
+<div>也可能不是朋友。帮助奶牛们求出，对于每一头奶牛，她是否可以成为最后一头离开的奶牛。可能会发生不存在满</div>
+<div>足上述要求的奶牛离开顺序的情况。</div>
+<p></p></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输入格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输入的第1行包含两个空格分隔的整数N和M。</div>
+<div>输入的第2&le;i&le;N行，每行包含两个整数xi和yi，满足1&le;xi,yi&le;N，xi&ne;yi，表示奶牛xi和奶牛yi是朋友关系。</div>
+<div>输入的第N+1&le;i&le;N+M行，每行包含两个整数ai和bi，满足1&le;ai,bi&le;N，ai&ne;bi，表示奶牛ai必须比奶牛bi先离开聚会。</div>
+<div>输入保证1&le;N,M&le;10^5</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">输出格式</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><div class=content><div>输出N行，每行包含一个整数di，如果奶牛i可以成为最后一头离开的奶牛，则di=1，否则di=0</div>
+<p></p></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">样例</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;"><h4>样例输入</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>5 1<br />
+1 2<br />
+2 3<br />
+3 4<br />
+4 5<br />
+2 4</span></div></code></pre></div><h4>样例输出</h4><div class="ui existing segment"><pre style="margin-top:0; margin-bottom:0;"><code class="lang-plain">
+			<div class=content><span class=sampledata>0<br />
+0<br />
+1<br />
+1<br />
+1<br />
+</span></div></code></pre></div></div></div></div></div><div class="row"><div class="column"><h4 class="ui top attached block header">数据范围与提示</h4><div class="ui bottom attached segment font-content"><div style="position: relative; overflow: hidden;">
+			<div class=content><p></p></div></div></div></div></div></div></div><div class="ui vertical footer segment"><div class="ui center aligned container"><span style="color: #999;">BZPRO Powered by Remmina.</span><br/><a href="https://github.com/remmina/BZPRO">Github Repository</a></div></div></body></html>
