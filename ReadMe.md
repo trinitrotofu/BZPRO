@@ -22,7 +22,7 @@
 
 下载本仓库后浏览器打开`index.html`
 
-或者直接通过GitPage访问：[https://remmina.github.io/BZPRO/](https://remmina.github.io/BZPRO/)
+或者直接通过GitPage访问：[https://trinitrotofu.github.io/BZPRO/](https://trinitrotofu.github.io/BZPRO/)
 
 ### 爬虫
 
